@@ -236,6 +236,7 @@ input.fator.falta{border-color:var(--warn);background:var(--warn-bg)}
       <button data-tab="estoque" class="active">Estoque</button>
       <button data-tab="compra">Lista de compra</button>
       <button data-tab="entradas">Entradas (notas)</button>
+      <button data-tab="cmv">CMV</button>
     </div>
     <div class="spacer"></div>
     <input class="search" id="search" type="search" placeholder="Buscar item…" autocomplete="off">
@@ -247,6 +248,7 @@ input.fator.falta{border-color:var(--warn);background:var(--warn-bg)}
       <option value="none">Sem contagem</option>
     </select>
     <button class="btn ghost" id="uploadBtn" title="Subir planilha de contagem preenchida">⇪ Contagem</button>
+    <button class="btn ghost" id="salvarCont" title="Salvar a contagem atual no histórico (base do CMV)">⛁ Salvar contagem</button>
     <button class="btn ghost" id="addBtn">＋ Item</button>
     <input class="hidefile" id="fileInput" type="file" accept=".xlsx,.xls,.csv">
   </div>
@@ -283,6 +285,8 @@ const state = {
   draft: null,     // nota em conferência
   aiStatus: null,  // texto de progresso da leitura
   aiImg: null,     // true/false: este visualizador aceita enviar imagem para a IA
+  contagens: [],   // snapshots de contagem (histórico) -> base do CMV
+  cmvA: null, cmvB: null,
 };
 const CNPJ_UNIDADE = "35631524000327";   // MULT COMERCIO (SIG = Sudoeste)
 let db = null, catalogoCol = null, cfgDoc = null;
@@ -366,7 +370,7 @@ function renderTable(){
   const ent=entradasPorItem();
   view.innerHTML=`<div class="card"><div class="tablewrap"><table>
     <thead><tr>
-      <th>Item</th><th>Setor</th><th class="num">Contagem</th><th class="num">Mínimo</th><th class="num">Entradas</th><th>Status</th><th class="num">Sugestão de compra</th>
+      <th>Item</th><th>Setor</th><th class="num">Contagem</th><th class="num">Mínimo</th><th class="num">Entradas</th><th>Status</th><th class="num">Sugestão de compra</th><th title="Reposição automática do CPD — sai da lista de compra">Auto</th>
     </tr></thead><tbody>
     ${rows.map(it=>{
       const st=statusOf(it); const [pc,pi,pl]=PILL[st]; const sug=sugestao(it);
@@ -380,8 +384,15 @@ function renderTable(){
         <td class="num mono">${ent[it.id]?`<span style="color:var(--accent)">+${fmt(ent[it.id])}</span>`:'<span style="color:var(--faint)">—</span>'}</td>
         <td><span class="pill ${pc}"><span class="pi">${pi}</span>${pl}</span></td>
         <td class="num"><span class="sug ${sugCls}">${sugTxt}</span></td>
+        <td style="text-align:center"><input type="checkbox" data-f="auto_cpd" ${it.auto_cpd?"checked":""} title="Reposição automática do CPD"></td>
       </tr>`;}).join("")}
     </tbody></table></div></div>`;
+  view.querySelectorAll('input[data-f="auto_cpd"]').forEach(cb=>{
+    cb.addEventListener("change",()=>{
+      const id=cb.closest("tr").dataset.id;
+      updateItem(id,"auto_cpd",cb.checked);
+    });
+  });
   view.querySelectorAll("input.qty").forEach(inp=>{
     inp.addEventListener("change",()=>{
       const tr=inp.closest("tr"); const id=tr.dataset.id; const f=inp.dataset.f;
@@ -394,7 +405,7 @@ function renderTable(){
 
 function renderBuy(){
   const view=document.getElementById("view");
-  const rows=itemsArray().map(it=>({it,sug:sugestao(it)})).filter(x=>x.sug&&x.sug>0)
+  const rows=itemsArray().map(it=>({it,sug:sugestao(it)})).filter(x=>x.sug&&x.sug>0&&!x.it.auto_cpd)
     .sort((a,b)=>(a.it.setor||"").localeCompare(b.it.setor)||(a.it.nome_everest||"").localeCompare(b.it.nome_everest||""));
   if(!rows.length){ view.innerHTML=`<div class="card"><div class="empty">Nada abaixo do mínimo. Estoque coberto. 🟢<br><span class="count-badge">Preencha a contagem para gerar a lista.</span></div></div>`; return; }
   const grp={}; rows.forEach(({it,sug})=>{(grp[it.setor]=grp[it.setor]||[]).push({it,sug});});
@@ -412,11 +423,14 @@ function renderBuy(){
 function renderAll(){ renderKPIs();renderSectorBars();renderSectorChips();
   document.querySelectorAll("#tabs button").forEach(b=>b.classList.toggle("active",b.dataset.tab===state.tab));
   const soEstoque = state.tab==="estoque";
-  document.getElementById("sectorchips").style.display = state.tab==="entradas"?"none":"flex";
+  document.getElementById("sectorchips").style.display = (state.tab==="entradas"||state.tab==="cmv")?"none":"flex";
   document.getElementById("search").style.display = soEstoque?"":"none";
   document.getElementById("statusFilter").style.display = soEstoque?"":"none";
+  const soEstoq = state.tab==="estoque";
+  const sc=document.getElementById("salvarCont"); if(sc) sc.style.display=soEstoq?"":"none";
   if(state.tab==="estoque") renderTable();
   else if(state.tab==="compra") renderBuy();
+  else if(state.tab==="cmv") renderCMV();
   else renderEntradas();
 }
 
@@ -495,6 +509,12 @@ document.getElementById("statusFilter").addEventListener("change",e=>{state.filt
 document.getElementById("uploadBtn").onclick=()=>document.getElementById("fileInput").click();
 document.getElementById("fileInput").onchange=e=>{if(e.target.files[0])handleFile(e.target.files[0]);e.target.value="";};
 document.getElementById("addBtn").onclick=openAdd;
+document.getElementById("salvarCont").onclick=()=>{
+  const n=itemsArray().filter(i=>i.contagem!=null&&i.contagem!=="").length;
+  if(!n){ toast("Preencha a contagem antes de salvar."); return; }
+  const r=prompt(`Salvar contagem de ${n} itens no histórico.\nRótulo (ex.: "Contagem terça"):`,"Contagem "+new Date().toLocaleDateString("pt-BR"));
+  if(r!==null) salvarContagem(r.trim());
+};
 document.getElementById("themeBtn").onclick=()=>{
   const r=document.documentElement;const cur=r.getAttribute("data-theme");
   const next=cur==="dark"?"light":cur==="light"?"dark":(matchMedia("(prefers-color-scheme: dark)").matches?"light":"dark");
@@ -594,10 +614,12 @@ Regras:
 
 Responda APENAS com um objeto JSON nesta forma:
 {"fornecedor":{"nome":string|null,"cnpj":string|null},
- "nota":{"numero":string|null,"serie":string|null,"emissao":string|null,"chave":string|null},
+ "nota":{"numero":string|null,"serie":string|null,"emissao":string|null,"chave":string|null,
+         "valor_total_produtos":number|null},
  "destinatario":{"nome":string|null,"cnpj":string|null},
  "itens":[{"codigo":string|null,"descricao":string,"un":string|null,"qtd":number|null,"vunit":number|null,"vtotal":number|null}],
  "ilegivel":[string]}
+O campo "valor_total_produtos" e o "VALOR TOTAL DOS PRODUTOS" impresso no quadro de imposto da nota.
 Em "ilegivel" liste descrições de itens cujos números você não conseguiu ler com certeza.`;
 
 async function lerNota(files){
@@ -649,6 +671,7 @@ function montarConferencia(data,aviso){
       novo_mapa:!dp};
   });
   state.draft={forn,nota,dest,linhas,aviso,ilegivel:data?.ilegivel||[]};
+  if(state.draft.nota) state.draft.nota.valor_total_produtos=data?.nota?.valor_total_produtos??null;
   state.tab="entradas"; renderAll();
 }
 
@@ -750,6 +773,11 @@ function renderConferencia(){
   const nOk=calc.filter(c=>c.status==="ok").length;
   const nPend=calc.filter(c=>c.status==="fator"||c.status==="item"||c.status==="qtd").length;
   const totalNota=d.linhas.reduce((s,l)=>s+(Number(l.vtotal)||0),0);
+  const totalImpresso=d.nota?.valor_total_produtos!=null?Number(d.nota.valor_total_produtos):null;
+  const difTotal=totalImpresso!=null?Math.abs(totalNota-totalImpresso):null;
+  const totalBate=difTotal!=null?difTotal<=0.05:null;
+  const linhasTortas=d.linhas.filter(l=>l.qtd!=null&&l.vunit!=null&&l.vtotal!=null
+      && Math.abs(Number(l.qtd)*Number(l.vunit)-Number(l.vtotal))>0.05);
   view.innerHTML=`<div class="card">
     <h2>Conferência da nota <span class="hint">nada é gravado até você aprovar</span>
       <button class="btn ghost" id="descartar">Descartar</button></h2>
@@ -768,6 +796,22 @@ function renderConferencia(){
       <div class="nf"><span class="k">Destinatário</span><span class="v">${d.dest?.nome||"—"}</span></div>`}
     </div>
     ${(!d.manual && !destOk)?`<div class="warnbox"><b>Atenção:</b> o destinatário lido (CNPJ ${d.dest?.cnpj||"não identificado"}) não é o CNPJ da sua unidade (35.631.524/0003-27). Confirme se esta nota é desta loja antes de dar entrada.</div>`:""}
+    ${(!d.manual && totalBate===true)?`<div class="banner" style="margin:12px 16px">
+        <b>✓ Leitura auditada.</b> A soma das linhas (R$ ${totalNota.toLocaleString("pt-BR",{minimumFractionDigits:2})})
+        confere com o total impresso na nota${linhasTortas.length?"":", e em todas as linhas qtd × valor unitário = valor total"}.
+      </div>`:""}
+    ${(!d.manual && totalBate===false)?`<div class="warnbox">
+        <b>Atenção — a leitura não fecha.</b> A soma das linhas dá
+        R$ ${totalNota.toLocaleString("pt-BR",{minimumFractionDigits:2})}, mas a nota diz
+        R$ ${totalImpresso.toLocaleString("pt-BR",{minimumFractionDigits:2})}
+        (diferença de R$ ${difTotal.toLocaleString("pt-BR",{minimumFractionDigits:2})}).
+        Algum número foi lido errado ou uma linha ficou de fora. Confira no papel antes de dar entrada.
+      </div>`:""}
+    ${(!d.manual && totalImpresso===null)?`<div class="banner" style="margin:12px 16px">
+        Não foi possível ler o <b>total dos produtos</b> impresso, então não deu para auditar a soma. Confira as linhas com atenção.
+      </div>`:""}
+    ${linhasTortas.length?`<div class="warnbox"><b>${linhasTortas.length} linha(s) onde qtd × valor unitário não dá o valor total:</b>
+        ${linhasTortas.map(l=>l.descricao).join(" · ")}. Provável erro de leitura nesses números.</div>`:""}
     ${d.aviso?`<div class="warnbox">${d.aviso}</div>`:""}
     ${d.ilegivel?.length?`<div class="warnbox"><b>A IA marcou como duvidoso:</b> ${d.ilegivel.join(" · ")}. Confira esses números no papel.</div>`:""}
     <div class="tablewrap"><table>
@@ -865,6 +909,126 @@ async function confirmarEntrada(){
   state.draft=null; renderAll();
 }
 
+/* ================= CONTAGENS (histórico) + CMV ================= */
+function hojeISO(){ const d=new Date(); return d.toISOString().slice(0,10); }
+function brDate(s){ // "dd/mm/aaaa" -> "aaaa-mm-dd"; devolve null se não der
+  if(!s) return null;
+  const m=String(s).match(/(\d{2})\/(\d{2})\/(\d{4})/);
+  if(m) return `${m[3]}-${m[2]}-${m[1]}`;
+  const i=String(s).match(/^\d{4}-\d{2}-\d{2}/); return i?i[0]:null;
+}
+function dataNota(n){ return brDate(n.emissao) || (n.criado_em||"").slice(0,10) || null; }
+
+async function salvarContagem(rotulo){
+  const valores={};
+  itemsArray().forEach(it=>{ if(it.contagem!=null&&it.contagem!=="") valores[it.id]=Number(it.contagem); });
+  const n=Object.keys(valores).length;
+  if(!n){ toast("Nenhuma contagem preenchida para salvar."); return; }
+  const id=hojeISO()+"_"+Math.random().toString(36).slice(2,6);
+  const doc={id,data:hojeISO(),rotulo:rotulo||("Contagem "+hojeISO()),valores,
+    itens_contados:n,criado_em:new Date().toISOString()};
+  state.contagens.push(doc);
+  if(db){ try{ await db.collection("contagens").doc(id).set(doc); toast(`Contagem salva: ${n} itens.`); }
+    catch(e){ toast("Erro ao salvar contagem: "+(e.code||e.message)); } }
+  else toast(`Contagem salva só nesta sessão (${n} itens).`);
+  renderAll();
+}
+
+/* custo por unidade do catálogo, da última entrada de cada item */
+function custoUltimo(){
+  const out={};
+  const ord=state.entradas.slice().sort((a,b)=>String(dataNota(a)||"").localeCompare(String(dataNota(b)||"")));
+  ord.forEach(n=>(n.linhas||[]).forEach(l=>{
+    if(l.ignorar||!l.item_id||l.vunit==null||!l.fator) return;
+    // vunit é por unidade da NOTA; fator = un_nota por 1 um_catalogo
+    out[l.item_id]={custo:Number(l.vunit)*Number(l.fator),data:dataNota(n),fornecedor:n.fornecedor};
+  }));
+  return out;
+}
+function comprasEntre(dIni,dFim){
+  const acc={};
+  state.entradas.forEach(n=>{
+    const d=dataNota(n); if(!d) return;
+    if(dIni && d<=dIni) return;
+    if(dFim && d>dFim) return;
+    (n.linhas||[]).forEach(l=>{ if(l.ignorar||!l.item_id) return;
+      acc[l.item_id]=(acc[l.item_id]||0)+(Number(l.qtd_convertida)||0); });
+  });
+  return acc;
+}
+
+function renderCMV(){
+  const view=document.getElementById("view");
+  const cs=state.contagens.slice().sort((a,b)=>String(a.criado_em).localeCompare(String(b.criado_em)));
+  if(cs.length<2){
+    view.innerHTML=`<div class="card"><h2>CMV por diferença <span class="hint">estoque inicial + compras − estoque final</span></h2>
+      <div class="body">
+        <div class="warnbox" style="margin:0">
+          <b>Faltam contagens.</b> O CMV por diferença precisa de <b>duas</b> contagens salvas —
+          uma de abertura e uma de fechamento do período. Você tem <b>${cs.length}</b>.<br><br>
+          Como fazer: preencha a contagem na aba <b>Estoque</b> (digitando ou subindo a planilha do
+          checklist), clique em <b>Salvar contagem</b>, e repita no próximo dia de contagem.
+          Na segunda, esta tela liga sozinha.
+        </div>
+        ${cs.length?`<div style="margin-top:12px"><b style="font-size:13px">Contagens salvas</b>
+          ${cs.map(c=>`<div class="entrow"><div><b>${c.rotulo}</b></div>
+            <div class="mono setortag">${c.itens_contados} itens</div><div class="setortag">${c.data}</div></div>`).join("")}</div>`:""}
+      </div></div>`;
+    return;
+  }
+  const iA=state.cmvA??0, iB=state.cmvB??(cs.length-1);
+  const A=cs[Math.min(iA,cs.length-1)], B=cs[Math.min(iB,cs.length-1)];
+  const compras=comprasEntre(A.data,B.data);
+  const custos=custoUltimo();
+  const rows=[];
+  itemsArray().forEach(it=>{
+    const ei=A.valores?.[it.id], ef=B.valores?.[it.id];
+    if(ei==null&&ef==null) return;
+    const c=compras[it.id]||0;
+    const consumo=(ei!=null&&ef!=null)?(Number(ei)+c-Number(ef)):null;
+    const cst=custos[it.id]?custos[it.id].custo:null;
+    rows.push({it,ei,ef,c,consumo,cst,valor:(consumo!=null&&cst!=null)?consumo*cst:null});
+  });
+  rows.sort((a,b)=>(b.valor??-1)-(a.valor??-1)||(b.consumo??-1)-(a.consumo??-1));
+  const neg=rows.filter(r=>r.consumo!=null&&r.consumo<0);
+  const semEF=rows.filter(r=>r.ef==null).length;
+  const totalR=rows.reduce((s,r)=>s+(r.valor||0),0);
+  const comCusto=rows.filter(r=>r.valor!=null).length;
+
+  view.innerHTML=`<div class="card">
+    <h2>CMV por diferença <span class="hint">${A.data} → ${B.data}</span></h2>
+    <div class="notahead">
+      <div class="nf"><span class="k">Contagem inicial</span>
+        <select class="sel" id="cmvA">${cs.map((c,i)=>`<option value="${i}" ${i===iA?"selected":""}>${c.rotulo} (${c.data})</option>`).join("")}</select></div>
+      <div class="nf"><span class="k">Contagem final</span>
+        <select class="sel" id="cmvB">${cs.map((c,i)=>`<option value="${i}" ${i===iB?"selected":""}>${c.rotulo} (${c.data})</option>`).join("")}</select></div>
+      <div class="nf"><span class="k">Itens no cálculo</span><span class="v mono">${rows.length}</span></div>
+      <div class="nf"><span class="k">CMV valorizado</span><span class="v mono">R$ ${totalR.toLocaleString("pt-BR",{minimumFractionDigits:2,maximumFractionDigits:2})}</span></div>
+      <div class="nf"><span class="k">Itens com custo</span><span class="v mono">${comCusto} de ${rows.length}</span></div>
+    </div>
+    ${neg.length?`<div class="warnbox"><b>${neg.length} item(ns) com consumo negativo — impossível fisicamente.</b>
+      Significa contagem errada ou entrada não lançada: ${neg.slice(0,6).map(r=>r.it.nome_everest).join(" · ")}${neg.length>6?" …":""}</div>`:""}
+    ${comCusto<rows.length?`<div class="banner" style="margin:12px 16px">Custo vem do <b>V.UNIT da última entrada</b> de cada item. ${rows.length-comCusto} item(ns) ainda sem entrada lançada ficam sem valor em R$.</div>`:""}
+    <div class="tablewrap"><table>
+      <thead><tr><th>Item</th><th>Setor</th><th class="num">Est. inicial</th><th class="num">Compras</th>
+        <th class="num">Est. final</th><th class="num">Consumo</th><th class="num">Custo un.</th><th class="num">CMV R$</th></tr></thead>
+      <tbody>${rows.map(r=>`<tr>
+        <td class="stripe ${r.consumo!=null&&r.consumo<0?"s-crit":"s-none"}"><div class="itnm">${r.it.nome_everest}</div>
+          <div class="itsub">${r.it.unidade}</div></td>
+        <td><span class="setortag">${r.it.setor}</span></td>
+        <td class="num mono">${r.ei??"—"}</td>
+        <td class="num mono">${r.c?"+"+fmt(r.c):"—"}</td>
+        <td class="num mono">${r.ef??"—"}</td>
+        <td class="num mono" style="${r.consumo!=null&&r.consumo<0?"color:var(--crit);font-weight:600":""}">${r.consumo!=null?fmt(r.consumo):"—"}</td>
+        <td class="num mono setortag">${r.cst!=null?"R$ "+r.cst.toFixed(2):"—"}</td>
+        <td class="num mono" style="font-weight:600">${r.valor!=null?"R$ "+r.valor.toLocaleString("pt-BR",{minimumFractionDigits:2,maximumFractionDigits:2}):"—"}</td>
+      </tr>`).join("")}</tbody></table></div>
+    ${semEF?`<div class="confbar"><span class="sum">${semEF} item(ns) sem contagem final — ficam sem consumo calculado.</span></div>`:""}
+  </div>`;
+  document.getElementById("cmvA").onchange=e=>{state.cmvA=+e.target.value;renderCMV();};
+  document.getElementById("cmvB").onchange=e=>{state.cmvB=+e.target.value;renderCMV();};
+}
+
 /* ---------- boot ---------- */
 function loadSample(){
   state.isSample=true;
@@ -901,6 +1065,11 @@ async function boot(){
         else state.dePara[ch.doc.id]=ch.doc.data()||{};
       });
       if(state.tab==="entradas") renderAll();
+    }); }catch(e){}
+  // histórico de contagens (base do CMV)
+  try{ db.collection("contagens").onSnapshot(snap=>{
+      state.contagens=snap.docs.map(x=>({...(x.data()||{}),id:x.id}));
+      if(state.tab==="cmv") renderAll();
     }); }catch(e){}
   // notas de entrada já conferidas
   try{ db.collection("entradas").onSnapshot(snap=>{
