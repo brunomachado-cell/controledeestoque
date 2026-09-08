@@ -95,3 +95,63 @@ Registrado em `data/fichas_bar.json`. Casos que exigiram decisão de equivalênc
 
 Onde havia mais de um item possível (5 cachaças, 7 whiskies, 2 gins, 2 vodkas), a escolha
 acima é uma **proposta** — o Bruno confirma qual marca a ficha usa de fato.
+
+
+---
+
+## Atualização — intermediários cadastrados e conversões derivadas
+
+**Decisão do Bruno:** os intermediários do bar passam a ser **itens contáveis**.
+
+Cadastrados no setor BAR / REFRIGERADA, unidade LITRO (`pendente_validacao: true`, mínimo 0):
+`PROD SUMO DE LIMAO` · `PROD XAROPE SIMPLES` · `PROD REDUCAO DE GENGIBRE` ·
+`PROD ESPUMA DE GENGIBRE` · `PROD REDUCAO DE HIBISCO` · `PROD REDUCAO DE PIMENTA ROSA` ·
+`PROD REDUCAO DE MARACUJA` · `PROD REDUCAO DE AMORA` · `PROD REDUCAO DE MORANGO` ·
+`PROD REDUCAO DE CHA MATE`
+
+Sem receita no almanaque (não dá para calcular custo de produção): `PROD ESPUMA DE GENGIBRE`
+e `PROD REDUCAO DE CHA MATE`.
+
+### Conversões aplicadas a partir dos documentos do próprio Bruno
+- `HORT MORANGO BANDEJA` = **0,300 kg/unidade** — peso declarado na NF MM ("MORANGO - BJ 300").
+- Suco de laranja = **2,51 g de laranja por ml** — almanaque, Sucos Naturais (753 g → 300 ml).
+- 6 linhas com sólido medido em ml corrigidas para g (marcadas com `correcao_proposta`,
+  valor original preservado em `un_original`).
+
+### Cobertura resultante
+**159 de 197 linhas prontas (81%)**, contra 47% antes.
+
+### Efeito no CMV — o que dá e o que não dá
+Contar os intermediários mantém o **CMV total em R$ correto**: quando o bar produz uma
+redução, o gengibre e o açúcar saem do estoque contado e aparecem como consumo com custo
+real de nota. O que fica indisponível sem o rendimento de cada produção é a **atribuição de
+custo por drink** (não se precifica um ml de redução sem saber quanto a panela rende).
+
+## Pendências finais do bar (38 linhas)
+
+**Volume/peso por embalagem:**
+
+| Item | Pergunta | Linhas |
+|---|---|---|
+| `ESP 1913 SPARKLING BRANCO` | ml por garrafa | 5 |
+| `REF AGUA TONICA` | ml por lata/garrafa | 5 |
+| `CAFE NESPRESSO RISTRETTO` | uma cápsula rende quantos ml | 2 |
+| `HORT ABACAXI` | kg por abacaxi | 2 |
+| `REF REDBULL TROPICAL` / `MELANCIA` | ml por lata | 2 |
+| `MP OVO` | g de clara por ovo | 1 |
+
+**Gramas por maço** (mesmo problema que já aparecia na entrada de nota):
+`HORT HORTELA MACO` (9 linhas) · `HORT ALECRIM MACO` (3) · `HORT MANJERICAO MACO` (2)
+
+**Outros:** rendimento de sumo por kg de limão siciliano (2) · densidade do chantilly,
+g por litro (1) · "frutas da estação" na Caipirinha e Caipiroska, qual fruta considerar (2) ·
+2 linhas em medida não métrica (1 fatia de laranja, 5 folhas de hortelã).
+
+## Marcas a confirmar
+
+Onde a ficha é genérica e o catálogo tem várias opções, a escolha foi proposta pelo Claude.
+Lista completa em `data/marcas_a_confirmar.json`. Atenção especial:
+- **SAKE NACIONAL** (Tokyo Mule) está apontando para `DEST VODKA SMIRNOFF` porque a ficha
+  diz "VODKA NACIONAL / SAKE NACIONAL" na mesma linha — existem 2 sakês no catálogo.
+- **WHISKY BOURBON** tem 7 whiskies possíveis; a proposta é `JIM BEAM BOURBON`.
+- **CACHAÇA BRANCA** tem 5 cachaças possíveis; a proposta é `SALINISSIMA PRATA`.

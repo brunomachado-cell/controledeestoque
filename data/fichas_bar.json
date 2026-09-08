@@ -80,8 +80,11 @@
      "un": "ml",
      "tipo": "intermediario",
      "intermediario": "PROD REDUCAO DE HIBISCO",
-     "divisor": null,
-     "status": "intermediario_sem_cadastro"
+     "divisor": 1000,
+     "status": "ok",
+     "item_id": "prod_reducao_de_hibisco",
+     "item_everest": "PROD REDUCAO DE HIBISCO",
+     "um_catalogo": "LITRO"
     },
     {
      "ingrediente": "APEROL",
@@ -108,13 +111,15 @@
     {
      "ingrediente": "LARANJA BAHIA",
      "qtd": 50.0,
-     "un": "ml",
+     "un": "g",
      "tipo": "estoque",
      "item_id": "hort_laranja_bahia_kg",
      "item_everest": "HORT LARANJA BAHIA KG",
      "um_catalogo": "KG",
-     "divisor": null,
-     "status": "indefinido"
+     "divisor": 1000,
+     "status": "ok",
+     "un_original": "ml",
+     "correcao_proposta": "solido medido em ml na ficha; tratado como g"
     },
     {
      "ingrediente": "CRAVO",
@@ -176,8 +181,11 @@
      "un": "ml",
      "tipo": "intermediario",
      "intermediario": "PROD SUMO DE LIMAO",
-     "divisor": null,
-     "status": "intermediario_sem_cadastro"
+     "divisor": 1000,
+     "status": "ok",
+     "item_id": "prod_sumo_de_limao",
+     "item_everest": "PROD SUMO DE LIMAO",
+     "um_catalogo": "LITRO"
     },
     {
      "ingrediente": "REDUÇÃO DE GENGIBRE",
@@ -185,8 +193,11 @@
      "un": "ml",
      "tipo": "intermediario",
      "intermediario": "PROD REDUCAO DE GENGIBRE",
-     "divisor": null,
-     "status": "intermediario_sem_cadastro"
+     "divisor": 1000,
+     "status": "ok",
+     "item_id": "prod_reducao_de_gengibre",
+     "item_everest": "PROD REDUCAO DE GENGIBRE",
+     "um_catalogo": "LITRO"
     },
     {
      "ingrediente": "XAROPE ELDERFLOWER",
@@ -238,7 +249,7 @@
      "tipo": "intermediario",
      "intermediario": "GENERICO FRUTAS DA ESTACAO",
      "divisor": null,
-     "status": "intermediario_sem_cadastro"
+     "status": "generico_a_definir"
     },
     {
      "ingrediente": "XAROPE SIMPLES",
@@ -246,8 +257,11 @@
      "un": "ml",
      "tipo": "intermediario",
      "intermediario": "PROD XAROPE SIMPLES",
-     "divisor": null,
-     "status": "intermediario_sem_cadastro"
+     "divisor": 1000,
+     "status": "ok",
+     "item_id": "prod_xarope_simples",
+     "item_everest": "PROD XAROPE SIMPLES",
+     "um_catalogo": "LITRO"
     }
    ]
   },
@@ -277,7 +291,7 @@
      "tipo": "intermediario",
      "intermediario": "GENERICO FRUTAS DA ESTACAO",
      "divisor": null,
-     "status": "intermediario_sem_cadastro"
+     "status": "generico_a_definir"
     },
     {
      "ingrediente": "XAROPE SIMPLES",
@@ -285,8 +299,11 @@
      "un": "ml",
      "tipo": "intermediario",
      "intermediario": "PROD XAROPE SIMPLES",
-     "divisor": null,
-     "status": "intermediario_sem_cadastro"
+     "divisor": 1000,
+     "status": "ok",
+     "item_id": "prod_xarope_simples",
+     "item_everest": "PROD XAROPE SIMPLES",
+     "um_catalogo": "LITRO"
     }
    ]
   },
@@ -317,8 +334,9 @@
      "item_id": "hort_morango_bandeja",
      "item_everest": "HORT MORANGO BANDEJA",
      "um_catalogo": "UNID",
-     "divisor": null,
-     "status": "falta_g_por_unidade"
+     "divisor": 300.0,
+     "status": "ok",
+     "fonte_fator": "peso da embalagem declarado na NF MM"
     },
     {
      "ingrediente": "LIMÃO SICILIANO",
@@ -359,8 +377,11 @@
      "un": "ml",
      "tipo": "intermediario",
      "intermediario": "PROD XAROPE SIMPLES",
-     "divisor": null,
-     "status": "intermediario_sem_cadastro"
+     "divisor": 1000,
+     "status": "ok",
+     "item_id": "prod_xarope_simples",
+     "item_everest": "PROD XAROPE SIMPLES",
+     "um_catalogo": "LITRO"
     },
     {
      "ingrediente": "SUMO DE LIMÃO",
@@ -368,8 +389,11 @@
      "un": "ml",
      "tipo": "intermediario",
      "intermediario": "PROD SUMO DE LIMAO",
-     "divisor": null,
-     "status": "intermediario_sem_cadastro"
+     "divisor": 1000,
+     "status": "ok",
+     "item_id": "prod_sumo_de_limao",
+     "item_everest": "PROD SUMO DE LIMAO",
+     "um_catalogo": "LITRO"
     },
     {
      "ingrediente": "ÁGUA CACHOEIRINHA",
@@ -398,8 +422,11 @@
      "un": "ml",
      "tipo": "intermediario",
      "intermediario": "PROD REDUCAO DE MARACUJA",
-     "divisor": null,
-     "status": "intermediario_sem_cadastro"
+     "divisor": 1000,
+     "status": "ok",
+     "item_id": "prod_reducao_de_maracuja",
+     "item_everest": "PROD REDUCAO DE MARACUJA",
+     "um_catalogo": "LITRO"
     },
     {
      "ingrediente": "SUMO DE LIMÃO",
@@ -407,8 +434,11 @@
      "un": "ml",
      "tipo": "intermediario",
      "intermediario": "PROD SUMO DE LIMAO",
-     "divisor": null,
-     "status": "intermediario_sem_cadastro"
+     "divisor": 1000,
+     "status": "ok",
+     "item_id": "prod_sumo_de_limao",
+     "item_everest": "PROD SUMO DE LIMAO",
+     "um_catalogo": "LITRO"
     },
     {
      "ingrediente": "GIN",
@@ -502,8 +532,11 @@
      "un": "ml",
      "tipo": "intermediario",
      "intermediario": "PROD REDUCAO DE CHA MATE",
-     "divisor": null,
-     "status": "intermediario_sem_cadastro"
+     "divisor": 1000,
+     "status": "ok",
+     "item_id": "prod_reducao_de_cha_mate",
+     "item_everest": "PROD REDUCAO DE CHA MATE",
+     "um_catalogo": "LITRO"
     },
     {
      "ingrediente": "REDUÇÃO DE GENGIBRE",
@@ -511,8 +544,11 @@
      "un": "ml",
      "tipo": "intermediario",
      "intermediario": "PROD REDUCAO DE GENGIBRE",
-     "divisor": null,
-     "status": "intermediario_sem_cadastro"
+     "divisor": 1000,
+     "status": "ok",
+     "item_id": "prod_reducao_de_gengibre",
+     "item_everest": "PROD REDUCAO DE GENGIBRE",
+     "um_catalogo": "LITRO"
     },
     {
      "ingrediente": "SUMO DE LIMÃO",
@@ -520,8 +556,11 @@
      "un": "ml",
      "tipo": "intermediario",
      "intermediario": "PROD SUMO DE LIMAO",
-     "divisor": null,
-     "status": "intermediario_sem_cadastro"
+     "divisor": 1000,
+     "status": "ok",
+     "item_id": "prod_sumo_de_limao",
+     "item_everest": "PROD SUMO DE LIMAO",
+     "um_catalogo": "LITRO"
     }
    ]
   },
@@ -574,8 +613,9 @@
      "item_id": "hort_laranja_kg",
      "item_everest": "HORT LARANJA KG",
      "um_catalogo": "KG",
-     "divisor": null,
-     "status": "indefinido"
+     "divisor": 398.40637450199205,
+     "status": "ok",
+     "fonte_fator": "almanaque Sucos Naturais: 753g de laranja rendem 300ml"
     },
     {
      "ingrediente": "XAROPE SIMPLES",
@@ -583,19 +623,24 @@
      "un": "ml",
      "tipo": "intermediario",
      "intermediario": "PROD XAROPE SIMPLES",
-     "divisor": null,
-     "status": "intermediario_sem_cadastro"
+     "divisor": 1000,
+     "status": "ok",
+     "item_id": "prod_xarope_simples",
+     "item_everest": "PROD XAROPE SIMPLES",
+     "um_catalogo": "LITRO"
     },
     {
      "ingrediente": "ABACAXI",
      "qtd": 150.0,
-     "un": "ml",
+     "un": "g",
      "tipo": "estoque",
      "item_id": "hort_abacaxi",
      "item_everest": "HORT ABACAXI",
      "um_catalogo": "UNID",
      "divisor": null,
-     "status": "falta_ml_por_unidade"
+     "status": "falta_ml_por_unidade",
+     "un_original": "ml",
+     "correcao_proposta": "solido medido em ml na ficha; tratado como g"
     },
     {
      "ingrediente": "UVA FATIADA",
@@ -616,8 +661,9 @@
      "item_id": "hort_morango_bandeja",
      "item_everest": "HORT MORANGO BANDEJA",
      "um_catalogo": "UNID",
-     "divisor": null,
-     "status": "falta_g_por_unidade"
+     "divisor": 300.0,
+     "status": "ok",
+     "fonte_fator": "peso da embalagem declarado na NF MM"
     },
     {
      "ingrediente": "ÁGUA CACHOEIRINHA",
@@ -692,8 +738,9 @@
      "item_id": "hort_laranja_kg",
      "item_everest": "HORT LARANJA KG",
      "um_catalogo": "KG",
-     "divisor": null,
-     "status": "indefinido"
+     "divisor": 398.40637450199205,
+     "status": "ok",
+     "fonte_fator": "almanaque Sucos Naturais: 753g de laranja rendem 300ml"
     },
     {
      "ingrediente": "XAROPE SIMPLES",
@@ -701,19 +748,24 @@
      "un": "ml",
      "tipo": "intermediario",
      "intermediario": "PROD XAROPE SIMPLES",
-     "divisor": null,
-     "status": "intermediario_sem_cadastro"
+     "divisor": 1000,
+     "status": "ok",
+     "item_id": "prod_xarope_simples",
+     "item_everest": "PROD XAROPE SIMPLES",
+     "um_catalogo": "LITRO"
     },
     {
      "ingrediente": "ABACAXI",
      "qtd": 50.0,
-     "un": "ml",
+     "un": "g",
      "tipo": "estoque",
      "item_id": "hort_abacaxi",
      "item_everest": "HORT ABACAXI",
      "um_catalogo": "UNID",
      "divisor": null,
-     "status": "falta_ml_por_unidade"
+     "status": "falta_ml_por_unidade",
+     "un_original": "ml",
+     "correcao_proposta": "solido medido em ml na ficha; tratado como g"
     },
     {
      "ingrediente": "UVA FATIADA",
@@ -734,8 +786,9 @@
      "item_id": "hort_morango_bandeja",
      "item_everest": "HORT MORANGO BANDEJA",
      "um_catalogo": "UNID",
-     "divisor": null,
-     "status": "falta_g_por_unidade"
+     "divisor": 300.0,
+     "status": "ok",
+     "fonte_fator": "peso da embalagem declarado na NF MM"
     },
     {
      "ingrediente": "ÁGUA CACHOEIRINHA",
@@ -775,8 +828,11 @@
      "un": "ml",
      "tipo": "intermediario",
      "intermediario": "PROD SUMO DE LIMAO",
-     "divisor": null,
-     "status": "intermediario_sem_cadastro"
+     "divisor": 1000,
+     "status": "ok",
+     "item_id": "prod_sumo_de_limao",
+     "item_everest": "PROD SUMO DE LIMAO",
+     "um_catalogo": "LITRO"
     },
     {
      "ingrediente": "SAL",
@@ -924,8 +980,11 @@
      "un": "ml",
      "tipo": "intermediario",
      "intermediario": "PROD REDUCAO DE PIMENTA ROSA",
-     "divisor": null,
-     "status": "intermediario_sem_cadastro"
+     "divisor": 1000,
+     "status": "ok",
+     "item_id": "prod_reducao_de_pimenta_rosa",
+     "item_everest": "PROD REDUCAO DE PIMENTA ROSA",
+     "um_catalogo": "LITRO"
     },
     {
      "ingrediente": "SUMO DE LIMÃO",
@@ -933,8 +992,11 @@
      "un": "ml",
      "tipo": "intermediario",
      "intermediario": "PROD SUMO DE LIMAO",
-     "divisor": null,
-     "status": "intermediario_sem_cadastro"
+     "divisor": 1000,
+     "status": "ok",
+     "item_id": "prod_sumo_de_limao",
+     "item_everest": "PROD SUMO DE LIMAO",
+     "um_catalogo": "LITRO"
     },
     {
      "ingrediente": "ÁGUA TÔNICA",
@@ -1074,8 +1136,9 @@
      "item_id": "hort_morango_bandeja",
      "item_everest": "HORT MORANGO BANDEJA",
      "um_catalogo": "UNID",
-     "divisor": null,
-     "status": "falta_g_por_unidade"
+     "divisor": 300.0,
+     "status": "ok",
+     "fonte_fator": "peso da embalagem declarado na NF MM"
     },
     {
      "ingrediente": "ÁGUA TÔNICA",
@@ -1126,8 +1189,11 @@
      "un": "ml",
      "tipo": "intermediario",
      "intermediario": "PROD REDUCAO DE GENGIBRE",
-     "divisor": null,
-     "status": "intermediario_sem_cadastro"
+     "divisor": 1000,
+     "status": "ok",
+     "item_id": "prod_reducao_de_gengibre",
+     "item_everest": "PROD REDUCAO DE GENGIBRE",
+     "um_catalogo": "LITRO"
     },
     {
      "ingrediente": "SUMO DE LIMÃO",
@@ -1135,8 +1201,11 @@
      "un": "ml",
      "tipo": "intermediario",
      "intermediario": "PROD SUMO DE LIMAO",
-     "divisor": null,
-     "status": "intermediario_sem_cadastro"
+     "divisor": 1000,
+     "status": "ok",
+     "item_id": "prod_sumo_de_limao",
+     "item_everest": "PROD SUMO DE LIMAO",
+     "um_catalogo": "LITRO"
     },
     {
      "ingrediente": "CHOPP / CERVEJA",
@@ -1155,8 +1224,11 @@
      "un": "ml",
      "tipo": "intermediario",
      "intermediario": "PROD ESPUMA DE GENGIBRE",
-     "divisor": null,
-     "status": "intermediario_sem_cadastro"
+     "divisor": 1000,
+     "status": "ok",
+     "item_id": "prod_espuma_de_gengibre",
+     "item_everest": "PROD ESPUMA DE GENGIBRE",
+     "um_catalogo": "LITRO"
     },
     {
      "ingrediente": "HORTELÃ",
@@ -1196,8 +1268,11 @@
      "un": "ml",
      "tipo": "intermediario",
      "intermediario": "PROD REDUCAO DE PIMENTA ROSA",
-     "divisor": null,
-     "status": "intermediario_sem_cadastro"
+     "divisor": 1000,
+     "status": "ok",
+     "item_id": "prod_reducao_de_pimenta_rosa",
+     "item_everest": "PROD REDUCAO DE PIMENTA ROSA",
+     "um_catalogo": "LITRO"
     },
     {
      "ingrediente": "SUMO DE LIMÃO",
@@ -1205,8 +1280,11 @@
      "un": "ml",
      "tipo": "intermediario",
      "intermediario": "PROD SUMO DE LIMAO",
-     "divisor": null,
-     "status": "intermediario_sem_cadastro"
+     "divisor": 1000,
+     "status": "ok",
+     "item_id": "prod_sumo_de_limao",
+     "item_everest": "PROD SUMO DE LIMAO",
+     "um_catalogo": "LITRO"
     },
     {
      "ingrediente": "ESPUMA DE GENGIBRE",
@@ -1214,8 +1292,11 @@
      "un": "g",
      "tipo": "intermediario",
      "intermediario": "PROD ESPUMA DE GENGIBRE",
-     "divisor": null,
-     "status": "intermediario_sem_cadastro"
+     "divisor": 1000,
+     "status": "ok",
+     "item_id": "prod_espuma_de_gengibre",
+     "item_everest": "PROD ESPUMA DE GENGIBRE",
+     "um_catalogo": "LITRO"
     },
     {
      "ingrediente": "PIMENTA ROSA",
@@ -1255,8 +1336,11 @@
      "un": "ml",
      "tipo": "intermediario",
      "intermediario": "PROD REDUCAO DE AMORA",
-     "divisor": null,
-     "status": "intermediario_sem_cadastro"
+     "divisor": 1000,
+     "status": "ok",
+     "item_id": "prod_reducao_de_amora",
+     "item_everest": "PROD REDUCAO DE AMORA",
+     "um_catalogo": "LITRO"
     },
     {
      "ingrediente": "REDUÇÃO DE GENGIBRE",
@@ -1264,8 +1348,11 @@
      "un": "ml",
      "tipo": "intermediario",
      "intermediario": "PROD REDUCAO DE GENGIBRE",
-     "divisor": null,
-     "status": "intermediario_sem_cadastro"
+     "divisor": 1000,
+     "status": "ok",
+     "item_id": "prod_reducao_de_gengibre",
+     "item_everest": "PROD REDUCAO DE GENGIBRE",
+     "um_catalogo": "LITRO"
     },
     {
      "ingrediente": "SUMO LIMÃO",
@@ -1273,8 +1360,11 @@
      "un": "ml",
      "tipo": "intermediario",
      "intermediario": "PROD SUMO DE LIMAO",
-     "divisor": null,
-     "status": "intermediario_sem_cadastro"
+     "divisor": 1000,
+     "status": "ok",
+     "item_id": "prod_sumo_de_limao",
+     "item_everest": "PROD SUMO DE LIMAO",
+     "um_catalogo": "LITRO"
     },
     {
      "ingrediente": "ESPUMA DE GENGIBRE",
@@ -1282,8 +1372,11 @@
      "un": "ml",
      "tipo": "intermediario",
      "intermediario": "PROD ESPUMA DE GENGIBRE",
-     "divisor": null,
-     "status": "intermediario_sem_cadastro"
+     "divisor": 1000,
+     "status": "ok",
+     "item_id": "prod_espuma_de_gengibre",
+     "item_everest": "PROD ESPUMA DE GENGIBRE",
+     "um_catalogo": "LITRO"
     },
     {
      "ingrediente": "CANELA PÓ",
@@ -1345,8 +1438,11 @@
      "un": "ml",
      "tipo": "intermediario",
      "intermediario": "PROD XAROPE SIMPLES",
-     "divisor": null,
-     "status": "intermediario_sem_cadastro"
+     "divisor": 1000,
+     "status": "ok",
+     "item_id": "prod_xarope_simples",
+     "item_everest": "PROD XAROPE SIMPLES",
+     "um_catalogo": "LITRO"
     },
     {
      "ingrediente": "SUMO LIMÃO",
@@ -1354,8 +1450,11 @@
      "un": "ml",
      "tipo": "intermediario",
      "intermediario": "PROD SUMO DE LIMAO",
-     "divisor": null,
-     "status": "intermediario_sem_cadastro"
+     "divisor": 1000,
+     "status": "ok",
+     "item_id": "prod_sumo_de_limao",
+     "item_everest": "PROD SUMO DE LIMAO",
+     "um_catalogo": "LITRO"
     },
     {
      "ingrediente": "SAL",
@@ -1406,8 +1505,11 @@
      "un": "ml",
      "tipo": "intermediario",
      "intermediario": "PROD XAROPE SIMPLES",
-     "divisor": null,
-     "status": "intermediario_sem_cadastro"
+     "divisor": 1000,
+     "status": "ok",
+     "item_id": "prod_xarope_simples",
+     "item_everest": "PROD XAROPE SIMPLES",
+     "um_catalogo": "LITRO"
     },
     {
      "ingrediente": "HORTELÃ",
@@ -1531,13 +1633,15 @@
     {
      "ingrediente": "LARANJA BAHIA",
      "qtd": 15.0,
-     "un": "ml",
+     "un": "g",
      "tipo": "estoque",
      "item_id": "hort_laranja_bahia_kg",
      "item_everest": "HORT LARANJA BAHIA KG",
      "um_catalogo": "KG",
-     "divisor": null,
-     "status": "indefinido"
+     "divisor": 1000,
+     "status": "ok",
+     "un_original": "ml",
+     "correcao_proposta": "solido medido em ml na ficha; tratado como g"
     },
     {
      "ingrediente": "CRAVO",
@@ -1577,8 +1681,11 @@
      "un": "ml",
      "tipo": "intermediario",
      "intermediario": "PROD SUMO DE LIMAO",
-     "divisor": null,
-     "status": "intermediario_sem_cadastro"
+     "divisor": 1000,
+     "status": "ok",
+     "item_id": "prod_sumo_de_limao",
+     "item_everest": "PROD SUMO DE LIMAO",
+     "um_catalogo": "LITRO"
     },
     {
      "ingrediente": "ÁGUA CACHOEIRINHA",
@@ -1631,8 +1738,9 @@
      "item_id": "hort_morango_bandeja",
      "item_everest": "HORT MORANGO BANDEJA",
      "um_catalogo": "UNID",
-     "divisor": null,
-     "status": "falta_g_por_unidade"
+     "divisor": 300.0,
+     "status": "ok",
+     "fonte_fator": "peso da embalagem declarado na NF MM"
     },
     {
      "ingrediente": "UVA",
@@ -1651,8 +1759,11 @@
      "un": "ml",
      "tipo": "intermediario",
      "intermediario": "PROD REDUCAO DE HIBISCO",
-     "divisor": null,
-     "status": "intermediario_sem_cadastro"
+     "divisor": 1000,
+     "status": "ok",
+     "item_id": "prod_reducao_de_hibisco",
+     "item_everest": "PROD REDUCAO DE HIBISCO",
+     "um_catalogo": "LITRO"
     },
     {
      "ingrediente": "XAROPE GRENADINE",
@@ -1725,8 +1836,11 @@
      "un": "ml",
      "tipo": "intermediario",
      "intermediario": "PROD SUMO DE LIMAO",
-     "divisor": null,
-     "status": "intermediario_sem_cadastro"
+     "divisor": 1000,
+     "status": "ok",
+     "item_id": "prod_sumo_de_limao",
+     "item_everest": "PROD SUMO DE LIMAO",
+     "um_catalogo": "LITRO"
     },
     {
      "ingrediente": "RED BULL MELANCIA",
@@ -1777,8 +1891,11 @@
      "un": "ml",
      "tipo": "intermediario",
      "intermediario": "PROD XAROPE SIMPLES",
-     "divisor": null,
-     "status": "intermediario_sem_cadastro"
+     "divisor": 1000,
+     "status": "ok",
+     "item_id": "prod_xarope_simples",
+     "item_everest": "PROD XAROPE SIMPLES",
+     "um_catalogo": "LITRO"
     },
     {
      "ingrediente": "SUMO DE LIMÃO",
@@ -1786,8 +1903,11 @@
      "un": "ml",
      "tipo": "intermediario",
      "intermediario": "PROD SUMO DE LIMAO",
-     "divisor": null,
-     "status": "intermediario_sem_cadastro"
+     "divisor": 1000,
+     "status": "ok",
+     "item_id": "prod_sumo_de_limao",
+     "item_everest": "PROD SUMO DE LIMAO",
+     "um_catalogo": "LITRO"
     },
     {
      "ingrediente": "LICOR DE LARANJA",
@@ -1806,8 +1926,11 @@
      "un": "ml",
      "tipo": "intermediario",
      "intermediario": "PROD ESPUMA DE GENGIBRE",
-     "divisor": null,
-     "status": "intermediario_sem_cadastro"
+     "divisor": 1000,
+     "status": "ok",
+     "item_id": "prod_espuma_de_gengibre",
+     "item_everest": "PROD ESPUMA DE GENGIBRE",
+     "um_catalogo": "LITRO"
     },
     {
      "ingrediente": "SAL",
@@ -1880,8 +2003,11 @@
      "un": "ml",
      "tipo": "intermediario",
      "intermediario": "PROD SUMO DE LIMAO",
-     "divisor": null,
-     "status": "intermediario_sem_cadastro"
+     "divisor": 1000,
+     "status": "ok",
+     "item_id": "prod_sumo_de_limao",
+     "item_everest": "PROD SUMO DE LIMAO",
+     "um_catalogo": "LITRO"
     },
     {
      "ingrediente": "MORANGO LAMINADO",
@@ -1891,8 +2017,9 @@
      "item_id": "hort_morango_bandeja",
      "item_everest": "HORT MORANGO BANDEJA",
      "um_catalogo": "UNID",
-     "divisor": null,
-     "status": "falta_g_por_unidade"
+     "divisor": 300.0,
+     "status": "ok",
+     "fonte_fator": "peso da embalagem declarado na NF MM"
     },
     {
      "ingrediente": "MANJERICÃO",
@@ -1994,13 +2121,15 @@
     {
      "ingrediente": "PEPINO JAPONÊS",
      "qtd": 20.0,
-     "un": "ml",
+     "un": "g",
      "tipo": "estoque",
      "item_id": "hort_pepino_japones_kg",
      "item_everest": "HORT PEPINO JAPONES KG",
      "um_catalogo": "KG",
-     "divisor": null,
-     "status": "indefinido"
+     "divisor": 1000,
+     "status": "ok",
+     "un_original": "ml",
+     "correcao_proposta": "solido medido em ml na ficha; tratado como g"
     },
     {
      "ingrediente": "REDUÇÃO DE HIBISCO",
@@ -2008,8 +2137,11 @@
      "un": "ml",
      "tipo": "intermediario",
      "intermediario": "PROD REDUCAO DE HIBISCO",
-     "divisor": null,
-     "status": "intermediario_sem_cadastro"
+     "divisor": 1000,
+     "status": "ok",
+     "item_id": "prod_reducao_de_hibisco",
+     "item_everest": "PROD REDUCAO DE HIBISCO",
+     "um_catalogo": "LITRO"
     },
     {
      "ingrediente": "SUMO DE LIMÃO",
@@ -2017,8 +2149,11 @@
      "un": "ml",
      "tipo": "intermediario",
      "intermediario": "PROD SUMO DE LIMAO",
-     "divisor": null,
-     "status": "intermediario_sem_cadastro"
+     "divisor": 1000,
+     "status": "ok",
+     "item_id": "prod_sumo_de_limao",
+     "item_everest": "PROD SUMO DE LIMAO",
+     "um_catalogo": "LITRO"
     },
     {
      "ingrediente": "ÁGUA CACHOEIRINHA",
@@ -2047,8 +2182,11 @@
      "un": "ml",
      "tipo": "intermediario",
      "intermediario": "PROD REDUCAO DE MORANGO",
-     "divisor": null,
-     "status": "intermediario_sem_cadastro"
+     "divisor": 1000,
+     "status": "ok",
+     "item_id": "prod_reducao_de_morango",
+     "item_everest": "PROD REDUCAO DE MORANGO",
+     "um_catalogo": "LITRO"
     },
     {
      "ingrediente": "SUMO DE LIMÃO",
@@ -2056,8 +2194,11 @@
      "un": "ml",
      "tipo": "intermediario",
      "intermediario": "PROD SUMO DE LIMAO",
-     "divisor": null,
-     "status": "intermediario_sem_cadastro"
+     "divisor": 1000,
+     "status": "ok",
+     "item_id": "prod_sumo_de_limao",
+     "item_everest": "PROD SUMO DE LIMAO",
+     "um_catalogo": "LITRO"
     },
     {
      "ingrediente": "REDUÇÃO GENGIBRE",
@@ -2065,8 +2206,11 @@
      "un": "ml",
      "tipo": "intermediario",
      "intermediario": "PROD REDUCAO DE GENGIBRE",
-     "divisor": null,
-     "status": "intermediario_sem_cadastro"
+     "divisor": 1000,
+     "status": "ok",
+     "item_id": "prod_reducao_de_gengibre",
+     "item_everest": "PROD REDUCAO DE GENGIBRE",
+     "um_catalogo": "LITRO"
     },
     {
      "ingrediente": "ÁGUA CACHOEIRINHA",
@@ -2106,8 +2250,11 @@
      "un": "ml",
      "tipo": "intermediario",
      "intermediario": "PROD SUMO DE LIMAO",
-     "divisor": null,
-     "status": "intermediario_sem_cadastro"
+     "divisor": 1000,
+     "status": "ok",
+     "item_id": "prod_sumo_de_limao",
+     "item_everest": "PROD SUMO DE LIMAO",
+     "um_catalogo": "LITRO"
     },
     {
      "ingrediente": "ÁGUA CACHOEIRINHA",
@@ -2122,14 +2269,15 @@
     },
     {
      "ingrediente": "MACA VERDE 15g (2 laminas)",
-     "qtd": null,
-     "un": null,
+     "qtd": 15.0,
+     "un": "g",
      "tipo": "estoque",
      "item_id": "hort_maca_verde_kg",
      "item_everest": "HORT MACA VERDE KG",
      "um_catalogo": "KG",
-     "divisor": null,
-     "status": "indefinido"
+     "divisor": 1000,
+     "status": "ok",
+     "correcao_proposta": "qtd lida da descricao '15g (2 laminas)'"
     }
    ]
   },
@@ -2171,8 +2319,9 @@
      "item_id": "hort_morango_bandeja",
      "item_everest": "HORT MORANGO BANDEJA",
      "um_catalogo": "UNID",
-     "divisor": null,
-     "status": "falta_g_por_unidade"
+     "divisor": 300.0,
+     "status": "ok",
+     "fonte_fator": "peso da embalagem declarado na NF MM"
     },
     {
      "ingrediente": "UVA FATIADA",
@@ -2225,8 +2374,9 @@
      "item_id": "hort_morango_bandeja",
      "item_everest": "HORT MORANGO BANDEJA",
      "um_catalogo": "UNID",
-     "divisor": null,
-     "status": "falta_g_por_unidade"
+     "divisor": 300.0,
+     "status": "ok",
+     "fonte_fator": "peso da embalagem declarado na NF MM"
     }
    ]
   },
@@ -2255,8 +2405,11 @@
      "un": "ml",
      "tipo": "intermediario",
      "intermediario": "PROD REDUCAO DE MARACUJA",
-     "divisor": null,
-     "status": "intermediario_sem_cadastro"
+     "divisor": 1000,
+     "status": "ok",
+     "item_id": "prod_reducao_de_maracuja",
+     "item_everest": "PROD REDUCAO DE MARACUJA",
+     "um_catalogo": "LITRO"
     },
     {
      "ingrediente": "SUMO DE LIMÃO",
@@ -2264,8 +2417,11 @@
      "un": "ml",
      "tipo": "intermediario",
      "intermediario": "PROD SUMO DE LIMAO",
-     "divisor": null,
-     "status": "intermediario_sem_cadastro"
+     "divisor": 1000,
+     "status": "ok",
+     "item_id": "prod_sumo_de_limao",
+     "item_everest": "PROD SUMO DE LIMAO",
+     "um_catalogo": "LITRO"
     },
     {
      "ingrediente": "REDUÇÃO DE GENGIBRE",
@@ -2273,8 +2429,11 @@
      "un": "ml",
      "tipo": "intermediario",
      "intermediario": "PROD REDUCAO DE GENGIBRE",
-     "divisor": null,
-     "status": "intermediario_sem_cadastro"
+     "divisor": 1000,
+     "status": "ok",
+     "item_id": "prod_reducao_de_gengibre",
+     "item_everest": "PROD REDUCAO DE GENGIBRE",
+     "um_catalogo": "LITRO"
     },
     {
      "ingrediente": "LICOR DE LARANJA",
@@ -2293,8 +2452,11 @@
      "un": "ml",
      "tipo": "intermediario",
      "intermediario": "PROD ESPUMA DE GENGIBRE",
-     "divisor": null,
-     "status": "intermediario_sem_cadastro"
+     "divisor": 1000,
+     "status": "ok",
+     "item_id": "prod_espuma_de_gengibre",
+     "item_everest": "PROD ESPUMA DE GENGIBRE",
+     "um_catalogo": "LITRO"
     }
    ]
   },
@@ -2312,8 +2474,11 @@
      "un": "ml",
      "tipo": "intermediario",
      "intermediario": "PROD REDUCAO DE AMORA",
-     "divisor": null,
-     "status": "intermediario_sem_cadastro"
+     "divisor": 1000,
+     "status": "ok",
+     "item_id": "prod_reducao_de_amora",
+     "item_everest": "PROD REDUCAO DE AMORA",
+     "um_catalogo": "LITRO"
     },
     {
      "ingrediente": "SUMO DE LIMAO",
@@ -2321,8 +2486,11 @@
      "un": "ml",
      "tipo": "intermediario",
      "intermediario": "PROD SUMO DE LIMAO",
-     "divisor": null,
-     "status": "intermediario_sem_cadastro"
+     "divisor": 1000,
+     "status": "ok",
+     "item_id": "prod_sumo_de_limao",
+     "item_everest": "PROD SUMO DE LIMAO",
+     "um_catalogo": "LITRO"
     },
     {
      "ingrediente": "ELDERFLOWER",
@@ -2373,8 +2541,11 @@
      "un": "ml",
      "tipo": "intermediario",
      "intermediario": "PROD REDUCAO DE PIMENTA ROSA",
-     "divisor": null,
-     "status": "intermediario_sem_cadastro"
+     "divisor": 1000,
+     "status": "ok",
+     "item_id": "prod_reducao_de_pimenta_rosa",
+     "item_everest": "PROD REDUCAO DE PIMENTA ROSA",
+     "um_catalogo": "LITRO"
     },
     {
      "ingrediente": "HORTELA",
@@ -2425,8 +2596,11 @@
      "un": "ml",
      "tipo": "intermediario",
      "intermediario": "PROD SUMO DE LIMAO",
-     "divisor": null,
-     "status": "intermediario_sem_cadastro"
+     "divisor": 1000,
+     "status": "ok",
+     "item_id": "prod_sumo_de_limao",
+     "item_everest": "PROD SUMO DE LIMAO",
+     "um_catalogo": "LITRO"
     },
     {
      "ingrediente": "XAROPE SIMPLES",
@@ -2434,8 +2608,11 @@
      "un": "ml",
      "tipo": "intermediario",
      "intermediario": "PROD XAROPE SIMPLES",
-     "divisor": null,
-     "status": "intermediario_sem_cadastro"
+     "divisor": 1000,
+     "status": "ok",
+     "item_id": "prod_xarope_simples",
+     "item_everest": "PROD XAROPE SIMPLES",
+     "um_catalogo": "LITRO"
     },
     {
      "ingrediente": "CLARA DE OVO",

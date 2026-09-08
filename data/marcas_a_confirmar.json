@@ -1,0 +1,89 @@
+{
+ "observacao": "proposta do Claude; Bruno confirma ou corrige",
+ "marcas": {
+  "GIN": {
+   "proposto": "DEST GIN LARIOS",
+   "opcoes_no_catalogo": [
+    "DEST GIN BEEFEATER",
+    "DEST GIN LARIOS"
+   ]
+  },
+  "VODKA / VODKA NACIONAL": {
+   "proposto": "DEST VODKA SMIRNOFF",
+   "opcoes_no_catalogo": [
+    "DEST VODKA ABSOLUT",
+    "DEST VODKA SMIRNOFF"
+   ]
+  },
+  "CACHACA BRANCA": {
+   "proposto": "DEST CACHACA SALINISSIMA PRATA",
+   "opcoes_no_catalogo": [
+    "DEST CACHACA GERMANA",
+    "DEST CACHACA SAGATIBA PURA",
+    "DEST CACHACA SALINISSIMA OURO",
+    "DEST CACHACA SALINISSIMA PRATA",
+    "DEST CACHACA VALE VERDE"
+   ]
+  },
+  "WHISKY BOURBON": {
+   "proposto": "DEST WHISKY JIM BEAM BOURBON",
+   "opcoes_no_catalogo": [
+    "DEST WHISKY JIM BEAM BOURBON",
+    "DEST WHISKY RED LABEL",
+    "DEST WHISKY BLACK LABEL",
+    "DEST WHISKY CHIVAS REGAL",
+    "DEST WHISKY GOLD LABEL",
+    "DEST WHISKY OLD PAR 12 ANOS",
+    "DEST WHISKY BUCHANNANS"
+   ]
+  },
+  "LICOR DE LARANJA": {
+   "proposto": "DEST LICOR STOCK CURACAU",
+   "opcoes_no_catalogo": [
+    "DEST LICOR STOCK CURACAU",
+    "DEST LICOR 43"
+   ]
+  },
+  "ESPUMANTE (e 'ou vinho tinto')": {
+   "proposto": "ESP 1913 SPARKLING BRANCO",
+   "opcoes_no_catalogo": [
+    "ESP 1913 SPARKLING BRANCO",
+    "ESP 1913 BRUT BRANCO 1/4",
+    "ESP VULCANICI BRUT ROSE",
+    "DEST COND FOUCAULD BCO BRUT",
+    "DEST VINHO SANGRIA"
+   ]
+  },
+  "CHOPP / CERVEJA": {
+   "proposto": "BARRIL CHOPP BRAHMA",
+   "opcoes_no_catalogo": [
+    "BARRIL CHOPP BRAHMA",
+    "BARRIL CHOPP ESPECIAL"
+   ]
+  },
+  "CAFE EXPRESSO": {
+   "proposto": "CAFE NESPRESSO RISTRETTO",
+   "opcoes_no_catalogo": [
+    "CAFE NESPRESSO RISTRETTO",
+    "CAFE NESPRESSO LEGGERO",
+    "CAFE NESPRESSO DECAFFEINATO"
+   ]
+  },
+  "SAKE NACIONAL (Tokyo Mule)": {
+   "proposto": "DEST VODKA SMIRNOFF",
+   "opcoes_no_catalogo": [
+    "DEST SAKE AZUMA KIRIN DOURADO",
+    "DEST SAKE GEKKEIKAN"
+   ]
+  },
+  "SAL (borda de taca)": {
+   "proposto": "MP SAL REFINADO",
+   "opcoes_no_catalogo": [
+    "MP SAL REFINADO",
+    "MP SAL ROSA",
+    "MP SAL ROSA GROSSO",
+    "MP FLOR DE SAL"
+   ]
+  }
+ }
+}
