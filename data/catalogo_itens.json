@@ -1,0 +1,4717 @@
+{
+ "loja": "SUDOESTE",
+ "versao_fonte": "Lista de Requisição (10 setores)",
+ "total": 471,
+ "itens": [
+  {
+   "id": "agua_c_gas",
+   "nome_checklist": "AGUA C/ GAS (UNID)",
+   "nome_everest": "AGUA C/ GAS",
+   "setor": "BAR",
+   "subsetor": "BEBIDAS",
+   "unidade": "UNID",
+   "estoque_minimo": 360.0,
+   "prefixo": "AGUA"
+  },
+  {
+   "id": "agua_s_gas",
+   "nome_checklist": "AGUA S/ GAS (UNID)",
+   "nome_everest": "AGUA S/ GAS",
+   "setor": "BAR",
+   "subsetor": "BEBIDAS",
+   "unidade": "UNID",
+   "estoque_minimo": 168.0,
+   "prefixo": "AGUA"
+  },
+  {
+   "id": "barril_chopp_brahma",
+   "nome_checklist": "BARRIL CHOPP BRAHMA (LITRO)",
+   "nome_everest": "BARRIL CHOPP BRAHMA",
+   "setor": "BAR",
+   "subsetor": "BEBIDAS",
+   "unidade": "LITRO",
+   "estoque_minimo": 250.0,
+   "prefixo": "BARRIL"
+  },
+  {
+   "id": "barril_chopp_especial",
+   "nome_checklist": "BARRIL CHOPP ESPECIAL (LITRO)",
+   "nome_everest": "BARRIL CHOPP ESPECIAL",
+   "setor": "BAR",
+   "subsetor": "BEBIDAS",
+   "unidade": "LITRO",
+   "estoque_minimo": 30.0,
+   "prefixo": "BARRIL"
+  },
+  {
+   "id": "cafe_nespresso_decaffeinato",
+   "nome_checklist": "CAFE NESPRESSO DECAFFEINATO (UNID)",
+   "nome_everest": "CAFE NESPRESSO DECAFFEINATO",
+   "setor": "BAR",
+   "subsetor": "BEBIDAS",
+   "unidade": "UNID",
+   "estoque_minimo": 50.0,
+   "prefixo": "CAFE"
+  },
+  {
+   "id": "cafe_nespresso_leggero",
+   "nome_checklist": "CAFE NESPRESSO LEGGERO (UNID)",
+   "nome_everest": "CAFE NESPRESSO LEGGERO",
+   "setor": "BAR",
+   "subsetor": "BEBIDAS",
+   "unidade": "UNID",
+   "estoque_minimo": 100.0,
+   "prefixo": "CAFE"
+  },
+  {
+   "id": "cafe_nespresso_ristretto",
+   "nome_checklist": "CAFE NESPRESSO RISTRETTO (UNID)",
+   "nome_everest": "CAFE NESPRESSO RISTRETTO",
+   "setor": "BAR",
+   "subsetor": "BEBIDAS",
+   "unidade": "UNID",
+   "estoque_minimo": 100.0,
+   "prefixo": "CAFE"
+  },
+  {
+   "id": "cerv_corona_600ml",
+   "nome_checklist": "CERV CORONA 600ML (UNID)",
+   "nome_everest": "CERV CORONA 600ML",
+   "setor": "BAR",
+   "subsetor": "BEBIDAS",
+   "unidade": "UNID",
+   "estoque_minimo": 24.0,
+   "prefixo": "CERV"
+  },
+  {
+   "id": "cerv_original_600ml",
+   "nome_checklist": "CERV ORIGINAL 600ML (UNID)",
+   "nome_everest": "CERV ORIGINAL 600ML",
+   "setor": "BAR",
+   "subsetor": "BEBIDAS",
+   "unidade": "UNID",
+   "estoque_minimo": 36.0,
+   "prefixo": "CERV"
+  },
+  {
+   "id": "cerv_patagonia_740ml",
+   "nome_checklist": "CERV PATAGONIA 740ML (UNID)",
+   "nome_everest": "CERV PATAGONIA 740ML",
+   "setor": "BAR",
+   "subsetor": "BEBIDAS",
+   "unidade": "UNID",
+   "estoque_minimo": 30.0,
+   "prefixo": "CERV"
+  },
+  {
+   "id": "cerv_spaten_600ml",
+   "nome_checklist": "CERV SPATEN 600ML (UNID)",
+   "nome_everest": "CERV SPATEN 600ML",
+   "setor": "BAR",
+   "subsetor": "BEBIDAS",
+   "unidade": "UNID",
+   "estoque_minimo": 36.0,
+   "prefixo": "CERV"
+  },
+  {
+   "id": "cerv_stella_artois_600ml",
+   "nome_checklist": "CERV STELLA ARTOIS 600ML (UNID)",
+   "nome_everest": "CERV STELLA ARTOIS 600ML",
+   "setor": "BAR",
+   "subsetor": "BEBIDAS",
+   "unidade": "UNID",
+   "estoque_minimo": 48.0,
+   "prefixo": "CERV"
+  },
+  {
+   "id": "dest_aperol",
+   "nome_checklist": "DEST APEROL (LITRO)",
+   "nome_everest": "DEST APEROL",
+   "setor": "BAR",
+   "subsetor": "BEBIDAS",
+   "unidade": "LITRO",
+   "estoque_minimo": 5.25,
+   "prefixo": "DEST"
+  },
+  {
+   "id": "dest_cachaca_germana",
+   "nome_checklist": "DEST CACHACA GERMANA (LITRO)",
+   "nome_everest": "DEST CACHACA GERMANA",
+   "setor": "BAR",
+   "subsetor": "BEBIDAS",
+   "unidade": "LITRO",
+   "estoque_minimo": 1.0,
+   "prefixo": "DEST"
+  },
+  {
+   "id": "dest_cachaca_sagatiba_pura",
+   "nome_checklist": "DEST CACHACA SAGATIBA PURA (LITRO)",
+   "nome_everest": "DEST CACHACA SAGATIBA PURA",
+   "setor": "BAR",
+   "subsetor": "BEBIDAS",
+   "unidade": "LITRO",
+   "estoque_minimo": 7.0,
+   "prefixo": "DEST"
+  },
+  {
+   "id": "dest_cachaca_salinissima_ouro",
+   "nome_checklist": "DEST CACHACA SALINISSIMA OURO (LITRO)",
+   "nome_everest": "DEST CACHACA SALINISSIMA OURO",
+   "setor": "BAR",
+   "subsetor": "BEBIDAS",
+   "unidade": "LITRO",
+   "estoque_minimo": 2.68,
+   "prefixo": "DEST"
+  },
+  {
+   "id": "dest_cachaca_salinissima_prata",
+   "nome_checklist": "DEST CACHACA SALINISSIMA PRATA (LITRO)",
+   "nome_everest": "DEST CACHACA SALINISSIMA PRATA",
+   "setor": "BAR",
+   "subsetor": "BEBIDAS",
+   "unidade": "LITRO",
+   "estoque_minimo": 2.68,
+   "prefixo": "DEST"
+  },
+  {
+   "id": "dest_cachaca_vale_verde",
+   "nome_checklist": "DEST CACHACA VALE VERDE (LITRO)",
+   "nome_everest": "DEST CACHACA VALE VERDE",
+   "setor": "BAR",
+   "subsetor": "BEBIDAS",
+   "unidade": "LITRO",
+   "estoque_minimo": 0.7,
+   "prefixo": "DEST"
+  },
+  {
+   "id": "dest_campari",
+   "nome_checklist": "DEST CAMPARI (LITRO)",
+   "nome_everest": "DEST CAMPARI",
+   "setor": "BAR",
+   "subsetor": "BEBIDAS",
+   "unidade": "LITRO",
+   "estoque_minimo": 1.8,
+   "prefixo": "DEST"
+  },
+  {
+   "id": "dest_cond_foucauld_bco_brut",
+   "nome_checklist": "DEST COND FOUCAULD BCO BRUT (LITRO)",
+   "nome_everest": "DEST COND FOUCAULD BCO BRUT",
+   "setor": "BAR",
+   "subsetor": "BEBIDAS",
+   "unidade": "LITRO",
+   "estoque_minimo": 9.0,
+   "prefixo": "DEST"
+  },
+  {
+   "id": "dest_gin_beefeater",
+   "nome_checklist": "DEST GIN BEEFEATER (LITRO)",
+   "nome_everest": "DEST GIN BEEFEATER",
+   "setor": "BAR",
+   "subsetor": "BEBIDAS",
+   "unidade": "LITRO",
+   "estoque_minimo": 0.75,
+   "prefixo": "DEST"
+  },
+  {
+   "id": "dest_gin_larios",
+   "nome_checklist": "DEST GIN LARIOS (LITRO)",
+   "nome_everest": "DEST GIN LARIOS",
+   "setor": "BAR",
+   "subsetor": "BEBIDAS",
+   "unidade": "LITRO",
+   "estoque_minimo": 9.1,
+   "prefixo": "DEST"
+  },
+  {
+   "id": "dest_licor_43",
+   "nome_checklist": "DEST LICOR 43 (LITRO)",
+   "nome_everest": "DEST LICOR 43",
+   "setor": "BAR",
+   "subsetor": "BEBIDAS",
+   "unidade": "LITRO",
+   "estoque_minimo": 1.4,
+   "prefixo": "DEST"
+  },
+  {
+   "id": "dest_licor_baileys",
+   "nome_checklist": "DEST LICOR BAILEYS (LITRO)",
+   "nome_everest": "DEST LICOR BAILEYS",
+   "setor": "BAR",
+   "subsetor": "BEBIDAS",
+   "unidade": "LITRO",
+   "estoque_minimo": 1.5,
+   "prefixo": "DEST"
+  },
+  {
+   "id": "dest_licor_stock_curacau",
+   "nome_checklist": "DEST LICOR STOCK CURACAU (LITRO)",
+   "nome_everest": "DEST LICOR STOCK CURACAU",
+   "setor": "BAR",
+   "subsetor": "BEBIDAS",
+   "unidade": "LITRO",
+   "estoque_minimo": 1.44,
+   "prefixo": "DEST"
+  },
+  {
+   "id": "dest_martini_rosso",
+   "nome_checklist": "DEST MARTINI ROSSO (LITRO)",
+   "nome_everest": "DEST MARTINI ROSSO",
+   "setor": "BAR",
+   "subsetor": "BEBIDAS",
+   "unidade": "LITRO",
+   "estoque_minimo": 1.5,
+   "prefixo": "DEST"
+  },
+  {
+   "id": "dest_montila",
+   "nome_checklist": "DEST MONTILA (LITRO)",
+   "nome_everest": "DEST MONTILA",
+   "setor": "BAR",
+   "subsetor": "BEBIDAS",
+   "unidade": "LITRO",
+   "estoque_minimo": 2.0,
+   "prefixo": "DEST"
+  },
+  {
+   "id": "dest_sake_azuma_kirin_dourado",
+   "nome_checklist": "DEST SAKE AZUMA KIRIN DOURADO (LITRO)",
+   "nome_everest": "DEST SAKE AZUMA KIRIN DOURADO",
+   "setor": "BAR",
+   "subsetor": "BEBIDAS",
+   "unidade": "LITRO",
+   "estoque_minimo": 8.879999999999999,
+   "prefixo": "DEST"
+  },
+  {
+   "id": "dest_sake_gekkeikan",
+   "nome_checklist": "DEST SAKE GEKKEIKAN (LITRO)",
+   "nome_everest": "DEST SAKE GEKKEIKAN",
+   "setor": "BAR",
+   "subsetor": "BEBIDAS",
+   "unidade": "LITRO",
+   "estoque_minimo": 3.0,
+   "prefixo": "DEST"
+  },
+  {
+   "id": "dest_tequila_jose_prata",
+   "nome_checklist": "DEST TEQUILA JOSE PRATA (LITRO)",
+   "nome_everest": "DEST TEQUILA JOSE PRATA",
+   "setor": "BAR",
+   "subsetor": "BEBIDAS",
+   "unidade": "LITRO",
+   "estoque_minimo": 1.5,
+   "prefixo": "DEST"
+  },
+  {
+   "id": "dest_vinho_sangria",
+   "nome_checklist": "DEST VINHO SANGRIA (LITRO)",
+   "nome_everest": "DEST VINHO SANGRIA",
+   "setor": "BAR",
+   "subsetor": "BEBIDAS",
+   "unidade": "LITRO",
+   "estoque_minimo": 5.0,
+   "prefixo": "DEST"
+  },
+  {
+   "id": "dest_vodka_absolut",
+   "nome_checklist": "DEST VODKA ABSOLUT (LITRO)",
+   "nome_everest": "DEST VODKA ABSOLUT",
+   "setor": "BAR",
+   "subsetor": "BEBIDAS",
+   "unidade": "LITRO",
+   "estoque_minimo": 3.0,
+   "prefixo": "DEST"
+  },
+  {
+   "id": "dest_vodka_smirnoff",
+   "nome_checklist": "DEST VODKA SMIRNOFF (LITRO)",
+   "nome_everest": "DEST VODKA SMIRNOFF",
+   "setor": "BAR",
+   "subsetor": "BEBIDAS",
+   "unidade": "LITRO",
+   "estoque_minimo": 0.998,
+   "prefixo": "DEST"
+  },
+  {
+   "id": "dest_whisky_black_label",
+   "nome_checklist": "DEST WHISKY BLACK LABEL (LITRO)",
+   "nome_everest": "DEST WHISKY BLACK LABEL",
+   "setor": "BAR",
+   "subsetor": "BEBIDAS",
+   "unidade": "LITRO",
+   "estoque_minimo": 2.0,
+   "prefixo": "DEST"
+  },
+  {
+   "id": "dest_whisky_buchannans",
+   "nome_checklist": "DEST WHISKY BUCHANNANS (LITRO)",
+   "nome_everest": "DEST WHISKY BUCHANNANS",
+   "setor": "BAR",
+   "subsetor": "BEBIDAS",
+   "unidade": "LITRO",
+   "estoque_minimo": 2.0,
+   "prefixo": "DEST"
+  },
+  {
+   "id": "dest_whisky_chivas_regal",
+   "nome_checklist": "DEST WHISKY CHIVAS REGAL (LITRO)",
+   "nome_everest": "DEST WHISKY CHIVAS REGAL",
+   "setor": "BAR",
+   "subsetor": "BEBIDAS",
+   "unidade": "LITRO",
+   "estoque_minimo": 2.0,
+   "prefixo": "DEST"
+  },
+  {
+   "id": "dest_whisky_gold_label",
+   "nome_checklist": "DEST WHISKY GOLD LABEL (LITRO)",
+   "nome_everest": "DEST WHISKY GOLD LABEL",
+   "setor": "BAR",
+   "subsetor": "BEBIDAS",
+   "unidade": "LITRO",
+   "estoque_minimo": 1.5,
+   "prefixo": "DEST"
+  },
+  {
+   "id": "dest_whisky_jim_beam_bourbon",
+   "nome_checklist": "DEST WHISKY JIM BEAM BOURBON (LITRO)",
+   "nome_everest": "DEST WHISKY JIM BEAM BOURBON",
+   "setor": "BAR",
+   "subsetor": "BEBIDAS",
+   "unidade": "LITRO",
+   "estoque_minimo": 2.0,
+   "prefixo": "DEST"
+  },
+  {
+   "id": "dest_whisky_old_par_12_anos",
+   "nome_checklist": "DEST WHISKY OLD PAR 12 ANOS (LITRO)",
+   "nome_everest": "DEST WHISKY OLD PAR 12 ANOS",
+   "setor": "BAR",
+   "subsetor": "BEBIDAS",
+   "unidade": "LITRO",
+   "estoque_minimo": 2.0,
+   "prefixo": "DEST"
+  },
+  {
+   "id": "dest_whisky_red_label",
+   "nome_checklist": "DEST WHISKY RED LABEL (LITRO)",
+   "nome_everest": "DEST WHISKY RED LABEL",
+   "setor": "BAR",
+   "subsetor": "BEBIDAS",
+   "unidade": "LITRO",
+   "estoque_minimo": 2.0,
+   "prefixo": "DEST"
+  },
+  {
+   "id": "longneck_corona",
+   "nome_checklist": "LONGNECK CORONA (UNID)",
+   "nome_everest": "LONGNECK CORONA",
+   "setor": "BAR",
+   "subsetor": "BEBIDAS",
+   "unidade": "UNID",
+   "estoque_minimo": 48.0,
+   "prefixo": "LONGNECK"
+  },
+  {
+   "id": "longneck_corona_zero",
+   "nome_checklist": "LONGNECK CORONA ZERO (UNID)",
+   "nome_everest": "LONGNECK CORONA ZERO",
+   "setor": "BAR",
+   "subsetor": "BEBIDAS",
+   "unidade": "UNID",
+   "estoque_minimo": 48.0,
+   "prefixo": "LONGNECK"
+  },
+  {
+   "id": "longneck_michelob",
+   "nome_checklist": "LONGNECK MICHELOB (UNID)",
+   "nome_everest": "LONGNECK MICHELOB",
+   "setor": "BAR",
+   "subsetor": "BEBIDAS",
+   "unidade": "UNID",
+   "estoque_minimo": 72.0,
+   "prefixo": "LONGNECK"
+  },
+  {
+   "id": "longneck_quilmes",
+   "nome_checklist": "LONGNECK QUILMES (UNID)",
+   "nome_everest": "LONGNECK QUILMES",
+   "setor": "BAR",
+   "subsetor": "BEBIDAS",
+   "unidade": "UNID",
+   "estoque_minimo": 48.0,
+   "prefixo": "LONGNECK"
+  },
+  {
+   "id": "longneck_spaten",
+   "nome_checklist": "LONGNECK SPATEN (UNID)",
+   "nome_everest": "LONGNECK SPATEN",
+   "setor": "BAR",
+   "subsetor": "BEBIDAS",
+   "unidade": "UNID",
+   "estoque_minimo": 48.0,
+   "prefixo": "LONGNECK"
+  },
+  {
+   "id": "longneck_stella_artois",
+   "nome_checklist": "LONGNECK STELLA ARTOIS (UNID)",
+   "nome_everest": "LONGNECK STELLA ARTOIS",
+   "setor": "BAR",
+   "subsetor": "BEBIDAS",
+   "unidade": "UNID",
+   "estoque_minimo": 48.0,
+   "prefixo": "LONGNECK"
+  },
+  {
+   "id": "longneck_stella_pure_gold",
+   "nome_checklist": "LONGNECK STELLA PURE GOLD (UNID)",
+   "nome_everest": "LONGNECK STELLA PURE GOLD",
+   "setor": "BAR",
+   "subsetor": "BEBIDAS",
+   "unidade": "UNID",
+   "estoque_minimo": 48.0,
+   "prefixo": "LONGNECK"
+  },
+  {
+   "id": "mp_agua_cachoeirinha",
+   "nome_checklist": "MP AGUA CACHOEIRINHA (LITRO)",
+   "nome_everest": "MP AGUA CACHOEIRINHA",
+   "setor": "BAR",
+   "subsetor": "BEBIDAS",
+   "unidade": "LITRO",
+   "estoque_minimo": 37.8,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_cha_matte",
+   "nome_checklist": "MP CHA MATTE (UNID)",
+   "nome_everest": "MP CHA MATTE",
+   "setor": "BAR",
+   "subsetor": "BEBIDAS",
+   "unidade": "UNID",
+   "estoque_minimo": 6.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_cha_verde",
+   "nome_checklist": "MP CHA VERDE (UNID)",
+   "nome_everest": "MP CHA VERDE",
+   "setor": "BAR",
+   "subsetor": "BEBIDAS",
+   "unidade": "UNID",
+   "estoque_minimo": 1.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_suco_de_uva",
+   "nome_checklist": "MP SUCO DE UVA (LITRO)",
+   "nome_everest": "MP SUCO DE UVA",
+   "setor": "BAR",
+   "subsetor": "BEBIDAS",
+   "unidade": "LITRO",
+   "estoque_minimo": 16.799999999999997,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_xarope_coco",
+   "nome_checklist": "MP XAROPE COCO (LITRO)",
+   "nome_everest": "MP XAROPE COCO",
+   "setor": "BAR",
+   "subsetor": "BEBIDAS",
+   "unidade": "LITRO",
+   "estoque_minimo": 2.0999999999999996,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_xarope_de_cranberry",
+   "nome_checklist": "MP XAROPE DE CRANBERRY (LITRO)",
+   "nome_everest": "MP XAROPE DE CRANBERRY",
+   "setor": "BAR",
+   "subsetor": "BEBIDAS",
+   "unidade": "LITRO",
+   "estoque_minimo": 8.399999999999999,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_xarope_de_elderflower",
+   "nome_checklist": "MP XAROPE DE ELDERFLOWER (LITRO)",
+   "nome_everest": "MP XAROPE DE ELDERFLOWER",
+   "setor": "BAR",
+   "subsetor": "BEBIDAS",
+   "unidade": "LITRO",
+   "estoque_minimo": 1.4,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_xarope_de_grenadine",
+   "nome_checklist": "MP XAROPE DE GRENADINE (LITRO)",
+   "nome_everest": "MP XAROPE DE GRENADINE",
+   "setor": "BAR",
+   "subsetor": "BEBIDAS",
+   "unidade": "LITRO",
+   "estoque_minimo": 8.399999999999999,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_xarope_de_maca_verde",
+   "nome_checklist": "MP XAROPE DE MACA VERDE (LITRO)",
+   "nome_everest": "MP XAROPE DE MACA VERDE",
+   "setor": "BAR",
+   "subsetor": "BEBIDAS",
+   "unidade": "LITRO",
+   "estoque_minimo": 2.0999999999999996,
+   "prefixo": "MP"
+  },
+  {
+   "id": "ref_agua_tonica",
+   "nome_checklist": "REF AGUA TONICA (UNID)",
+   "nome_everest": "REF AGUA TONICA",
+   "setor": "BAR",
+   "subsetor": "BEBIDAS",
+   "unidade": "UNID",
+   "estoque_minimo": 48.0,
+   "prefixo": "REF"
+  },
+  {
+   "id": "ref_agua_tonica_diet",
+   "nome_checklist": "REF AGUA TONICA DIET (UNID)",
+   "nome_everest": "REF AGUA TONICA DIET",
+   "setor": "BAR",
+   "subsetor": "BEBIDAS",
+   "unidade": "UNID",
+   "estoque_minimo": 48.0,
+   "prefixo": "REF"
+  },
+  {
+   "id": "ref_coca_cola",
+   "nome_checklist": "REF COCA COLA (UNID)",
+   "nome_everest": "REF COCA COLA",
+   "setor": "BAR",
+   "subsetor": "BEBIDAS",
+   "unidade": "UNID",
+   "estoque_minimo": 255.0,
+   "prefixo": "REF"
+  },
+  {
+   "id": "ref_coca_cola_zero",
+   "nome_checklist": "REF COCA COLA ZERO (UNID)",
+   "nome_everest": "REF COCA COLA ZERO",
+   "setor": "BAR",
+   "subsetor": "BEBIDAS",
+   "unidade": "UNID",
+   "estoque_minimo": 516.0,
+   "prefixo": "REF"
+  },
+  {
+   "id": "ref_guarana",
+   "nome_checklist": "REF GUARANA (UNID)",
+   "nome_everest": "REF GUARANA",
+   "setor": "BAR",
+   "subsetor": "BEBIDAS",
+   "unidade": "UNID",
+   "estoque_minimo": 108.0,
+   "prefixo": "REF"
+  },
+  {
+   "id": "ref_guarana_zero",
+   "nome_checklist": "REF GUARANA ZERO (UNID)",
+   "nome_everest": "REF GUARANA ZERO",
+   "setor": "BAR",
+   "subsetor": "BEBIDAS",
+   "unidade": "UNID",
+   "estoque_minimo": 120.0,
+   "prefixo": "REF"
+  },
+  {
+   "id": "ref_h2oh_limao",
+   "nome_checklist": "REF H2OH LIMAO (UNID)",
+   "nome_everest": "REF H2OH LIMAO",
+   "setor": "BAR",
+   "subsetor": "BEBIDAS",
+   "unidade": "UNID",
+   "estoque_minimo": 60.0,
+   "prefixo": "REF"
+  },
+  {
+   "id": "ref_pepsi_black",
+   "nome_checklist": "REF PEPSI BLACK (UNID)",
+   "nome_everest": "REF PEPSI BLACK",
+   "setor": "BAR",
+   "subsetor": "BEBIDAS",
+   "unidade": "UNID",
+   "estoque_minimo": 96.0,
+   "prefixo": "REF"
+  },
+  {
+   "id": "mp_amora_congelada",
+   "nome_checklist": "MP AMORA CONGELADA (KG)",
+   "nome_everest": "MP AMORA CONGELADA",
+   "setor": "BAR",
+   "subsetor": "CONGELADA",
+   "unidade": "KG",
+   "estoque_minimo": 5.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_morango_congelado",
+   "nome_checklist": "MP MORANGO CONGELADO (KG)",
+   "nome_everest": "MP MORANGO CONGELADO",
+   "setor": "BAR",
+   "subsetor": "CONGELADA",
+   "unidade": "KG",
+   "estoque_minimo": 9.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "apv_bolacha_de_chopp",
+   "nome_checklist": "APV BOLACHA DE CHOPP (UNID)",
+   "nome_everest": "APV BOLACHA DE CHOPP",
+   "setor": "BAR",
+   "subsetor": "MATERIAIS DE PRIMEIRO USO",
+   "unidade": "UNID",
+   "estoque_minimo": 100.0,
+   "prefixo": "APV"
+  },
+  {
+   "id": "apv_canudo_fino_caixa",
+   "nome_checklist": "APV CANUDO FINO CAIXA (CAIXA)",
+   "nome_everest": "APV CANUDO FINO CAIXA",
+   "setor": "BAR",
+   "subsetor": "MATERIAIS DE PRIMEIRO USO",
+   "unidade": "UNID",
+   "estoque_minimo": 1.0,
+   "prefixo": "APV"
+  },
+  {
+   "id": "apv_canudo_grosso_bio_caixa",
+   "nome_checklist": "APV CANUDO GROSSO BIO CAIXA (UNID)",
+   "nome_everest": "APV CANUDO GROSSO BIO CAIXA",
+   "setor": "BAR",
+   "subsetor": "MATERIAIS DE PRIMEIRO USO",
+   "unidade": "UNID",
+   "estoque_minimo": 1.0,
+   "prefixo": "APV"
+  },
+  {
+   "id": "apv_capsula_de_gas_caixa",
+   "nome_checklist": "APV CAPSULA DE GAS CAIXA (UNID)",
+   "nome_everest": "APV CAPSULA DE GAS CAIXA",
+   "setor": "BAR",
+   "subsetor": "MATERIAIS DE PRIMEIRO USO",
+   "unidade": "UNID",
+   "estoque_minimo": 3.0,
+   "prefixo": "APV"
+  },
+  {
+   "id": "apv_cilindro_gas_chopp",
+   "nome_checklist": "APV CILINDRO GAS CHOPP (UNID)",
+   "nome_everest": "APV CILINDRO GAS CHOPP",
+   "setor": "BAR",
+   "subsetor": "MATERIAIS DE PRIMEIRO USO",
+   "unidade": "UNID",
+   "estoque_minimo": 2.0,
+   "prefixo": "APV"
+  },
+  {
+   "id": "apv_mexedor_de_cafe_pacote",
+   "nome_checklist": "APV MEXEDOR DE CAFE PACOTE (UNID)",
+   "nome_everest": "APV MEXEDOR DE CAFE PACOTE",
+   "setor": "BAR",
+   "subsetor": "MATERIAIS DE PRIMEIRO USO",
+   "unidade": "UNID",
+   "estoque_minimo": 1.0,
+   "prefixo": "APV"
+  },
+  {
+   "id": "emb_garrafa_delivery",
+   "nome_checklist": "EMB GARRAFA DELIVERY (UNID)",
+   "nome_everest": "EMB GARRAFA DELIVERY",
+   "setor": "BAR",
+   "subsetor": "MATERIAIS DE PRIMEIRO USO",
+   "unidade": "UNID",
+   "estoque_minimo": 100.0,
+   "prefixo": "EMB"
+  },
+  {
+   "id": "prod_petit_four",
+   "nome_checklist": "PROD PETIT FOUR (UNID)",
+   "nome_everest": "PROD PETIT FOUR",
+   "setor": "BAR",
+   "subsetor": "REFRIGERADA",
+   "unidade": "UNID",
+   "estoque_minimo": 300.0,
+   "prefixo": "PROD"
+  },
+  {
+   "id": "mp_acucar_cristal",
+   "nome_checklist": "MP ACUCAR CRISTAL (KG)",
+   "nome_everest": "MP ACUCAR CRISTAL",
+   "setor": "BAR",
+   "subsetor": "SECOS",
+   "unidade": "KG",
+   "estoque_minimo": 30.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_cravo",
+   "nome_checklist": "MP CRAVO (KG)",
+   "nome_everest": "MP CRAVO",
+   "setor": "BAR",
+   "subsetor": "SECOS",
+   "unidade": "KG",
+   "estoque_minimo": 0.2,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_emulsificante",
+   "nome_checklist": "MP EMULSIFICANTE (KG)",
+   "nome_everest": "MP EMULSIFICANTE",
+   "setor": "BAR",
+   "subsetor": "SECOS",
+   "unidade": "KG",
+   "estoque_minimo": 1.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_hibisco_desidratado",
+   "nome_checklist": "MP HIBISCO DESIDRATADO (KG)",
+   "nome_everest": "MP HIBISCO DESIDRATADO",
+   "setor": "BAR",
+   "subsetor": "SECOS",
+   "unidade": "KG",
+   "estoque_minimo": 1.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_leite_de_coco",
+   "nome_checklist": "MP LEITE DE COCO (LITRO)",
+   "nome_everest": "MP LEITE DE COCO",
+   "setor": "BAR",
+   "subsetor": "SECOS",
+   "unidade": "LITRO",
+   "estoque_minimo": 2.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_pimenta_rosa",
+   "nome_checklist": "MP PIMENTA ROSA (KG)",
+   "nome_everest": "MP PIMENTA ROSA",
+   "setor": "BAR",
+   "subsetor": "SECOS",
+   "unidade": "KG",
+   "estoque_minimo": 0.25,
+   "prefixo": "MP"
+  },
+  {
+   "id": "ref_pepsi_tradicional",
+   "nome_checklist": "REF PEPSI TRADICIONAL (UNID)",
+   "nome_everest": "REF PEPSI TRADICIONAL",
+   "setor": "BAR",
+   "subsetor": "BEBIDAS",
+   "unidade": "UNID",
+   "estoque_minimo": 72.0,
+   "prefixo": "REF"
+  },
+  {
+   "id": "ref_redbull_melancia",
+   "nome_checklist": "REF REDBULL MELANCIA (UNID)",
+   "nome_everest": "REF REDBULL MELANCIA",
+   "setor": "BAR",
+   "subsetor": "BEBIDAS",
+   "unidade": "UNID",
+   "estoque_minimo": 12.0,
+   "prefixo": "REF"
+  },
+  {
+   "id": "ref_redbull_sugar_free",
+   "nome_checklist": "REF REDBULL SUGAR FREE (UNID)",
+   "nome_everest": "REF REDBULL SUGAR FREE",
+   "setor": "BAR",
+   "subsetor": "BEBIDAS",
+   "unidade": "UNID",
+   "estoque_minimo": 12.0,
+   "prefixo": "REF"
+  },
+  {
+   "id": "ref_redbull_tradicional",
+   "nome_checklist": "REF REDBULL TRADICIONAL (UNID)",
+   "nome_everest": "REF REDBULL TRADICIONAL",
+   "setor": "BAR",
+   "subsetor": "BEBIDAS",
+   "unidade": "UNID",
+   "estoque_minimo": 24.0,
+   "prefixo": "REF"
+  },
+  {
+   "id": "ref_redbull_tropical",
+   "nome_checklist": "REF REDBULL TROPICAL (UNID)",
+   "nome_everest": "REF REDBULL TROPICAL",
+   "setor": "BAR",
+   "subsetor": "BEBIDAS",
+   "unidade": "UNID",
+   "estoque_minimo": 24.0,
+   "prefixo": "REF"
+  },
+  {
+   "id": "po_ancho_250g",
+   "nome_checklist": "PO ANCHO 250G (UNID)",
+   "nome_everest": "PO ANCHO 250G",
+   "setor": "CARNES",
+   "subsetor": "CONGELADA",
+   "unidade": "UNID",
+   "estoque_minimo": 100.0,
+   "prefixo": "PO"
+  },
+  {
+   "id": "po_assado_de_tiras_kg",
+   "nome_checklist": "PO ASSADO DE TIRAS KG (KG)",
+   "nome_everest": "PO ASSADO DE TIRAS KG",
+   "setor": "CARNES",
+   "subsetor": "CONGELADA",
+   "unidade": "KG",
+   "estoque_minimo": 4.0,
+   "prefixo": "PO"
+  },
+  {
+   "id": "po_bombom_250g",
+   "nome_checklist": "PO BOMBOM 250G (UNID)",
+   "nome_everest": "PO BOMBOM 250G",
+   "setor": "CARNES",
+   "subsetor": "CONGELADA",
+   "unidade": "UNID",
+   "estoque_minimo": 300.0,
+   "prefixo": "PO"
+  },
+  {
+   "id": "po_chorizo_250g",
+   "nome_checklist": "PO CHORIZO 250G (UNID)",
+   "nome_everest": "PO CHORIZO 250G",
+   "setor": "CARNES",
+   "subsetor": "CONGELADA",
+   "unidade": "UNID",
+   "estoque_minimo": 200.0,
+   "prefixo": "PO"
+  },
+  {
+   "id": "po_file_200g",
+   "nome_checklist": "PO FILE 200G (UNID)",
+   "nome_everest": "PO FILE 200G",
+   "setor": "CARNES",
+   "subsetor": "CONGELADA",
+   "unidade": "UNID",
+   "estoque_minimo": 158.0,
+   "prefixo": "PO"
+  },
+  {
+   "id": "po_flat_iron_300g",
+   "nome_checklist": "PO FLAT IRON 300G (UNID)",
+   "nome_everest": "PO FLAT IRON 300G",
+   "setor": "CARNES",
+   "subsetor": "CONGELADA",
+   "unidade": "UNID",
+   "estoque_minimo": 27.0,
+   "prefixo": "PO"
+  },
+  {
+   "id": "po_fraldinha_300g",
+   "nome_checklist": "PO FRALDINHA 300G (UNID)",
+   "nome_everest": "PO FRALDINHA 300G",
+   "setor": "CARNES",
+   "subsetor": "CONGELADA",
+   "unidade": "UNID",
+   "estoque_minimo": 14.0,
+   "prefixo": "PO"
+  },
+  {
+   "id": "po_galeto_400g",
+   "nome_checklist": "PO GALETO 400G (UNID)",
+   "nome_everest": "PO GALETO 400G",
+   "setor": "CARNES",
+   "subsetor": "CONGELADA",
+   "unidade": "UNID",
+   "estoque_minimo": 41.0,
+   "prefixo": "PO"
+  },
+  {
+   "id": "po_hamburguer_150g",
+   "nome_checklist": "PO HAMBURGUER 150G (UNID)",
+   "nome_everest": "PO HAMBURGUER 150G",
+   "setor": "CARNES",
+   "subsetor": "CONGELADA",
+   "unidade": "UNID",
+   "estoque_minimo": 198.0,
+   "prefixo": "PO"
+  },
+  {
+   "id": "po_linguica_argentina",
+   "nome_checklist": "PO LINGUICA ARGENTINA (UNID)",
+   "nome_everest": "PO LINGUICA ARGENTINA",
+   "setor": "CARNES",
+   "subsetor": "CONGELADA",
+   "unidade": "UNID",
+   "estoque_minimo": 36.0,
+   "prefixo": "PO"
+  },
+  {
+   "id": "po_linguica_caminito",
+   "nome_checklist": "PO LINGUICA CAMINITO (UNID)",
+   "nome_everest": "PO LINGUICA CAMINITO",
+   "setor": "CARNES",
+   "subsetor": "CONGELADA",
+   "unidade": "UNID",
+   "estoque_minimo": 18.0,
+   "prefixo": "PO"
+  },
+  {
+   "id": "po_linguica_cerveja_ipa",
+   "nome_checklist": "PO LINGUICA CERVEJA IPA (UNID)",
+   "nome_everest": "PO LINGUICA CERVEJA IPA",
+   "setor": "CARNES",
+   "subsetor": "CONGELADA",
+   "unidade": "UNID",
+   "estoque_minimo": 23.0,
+   "prefixo": "PO"
+  },
+  {
+   "id": "po_linguica_formiga",
+   "nome_checklist": "PO LINGUICA FORMIGA (UNID)",
+   "nome_everest": "PO LINGUICA FORMIGA",
+   "setor": "CARNES",
+   "subsetor": "CONGELADA",
+   "unidade": "UNID",
+   "estoque_minimo": 20.0,
+   "prefixo": "PO"
+  },
+  {
+   "id": "po_peito_de_frango_200g",
+   "nome_checklist": "PO PEITO DE FRANGO 200G (UNID)",
+   "nome_everest": "PO PEITO DE FRANGO 200G",
+   "setor": "CARNES",
+   "subsetor": "CONGELADA",
+   "unidade": "UNID",
+   "estoque_minimo": 63.0,
+   "prefixo": "PO"
+  },
+  {
+   "id": "po_prime_rib_kg",
+   "nome_checklist": "PO PRIME RIB KG (KG)",
+   "nome_everest": "PO PRIME RIB KG",
+   "setor": "CARNES",
+   "subsetor": "CONGELADA",
+   "unidade": "KG",
+   "estoque_minimo": 5.0,
+   "prefixo": "PO"
+  },
+  {
+   "id": "po_salmao_200g",
+   "nome_checklist": "PO SALMAO 200G (UNID)",
+   "nome_everest": "PO SALMAO 200G",
+   "setor": "CARNES",
+   "subsetor": "CONGELADA",
+   "unidade": "UNID",
+   "estoque_minimo": 54.0,
+   "prefixo": "PO"
+  },
+  {
+   "id": "prod_costelinha_bbq_300g",
+   "nome_checklist": "PROD COSTELINHA BBQ 300G (UNID)",
+   "nome_everest": "PROD COSTELINHA BBQ 300G",
+   "setor": "CARNES",
+   "subsetor": "CONGELADA",
+   "unidade": "UNID",
+   "estoque_minimo": 10.0,
+   "prefixo": "PROD"
+  },
+  {
+   "id": "prod_costelinha_bbq_600g",
+   "nome_checklist": "PROD COSTELINHA BBQ 600G (UNID)",
+   "nome_everest": "PROD COSTELINHA BBQ 600G",
+   "setor": "CARNES",
+   "subsetor": "CONGELADA",
+   "unidade": "UNID",
+   "estoque_minimo": 10.0,
+   "prefixo": "PROD"
+  },
+  {
+   "id": "funcionario_pao",
+   "nome_checklist": "FUNCIONARIO PAO (UNID)",
+   "nome_everest": "FUNCIONARIO PAO",
+   "setor": "COZINHA",
+   "subsetor": "CONGELADA",
+   "unidade": "UNID",
+   "estoque_minimo": 20.0,
+   "prefixo": "FUNCIONARIO"
+  },
+  {
+   "id": "mp_bacon_cubos",
+   "nome_checklist": "MP BACON CUBOS (KG)",
+   "nome_everest": "MP BACON CUBOS",
+   "setor": "COZINHA",
+   "subsetor": "CONGELADA",
+   "unidade": "KG",
+   "estoque_minimo": 26.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_batata_carinhas",
+   "nome_checklist": "MP BATATA CARINHAS (KG)",
+   "nome_everest": "MP BATATA CARINHAS",
+   "setor": "COZINHA",
+   "subsetor": "CONGELADA",
+   "unidade": "KG",
+   "estoque_minimo": 10.5,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_batata_frita_congelada_7mm",
+   "nome_checklist": "MP BATATA FRITA CONGELADA 7MM (KG)",
+   "nome_everest": "MP BATATA FRITA CONGELADA 7MM",
+   "setor": "COZINHA",
+   "subsetor": "CONGELADA",
+   "unidade": "KG",
+   "estoque_minimo": 72.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_brocolis_congelado",
+   "nome_checklist": "MP BROCOLIS CONGELADO (KG)",
+   "nome_everest": "MP BROCOLIS CONGELADO",
+   "setor": "COZINHA",
+   "subsetor": "CONGELADA",
+   "unidade": "KG",
+   "estoque_minimo": 2.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_camarao_s_casca_111_200",
+   "nome_checklist": "MP CAMARAO S/ CASCA 111/200 (KG)",
+   "nome_everest": "MP CAMARAO S/ CASCA 111/200",
+   "setor": "COZINHA",
+   "subsetor": "CONGELADA",
+   "unidade": "KG",
+   "estoque_minimo": 3.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_camarao_s_casca_51_60",
+   "nome_checklist": "MP CAMARAO S/ CASCA 51/60 (KG)",
+   "nome_everest": "MP CAMARAO S/ CASCA 51/60",
+   "setor": "COZINHA",
+   "subsetor": "CONGELADA",
+   "unidade": "KG",
+   "estoque_minimo": 12.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_empanada_de_carne_suave",
+   "nome_checklist": "MP EMPANADA DE CARNE SUAVE (UNID)",
+   "nome_everest": "MP EMPANADA DE CARNE SUAVE",
+   "setor": "COZINHA",
+   "subsetor": "CONGELADA",
+   "unidade": "UNID",
+   "estoque_minimo": 60.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_ervilha_congelada",
+   "nome_checklist": "MP ERVILHA CONGELADA (KG)",
+   "nome_everest": "MP ERVILHA CONGELADA",
+   "setor": "COZINHA",
+   "subsetor": "CONGELADA",
+   "unidade": "KG",
+   "estoque_minimo": 2.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_guioza",
+   "nome_checklist": "MP GUIOZA (UNID)",
+   "nome_everest": "MP GUIOZA",
+   "setor": "COZINHA",
+   "subsetor": "CONGELADA",
+   "unidade": "UNID",
+   "estoque_minimo": 300.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_kanikama",
+   "nome_checklist": "MP KANIKAMA (KG)",
+   "nome_everest": "MP KANIKAMA",
+   "setor": "COZINHA",
+   "subsetor": "CONGELADA",
+   "unidade": "KG",
+   "estoque_minimo": 13.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_massa_harumaki_pacote",
+   "nome_checklist": "MP MASSA HARUMAKI PACOTE (UNID)",
+   "nome_everest": "MP MASSA HARUMAKI PACOTE",
+   "setor": "COZINHA",
+   "subsetor": "CONGELADA",
+   "unidade": "UNID",
+   "estoque_minimo": 7.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_pao_torrada",
+   "nome_checklist": "MP PAO TORRADA (UNID)",
+   "nome_everest": "MP PAO TORRADA",
+   "setor": "COZINHA",
+   "subsetor": "CONGELADA",
+   "unidade": "UNID",
+   "estoque_minimo": 30.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_sorvete_de_baunilha",
+   "nome_checklist": "MP SORVETE DE BAUNILHA (LITRO)",
+   "nome_everest": "MP SORVETE DE BAUNILHA",
+   "setor": "COZINHA",
+   "subsetor": "CONGELADA",
+   "unidade": "LITRO",
+   "estoque_minimo": 20.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "po_carne_picada_100g",
+   "nome_checklist": "PO CARNE PICADA 100G (UNID)",
+   "nome_everest": "PO CARNE PICADA 100G",
+   "setor": "COZINHA",
+   "subsetor": "CONGELADA",
+   "unidade": "UNID",
+   "estoque_minimo": 99.0,
+   "prefixo": "PO"
+  },
+  {
+   "id": "prod_atum_poke",
+   "nome_checklist": "PROD ATUM POKE (KG)",
+   "nome_everest": "PROD ATUM POKE",
+   "setor": "COZINHA",
+   "subsetor": "CONGELADA",
+   "unidade": "KG",
+   "estoque_minimo": 0.0,
+   "prefixo": "PROD"
+  },
+  {
+   "id": "prod_brigadeiro_chocolate",
+   "nome_checklist": "PROD BRIGADEIRO CHOCOLATE (KG)",
+   "nome_everest": "PROD BRIGADEIRO CHOCOLATE",
+   "setor": "COZINHA",
+   "subsetor": "CONGELADA",
+   "unidade": "KG",
+   "estoque_minimo": 8.0,
+   "prefixo": "PROD"
+  },
+  {
+   "id": "prod_brigadeiro_leite_ninho",
+   "nome_checklist": "PROD BRIGADEIRO LEITE NINHO (KG)",
+   "nome_everest": "PROD BRIGADEIRO LEITE NINHO",
+   "setor": "COZINHA",
+   "subsetor": "CONGELADA",
+   "unidade": "KG",
+   "estoque_minimo": 5.0,
+   "prefixo": "PROD"
+  },
+  {
+   "id": "prod_brigadeiro_pacoca",
+   "nome_checklist": "PROD BRIGADEIRO PACOCA (KG)",
+   "nome_everest": "PROD BRIGADEIRO PACOCA",
+   "setor": "COZINHA",
+   "subsetor": "CONGELADA",
+   "unidade": "KG",
+   "estoque_minimo": 5.0,
+   "prefixo": "PROD"
+  },
+  {
+   "id": "prod_brisket",
+   "nome_checklist": "PROD BRISKET (KG)",
+   "nome_everest": "PROD BRISKET",
+   "setor": "COZINHA",
+   "subsetor": "CONGELADA",
+   "unidade": "KG",
+   "estoque_minimo": 6.800000000000001,
+   "prefixo": "PROD"
+  },
+  {
+   "id": "prod_brocolis_picado",
+   "nome_checklist": "PROD BROCOLIS PICADO (KG)",
+   "nome_everest": "PROD BROCOLIS PICADO",
+   "setor": "COZINHA",
+   "subsetor": "CONGELADA",
+   "unidade": "KG",
+   "estoque_minimo": 7.0,
+   "prefixo": "PROD"
+  },
+  {
+   "id": "prod_brownie",
+   "nome_checklist": "PROD BROWNIE (UNID)",
+   "nome_everest": "PROD BROWNIE",
+   "setor": "COZINHA",
+   "subsetor": "CONGELADA",
+   "unidade": "UNID",
+   "estoque_minimo": 21.0,
+   "prefixo": "PROD"
+  },
+  {
+   "id": "prod_calda_de_brigadeiro",
+   "nome_checklist": "PROD CALDA DE BRIGADEIRO (KG)",
+   "nome_everest": "PROD CALDA DE BRIGADEIRO",
+   "setor": "COZINHA",
+   "subsetor": "CONGELADA",
+   "unidade": "KG",
+   "estoque_minimo": 5.0,
+   "prefixo": "PROD"
+  },
+  {
+   "id": "prod_caldo_de_legumes",
+   "nome_checklist": "PROD CALDO DE LEGUMES (KG)",
+   "nome_everest": "PROD CALDO DE LEGUMES",
+   "setor": "COZINHA",
+   "subsetor": "CONGELADA",
+   "unidade": "KG",
+   "estoque_minimo": 5.0,
+   "prefixo": "PROD"
+  },
+  {
+   "id": "prod_camarao_ebi_furay",
+   "nome_checklist": "PROD CAMARAO EBI FURAY (KG)",
+   "nome_everest": "PROD CAMARAO EBI FURAY",
+   "setor": "COZINHA",
+   "subsetor": "CONGELADA",
+   "unidade": "KG",
+   "estoque_minimo": 13.0,
+   "prefixo": "PROD"
+  },
+  {
+   "id": "prod_camarao_ebi_king",
+   "nome_checklist": "PROD CAMARAO EBI KING (UNID)",
+   "nome_everest": "PROD CAMARAO EBI KING",
+   "setor": "COZINHA",
+   "subsetor": "CONGELADA",
+   "unidade": "UNID",
+   "estoque_minimo": 360.0,
+   "prefixo": "PROD"
+  },
+  {
+   "id": "prod_carpaccio",
+   "nome_checklist": "PROD CARPACCIO (UNID)",
+   "nome_everest": "PROD CARPACCIO",
+   "setor": "COZINHA",
+   "subsetor": "CONGELADA",
+   "unidade": "UNID",
+   "estoque_minimo": 10.0,
+   "prefixo": "PROD"
+  },
+  {
+   "id": "prod_churros",
+   "nome_checklist": "PROD CHURROS (UNID)",
+   "nome_everest": "PROD CHURROS",
+   "setor": "COZINHA",
+   "subsetor": "CONGELADA",
+   "unidade": "UNID",
+   "estoque_minimo": 200.0,
+   "prefixo": "PROD"
+  },
+  {
+   "id": "prod_coxinha_de_cupim",
+   "nome_checklist": "PROD COXINHA DE CUPIM (UNID)",
+   "nome_everest": "PROD COXINHA DE CUPIM",
+   "setor": "COZINHA",
+   "subsetor": "CONGELADA",
+   "unidade": "UNID",
+   "estoque_minimo": 140.0,
+   "prefixo": "PROD"
+  },
+  {
+   "id": "prod_creme_de_queijo",
+   "nome_checklist": "PROD CREME DE QUEIJO (KG)",
+   "nome_everest": "PROD CREME DE QUEIJO",
+   "setor": "COZINHA",
+   "subsetor": "CONGELADA",
+   "unidade": "KG",
+   "estoque_minimo": 13.0,
+   "prefixo": "PROD"
+  },
+  {
+   "id": "prod_croquete_suino",
+   "nome_checklist": "PROD CROQUETE SUINO (UNID)",
+   "nome_everest": "PROD CROQUETE SUINO",
+   "setor": "COZINHA",
+   "subsetor": "CONGELADA",
+   "unidade": "UNID",
+   "estoque_minimo": 104.0,
+   "prefixo": "PROD"
+  },
+  {
+   "id": "prod_farofa_brownie",
+   "nome_checklist": "PROD FAROFA BROWNIE (KG)",
+   "nome_everest": "PROD FAROFA BROWNIE",
+   "setor": "COZINHA",
+   "subsetor": "CONGELADA",
+   "unidade": "KG",
+   "estoque_minimo": 3.0,
+   "prefixo": "PROD"
+  },
+  {
+   "id": "prod_frango_defumado",
+   "nome_checklist": "PROD FRANGO DEFUMADO (UNID)",
+   "nome_everest": "PROD FRANGO DEFUMADO",
+   "setor": "COZINHA",
+   "subsetor": "CONGELADA",
+   "unidade": "UNID",
+   "estoque_minimo": 12.0,
+   "prefixo": "PROD"
+  },
+  {
+   "id": "prod_frango_picado_100g",
+   "nome_checklist": "PROD FRANGO PICADO 100G (UNID)",
+   "nome_everest": "PROD FRANGO PICADO 100G",
+   "setor": "COZINHA",
+   "subsetor": "CONGELADA",
+   "unidade": "UNID",
+   "estoque_minimo": 67.0,
+   "prefixo": "PROD"
+  },
+  {
+   "id": "prod_frango_salad_200g",
+   "nome_checklist": "PROD FRANGO SALAD 200G (UNID)",
+   "nome_everest": "PROD FRANGO SALAD 200G",
+   "setor": "COZINHA",
+   "subsetor": "CONGELADA",
+   "unidade": "UNID",
+   "estoque_minimo": 6.0,
+   "prefixo": "PROD"
+  },
+  {
+   "id": "prod_geleia_de_abacaxi",
+   "nome_checklist": "PROD GELEIA DE ABACAXI (KG)",
+   "nome_everest": "PROD GELEIA DE ABACAXI",
+   "setor": "COZINHA",
+   "subsetor": "CONGELADA",
+   "unidade": "KG",
+   "estoque_minimo": 3.5,
+   "prefixo": "PROD"
+  },
+  {
+   "id": "prod_harumaki_camarao",
+   "nome_checklist": "PROD HARUMAKI CAMARAO (UNID)",
+   "nome_everest": "PROD HARUMAKI CAMARAO",
+   "setor": "COZINHA",
+   "subsetor": "CONGELADA",
+   "unidade": "UNID",
+   "estoque_minimo": 240.0,
+   "prefixo": "PROD"
+  },
+  {
+   "id": "prod_harumaki_doce_de_leite",
+   "nome_checklist": "PROD HARUMAKI DOCE DE LEITE (UNID)",
+   "nome_everest": "PROD HARUMAKI DOCE DE LEITE",
+   "setor": "COZINHA",
+   "subsetor": "CONGELADA",
+   "unidade": "UNID",
+   "estoque_minimo": 285.0,
+   "prefixo": "PROD"
+  },
+  {
+   "id": "prod_harumaki_queijo_brie",
+   "nome_checklist": "PROD HARUMAKI QUEIJO BRIE (UNID)",
+   "nome_everest": "PROD HARUMAKI QUEIJO BRIE",
+   "setor": "COZINHA",
+   "subsetor": "CONGELADA",
+   "unidade": "UNID",
+   "estoque_minimo": 285.0,
+   "prefixo": "PROD"
+  },
+  {
+   "id": "prod_linguicinha_defumada",
+   "nome_checklist": "PROD LINGUICINHA DEFUMADA (KG)",
+   "nome_everest": "PROD LINGUICINHA DEFUMADA",
+   "setor": "COZINHA",
+   "subsetor": "CONGELADA",
+   "unidade": "KG",
+   "estoque_minimo": 13.0,
+   "prefixo": "PROD"
+  },
+  {
+   "id": "prod_mini_cake",
+   "nome_checklist": "PROD MINI CAKE (UNID)",
+   "nome_everest": "PROD MINI CAKE",
+   "setor": "COZINHA",
+   "subsetor": "CONGELADA",
+   "unidade": "UNID",
+   "estoque_minimo": 280.0,
+   "prefixo": "PROD"
+  },
+  {
+   "id": "prod_mix_de_frutos_do_mar",
+   "nome_checklist": "PROD MIX DE FRUTOS DO MAR (KG)",
+   "nome_everest": "PROD MIX DE FRUTOS DO MAR",
+   "setor": "COZINHA",
+   "subsetor": "CONGELADA",
+   "unidade": "KG",
+   "estoque_minimo": 8.0,
+   "prefixo": "PROD"
+  },
+  {
+   "id": "prod_molho_3_mostardas",
+   "nome_checklist": "PROD MOLHO 3 MOSTARDAS (KG)",
+   "nome_everest": "PROD MOLHO 3 MOSTARDAS",
+   "setor": "COZINHA",
+   "subsetor": "CONGELADA",
+   "unidade": "KG",
+   "estoque_minimo": 5.6,
+   "prefixo": "PROD"
+  },
+  {
+   "id": "prod_molho_caesar",
+   "nome_checklist": "PROD MOLHO CAESAR (KG)",
+   "nome_everest": "PROD MOLHO CAESAR",
+   "setor": "COZINHA",
+   "subsetor": "CONGELADA",
+   "unidade": "KG",
+   "estoque_minimo": 6.3,
+   "prefixo": "PROD"
+  },
+  {
+   "id": "prod_molho_caminito_salada",
+   "nome_checklist": "PROD MOLHO CAMINITO SALADA (KG)",
+   "nome_everest": "PROD MOLHO CAMINITO SALADA",
+   "setor": "COZINHA",
+   "subsetor": "CONGELADA",
+   "unidade": "KG",
+   "estoque_minimo": 6.3,
+   "prefixo": "PROD"
+  },
+  {
+   "id": "prod_molho_de_tomate_rustico",
+   "nome_checklist": "PROD MOLHO DE TOMATE RUSTICO (KG)",
+   "nome_everest": "PROD MOLHO DE TOMATE RUSTICO",
+   "setor": "COZINHA",
+   "subsetor": "CONGELADA",
+   "unidade": "KG",
+   "estoque_minimo": 40.0,
+   "prefixo": "PROD"
+  },
+  {
+   "id": "prod_molho_demi_glace_com_mostarda",
+   "nome_checklist": "PROD MOLHO DEMI GLACE COM MOSTARDA (KG)",
+   "nome_everest": "PROD MOLHO DEMI GLACE COM MOSTARDA",
+   "setor": "COZINHA",
+   "subsetor": "CONGELADA",
+   "unidade": "KG",
+   "estoque_minimo": 20.0,
+   "prefixo": "PROD"
+  },
+  {
+   "id": "prod_molho_gyoza",
+   "nome_checklist": "PROD MOLHO GYOZA (KG)",
+   "nome_everest": "PROD MOLHO GYOZA",
+   "setor": "COZINHA",
+   "subsetor": "CONGELADA",
+   "unidade": "KG",
+   "estoque_minimo": 3.0,
+   "prefixo": "PROD"
+  },
+  {
+   "id": "prod_molho_julienne",
+   "nome_checklist": "PROD MOLHO JULIENNE (KG)",
+   "nome_everest": "PROD MOLHO JULIENNE",
+   "setor": "COZINHA",
+   "subsetor": "CONGELADA",
+   "unidade": "KG",
+   "estoque_minimo": 12.6,
+   "prefixo": "PROD"
+  },
+  {
+   "id": "prod_molho_shimeji",
+   "nome_checklist": "PROD MOLHO SHIMEJI (KG)",
+   "nome_everest": "PROD MOLHO SHIMEJI",
+   "setor": "COZINHA",
+   "subsetor": "CONGELADA",
+   "unidade": "KG",
+   "estoque_minimo": 13.0,
+   "prefixo": "PROD"
+  },
+  {
+   "id": "prod_ossobuco",
+   "nome_checklist": "PROD OSSOBUCO (KG)",
+   "nome_everest": "PROD OSSOBUCO",
+   "setor": "COZINHA",
+   "subsetor": "CONGELADA",
+   "unidade": "KG",
+   "estoque_minimo": 9.0,
+   "prefixo": "PROD"
+  },
+  {
+   "id": "prod_pao_de_alho",
+   "nome_checklist": "PROD PAO DE ALHO (UNID)",
+   "nome_everest": "PROD PAO DE ALHO",
+   "setor": "COZINHA",
+   "subsetor": "CONGELADA",
+   "unidade": "UNID",
+   "estoque_minimo": 40.0,
+   "prefixo": "PROD"
+  },
+  {
+   "id": "prod_pao_de_linguica",
+   "nome_checklist": "PROD PAO DE LINGUICA (UNID)",
+   "nome_everest": "PROD PAO DE LINGUICA",
+   "setor": "COZINHA",
+   "subsetor": "CONGELADA",
+   "unidade": "UNID",
+   "estoque_minimo": 20.0,
+   "prefixo": "PROD"
+  },
+  {
+   "id": "prod_parmegiana",
+   "nome_checklist": "PROD PARMEGIANA (UNID)",
+   "nome_everest": "PROD PARMEGIANA",
+   "setor": "COZINHA",
+   "subsetor": "CONGELADA",
+   "unidade": "UNID",
+   "estoque_minimo": 156.0,
+   "prefixo": "PROD"
+  },
+  {
+   "id": "prod_parmegiana_de_frango",
+   "nome_checklist": "PROD PARMEGIANA DE FRANGO (UNID)",
+   "nome_everest": "PROD PARMEGIANA DE FRANGO",
+   "setor": "COZINHA",
+   "subsetor": "CONGELADA",
+   "unidade": "UNID",
+   "estoque_minimo": 96.0,
+   "prefixo": "PROD"
+  },
+  {
+   "id": "prod_parmesao_ralado",
+   "nome_checklist": "PROD PARMESAO RALADO (KG)",
+   "nome_everest": "PROD PARMESAO RALADO",
+   "setor": "COZINHA",
+   "subsetor": "CONGELADA",
+   "unidade": "KG",
+   "estoque_minimo": 11.0,
+   "prefixo": "PROD"
+  },
+  {
+   "id": "prod_pastel_de_pastrami",
+   "nome_checklist": "PROD PASTEL DE PASTRAMI (UNID)",
+   "nome_everest": "PROD PASTEL DE PASTRAMI",
+   "setor": "COZINHA",
+   "subsetor": "CONGELADA",
+   "unidade": "UNID",
+   "estoque_minimo": 60.0,
+   "prefixo": "PROD"
+  },
+  {
+   "id": "prod_peito_peru_cortado",
+   "nome_checklist": "PROD PEITO PERU CORTADO (KG)",
+   "nome_everest": "PROD PEITO PERU CORTADO",
+   "setor": "COZINHA",
+   "subsetor": "CONGELADA",
+   "unidade": "KG",
+   "estoque_minimo": 4.0,
+   "prefixo": "PROD"
+  },
+  {
+   "id": "prod_queijo_mussarela_fatiada",
+   "nome_checklist": "PROD QUEIJO MUSSARELA FATIADA (KG)",
+   "nome_everest": "PROD QUEIJO MUSSARELA FATIADA",
+   "setor": "COZINHA",
+   "subsetor": "CONGELADA",
+   "unidade": "KG",
+   "estoque_minimo": 3.6,
+   "prefixo": "PROD"
+  },
+  {
+   "id": "prod_robata_de_brocolis",
+   "nome_checklist": "PROD ROBATA DE BROCOLIS (UNID)",
+   "nome_everest": "PROD ROBATA DE BROCOLIS",
+   "setor": "COZINHA",
+   "subsetor": "CONGELADA",
+   "unidade": "UNID",
+   "estoque_minimo": 20.0,
+   "prefixo": "PROD"
+  },
+  {
+   "id": "prod_robata_de_carne_e_bacon",
+   "nome_checklist": "PROD ROBATA DE CARNE E BACON (UNID)",
+   "nome_everest": "PROD ROBATA DE CARNE E BACON",
+   "setor": "COZINHA",
+   "subsetor": "CONGELADA",
+   "unidade": "UNID",
+   "estoque_minimo": 50.0,
+   "prefixo": "PROD"
+  },
+  {
+   "id": "prod_robata_de_frango",
+   "nome_checklist": "PROD ROBATA DE FRANGO (UNID)",
+   "nome_everest": "PROD ROBATA DE FRANGO",
+   "setor": "COZINHA",
+   "subsetor": "CONGELADA",
+   "unidade": "UNID",
+   "estoque_minimo": 25.0,
+   "prefixo": "PROD"
+  },
+  {
+   "id": "prod_salmao_poke",
+   "nome_checklist": "PROD SALMAO POKE (KG)",
+   "nome_everest": "PROD SALMAO POKE",
+   "setor": "COZINHA",
+   "subsetor": "CONGELADA",
+   "unidade": "KG",
+   "estoque_minimo": 0.0,
+   "prefixo": "PROD"
+  },
+  {
+   "id": "prod_sobrecoxa_marinada",
+   "nome_checklist": "PROD SOBRECOXA MARINADA (UNID)",
+   "nome_everest": "PROD SOBRECOXA MARINADA",
+   "setor": "COZINHA",
+   "subsetor": "CONGELADA",
+   "unidade": "UNID",
+   "estoque_minimo": 100.0,
+   "prefixo": "PROD"
+  },
+  {
+   "id": "prod_tilapia_poke",
+   "nome_checklist": "PROD TILAPIA POKE (KG)",
+   "nome_everest": "PROD TILAPIA POKE",
+   "setor": "COZINHA",
+   "subsetor": "CONGELADA",
+   "unidade": "KG",
+   "estoque_minimo": 0.0,
+   "prefixo": "PROD"
+  },
+  {
+   "id": "cog_paris",
+   "nome_checklist": "COG PARIS (KG)",
+   "nome_everest": "COG PARIS",
+   "setor": "COZINHA",
+   "subsetor": "REFRIGERADA",
+   "unidade": "KG",
+   "estoque_minimo": 1.0,
+   "prefixo": "COG"
+  },
+  {
+   "id": "cog_portobelo",
+   "nome_checklist": "COG PORTOBELO (KG)",
+   "nome_everest": "COG PORTOBELO",
+   "setor": "COZINHA",
+   "subsetor": "REFRIGERADA",
+   "unidade": "KG",
+   "estoque_minimo": 1.0,
+   "prefixo": "COG"
+  },
+  {
+   "id": "cog_shimeji",
+   "nome_checklist": "COG SHIMEJI (KG)",
+   "nome_everest": "COG SHIMEJI",
+   "setor": "COZINHA",
+   "subsetor": "REFRIGERADA",
+   "unidade": "KG",
+   "estoque_minimo": 30.0,
+   "prefixo": "COG"
+  },
+  {
+   "id": "mp_cream_cheese",
+   "nome_checklist": "MP CREAM CHEESE (KG)",
+   "nome_everest": "MP CREAM CHEESE",
+   "setor": "COZINHA",
+   "subsetor": "REFRIGERADA",
+   "unidade": "KG",
+   "estoque_minimo": 30.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_creme_de_leite_fresco",
+   "nome_checklist": "MP CREME DE LEITE FRESCO (KG)",
+   "nome_everest": "MP CREME DE LEITE FRESCO",
+   "setor": "COZINHA",
+   "subsetor": "REFRIGERADA",
+   "unidade": "KG",
+   "estoque_minimo": 1.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_manteiga_sem_sal",
+   "nome_checklist": "MP MANTEIGA SEM SAL (KG)",
+   "nome_everest": "MP MANTEIGA SEM SAL",
+   "setor": "COZINHA",
+   "subsetor": "REFRIGERADA",
+   "unidade": "KG",
+   "estoque_minimo": 10.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_queijo_burrata",
+   "nome_checklist": "MP QUEIJO BURRATA (UNID)",
+   "nome_everest": "MP QUEIJO BURRATA",
+   "setor": "COZINHA",
+   "subsetor": "REFRIGERADA",
+   "unidade": "UNID",
+   "estoque_minimo": 13.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_queijo_minas_padrao",
+   "nome_checklist": "MP QUEIJO MINAS PADRAO (KG)",
+   "nome_everest": "MP QUEIJO MINAS PADRAO",
+   "setor": "COZINHA",
+   "subsetor": "REFRIGERADA",
+   "unidade": "KG",
+   "estoque_minimo": 4.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_queijo_ricota",
+   "nome_checklist": "MP QUEIJO RICOTA (KG)",
+   "nome_everest": "MP QUEIJO RICOTA",
+   "setor": "COZINHA",
+   "subsetor": "REFRIGERADA",
+   "unidade": "KG",
+   "estoque_minimo": 1.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "prod_legumes_yakissoba",
+   "nome_checklist": "PROD LEGUMES YAKISSOBA (UNID)",
+   "nome_everest": "PROD LEGUMES YAKISSOBA",
+   "setor": "COZINHA",
+   "subsetor": "REFRIGERADA",
+   "unidade": "UNID",
+   "estoque_minimo": 40.0,
+   "prefixo": "PROD"
+  },
+  {
+   "id": "prod_maionese_com_picles",
+   "nome_checklist": "PROD MAIONESE COM PICLES (KG)",
+   "nome_everest": "PROD MAIONESE COM PICLES",
+   "setor": "COZINHA",
+   "subsetor": "REFRIGERADA",
+   "unidade": "KG",
+   "estoque_minimo": 7.0,
+   "prefixo": "PROD"
+  },
+  {
+   "id": "prod_maionese_tabasco",
+   "nome_checklist": "PROD MAIONESE TABASCO (KG)",
+   "nome_everest": "PROD MAIONESE TABASCO",
+   "setor": "COZINHA",
+   "subsetor": "REFRIGERADA",
+   "unidade": "KG",
+   "estoque_minimo": 6.3,
+   "prefixo": "PROD"
+  },
+  {
+   "id": "prod_molho_domburi_yakissoba",
+   "nome_checklist": "PROD MOLHO DOMBURI YAKISSOBA (KG)",
+   "nome_everest": "PROD MOLHO DOMBURI YAKISSOBA",
+   "setor": "COZINHA",
+   "subsetor": "REFRIGERADA",
+   "unidade": "KG",
+   "estoque_minimo": 10.0,
+   "prefixo": "PROD"
+  },
+  {
+   "id": "prod_molho_su",
+   "nome_checklist": "PROD MOLHO SU (KG)",
+   "nome_everest": "PROD MOLHO SU",
+   "setor": "COZINHA",
+   "subsetor": "REFRIGERADA",
+   "unidade": "KG",
+   "estoque_minimo": 15.0,
+   "prefixo": "PROD"
+  },
+  {
+   "id": "prod_panqueca",
+   "nome_checklist": "PROD PANQUECA (UNID)",
+   "nome_everest": "PROD PANQUECA",
+   "setor": "COZINHA",
+   "subsetor": "REFRIGERADA",
+   "unidade": "UNID",
+   "estoque_minimo": 120.0,
+   "prefixo": "PROD"
+  },
+  {
+   "id": "prod_petit_gateau_mini",
+   "nome_checklist": "PROD PETIT GATEAU MINI (UNID)",
+   "nome_everest": "PROD PETIT GATEAU MINI",
+   "setor": "COZINHA",
+   "subsetor": "REFRIGERADA",
+   "unidade": "UNID",
+   "estoque_minimo": 120.0,
+   "prefixo": "PROD"
+  },
+  {
+   "id": "prod_picles_cebola",
+   "nome_checklist": "PROD PICLES CEBOLA (KG)",
+   "nome_everest": "PROD PICLES CEBOLA",
+   "setor": "COZINHA",
+   "subsetor": "REFRIGERADA",
+   "unidade": "KG",
+   "estoque_minimo": 7.0,
+   "prefixo": "PROD"
+  },
+  {
+   "id": "prod_pudim_doce_de_leite",
+   "nome_checklist": "PROD PUDIM DOCE DE LEITE (UNID)",
+   "nome_everest": "PROD PUDIM DOCE DE LEITE",
+   "setor": "COZINHA",
+   "subsetor": "REFRIGERADA",
+   "unidade": "UNID",
+   "estoque_minimo": 34.0,
+   "prefixo": "PROD"
+  },
+  {
+   "id": "prod_pure_de_duas_batatas",
+   "nome_checklist": "PROD PURE DE DUAS BATATAS (KG)",
+   "nome_everest": "PROD PURE DE DUAS BATATAS",
+   "setor": "COZINHA",
+   "subsetor": "REFRIGERADA",
+   "unidade": "KG",
+   "estoque_minimo": 14.0,
+   "prefixo": "PROD"
+  },
+  {
+   "id": "prod_sunomono",
+   "nome_checklist": "PROD SUNOMONO (KG)",
+   "nome_everest": "PROD SUNOMONO",
+   "setor": "COZINHA",
+   "subsetor": "REFRIGERADA",
+   "unidade": "KG",
+   "estoque_minimo": 16.8,
+   "prefixo": "PROD"
+  },
+  {
+   "id": "mp_sal_rosa_grosso",
+   "nome_checklist": "MP SAL ROSA GROSSO (KG)",
+   "nome_everest": "MP SAL ROSA GROSSO",
+   "setor": "COZINHA",
+   "subsetor": "SECOS",
+   "unidade": "KG",
+   "estoque_minimo": 10.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "apv_bobina_termica_caixa",
+   "nome_checklist": "APV BOBINA TERMICA CAIXA (UNID)",
+   "nome_everest": "APV BOBINA TERMICA CAIXA",
+   "setor": "DELIVERY",
+   "subsetor": "MATERIAIS DE PRIMEIRO USO",
+   "unidade": "UNID",
+   "estoque_minimo": 1.0,
+   "prefixo": "APV"
+  },
+  {
+   "id": "apv_clip_hashi_pacote",
+   "nome_checklist": "APV CLIP HASHI PACOTE (UNID)",
+   "nome_everest": "APV CLIP HASHI PACOTE",
+   "setor": "DELIVERY",
+   "subsetor": "MATERIAIS DE PRIMEIRO USO",
+   "unidade": "UNID",
+   "estoque_minimo": 1.0,
+   "prefixo": "APV"
+  },
+  {
+   "id": "apv_copack_tag_parrilla_100und",
+   "nome_checklist": "APV COPACK TAG PARRILLA 100UND (UNID)",
+   "nome_everest": "APV COPACK TAG PARRILLA 100UND",
+   "setor": "DELIVERY",
+   "subsetor": "MATERIAIS DE PRIMEIRO USO",
+   "unidade": "UNID",
+   "estoque_minimo": 1.0,
+   "prefixo": "APV"
+  },
+  {
+   "id": "apv_copo_descartavel_pacote",
+   "nome_checklist": "APV COPO DESCARTAVEL PACOTE (UNID)",
+   "nome_everest": "APV COPO DESCARTAVEL PACOTE",
+   "setor": "DELIVERY",
+   "subsetor": "MATERIAIS DE PRIMEIRO USO",
+   "unidade": "UNID",
+   "estoque_minimo": 2.0,
+   "prefixo": "APV"
+  },
+  {
+   "id": "apv_etiqueta_suflex",
+   "nome_checklist": "APV ETIQUETA SUFLEX (UNID)",
+   "nome_everest": "APV ETIQUETA SUFLEX",
+   "setor": "DELIVERY",
+   "subsetor": "MATERIAIS DE PRIMEIRO USO",
+   "unidade": "UNID",
+   "estoque_minimo": 2.0,
+   "prefixo": "APV"
+  },
+  {
+   "id": "apv_filme_pvc",
+   "nome_checklist": "APV FILME PVC (UNID)",
+   "nome_everest": "APV FILME PVC",
+   "setor": "DELIVERY",
+   "subsetor": "MATERIAIS DE PRIMEIRO USO",
+   "unidade": "UNID",
+   "estoque_minimo": 2.0,
+   "prefixo": "APV"
+  },
+  {
+   "id": "apv_hashi_caixa",
+   "nome_checklist": "APV HASHI CAIXA (UNID)",
+   "nome_everest": "APV HASHI CAIXA",
+   "setor": "DELIVERY",
+   "subsetor": "MATERIAIS DE PRIMEIRO USO",
+   "unidade": "UNID",
+   "estoque_minimo": 1.0,
+   "prefixo": "APV"
+  },
+  {
+   "id": "apv_lacre_de_seguranca",
+   "nome_checklist": "APV LACRE DE SEGURANCA (UNID)",
+   "nome_everest": "APV LACRE DE SEGURANCA",
+   "setor": "DELIVERY",
+   "subsetor": "MATERIAIS DE PRIMEIRO USO",
+   "unidade": "UNID",
+   "estoque_minimo": 1.0,
+   "prefixo": "APV"
+  },
+  {
+   "id": "apv_parafina_kg",
+   "nome_checklist": "APV PARAFINA KG (KG)",
+   "nome_everest": "APV PARAFINA KG",
+   "setor": "DELIVERY",
+   "subsetor": "MATERIAIS DE PRIMEIRO USO",
+   "unidade": "KG",
+   "estoque_minimo": 1.0,
+   "prefixo": "APV"
+  },
+  {
+   "id": "apv_pavio_pacote",
+   "nome_checklist": "APV PAVIO PACOTE (UNID)",
+   "nome_everest": "APV PAVIO PACOTE",
+   "setor": "DELIVERY",
+   "subsetor": "MATERIAIS DE PRIMEIRO USO",
+   "unidade": "UNID",
+   "estoque_minimo": 1.0,
+   "prefixo": "APV"
+  },
+  {
+   "id": "apv_pimenta_mendes_und",
+   "nome_checklist": "APV PIMENTA MENDES UND (UNID)",
+   "nome_everest": "APV PIMENTA MENDES UND",
+   "setor": "DELIVERY",
+   "subsetor": "MATERIAIS DE PRIMEIRO USO",
+   "unidade": "UNID",
+   "estoque_minimo": 5.0,
+   "prefixo": "APV"
+  },
+  {
+   "id": "apv_ribbon_suflex",
+   "nome_checklist": "APV RIBBON SUFLEX (UNID)",
+   "nome_everest": "APV RIBBON SUFLEX",
+   "setor": "DELIVERY",
+   "subsetor": "MATERIAIS DE PRIMEIRO USO",
+   "unidade": "UNID",
+   "estoque_minimo": 1.0,
+   "prefixo": "APV"
+  },
+  {
+   "id": "apv_vela_aniversario_pacote",
+   "nome_checklist": "APV VELA ANIVERSARIO PACOTE (UNID)",
+   "nome_everest": "APV VELA ANIVERSARIO PACOTE",
+   "setor": "DELIVERY",
+   "subsetor": "MATERIAIS DE PRIMEIRO USO",
+   "unidade": "UNID",
+   "estoque_minimo": 2.0,
+   "prefixo": "APV"
+  },
+  {
+   "id": "emb_aluminio_250ml",
+   "nome_checklist": "EMB ALUMINIO 250ML (UNID)",
+   "nome_everest": "EMB ALUMINIO 250ML",
+   "setor": "DELIVERY",
+   "subsetor": "MATERIAIS DE PRIMEIRO USO",
+   "unidade": "UNID",
+   "estoque_minimo": 120.0,
+   "prefixo": "EMB"
+  },
+  {
+   "id": "emb_copack_choripan",
+   "nome_checklist": "EMB COPACK CHORIPAN (UNID)",
+   "nome_everest": "EMB COPACK CHORIPAN",
+   "setor": "DELIVERY",
+   "subsetor": "MATERIAIS DE PRIMEIRO USO",
+   "unidade": "UNID",
+   "estoque_minimo": 120.0,
+   "prefixo": "EMB"
+  },
+  {
+   "id": "emb_copack_domburi",
+   "nome_checklist": "EMB COPACK DOMBURI (UNID)",
+   "nome_everest": "EMB COPACK DOMBURI",
+   "setor": "DELIVERY",
+   "subsetor": "MATERIAIS DE PRIMEIRO USO",
+   "unidade": "UNID",
+   "estoque_minimo": 500.0,
+   "prefixo": "EMB"
+  },
+  {
+   "id": "emb_copack_executivo",
+   "nome_checklist": "EMB COPACK EXECUTIVO (UNID)",
+   "nome_everest": "EMB COPACK EXECUTIVO",
+   "setor": "DELIVERY",
+   "subsetor": "MATERIAIS DE PRIMEIRO USO",
+   "unidade": "UNID",
+   "estoque_minimo": 500.0,
+   "prefixo": "EMB"
+  },
+  {
+   "id": "emb_copack_familia_500ml",
+   "nome_checklist": "EMB COPACK FAMILIA 500ML (UNID)",
+   "nome_everest": "EMB COPACK FAMILIA 500ML",
+   "setor": "DELIVERY",
+   "subsetor": "MATERIAIS DE PRIMEIRO USO",
+   "unidade": "UNID",
+   "estoque_minimo": 500.0,
+   "prefixo": "EMB"
+  },
+  {
+   "id": "emb_copack_hamburguer",
+   "nome_checklist": "EMB COPACK HAMBURGUER (UNID)",
+   "nome_everest": "EMB COPACK HAMBURGUER",
+   "setor": "DELIVERY",
+   "subsetor": "MATERIAIS DE PRIMEIRO USO",
+   "unidade": "UNID",
+   "estoque_minimo": 500.0,
+   "prefixo": "EMB"
+  },
+  {
+   "id": "emb_copack_nazo_g",
+   "nome_checklist": "EMB COPACK NAZO G (UNID)",
+   "nome_everest": "EMB COPACK NAZO G",
+   "setor": "DELIVERY",
+   "subsetor": "MATERIAIS DE PRIMEIRO USO",
+   "unidade": "UNID",
+   "estoque_minimo": 100.0,
+   "prefixo": "EMB"
+  },
+  {
+   "id": "emb_copack_nazo_m",
+   "nome_checklist": "EMB COPACK NAZO M (UNID)",
+   "nome_everest": "EMB COPACK NAZO M",
+   "setor": "DELIVERY",
+   "subsetor": "MATERIAIS DE PRIMEIRO USO",
+   "unidade": "UNID",
+   "estoque_minimo": 120.0,
+   "prefixo": "EMB"
+  },
+  {
+   "id": "emb_copack_nazo_p",
+   "nome_checklist": "EMB COPACK NAZO P (UNID)",
+   "nome_everest": "EMB COPACK NAZO P",
+   "setor": "DELIVERY",
+   "subsetor": "MATERIAIS DE PRIMEIRO USO",
+   "unidade": "UNID",
+   "estoque_minimo": 300.0,
+   "prefixo": "EMB"
+  },
+  {
+   "id": "emb_copack_totti",
+   "nome_checklist": "EMB COPACK TOTTI (UNID)",
+   "nome_everest": "EMB COPACK TOTTI",
+   "setor": "DELIVERY",
+   "subsetor": "MATERIAIS DE PRIMEIRO USO",
+   "unidade": "UNID",
+   "estoque_minimo": 250.0,
+   "prefixo": "EMB"
+  },
+  {
+   "id": "emb_galvanotek_copo_60ml",
+   "nome_checklist": "EMB GALVANOTEK COPO 60ML (UNID)",
+   "nome_everest": "EMB GALVANOTEK COPO 60ML",
+   "setor": "DELIVERY",
+   "subsetor": "MATERIAIS DE PRIMEIRO USO",
+   "unidade": "UNID",
+   "estoque_minimo": 700.0,
+   "prefixo": "EMB"
+  },
+  {
+   "id": "emb_kit_garfo",
+   "nome_checklist": "EMB KIT GARFO (UNID)",
+   "nome_everest": "EMB KIT GARFO",
+   "setor": "DELIVERY",
+   "subsetor": "MATERIAIS DE PRIMEIRO USO",
+   "unidade": "UNID",
+   "estoque_minimo": 200.0,
+   "prefixo": "EMB"
+  },
+  {
+   "id": "emb_p_batata_frita",
+   "nome_checklist": "EMB P/ BATATA FRITA (UNID)",
+   "nome_everest": "EMB P/ BATATA FRITA",
+   "setor": "DELIVERY",
+   "subsetor": "MATERIAIS DE PRIMEIRO USO",
+   "unidade": "UNID",
+   "estoque_minimo": 400.0,
+   "prefixo": "EMB"
+  },
+  {
+   "id": "emb_p_viagem",
+   "nome_checklist": "EMB P/ VIAGEM (UNID)",
+   "nome_everest": "EMB P/ VIAGEM",
+   "setor": "DELIVERY",
+   "subsetor": "MATERIAIS DE PRIMEIRO USO",
+   "unidade": "UNID",
+   "estoque_minimo": 200.0,
+   "prefixo": "EMB"
+  },
+  {
+   "id": "emb_saco_kraft",
+   "nome_checklist": "EMB SACO KRAFT (UNID)",
+   "nome_everest": "EMB SACO KRAFT",
+   "setor": "DELIVERY",
+   "subsetor": "MATERIAIS DE PRIMEIRO USO",
+   "unidade": "UNID",
+   "estoque_minimo": 800.0,
+   "prefixo": "EMB"
+  },
+  {
+   "id": "emb_saco_kraft_pequeno",
+   "nome_checklist": "EMB SACO KRAFT PEQUENO (UNID)",
+   "nome_everest": "EMB SACO KRAFT PEQUENO",
+   "setor": "DELIVERY",
+   "subsetor": "MATERIAIS DE PRIMEIRO USO",
+   "unidade": "UNID",
+   "estoque_minimo": 600.0,
+   "prefixo": "EMB"
+  },
+  {
+   "id": "emb_salada_1000ml_transparente",
+   "nome_checklist": "EMB SALADA 1000ML TRANSPARENTE (UNID)",
+   "nome_everest": "EMB SALADA 1000ML TRANSPARENTE",
+   "setor": "DELIVERY",
+   "subsetor": "MATERIAIS DE PRIMEIRO USO",
+   "unidade": "UNID",
+   "estoque_minimo": 200.0,
+   "prefixo": "EMB"
+  },
+  {
+   "id": "emb_salada_500ml_transparente",
+   "nome_checklist": "EMB SALADA 500ML TRANSPARENTE (UNID)",
+   "nome_everest": "EMB SALADA 500ML TRANSPARENTE",
+   "setor": "DELIVERY",
+   "subsetor": "MATERIAIS DE PRIMEIRO USO",
+   "unidade": "UNID",
+   "estoque_minimo": 240.0,
+   "prefixo": "EMB"
+  },
+  {
+   "id": "mp_barca_shoyu",
+   "nome_checklist": "MP BARCA SHOYU (UNID)",
+   "nome_everest": "MP BARCA SHOYU",
+   "setor": "DELIVERY",
+   "subsetor": "SECOS",
+   "unidade": "UNID",
+   "estoque_minimo": 300.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_barca_tare",
+   "nome_checklist": "MP BARCA TARE (UNID)",
+   "nome_everest": "MP BARCA TARE",
+   "setor": "DELIVERY",
+   "subsetor": "SECOS",
+   "unidade": "UNID",
+   "estoque_minimo": 120.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_molho_tare",
+   "nome_checklist": "MP MOLHO TARE (LITRO)",
+   "nome_everest": "MP MOLHO TARE",
+   "setor": "DELIVERY",
+   "subsetor": "SECOS",
+   "unidade": "LITRO",
+   "estoque_minimo": 5.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_sache_acucar_caixa",
+   "nome_checklist": "MP SACHE ACUCAR CAIXA (UNID)",
+   "nome_everest": "MP SACHE ACUCAR CAIXA",
+   "setor": "DELIVERY",
+   "subsetor": "SECOS",
+   "unidade": "UNID",
+   "estoque_minimo": 1.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_sache_adocante_caixa",
+   "nome_checklist": "MP SACHE ADOCANTE CAIXA (UNID)",
+   "nome_everest": "MP SACHE ADOCANTE CAIXA",
+   "setor": "DELIVERY",
+   "subsetor": "SECOS",
+   "unidade": "UNID",
+   "estoque_minimo": 1.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_sache_ketchup_caixa",
+   "nome_checklist": "MP SACHE KETCHUP CAIXA (UNID)",
+   "nome_everest": "MP SACHE KETCHUP CAIXA",
+   "setor": "DELIVERY",
+   "subsetor": "SECOS",
+   "unidade": "UNID",
+   "estoque_minimo": 1.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_sache_mostarda_caixa",
+   "nome_checklist": "MP SACHE MOSTARDA CAIXA (UNID)",
+   "nome_everest": "MP SACHE MOSTARDA CAIXA",
+   "setor": "DELIVERY",
+   "subsetor": "SECOS",
+   "unidade": "UNID",
+   "estoque_minimo": 1.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_sache_palito_caixa",
+   "nome_checklist": "MP SACHE PALITO CAIXA (UNID)",
+   "nome_everest": "MP SACHE PALITO CAIXA",
+   "setor": "DELIVERY",
+   "subsetor": "SECOS",
+   "unidade": "UNID",
+   "estoque_minimo": 1.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_sache_sal_caixa",
+   "nome_checklist": "MP SACHE SAL CAIXA (UNID)",
+   "nome_everest": "MP SACHE SAL CAIXA",
+   "setor": "DELIVERY",
+   "subsetor": "SECOS",
+   "unidade": "UNID",
+   "estoque_minimo": 1.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_sache_wasabi_pacote",
+   "nome_checklist": "MP SACHE WASABI PACOTE (UNID)",
+   "nome_everest": "MP SACHE WASABI PACOTE",
+   "setor": "DELIVERY",
+   "subsetor": "SECOS",
+   "unidade": "UNID",
+   "estoque_minimo": 1.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "hort_abacate_kg",
+   "nome_checklist": "HORT ABACATE KG (KG)",
+   "nome_everest": "HORT ABACATE KG",
+   "setor": "HORTIFRUTI",
+   "subsetor": "HORTIFRUTI",
+   "unidade": "KG",
+   "estoque_minimo": 13.0,
+   "prefixo": "HORT"
+  },
+  {
+   "id": "hort_abacaxi",
+   "nome_checklist": "HORT ABACAXI (UNID)",
+   "nome_everest": "HORT ABACAXI",
+   "setor": "HORTIFRUTI",
+   "subsetor": "HORTIFRUTI",
+   "unidade": "UNID",
+   "estoque_minimo": 41.0,
+   "prefixo": "HORT"
+  },
+  {
+   "id": "hort_abobora_cabotia_kg",
+   "nome_checklist": "HORT ABOBORA CABOTIA KG (KG)",
+   "nome_everest": "HORT ABOBORA CABOTIA KG",
+   "setor": "HORTIFRUTI",
+   "subsetor": "HORTIFRUTI",
+   "unidade": "KG",
+   "estoque_minimo": 40.0,
+   "prefixo": "HORT"
+  },
+  {
+   "id": "hort_abobrinha_kg",
+   "nome_checklist": "HORT ABOBRINHA KG (KG)",
+   "nome_everest": "HORT ABOBRINHA KG",
+   "setor": "HORTIFRUTI",
+   "subsetor": "HORTIFRUTI",
+   "unidade": "KG",
+   "estoque_minimo": 16.0,
+   "prefixo": "HORT"
+  },
+  {
+   "id": "hort_acelga_maco",
+   "nome_checklist": "HORT ACELGA MACO (UNID)",
+   "nome_everest": "HORT ACELGA MACO",
+   "setor": "HORTIFRUTI",
+   "subsetor": "HORTIFRUTI",
+   "unidade": "UNID",
+   "estoque_minimo": 3.0,
+   "prefixo": "HORT"
+  },
+  {
+   "id": "hort_alecrim_maco",
+   "nome_checklist": "HORT ALECRIM MACO (UNID)",
+   "nome_everest": "HORT ALECRIM MACO",
+   "setor": "HORTIFRUTI",
+   "subsetor": "HORTIFRUTI",
+   "unidade": "UNID",
+   "estoque_minimo": 3.0,
+   "prefixo": "HORT"
+  },
+  {
+   "id": "hort_alho_descascado_kg",
+   "nome_checklist": "HORT ALHO DESCASCADO KG (KG)",
+   "nome_everest": "HORT ALHO DESCASCADO KG",
+   "setor": "HORTIFRUTI",
+   "subsetor": "HORTIFRUTI",
+   "unidade": "KG",
+   "estoque_minimo": 4.0,
+   "prefixo": "HORT"
+  },
+  {
+   "id": "hort_alho_poro_maco",
+   "nome_checklist": "HORT ALHO PORO MACO (UNID)",
+   "nome_everest": "HORT ALHO PORO MACO",
+   "setor": "HORTIFRUTI",
+   "subsetor": "HORTIFRUTI",
+   "unidade": "UNID",
+   "estoque_minimo": 36.0,
+   "prefixo": "HORT"
+  },
+  {
+   "id": "hort_banana_nanica_kg",
+   "nome_checklist": "HORT BANANA NANICA KG (KG)",
+   "nome_everest": "HORT BANANA NANICA KG",
+   "setor": "HORTIFRUTI",
+   "subsetor": "HORTIFRUTI",
+   "unidade": "KG",
+   "estoque_minimo": 14.0,
+   "prefixo": "HORT"
+  },
+  {
+   "id": "hort_batata_bolinha_kg",
+   "nome_checklist": "HORT BATATA BOLINHA KG (KG)",
+   "nome_everest": "HORT BATATA BOLINHA KG",
+   "setor": "HORTIFRUTI",
+   "subsetor": "HORTIFRUTI",
+   "unidade": "KG",
+   "estoque_minimo": 14.0,
+   "prefixo": "HORT"
+  },
+  {
+   "id": "hort_batata_doce_kg",
+   "nome_checklist": "HORT BATATA DOCE KG (KG)",
+   "nome_everest": "HORT BATATA DOCE KG",
+   "setor": "HORTIFRUTI",
+   "subsetor": "HORTIFRUTI",
+   "unidade": "KG",
+   "estoque_minimo": 9.0,
+   "prefixo": "HORT"
+  },
+  {
+   "id": "hort_batata_inglesa_kg",
+   "nome_checklist": "HORT BATATA INGLESA KG (KG)",
+   "nome_everest": "HORT BATATA INGLESA KG",
+   "setor": "HORTIFRUTI",
+   "subsetor": "HORTIFRUTI",
+   "unidade": "KG",
+   "estoque_minimo": 17.0,
+   "prefixo": "HORT"
+  },
+  {
+   "id": "hort_beringela_kg",
+   "nome_checklist": "HORT BERINGELA KG (KG)",
+   "nome_everest": "HORT BERINGELA KG",
+   "setor": "HORTIFRUTI",
+   "subsetor": "HORTIFRUTI",
+   "unidade": "KG",
+   "estoque_minimo": 16.0,
+   "prefixo": "HORT"
+  },
+  {
+   "id": "hort_beterraba_kg",
+   "nome_checklist": "HORT BETERRABA KG (KG)",
+   "nome_everest": "HORT BETERRABA KG",
+   "setor": "HORTIFRUTI",
+   "subsetor": "HORTIFRUTI",
+   "unidade": "KG",
+   "estoque_minimo": 3.0,
+   "prefixo": "HORT"
+  },
+  {
+   "id": "hort_broto_de_feijao_kg",
+   "nome_checklist": "HORT BROTO DE FEIJAO KG (KG)",
+   "nome_everest": "HORT BROTO DE FEIJAO KG",
+   "setor": "HORTIFRUTI",
+   "subsetor": "HORTIFRUTI",
+   "unidade": "KG",
+   "estoque_minimo": 5.0,
+   "prefixo": "HORT"
+  },
+  {
+   "id": "hort_cebola_branca_kg",
+   "nome_checklist": "HORT CEBOLA BRANCA KG (KG)",
+   "nome_everest": "HORT CEBOLA BRANCA KG",
+   "setor": "HORTIFRUTI",
+   "subsetor": "HORTIFRUTI",
+   "unidade": "KG",
+   "estoque_minimo": 20.0,
+   "prefixo": "HORT"
+  },
+  {
+   "id": "hort_cebola_roxa_kg",
+   "nome_checklist": "HORT CEBOLA ROXA KG (KG)",
+   "nome_everest": "HORT CEBOLA ROXA KG",
+   "setor": "HORTIFRUTI",
+   "subsetor": "HORTIFRUTI",
+   "unidade": "KG",
+   "estoque_minimo": 12.0,
+   "prefixo": "HORT"
+  },
+  {
+   "id": "hort_cebolete_maco",
+   "nome_checklist": "HORT CEBOLETE MACO (UNID)",
+   "nome_everest": "HORT CEBOLETE MACO",
+   "setor": "HORTIFRUTI",
+   "subsetor": "HORTIFRUTI",
+   "unidade": "UNID",
+   "estoque_minimo": 14.0,
+   "prefixo": "HORT"
+  },
+  {
+   "id": "hort_cebolinha_maco",
+   "nome_checklist": "HORT CEBOLINHA MACO (UNID)",
+   "nome_everest": "HORT CEBOLINHA MACO",
+   "setor": "HORTIFRUTI",
+   "subsetor": "HORTIFRUTI",
+   "unidade": "UNID",
+   "estoque_minimo": 27.0,
+   "prefixo": "HORT"
+  },
+  {
+   "id": "hort_cenoura_kg",
+   "nome_checklist": "HORT CENOURA KG (KG)",
+   "nome_everest": "HORT CENOURA KG",
+   "setor": "HORTIFRUTI",
+   "subsetor": "HORTIFRUTI",
+   "unidade": "KG",
+   "estoque_minimo": 27.0,
+   "prefixo": "HORT"
+  },
+  {
+   "id": "hort_chuchu_kg",
+   "nome_checklist": "HORT CHUCHU KG (KG)",
+   "nome_everest": "HORT CHUCHU KG",
+   "setor": "HORTIFRUTI",
+   "subsetor": "HORTIFRUTI",
+   "unidade": "KG",
+   "estoque_minimo": 10.0,
+   "prefixo": "HORT"
+  },
+  {
+   "id": "hort_coentro_maco",
+   "nome_checklist": "HORT COENTRO MACO (UNID)",
+   "nome_everest": "HORT COENTRO MACO",
+   "setor": "HORTIFRUTI",
+   "subsetor": "HORTIFRUTI",
+   "unidade": "UNID",
+   "estoque_minimo": 4.0,
+   "prefixo": "HORT"
+  },
+  {
+   "id": "hort_couve_flor_unidade",
+   "nome_checklist": "HORT COUVE FLOR UNIDADE (UNID)",
+   "nome_everest": "HORT COUVE FLOR UNIDADE",
+   "setor": "HORTIFRUTI",
+   "subsetor": "HORTIFRUTI",
+   "unidade": "UNID",
+   "estoque_minimo": 4.0,
+   "prefixo": "HORT"
+  },
+  {
+   "id": "hort_couve_maco",
+   "nome_checklist": "HORT COUVE MACO (UNID)",
+   "nome_everest": "HORT COUVE MACO",
+   "setor": "HORTIFRUTI",
+   "subsetor": "HORTIFRUTI",
+   "unidade": "UNID",
+   "estoque_minimo": 5.0,
+   "prefixo": "HORT"
+  },
+  {
+   "id": "hort_flor_comestivel_bandeja",
+   "nome_checklist": "HORT FLOR COMESTIVEL BANDEJA (UNID)",
+   "nome_everest": "HORT FLOR COMESTIVEL BANDEJA",
+   "setor": "HORTIFRUTI",
+   "subsetor": "HORTIFRUTI",
+   "unidade": "UNID",
+   "estoque_minimo": 14.0,
+   "prefixo": "HORT"
+  },
+  {
+   "id": "hort_gengibre_kg",
+   "nome_checklist": "HORT GENGIBRE KG (KG)",
+   "nome_everest": "HORT GENGIBRE KG",
+   "setor": "HORTIFRUTI",
+   "subsetor": "HORTIFRUTI",
+   "unidade": "KG",
+   "estoque_minimo": 6.0,
+   "prefixo": "HORT"
+  },
+  {
+   "id": "hort_hortela_maco",
+   "nome_checklist": "HORT HORTELA MACO (UNID)",
+   "nome_everest": "HORT HORTELA MACO",
+   "setor": "HORTIFRUTI",
+   "subsetor": "HORTIFRUTI",
+   "unidade": "UNID",
+   "estoque_minimo": 5.0,
+   "prefixo": "HORT"
+  },
+  {
+   "id": "hort_laranja_bahia_kg",
+   "nome_checklist": "HORT LARANJA BAHIA KG (KG)",
+   "nome_everest": "HORT LARANJA BAHIA KG",
+   "setor": "HORTIFRUTI",
+   "subsetor": "HORTIFRUTI",
+   "unidade": "KG",
+   "estoque_minimo": 3.0,
+   "prefixo": "HORT"
+  },
+  {
+   "id": "hort_laranja_kg",
+   "nome_checklist": "HORT LARANJA KG (KG)",
+   "nome_everest": "HORT LARANJA KG",
+   "setor": "HORTIFRUTI",
+   "subsetor": "HORTIFRUTI",
+   "unidade": "KG",
+   "estoque_minimo": 120.0,
+   "prefixo": "HORT"
+  },
+  {
+   "id": "hort_limao_siciliano_kg",
+   "nome_checklist": "HORT LIMAO SICILIANO KG (KG)",
+   "nome_everest": "HORT LIMAO SICILIANO KG",
+   "setor": "HORTIFRUTI",
+   "subsetor": "HORTIFRUTI",
+   "unidade": "KG",
+   "estoque_minimo": 8.0,
+   "prefixo": "HORT"
+  },
+  {
+   "id": "hort_limao_tahiti_kg",
+   "nome_checklist": "HORT LIMAO TAHITI KG (KG)",
+   "nome_everest": "HORT LIMAO TAHITI KG",
+   "setor": "HORTIFRUTI",
+   "subsetor": "HORTIFRUTI",
+   "unidade": "KG",
+   "estoque_minimo": 120.0,
+   "prefixo": "HORT"
+  },
+  {
+   "id": "hort_maca_verde_kg",
+   "nome_checklist": "HORT MACA VERDE KG (KG)",
+   "nome_everest": "HORT MACA VERDE KG",
+   "setor": "HORTIFRUTI",
+   "subsetor": "HORTIFRUTI",
+   "unidade": "KG",
+   "estoque_minimo": 2.0,
+   "prefixo": "HORT"
+  },
+  {
+   "id": "hort_mandioca_descascada",
+   "nome_checklist": "HORT MANDIOCA DESCASCADA (KG)",
+   "nome_everest": "HORT MANDIOCA DESCASCADA",
+   "setor": "HORTIFRUTI",
+   "subsetor": "HORTIFRUTI",
+   "unidade": "KG",
+   "estoque_minimo": 14.0,
+   "prefixo": "HORT"
+  },
+  {
+   "id": "hort_manga_kg",
+   "nome_checklist": "HORT MANGA KG (KG)",
+   "nome_everest": "HORT MANGA KG",
+   "setor": "HORTIFRUTI",
+   "subsetor": "HORTIFRUTI",
+   "unidade": "KG",
+   "estoque_minimo": 7.0,
+   "prefixo": "HORT"
+  },
+  {
+   "id": "hort_manjericao_maco",
+   "nome_checklist": "HORT MANJERICAO MACO (UNID)",
+   "nome_everest": "HORT MANJERICAO MACO",
+   "setor": "HORTIFRUTI",
+   "subsetor": "HORTIFRUTI",
+   "unidade": "UNID",
+   "estoque_minimo": 2.0,
+   "prefixo": "HORT"
+  },
+  {
+   "id": "hort_maracuja_kg",
+   "nome_checklist": "HORT MARACUJA KG (KG)",
+   "nome_everest": "HORT MARACUJA KG",
+   "setor": "HORTIFRUTI",
+   "subsetor": "HORTIFRUTI",
+   "unidade": "KG",
+   "estoque_minimo": 32.0,
+   "prefixo": "HORT"
+  },
+  {
+   "id": "hort_melancia_kg",
+   "nome_checklist": "HORT MELANCIA KG (KG)",
+   "nome_everest": "HORT MELANCIA KG",
+   "setor": "HORTIFRUTI",
+   "subsetor": "HORTIFRUTI",
+   "unidade": "KG",
+   "estoque_minimo": 29.0,
+   "prefixo": "HORT"
+  },
+  {
+   "id": "hort_milho_verde_kg",
+   "nome_checklist": "HORT MILHO VERDE KG (KG)",
+   "nome_everest": "HORT MILHO VERDE KG",
+   "setor": "HORTIFRUTI",
+   "subsetor": "HORTIFRUTI",
+   "unidade": "KG",
+   "estoque_minimo": 10.0,
+   "prefixo": "HORT"
+  },
+  {
+   "id": "hort_morango_bandeja",
+   "nome_checklist": "HORT MORANGO BANDEJA (UNID)",
+   "nome_everest": "HORT MORANGO BANDEJA",
+   "setor": "HORTIFRUTI",
+   "subsetor": "HORTIFRUTI",
+   "unidade": "UNID",
+   "estoque_minimo": 60.0,
+   "prefixo": "HORT"
+  },
+  {
+   "id": "hort_nabo_unidade",
+   "nome_checklist": "HORT NABO UNIDADE (UNID)",
+   "nome_everest": "HORT NABO UNIDADE",
+   "setor": "HORTIFRUTI",
+   "subsetor": "HORTIFRUTI",
+   "unidade": "UNID",
+   "estoque_minimo": 5.0,
+   "prefixo": "HORT"
+  },
+  {
+   "id": "hort_pepino_japones_kg",
+   "nome_checklist": "HORT PEPINO JAPONES KG (KG)",
+   "nome_everest": "HORT PEPINO JAPONES KG",
+   "setor": "HORTIFRUTI",
+   "subsetor": "HORTIFRUTI",
+   "unidade": "KG",
+   "estoque_minimo": 5.0,
+   "prefixo": "HORT"
+  },
+  {
+   "id": "hort_pimenta_dedo_de_moca_kg",
+   "nome_checklist": "HORT PIMENTA DEDO DE MOCA KG (KG)",
+   "nome_everest": "HORT PIMENTA DEDO DE MOCA KG",
+   "setor": "HORTIFRUTI",
+   "subsetor": "HORTIFRUTI",
+   "unidade": "KG",
+   "estoque_minimo": 3.0,
+   "prefixo": "HORT"
+  },
+  {
+   "id": "hort_pimentao_amarelo_kg",
+   "nome_checklist": "HORT PIMENTAO AMARELO KG (KG)",
+   "nome_everest": "HORT PIMENTAO AMARELO KG",
+   "setor": "HORTIFRUTI",
+   "subsetor": "HORTIFRUTI",
+   "unidade": "KG",
+   "estoque_minimo": 4.0,
+   "prefixo": "HORT"
+  },
+  {
+   "id": "hort_pimentao_vermelho_kg",
+   "nome_checklist": "HORT PIMENTAO VERMELHO KG (KG)",
+   "nome_everest": "HORT PIMENTAO VERMELHO KG",
+   "setor": "HORTIFRUTI",
+   "subsetor": "HORTIFRUTI",
+   "unidade": "KG",
+   "estoque_minimo": 4.0,
+   "prefixo": "HORT"
+  },
+  {
+   "id": "hort_repolho_roxo_kg",
+   "nome_checklist": "HORT REPOLHO ROXO KG (KG)",
+   "nome_everest": "HORT REPOLHO ROXO KG",
+   "setor": "HORTIFRUTI",
+   "subsetor": "HORTIFRUTI",
+   "unidade": "KG",
+   "estoque_minimo": 3.0,
+   "prefixo": "HORT"
+  },
+  {
+   "id": "hort_rucula_maco",
+   "nome_checklist": "HORT RUCULA MACO (UNID)",
+   "nome_everest": "HORT RUCULA MACO",
+   "setor": "HORTIFRUTI",
+   "subsetor": "HORTIFRUTI",
+   "unidade": "UNID",
+   "estoque_minimo": 7.0,
+   "prefixo": "HORT"
+  },
+  {
+   "id": "hort_salsa_crespa_maco",
+   "nome_checklist": "HORT SALSA CRESPA MACO (UNID)",
+   "nome_everest": "HORT SALSA CRESPA MACO",
+   "setor": "HORTIFRUTI",
+   "subsetor": "HORTIFRUTI",
+   "unidade": "UNID",
+   "estoque_minimo": 5.0,
+   "prefixo": "HORT"
+  },
+  {
+   "id": "hort_salsa_maco",
+   "nome_checklist": "HORT SALSA MACO (UNID)",
+   "nome_everest": "HORT SALSA MACO",
+   "setor": "HORTIFRUTI",
+   "subsetor": "HORTIFRUTI",
+   "unidade": "UNID",
+   "estoque_minimo": 26.0,
+   "prefixo": "HORT"
+  },
+  {
+   "id": "hort_salvia_maco",
+   "nome_checklist": "HORT SALVIA MACO (UNID)",
+   "nome_everest": "HORT SALVIA MACO",
+   "setor": "HORTIFRUTI",
+   "subsetor": "HORTIFRUTI",
+   "unidade": "UNID",
+   "estoque_minimo": 14.0,
+   "prefixo": "HORT"
+  },
+  {
+   "id": "hort_tomate_cereja_kg",
+   "nome_checklist": "HORT TOMATE CEREJA KG (KG)",
+   "nome_everest": "HORT TOMATE CEREJA KG",
+   "setor": "HORTIFRUTI",
+   "subsetor": "HORTIFRUTI",
+   "unidade": "KG",
+   "estoque_minimo": 26.0,
+   "prefixo": "HORT"
+  },
+  {
+   "id": "hort_tomate_kg",
+   "nome_checklist": "HORT TOMATE KG (KG)",
+   "nome_everest": "HORT TOMATE KG",
+   "setor": "HORTIFRUTI",
+   "subsetor": "HORTIFRUTI",
+   "unidade": "KG",
+   "estoque_minimo": 26.0,
+   "prefixo": "HORT"
+  },
+  {
+   "id": "hort_tomilho_maco",
+   "nome_checklist": "HORT TOMILHO MACO (UNID)",
+   "nome_everest": "HORT TOMILHO MACO",
+   "setor": "HORTIFRUTI",
+   "subsetor": "HORTIFRUTI",
+   "unidade": "UNID",
+   "estoque_minimo": 13.0,
+   "prefixo": "HORT"
+  },
+  {
+   "id": "hort_uva_kg",
+   "nome_checklist": "HORT UVA KG (KG)",
+   "nome_everest": "HORT UVA KG",
+   "setor": "HORTIFRUTI",
+   "subsetor": "HORTIFRUTI",
+   "unidade": "KG",
+   "estoque_minimo": 5.0,
+   "prefixo": "HORT"
+  },
+  {
+   "id": "limp_agua_sanitaria_caixa_12",
+   "nome_checklist": "LIMP AGUA SANITARIA CAIXA/12 (UNID)",
+   "nome_everest": "LIMP AGUA SANITARIA CAIXA/12",
+   "setor": "LIMPEZA",
+   "subsetor": "MATERIAIS DE PRIMEIRO USO",
+   "unidade": "UNID",
+   "estoque_minimo": 1.0,
+   "prefixo": "LIMP"
+  },
+  {
+   "id": "limp_alcool_gel_5l",
+   "nome_checklist": "LIMP ALCOOL GEL 5L (UNID)",
+   "nome_everest": "LIMP ALCOOL GEL 5L",
+   "setor": "LIMPEZA",
+   "subsetor": "MATERIAIS DE PRIMEIRO USO",
+   "unidade": "UNID",
+   "estoque_minimo": 1.0,
+   "prefixo": "LIMP"
+  },
+  {
+   "id": "limp_citronela_1l",
+   "nome_checklist": "LIMP CITRONELA 1L (UNID)",
+   "nome_everest": "LIMP CITRONELA 1L",
+   "setor": "LIMPEZA",
+   "subsetor": "MATERIAIS DE PRIMEIRO USO",
+   "unidade": "UNID",
+   "estoque_minimo": 2.0,
+   "prefixo": "LIMP"
+  },
+  {
+   "id": "limp_desincrustante_g_105_5l",
+   "nome_checklist": "LIMP DESINCRUSTANTE G-105 5L (UNID)",
+   "nome_everest": "LIMP DESINCRUSTANTE G-105 5L",
+   "setor": "LIMPEZA",
+   "subsetor": "MATERIAIS DE PRIMEIRO USO",
+   "unidade": "UNID",
+   "estoque_minimo": 1.0,
+   "prefixo": "LIMP"
+  },
+  {
+   "id": "limp_desinfetante_2l",
+   "nome_checklist": "LIMP DESINFETANTE 2L (UNID)",
+   "nome_everest": "LIMP DESINFETANTE 2L",
+   "setor": "LIMPEZA",
+   "subsetor": "MATERIAIS DE PRIMEIRO USO",
+   "unidade": "UNID",
+   "estoque_minimo": 4.0,
+   "prefixo": "LIMP"
+  },
+  {
+   "id": "limp_desinfetante_g_117_5l",
+   "nome_checklist": "LIMP DESINFETANTE G-117 5L (UNID)",
+   "nome_everest": "LIMP DESINFETANTE G-117 5L",
+   "setor": "LIMPEZA",
+   "subsetor": "MATERIAIS DE PRIMEIRO USO",
+   "unidade": "UNID",
+   "estoque_minimo": 1.0,
+   "prefixo": "LIMP"
+  },
+  {
+   "id": "limp_detergente_clorado_td_cl_5l",
+   "nome_checklist": "LIMP DETERGENTE CLORADO TD-CL 5L (UNID)",
+   "nome_everest": "LIMP DETERGENTE CLORADO TD-CL 5L",
+   "setor": "LIMPEZA",
+   "subsetor": "MATERIAIS DE PRIMEIRO USO",
+   "unidade": "UNID",
+   "estoque_minimo": 1.0,
+   "prefixo": "LIMP"
+  },
+  {
+   "id": "limp_detergente_concentrado_td_nc_5l",
+   "nome_checklist": "LIMP DETERGENTE CONCENTRADO TD-NC 5L (UNID)",
+   "nome_everest": "LIMP DETERGENTE CONCENTRADO TD-NC 5L",
+   "setor": "LIMPEZA",
+   "subsetor": "MATERIAIS DE PRIMEIRO USO",
+   "unidade": "UNID",
+   "estoque_minimo": 1.0,
+   "prefixo": "LIMP"
+  },
+  {
+   "id": "limp_detergente_maquina_20l",
+   "nome_checklist": "LIMP DETERGENTE MAQUINA 20L (UNID)",
+   "nome_everest": "LIMP DETERGENTE MAQUINA 20L",
+   "setor": "LIMPEZA",
+   "subsetor": "MATERIAIS DE PRIMEIRO USO",
+   "unidade": "UNID",
+   "estoque_minimo": 1.0,
+   "prefixo": "LIMP"
+  },
+  {
+   "id": "limp_detergente_neutro_caixa_24",
+   "nome_checklist": "LIMP DETERGENTE NEUTRO CAIXA/24 (UNID)",
+   "nome_everest": "LIMP DETERGENTE NEUTRO CAIXA/24",
+   "setor": "LIMPEZA",
+   "subsetor": "MATERIAIS DE PRIMEIRO USO",
+   "unidade": "UNID",
+   "estoque_minimo": 1.0,
+   "prefixo": "LIMP"
+  },
+  {
+   "id": "limp_escova_de_aco",
+   "nome_checklist": "LIMP ESCOVA DE ACO (UNID)",
+   "nome_everest": "LIMP ESCOVA DE ACO",
+   "setor": "LIMPEZA",
+   "subsetor": "MATERIAIS DE PRIMEIRO USO",
+   "unidade": "UNID",
+   "estoque_minimo": 2.0,
+   "prefixo": "LIMP"
+  },
+  {
+   "id": "limp_esponja_dupla_face_pct_10",
+   "nome_checklist": "LIMP ESPONJA DUPLA FACE PCT/10 (UNID)",
+   "nome_everest": "LIMP ESPONJA DUPLA FACE PCT/10",
+   "setor": "LIMPEZA",
+   "subsetor": "MATERIAIS DE PRIMEIRO USO",
+   "unidade": "UNID",
+   "estoque_minimo": 2.0,
+   "prefixo": "LIMP"
+  },
+  {
+   "id": "limp_fibraco_pacote",
+   "nome_checklist": "LIMP FIBRACO PACOTE (UNID)",
+   "nome_everest": "LIMP FIBRACO PACOTE",
+   "setor": "LIMPEZA",
+   "subsetor": "MATERIAIS DE PRIMEIRO USO",
+   "unidade": "UNID",
+   "estoque_minimo": 1.0,
+   "prefixo": "LIMP"
+  },
+  {
+   "id": "limp_guardanapo_caixa",
+   "nome_checklist": "LIMP GUARDANAPO CAIXA (UNID)",
+   "nome_everest": "LIMP GUARDANAPO CAIXA",
+   "setor": "LIMPEZA",
+   "subsetor": "MATERIAIS DE PRIMEIRO USO",
+   "unidade": "UNID",
+   "estoque_minimo": 4.0,
+   "prefixo": "LIMP"
+  },
+  {
+   "id": "limp_luva_nitrilica_caixa_100",
+   "nome_checklist": "LIMP LUVA NITRILICA CAIXA/100 (UNID)",
+   "nome_everest": "LIMP LUVA NITRILICA CAIXA/100",
+   "setor": "LIMPEZA",
+   "subsetor": "MATERIAIS DE PRIMEIRO USO",
+   "unidade": "UNID",
+   "estoque_minimo": 2.0,
+   "prefixo": "LIMP"
+  },
+  {
+   "id": "limp_papel_higienico_caixa",
+   "nome_checklist": "LIMP PAPEL HIGIENICO CAIXA (UNID)",
+   "nome_everest": "LIMP PAPEL HIGIENICO CAIXA",
+   "setor": "LIMPEZA",
+   "subsetor": "MATERIAIS DE PRIMEIRO USO",
+   "unidade": "UNID",
+   "estoque_minimo": 2.0,
+   "prefixo": "LIMP"
+  },
+  {
+   "id": "limp_papel_higienico_cliente_caixa",
+   "nome_checklist": "LIMP PAPEL HIGIENICO CLIENTE CAIXA (UNID)",
+   "nome_everest": "LIMP PAPEL HIGIENICO CLIENTE CAIXA",
+   "setor": "LIMPEZA",
+   "subsetor": "MATERIAIS DE PRIMEIRO USO",
+   "unidade": "UNID",
+   "estoque_minimo": 2.0,
+   "prefixo": "LIMP"
+  },
+  {
+   "id": "limp_papel_toalha_interfolhado_caixa",
+   "nome_checklist": "LIMP PAPEL TOALHA INTERFOLHADO CAIXA (UNID)",
+   "nome_everest": "LIMP PAPEL TOALHA INTERFOLHADO CAIXA",
+   "setor": "LIMPEZA",
+   "subsetor": "MATERIAIS DE PRIMEIRO USO",
+   "unidade": "UNID",
+   "estoque_minimo": 2.0,
+   "prefixo": "LIMP"
+  },
+  {
+   "id": "limp_papel_toalha_rolo_caixa",
+   "nome_checklist": "LIMP PAPEL TOALHA ROLO CAIXA (UNID)",
+   "nome_everest": "LIMP PAPEL TOALHA ROLO CAIXA",
+   "setor": "LIMPEZA",
+   "subsetor": "MATERIAIS DE PRIMEIRO USO",
+   "unidade": "UNID",
+   "estoque_minimo": 2.0,
+   "prefixo": "LIMP"
+  },
+  {
+   "id": "limp_perfex",
+   "nome_checklist": "LIMP PERFEX (UNID)",
+   "nome_everest": "LIMP PERFEX",
+   "setor": "LIMPEZA",
+   "subsetor": "MATERIAIS DE PRIMEIRO USO",
+   "unidade": "UNID",
+   "estoque_minimo": 2.0,
+   "prefixo": "LIMP"
+  },
+  {
+   "id": "limp_sabonete_bact_5l",
+   "nome_checklist": "LIMP SABONETE BACT 5L (UNID)",
+   "nome_everest": "LIMP SABONETE BACT 5L",
+   "setor": "LIMPEZA",
+   "subsetor": "MATERIAIS DE PRIMEIRO USO",
+   "unidade": "UNID",
+   "estoque_minimo": 1.0,
+   "prefixo": "LIMP"
+  },
+  {
+   "id": "limp_sabonete_erva_doce_cliente_5l",
+   "nome_checklist": "LIMP SABONETE ERVA DOCE CLIENTE 5L (UNID)",
+   "nome_everest": "LIMP SABONETE ERVA DOCE CLIENTE 5L",
+   "setor": "LIMPEZA",
+   "subsetor": "MATERIAIS DE PRIMEIRO USO",
+   "unidade": "UNID",
+   "estoque_minimo": 1.0,
+   "prefixo": "LIMP"
+  },
+  {
+   "id": "limp_saco_alvejado",
+   "nome_checklist": "LIMP SACO ALVEJADO (UNID)",
+   "nome_everest": "LIMP SACO ALVEJADO",
+   "setor": "LIMPEZA",
+   "subsetor": "MATERIAIS DE PRIMEIRO USO",
+   "unidade": "UNID",
+   "estoque_minimo": 5.0,
+   "prefixo": "LIMP"
+  },
+  {
+   "id": "limp_saco_lixo_100_fd_100",
+   "nome_checklist": "LIMP SACO LIXO 100 FD/100 (UNID)",
+   "nome_everest": "LIMP SACO LIXO 100 FD/100",
+   "setor": "LIMPEZA",
+   "subsetor": "MATERIAIS DE PRIMEIRO USO",
+   "unidade": "UNID",
+   "estoque_minimo": 2.0,
+   "prefixo": "LIMP"
+  },
+  {
+   "id": "limp_saco_lixo_200_fd_100",
+   "nome_checklist": "LIMP SACO LIXO 200 FD/100 (UNID)",
+   "nome_everest": "LIMP SACO LIXO 200 FD/100",
+   "setor": "LIMPEZA",
+   "subsetor": "MATERIAIS DE PRIMEIRO USO",
+   "unidade": "UNID",
+   "estoque_minimo": 2.0,
+   "prefixo": "LIMP"
+  },
+  {
+   "id": "limp_saco_lixo_40_fd_100",
+   "nome_checklist": "LIMP SACO LIXO 40 FD/100 (UNID)",
+   "nome_everest": "LIMP SACO LIXO 40 FD/100",
+   "setor": "LIMPEZA",
+   "subsetor": "MATERIAIS DE PRIMEIRO USO",
+   "unidade": "UNID",
+   "estoque_minimo": 1.0,
+   "prefixo": "LIMP"
+  },
+  {
+   "id": "limp_secante_maquina_20l",
+   "nome_checklist": "LIMP SECANTE MAQUINA 20L (UNID)",
+   "nome_everest": "LIMP SECANTE MAQUINA 20L",
+   "setor": "LIMPEZA",
+   "subsetor": "MATERIAIS DE PRIMEIRO USO",
+   "unidade": "UNID",
+   "estoque_minimo": 1.0,
+   "prefixo": "LIMP"
+  },
+  {
+   "id": "limp_touca_pacote",
+   "nome_checklist": "LIMP TOUCA PACOTE (UNID)",
+   "nome_everest": "LIMP TOUCA PACOTE",
+   "setor": "LIMPEZA",
+   "subsetor": "MATERIAIS DE PRIMEIRO USO",
+   "unidade": "UNID",
+   "estoque_minimo": 4.0,
+   "prefixo": "LIMP"
+  },
+  {
+   "id": "mp_pao_frances",
+   "nome_checklist": "MP PAO FRANCES (UNID)",
+   "nome_everest": "MP PAO FRANCES",
+   "setor": "PARRILLA",
+   "subsetor": "CONGELADA",
+   "unidade": "UNID",
+   "estoque_minimo": 60.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "prod_bacon_fatias",
+   "nome_checklist": "PROD BACON FATIAS (KG)",
+   "nome_everest": "PROD BACON FATIAS",
+   "setor": "PARRILLA",
+   "subsetor": "CONGELADA",
+   "unidade": "KG",
+   "estoque_minimo": 4.0,
+   "prefixo": "PROD"
+  },
+  {
+   "id": "prod_manteiga_de_ervas",
+   "nome_checklist": "PROD MANTEIGA DE ERVAS (KG)",
+   "nome_everest": "PROD MANTEIGA DE ERVAS",
+   "setor": "PARRILLA",
+   "subsetor": "CONGELADA",
+   "unidade": "KG",
+   "estoque_minimo": 3.0,
+   "prefixo": "PROD"
+  },
+  {
+   "id": "prod_molho_gorgonzola",
+   "nome_checklist": "PROD MOLHO GORGONZOLA (KG)",
+   "nome_everest": "PROD MOLHO GORGONZOLA",
+   "setor": "PARRILLA",
+   "subsetor": "CONGELADA",
+   "unidade": "KG",
+   "estoque_minimo": 2.1,
+   "prefixo": "PROD"
+  },
+  {
+   "id": "prod_pastrami_fatiado",
+   "nome_checklist": "PROD PASTRAMI FATIADO (KG)",
+   "nome_everest": "PROD PASTRAMI FATIADO",
+   "setor": "PARRILLA",
+   "subsetor": "CONGELADA",
+   "unidade": "KG",
+   "estoque_minimo": 2.0,
+   "prefixo": "PROD"
+  },
+  {
+   "id": "prod_provoleta",
+   "nome_checklist": "PROD PROVOLETA (UNID)",
+   "nome_everest": "PROD PROVOLETA",
+   "setor": "PARRILLA",
+   "subsetor": "CONGELADA",
+   "unidade": "UNID",
+   "estoque_minimo": 14.0,
+   "prefixo": "PROD"
+  },
+  {
+   "id": "apv_fogo_gel_parrilla",
+   "nome_checklist": "APV FOGO GEL PARRILLA (UNID)",
+   "nome_everest": "APV FOGO GEL PARRILLA",
+   "setor": "PARRILLA",
+   "subsetor": "MATERIAIS DE PRIMEIRO USO",
+   "unidade": "UNID",
+   "estoque_minimo": 1.0,
+   "prefixo": "APV"
+  },
+  {
+   "id": "mp_queijo_cheddar_fatiado",
+   "nome_checklist": "MP QUEIJO CHEDDAR FATIADO (KG)",
+   "nome_everest": "MP QUEIJO CHEDDAR FATIADO",
+   "setor": "PARRILLA",
+   "subsetor": "REFRIGERADA",
+   "unidade": "KG",
+   "estoque_minimo": 8.16,
+   "prefixo": "MP"
+  },
+  {
+   "id": "prod_cebola_caramelizada",
+   "nome_checklist": "PROD CEBOLA CARAMELIZADA (KG)",
+   "nome_everest": "PROD CEBOLA CARAMELIZADA",
+   "setor": "PARRILLA",
+   "subsetor": "REFRIGERADA",
+   "unidade": "KG",
+   "estoque_minimo": 2.4,
+   "prefixo": "PROD"
+  },
+  {
+   "id": "prod_geleia_de_bacon",
+   "nome_checklist": "PROD GELEIA DE BACON (KG)",
+   "nome_everest": "PROD GELEIA DE BACON",
+   "setor": "PARRILLA",
+   "subsetor": "REFRIGERADA",
+   "unidade": "KG",
+   "estoque_minimo": 2.0,
+   "prefixo": "PROD"
+  },
+  {
+   "id": "prod_molho_aioli",
+   "nome_checklist": "PROD MOLHO AIOLI (KG)",
+   "nome_everest": "PROD MOLHO AIOLI",
+   "setor": "PARRILLA",
+   "subsetor": "REFRIGERADA",
+   "unidade": "KG",
+   "estoque_minimo": 5.6,
+   "prefixo": "PROD"
+  },
+  {
+   "id": "prod_molho_bbq_da_casa",
+   "nome_checklist": "PROD MOLHO BBQ DA CASA (KG)",
+   "nome_everest": "PROD MOLHO BBQ DA CASA",
+   "setor": "PARRILLA",
+   "subsetor": "REFRIGERADA",
+   "unidade": "KG",
+   "estoque_minimo": 10.5,
+   "prefixo": "PROD"
+  },
+  {
+   "id": "prod_molho_pesto_de_ervas",
+   "nome_checklist": "PROD MOLHO PESTO DE ERVAS (KG)",
+   "nome_everest": "PROD MOLHO PESTO DE ERVAS",
+   "setor": "PARRILLA",
+   "subsetor": "REFRIGERADA",
+   "unidade": "KG",
+   "estoque_minimo": 6.0,
+   "prefixo": "PROD"
+  },
+  {
+   "id": "mp_black_rub",
+   "nome_checklist": "MP BLACK RUB (KG)",
+   "nome_everest": "MP BLACK RUB",
+   "setor": "PARRILLA",
+   "subsetor": "SECOS",
+   "unidade": "KG",
+   "estoque_minimo": 1.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_oregano",
+   "nome_checklist": "MP OREGANO (KG)",
+   "nome_everest": "MP OREGANO",
+   "setor": "PARRILLA",
+   "subsetor": "SECOS",
+   "unidade": "KG",
+   "estoque_minimo": 1.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_pao_brioche",
+   "nome_checklist": "MP PAO BRIOCHE (UNID)",
+   "nome_everest": "MP PAO BRIOCHE",
+   "setor": "PARRILLA",
+   "subsetor": "SECOS",
+   "unidade": "UNID",
+   "estoque_minimo": 162.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_sal_rosa",
+   "nome_checklist": "MP SAL ROSA (KG)",
+   "nome_everest": "MP SAL ROSA",
+   "setor": "PARRILLA",
+   "subsetor": "SECOS",
+   "unidade": "KG",
+   "estoque_minimo": 2.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "prod_tempero_chimichurri",
+   "nome_checklist": "PROD TEMPERO CHIMICHURRI (KG)",
+   "nome_everest": "PROD TEMPERO CHIMICHURRI",
+   "setor": "PARRILLA",
+   "subsetor": "SECOS",
+   "unidade": "KG",
+   "estoque_minimo": 3.0,
+   "prefixo": "PROD"
+  },
+  {
+   "id": "apv_espeto_robata_pacote",
+   "nome_checklist": "APV ESPETO ROBATA PACOTE (UNID)",
+   "nome_everest": "APV ESPETO ROBATA PACOTE",
+   "setor": "SECOS",
+   "subsetor": "MATERIAIS DE PRIMEIRO USO",
+   "unidade": "UNID",
+   "estoque_minimo": 3.0,
+   "prefixo": "APV"
+  },
+  {
+   "id": "apv_etiqueta_de_produto_manipulado",
+   "nome_checklist": "APV ETIQUETA DE PRODUTO MANIPULADO (UNID)",
+   "nome_everest": "APV ETIQUETA DE PRODUTO MANIPULADO",
+   "setor": "SECOS",
+   "subsetor": "MATERIAIS DE PRIMEIRO USO",
+   "unidade": "UNID",
+   "estoque_minimo": 6.0,
+   "prefixo": "APV"
+  },
+  {
+   "id": "apv_gas_de_macarico",
+   "nome_checklist": "APV GAS DE MACARICO (UNID)",
+   "nome_everest": "APV GAS DE MACARICO",
+   "setor": "SECOS",
+   "subsetor": "MATERIAIS DE PRIMEIRO USO",
+   "unidade": "UNID",
+   "estoque_minimo": 8.0,
+   "prefixo": "APV"
+  },
+  {
+   "id": "apv_papel_aluminio",
+   "nome_checklist": "APV PAPEL ALUMINIO (UNID)",
+   "nome_everest": "APV PAPEL ALUMINIO",
+   "setor": "SECOS",
+   "subsetor": "MATERIAIS DE PRIMEIRO USO",
+   "unidade": "UNID",
+   "estoque_minimo": 8.0,
+   "prefixo": "APV"
+  },
+  {
+   "id": "apv_papel_manteiga_fardo",
+   "nome_checklist": "APV PAPEL MANTEIGA FARDO (UNID)",
+   "nome_everest": "APV PAPEL MANTEIGA FARDO",
+   "setor": "SECOS",
+   "subsetor": "MATERIAIS DE PRIMEIRO USO",
+   "unidade": "UNID",
+   "estoque_minimo": 2.0,
+   "prefixo": "APV"
+  },
+  {
+   "id": "apv_saquinho_crispy_10x15_pacote",
+   "nome_checklist": "APV SAQUINHO CRISPY 10X15 PACOTE (UNID)",
+   "nome_everest": "APV SAQUINHO CRISPY 10X15 PACOTE",
+   "setor": "SECOS",
+   "subsetor": "MATERIAIS DE PRIMEIRO USO",
+   "unidade": "UNID",
+   "estoque_minimo": 1.0,
+   "prefixo": "APV"
+  },
+  {
+   "id": "emb_pote_producao_1000ml",
+   "nome_checklist": "EMB POTE PRODUCAO 1000ML (UNID)",
+   "nome_everest": "EMB POTE PRODUCAO 1000ML",
+   "setor": "SECOS",
+   "subsetor": "MATERIAIS DE PRIMEIRO USO",
+   "unidade": "UNID",
+   "estoque_minimo": 48.0,
+   "prefixo": "EMB"
+  },
+  {
+   "id": "emb_saco_bobinado_g_rolo",
+   "nome_checklist": "EMB SACO BOBINADO G ROLO (UNID)",
+   "nome_everest": "EMB SACO BOBINADO G ROLO",
+   "setor": "SECOS",
+   "subsetor": "MATERIAIS DE PRIMEIRO USO",
+   "unidade": "UNID",
+   "estoque_minimo": 2.0,
+   "prefixo": "EMB"
+  },
+  {
+   "id": "emb_saco_bobinado_m_rolo",
+   "nome_checklist": "EMB SACO BOBINADO M ROLO (UNID)",
+   "nome_everest": "EMB SACO BOBINADO M ROLO",
+   "setor": "SECOS",
+   "subsetor": "MATERIAIS DE PRIMEIRO USO",
+   "unidade": "UNID",
+   "estoque_minimo": 3.0,
+   "prefixo": "EMB"
+  },
+  {
+   "id": "emb_vacuo_20x30",
+   "nome_checklist": "EMB VACUO 20X30 (UNID)",
+   "nome_everest": "EMB VACUO 20X30",
+   "setor": "SECOS",
+   "subsetor": "MATERIAIS DE PRIMEIRO USO",
+   "unidade": "UNID",
+   "estoque_minimo": 20.0,
+   "prefixo": "EMB"
+  },
+  {
+   "id": "funcionario_cafe",
+   "nome_checklist": "FUNCIONARIO CAFE (KG)",
+   "nome_everest": "FUNCIONARIO CAFE",
+   "setor": "SECOS",
+   "subsetor": "SECOS",
+   "unidade": "KG",
+   "estoque_minimo": 4.0,
+   "prefixo": "FUNCIONARIO"
+  },
+  {
+   "id": "funcionario_feijao",
+   "nome_checklist": "FUNCIONARIO FEIJAO (KG)",
+   "nome_everest": "FUNCIONARIO FEIJAO",
+   "setor": "SECOS",
+   "subsetor": "SECOS",
+   "unidade": "KG",
+   "estoque_minimo": 20.0,
+   "prefixo": "FUNCIONARIO"
+  },
+  {
+   "id": "funcionario_macarrao",
+   "nome_checklist": "FUNCIONARIO MACARRAO (KG)",
+   "nome_everest": "FUNCIONARIO MACARRAO",
+   "setor": "SECOS",
+   "subsetor": "SECOS",
+   "unidade": "KG",
+   "estoque_minimo": 11.0,
+   "prefixo": "FUNCIONARIO"
+  },
+  {
+   "id": "mp_acucar_refinado",
+   "nome_checklist": "MP ACUCAR REFINADO (KG)",
+   "nome_everest": "MP ACUCAR REFINADO",
+   "setor": "SECOS",
+   "subsetor": "SECOS",
+   "unidade": "KG",
+   "estoque_minimo": 5.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_alcaparrones",
+   "nome_checklist": "MP ALCAPARRONES (KG)",
+   "nome_everest": "MP ALCAPARRONES",
+   "setor": "SECOS",
+   "subsetor": "SECOS",
+   "unidade": "KG",
+   "estoque_minimo": 1.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_alga_nori",
+   "nome_checklist": "MP ALGA NORI (KG)",
+   "nome_everest": "MP ALGA NORI",
+   "setor": "SECOS",
+   "subsetor": "SECOS",
+   "unidade": "KG",
+   "estoque_minimo": 1.2600000000000002,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_alho_frito",
+   "nome_checklist": "MP ALHO FRITO (KG)",
+   "nome_everest": "MP ALHO FRITO",
+   "setor": "SECOS",
+   "subsetor": "SECOS",
+   "unidade": "KG",
+   "estoque_minimo": 2.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_amido_de_milho",
+   "nome_checklist": "MP AMIDO DE MILHO (KG)",
+   "nome_everest": "MP AMIDO DE MILHO",
+   "setor": "SECOS",
+   "subsetor": "SECOS",
+   "unidade": "KG",
+   "estoque_minimo": 1.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_arroz_italiano",
+   "nome_checklist": "MP ARROZ ITALIANO (KG)",
+   "nome_everest": "MP ARROZ ITALIANO",
+   "setor": "SECOS",
+   "subsetor": "SECOS",
+   "unidade": "KG",
+   "estoque_minimo": 90.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_arroz_sushi",
+   "nome_checklist": "MP ARROZ SUSHI (KG)",
+   "nome_everest": "MP ARROZ SUSHI",
+   "setor": "SECOS",
+   "subsetor": "SECOS",
+   "unidade": "KG",
+   "estoque_minimo": 60.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_azeite_extra_virgem",
+   "nome_checklist": "MP AZEITE EXTRA VIRGEM (LITRO)",
+   "nome_everest": "MP AZEITE EXTRA VIRGEM",
+   "setor": "SECOS",
+   "subsetor": "SECOS",
+   "unidade": "LITRO",
+   "estoque_minimo": 15.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_azeite_extra_virgem_paganine",
+   "nome_checklist": "MP AZEITE EXTRA VIRGEM PAGANINE (LITRO)",
+   "nome_everest": "MP AZEITE EXTRA VIRGEM PAGANINE",
+   "setor": "SECOS",
+   "subsetor": "SECOS",
+   "unidade": "LITRO",
+   "estoque_minimo": 6.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_azeite_trufado",
+   "nome_checklist": "MP AZEITE TRUFADO (LITRO)",
+   "nome_everest": "MP AZEITE TRUFADO",
+   "setor": "SECOS",
+   "subsetor": "SECOS",
+   "unidade": "LITRO",
+   "estoque_minimo": 2.75,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_canela_em_po",
+   "nome_checklist": "MP CANELA EM PO (KG)",
+   "nome_everest": "MP CANELA EM PO",
+   "setor": "SECOS",
+   "subsetor": "SECOS",
+   "unidade": "KG",
+   "estoque_minimo": 0.5,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_castanha_de_caju_xerem",
+   "nome_checklist": "MP CASTANHA DE CAJU XEREM (KG)",
+   "nome_everest": "MP CASTANHA DE CAJU XEREM",
+   "setor": "SECOS",
+   "subsetor": "SECOS",
+   "unidade": "KG",
+   "estoque_minimo": 1.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_champignon_conserva",
+   "nome_checklist": "MP CHAMPIGNON CONSERVA (KG)",
+   "nome_everest": "MP CHAMPIGNON CONSERVA",
+   "setor": "SECOS",
+   "subsetor": "SECOS",
+   "unidade": "KG",
+   "estoque_minimo": 4.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_creme_avela",
+   "nome_checklist": "MP CREME AVELA (KG)",
+   "nome_everest": "MP CREME AVELA",
+   "setor": "SECOS",
+   "subsetor": "SECOS",
+   "unidade": "KG",
+   "estoque_minimo": 3.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_creme_de_leite",
+   "nome_checklist": "MP CREME DE LEITE (KG)",
+   "nome_everest": "MP CREME DE LEITE",
+   "setor": "SECOS",
+   "subsetor": "SECOS",
+   "unidade": "KG",
+   "estoque_minimo": 25.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_doce_de_leite_argentino",
+   "nome_checklist": "MP DOCE DE LEITE ARGENTINO (KG)",
+   "nome_everest": "MP DOCE DE LEITE ARGENTINO",
+   "setor": "SECOS",
+   "subsetor": "SECOS",
+   "unidade": "KG",
+   "estoque_minimo": 28.8,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_extrato_de_tomate",
+   "nome_checklist": "MP EXTRATO DE TOMATE (KG)",
+   "nome_everest": "MP EXTRATO DE TOMATE",
+   "setor": "SECOS",
+   "subsetor": "SECOS",
+   "unidade": "KG",
+   "estoque_minimo": 4.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_farinha_baiana_flocada",
+   "nome_checklist": "MP FARINHA BAIANA FLOCADA (KG)",
+   "nome_everest": "MP FARINHA BAIANA FLOCADA",
+   "setor": "SECOS",
+   "subsetor": "SECOS",
+   "unidade": "KG",
+   "estoque_minimo": 50.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_farinha_de_trigo",
+   "nome_checklist": "MP FARINHA DE TRIGO (KG)",
+   "nome_everest": "MP FARINHA DE TRIGO",
+   "setor": "SECOS",
+   "subsetor": "SECOS",
+   "unidade": "KG",
+   "estoque_minimo": 14.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_farinha_panko",
+   "nome_checklist": "MP FARINHA PANKO (KG)",
+   "nome_everest": "MP FARINHA PANKO",
+   "setor": "SECOS",
+   "subsetor": "SECOS",
+   "unidade": "KG",
+   "estoque_minimo": 7.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_farinha_pernambucana_amarela",
+   "nome_checklist": "MP FARINHA PERNAMBUCANA AMARELA (KG)",
+   "nome_everest": "MP FARINHA PERNAMBUCANA AMARELA",
+   "setor": "SECOS",
+   "subsetor": "SECOS",
+   "unidade": "KG",
+   "estoque_minimo": 50.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_gengibre_em_conserva",
+   "nome_checklist": "MP GENGIBRE EM CONSERVA (KG)",
+   "nome_everest": "MP GENGIBRE EM CONSERVA",
+   "setor": "SECOS",
+   "subsetor": "SECOS",
+   "unidade": "KG",
+   "estoque_minimo": 9.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_gergelim_branco",
+   "nome_checklist": "MP GERGELIM BRANCO (KG)",
+   "nome_everest": "MP GERGELIM BRANCO",
+   "setor": "SECOS",
+   "subsetor": "SECOS",
+   "unidade": "KG",
+   "estoque_minimo": 4.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_gergelim_preto",
+   "nome_checklist": "MP GERGELIM PRETO (KG)",
+   "nome_everest": "MP GERGELIM PRETO",
+   "setor": "SECOS",
+   "subsetor": "SECOS",
+   "unidade": "KG",
+   "estoque_minimo": 2.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_gordura_vegetal_balde_14_5kg",
+   "nome_checklist": "MP GORDURA VEGETAL BALDE 14,5KG (UNID)",
+   "nome_everest": "MP GORDURA VEGETAL BALDE 14,5KG",
+   "setor": "SECOS",
+   "subsetor": "SECOS",
+   "unidade": "UNID",
+   "estoque_minimo": 10.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_hondashi",
+   "nome_checklist": "MP HONDASHI (KG)",
+   "nome_everest": "MP HONDASHI",
+   "setor": "SECOS",
+   "subsetor": "SECOS",
+   "unidade": "KG",
+   "estoque_minimo": 3.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_leite_em_po",
+   "nome_checklist": "MP LEITE EM PO (KG)",
+   "nome_everest": "MP LEITE EM PO",
+   "setor": "SECOS",
+   "subsetor": "SECOS",
+   "unidade": "KG",
+   "estoque_minimo": 2.4,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_leite_integral",
+   "nome_checklist": "MP LEITE INTEGRAL (LITRO)",
+   "nome_everest": "MP LEITE INTEGRAL",
+   "setor": "SECOS",
+   "subsetor": "SECOS",
+   "unidade": "LITRO",
+   "estoque_minimo": 5.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_macarrao_linguine",
+   "nome_checklist": "MP MACARRAO LINGUINE (KG)",
+   "nome_everest": "MP MACARRAO LINGUINE",
+   "setor": "SECOS",
+   "subsetor": "SECOS",
+   "unidade": "KG",
+   "estoque_minimo": 20.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_macarrao_yakissoba",
+   "nome_checklist": "MP MACARRAO YAKISSOBA (KG)",
+   "nome_everest": "MP MACARRAO YAKISSOBA",
+   "setor": "SECOS",
+   "subsetor": "SECOS",
+   "unidade": "KG",
+   "estoque_minimo": 20.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_maionese",
+   "nome_checklist": "MP MAIONESE (KG)",
+   "nome_everest": "MP MAIONESE",
+   "setor": "SECOS",
+   "subsetor": "SECOS",
+   "unidade": "KG",
+   "estoque_minimo": 2.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_manteiga_de_garrafa",
+   "nome_checklist": "MP MANTEIGA DE GARRAFA (LITRO)",
+   "nome_everest": "MP MANTEIGA DE GARRAFA",
+   "setor": "SECOS",
+   "subsetor": "SECOS",
+   "unidade": "LITRO",
+   "estoque_minimo": 2.4,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_misso",
+   "nome_checklist": "MP MISSO (KG)",
+   "nome_everest": "MP MISSO",
+   "setor": "SECOS",
+   "subsetor": "SECOS",
+   "unidade": "KG",
+   "estoque_minimo": 4.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_molho_shoyu_hinomoto",
+   "nome_checklist": "MP MOLHO SHOYU HINOMOTO (LITRO)",
+   "nome_everest": "MP MOLHO SHOYU HINOMOTO",
+   "setor": "SECOS",
+   "subsetor": "SECOS",
+   "unidade": "LITRO",
+   "estoque_minimo": 40.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_molho_shoyu_kikkoman",
+   "nome_checklist": "MP MOLHO SHOYU KIKKOMAN (LITRO)",
+   "nome_everest": "MP MOLHO SHOYU KIKKOMAN",
+   "setor": "SECOS",
+   "subsetor": "SECOS",
+   "unidade": "LITRO",
+   "estoque_minimo": 40.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_molho_shoyu_light",
+   "nome_checklist": "MP MOLHO SHOYU LIGHT (LITRO)",
+   "nome_everest": "MP MOLHO SHOYU LIGHT",
+   "setor": "SECOS",
+   "subsetor": "SECOS",
+   "unidade": "LITRO",
+   "estoque_minimo": 40.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_mostarda_graos_lancienne",
+   "nome_checklist": "MP MOSTARDA GRAOS LANCIENNE (KG)",
+   "nome_everest": "MP MOSTARDA GRAOS LANCIENNE",
+   "setor": "SECOS",
+   "subsetor": "SECOS",
+   "unidade": "KG",
+   "estoque_minimo": 1.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_oleo_de_gergelim",
+   "nome_checklist": "MP OLEO DE GERGELIM (LITRO)",
+   "nome_everest": "MP OLEO DE GERGELIM",
+   "setor": "SECOS",
+   "subsetor": "SECOS",
+   "unidade": "LITRO",
+   "estoque_minimo": 4.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_oleo_de_soja",
+   "nome_checklist": "MP OLEO DE SOJA (LITRO)",
+   "nome_everest": "MP OLEO DE SOJA",
+   "setor": "SECOS",
+   "subsetor": "SECOS",
+   "unidade": "LITRO",
+   "estoque_minimo": 36.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_ovo",
+   "nome_checklist": "MP OVO (UNID)",
+   "nome_everest": "MP OVO",
+   "setor": "SECOS",
+   "subsetor": "SECOS",
+   "unidade": "UNID",
+   "estoque_minimo": 1440.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_pacoca",
+   "nome_checklist": "MP PACOCA (KG)",
+   "nome_everest": "MP PACOCA",
+   "setor": "SECOS",
+   "subsetor": "SECOS",
+   "unidade": "KG",
+   "estoque_minimo": 2.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_palmito_fatiado_em_conserva",
+   "nome_checklist": "MP PALMITO FATIADO EM CONSERVA (KG)",
+   "nome_everest": "MP PALMITO FATIADO EM CONSERVA",
+   "setor": "SECOS",
+   "subsetor": "SECOS",
+   "unidade": "KG",
+   "estoque_minimo": 7.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_pimenta_reino_em_grao",
+   "nome_checklist": "MP PIMENTA REINO EM GRAO (KG)",
+   "nome_everest": "MP PIMENTA REINO EM GRAO",
+   "setor": "SECOS",
+   "subsetor": "SECOS",
+   "unidade": "KG",
+   "estoque_minimo": 0.5,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_pimenta_tabasco",
+   "nome_checklist": "MP PIMENTA TABASCO (LITRO)",
+   "nome_everest": "MP PIMENTA TABASCO",
+   "setor": "SECOS",
+   "subsetor": "SECOS",
+   "unidade": "LITRO",
+   "estoque_minimo": 1.3199999999999998,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_quinoa_grao",
+   "nome_checklist": "MP QUINOA GRAO (KG)",
+   "nome_everest": "MP QUINOA GRAO",
+   "setor": "SECOS",
+   "subsetor": "SECOS",
+   "unidade": "KG",
+   "estoque_minimo": 6.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_sal_refinado",
+   "nome_checklist": "MP SAL REFINADO (KG)",
+   "nome_everest": "MP SAL REFINADO",
+   "setor": "SECOS",
+   "subsetor": "SECOS",
+   "unidade": "KG",
+   "estoque_minimo": 10.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_tempura",
+   "nome_checklist": "MP TEMPURA (KG)",
+   "nome_everest": "MP TEMPURA",
+   "setor": "SECOS",
+   "subsetor": "SECOS",
+   "unidade": "KG",
+   "estoque_minimo": 3.5,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_tonkatsu",
+   "nome_checklist": "MP TONKATSU (LITRO)",
+   "nome_everest": "MP TONKATSU",
+   "setor": "SECOS",
+   "subsetor": "SECOS",
+   "unidade": "LITRO",
+   "estoque_minimo": 5.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_vinagre_de_maca",
+   "nome_checklist": "MP VINAGRE DE MACA (LITRO)",
+   "nome_everest": "MP VINAGRE DE MACA",
+   "setor": "SECOS",
+   "subsetor": "SECOS",
+   "unidade": "LITRO",
+   "estoque_minimo": 0.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_vinagre_de_vinho_tinto",
+   "nome_checklist": "MP VINAGRE DE VINHO TINTO (LITRO)",
+   "nome_everest": "MP VINAGRE DE VINHO TINTO",
+   "setor": "SECOS",
+   "subsetor": "SECOS",
+   "unidade": "LITRO",
+   "estoque_minimo": 3.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "prod_cestinha_de_harumaki",
+   "nome_checklist": "PROD CESTINHA DE HARUMAKI (UNID)",
+   "nome_everest": "PROD CESTINHA DE HARUMAKI",
+   "setor": "SECOS",
+   "subsetor": "SECOS",
+   "unidade": "UNID",
+   "estoque_minimo": 960.0,
+   "prefixo": "PROD"
+  },
+  {
+   "id": "prod_sal_rosa_temperado",
+   "nome_checklist": "PROD SAL ROSA TEMPERADO (KG)",
+   "nome_everest": "PROD SAL ROSA TEMPERADO",
+   "setor": "SECOS",
+   "subsetor": "SECOS",
+   "unidade": "KG",
+   "estoque_minimo": 2.0,
+   "prefixo": "PROD"
+  },
+  {
+   "id": "mp_bit_salmao_defumado",
+   "nome_checklist": "MP BIT SALMAO DEFUMADO (KG)",
+   "nome_everest": "MP BIT SALMAO DEFUMADO",
+   "setor": "SUSHI",
+   "subsetor": "CONGELADA",
+   "unidade": "KG",
+   "estoque_minimo": 5.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_ovas_black",
+   "nome_checklist": "MP OVAS BLACK (KG)",
+   "nome_everest": "MP OVAS BLACK",
+   "setor": "SUSHI",
+   "subsetor": "CONGELADA",
+   "unidade": "KG",
+   "estoque_minimo": 1.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_ovas_orange",
+   "nome_checklist": "MP OVAS ORANGE (KG)",
+   "nome_everest": "MP OVAS ORANGE",
+   "setor": "SUSHI",
+   "subsetor": "CONGELADA",
+   "unidade": "KG",
+   "estoque_minimo": 1.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_polvo",
+   "nome_checklist": "MP POLVO (KG)",
+   "nome_everest": "MP POLVO",
+   "setor": "SUSHI",
+   "subsetor": "CONGELADA",
+   "unidade": "KG",
+   "estoque_minimo": 2.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "prod_camarao_niguiri",
+   "nome_checklist": "PROD CAMARAO NIGUIRI (UNID)",
+   "nome_everest": "PROD CAMARAO NIGUIRI",
+   "setor": "SUSHI",
+   "subsetor": "CONGELADA",
+   "unidade": "UNID",
+   "estoque_minimo": 200.0,
+   "prefixo": "PROD"
+  },
+  {
+   "id": "prod_geleia_de_maracuja",
+   "nome_checklist": "PROD GELEIA DE MARACUJA (KG)",
+   "nome_everest": "PROD GELEIA DE MARACUJA",
+   "setor": "SUSHI",
+   "subsetor": "CONGELADA",
+   "unidade": "KG",
+   "estoque_minimo": 7.0,
+   "prefixo": "PROD"
+  },
+  {
+   "id": "prod_geleia_de_pimenta",
+   "nome_checklist": "PROD GELEIA DE PIMENTA (KG)",
+   "nome_everest": "PROD GELEIA DE PIMENTA",
+   "setor": "SUSHI",
+   "subsetor": "CONGELADA",
+   "unidade": "KG",
+   "estoque_minimo": 6.0,
+   "prefixo": "PROD"
+  },
+  {
+   "id": "prod_geleia_frutas_vermelhas",
+   "nome_checklist": "PROD GELEIA FRUTAS VERMELHAS (KG)",
+   "nome_everest": "PROD GELEIA FRUTAS VERMELHAS",
+   "setor": "SUSHI",
+   "subsetor": "CONGELADA",
+   "unidade": "KG",
+   "estoque_minimo": 4.0,
+   "prefixo": "PROD"
+  },
+  {
+   "id": "prod_leite_de_tigre",
+   "nome_checklist": "PROD LEITE DE TIGRE (LITRO)",
+   "nome_everest": "PROD LEITE DE TIGRE",
+   "setor": "SUSHI",
+   "subsetor": "CONGELADA",
+   "unidade": "LITRO",
+   "estoque_minimo": 8.0,
+   "prefixo": "PROD"
+  },
+  {
+   "id": "prod_lula_marinada",
+   "nome_checklist": "PROD LULA MARINADA (KG)",
+   "nome_everest": "PROD LULA MARINADA",
+   "setor": "SUSHI",
+   "subsetor": "CONGELADA",
+   "unidade": "KG",
+   "estoque_minimo": 15.0,
+   "prefixo": "PROD"
+  },
+  {
+   "id": "mp_queijo_brie",
+   "nome_checklist": "MP QUEIJO BRIE (KG)",
+   "nome_everest": "MP QUEIJO BRIE",
+   "setor": "SUSHI",
+   "subsetor": "REFRIGERADA",
+   "unidade": "KG",
+   "estoque_minimo": 0.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_queijo_coalho",
+   "nome_checklist": "MP QUEIJO COALHO (KG)",
+   "nome_everest": "MP QUEIJO COALHO",
+   "setor": "SUSHI",
+   "subsetor": "REFRIGERADA",
+   "unidade": "KG",
+   "estoque_minimo": 3.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "prod_molho_teriaki",
+   "nome_checklist": "PROD MOLHO TERIAKI (KG)",
+   "nome_everest": "PROD MOLHO TERIAKI",
+   "setor": "SUSHI",
+   "subsetor": "REFRIGERADA",
+   "unidade": "KG",
+   "estoque_minimo": 18.2,
+   "prefixo": "PROD"
+  },
+  {
+   "id": "mp_aceto_balsamico",
+   "nome_checklist": "MP ACETO BALSAMICO (LITRO)",
+   "nome_everest": "MP ACETO BALSAMICO",
+   "setor": "SUSHI",
+   "subsetor": "SECOS",
+   "unidade": "LITRO",
+   "estoque_minimo": 2.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_ajinomoto_glutamato",
+   "nome_checklist": "MP AJINOMOTO GLUTAMATO (KG)",
+   "nome_everest": "MP AJINOMOTO GLUTAMATO",
+   "setor": "SUSHI",
+   "subsetor": "SECOS",
+   "unidade": "KG",
+   "estoque_minimo": 1.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_alecrim_desidratado",
+   "nome_checklist": "MP ALECRIM DESIDRATADO (KG)",
+   "nome_everest": "MP ALECRIM DESIDRATADO",
+   "setor": "SUSHI",
+   "subsetor": "SECOS",
+   "unidade": "KG",
+   "estoque_minimo": 0.5,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_flor_de_sal",
+   "nome_checklist": "MP FLOR DE SAL (KG)",
+   "nome_everest": "MP FLOR DE SAL",
+   "setor": "SUSHI",
+   "subsetor": "SECOS",
+   "unidade": "KG",
+   "estoque_minimo": 0.35,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_mel_silvestre",
+   "nome_checklist": "MP MEL SILVESTRE (KG)",
+   "nome_everest": "MP MEL SILVESTRE",
+   "setor": "SUSHI",
+   "subsetor": "SECOS",
+   "unidade": "KG",
+   "estoque_minimo": 1.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_molho_de_ostra_vegetariano",
+   "nome_checklist": "MP MOLHO DE OSTRA VEGETARIANO (LITRO)",
+   "nome_everest": "MP MOLHO DE OSTRA VEGETARIANO",
+   "setor": "SUSHI",
+   "subsetor": "SECOS",
+   "unidade": "LITRO",
+   "estoque_minimo": 2.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_mostarda_amarela_em_graos",
+   "nome_checklist": "MP MOSTARDA AMARELA EM GRAOS (KG)",
+   "nome_everest": "MP MOSTARDA AMARELA EM GRAOS",
+   "setor": "SUSHI",
+   "subsetor": "SECOS",
+   "unidade": "KG",
+   "estoque_minimo": 1.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_nozes_s_casca",
+   "nome_checklist": "MP NOZES S CASCA (KG)",
+   "nome_everest": "MP NOZES S CASCA",
+   "setor": "SUSHI",
+   "subsetor": "SECOS",
+   "unidade": "KG",
+   "estoque_minimo": 0.5,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_pasta_tamarindo",
+   "nome_checklist": "MP PASTA TAMARINDO (KG)",
+   "nome_everest": "MP PASTA TAMARINDO",
+   "setor": "SUSHI",
+   "subsetor": "SECOS",
+   "unidade": "KG",
+   "estoque_minimo": 2.88,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_pimenta_sriracha",
+   "nome_checklist": "MP PIMENTA SRIRACHA (LITRO)",
+   "nome_everest": "MP PIMENTA SRIRACHA",
+   "setor": "SUSHI",
+   "subsetor": "SECOS",
+   "unidade": "LITRO",
+   "estoque_minimo": 2.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_rapadura",
+   "nome_checklist": "MP RAPADURA (KG)",
+   "nome_everest": "MP RAPADURA",
+   "setor": "SUSHI",
+   "subsetor": "SECOS",
+   "unidade": "KG",
+   "estoque_minimo": 3.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_sake_mirin",
+   "nome_checklist": "MP SAKE MIRIN (L)",
+   "nome_everest": "MP SAKE MIRIN",
+   "setor": "SUSHI",
+   "subsetor": "SECOS",
+   "unidade": "LITRO",
+   "estoque_minimo": 5.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_salsa_desidratada",
+   "nome_checklist": "MP SALSA DESIDRATADA (KG)",
+   "nome_everest": "MP SALSA DESIDRATADA",
+   "setor": "SUSHI",
+   "subsetor": "SECOS",
+   "unidade": "KG",
+   "estoque_minimo": 0.5,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_tempero_p_sushi",
+   "nome_checklist": "MP TEMPERO P SUSHI (LITRO)",
+   "nome_everest": "MP TEMPERO P SUSHI",
+   "setor": "SUSHI",
+   "subsetor": "SECOS",
+   "unidade": "LITRO",
+   "estoque_minimo": 5.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_tomilho_desidratado",
+   "nome_checklist": "MP TOMILHO DESIDRATADO (KG)",
+   "nome_everest": "MP TOMILHO DESIDRATADO",
+   "setor": "SUSHI",
+   "subsetor": "SECOS",
+   "unidade": "KG",
+   "estoque_minimo": 0.5,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_tortilla_chips",
+   "nome_checklist": "MP TORTILLA CHIPS (KG)",
+   "nome_everest": "MP TORTILLA CHIPS",
+   "setor": "SUSHI",
+   "subsetor": "SECOS",
+   "unidade": "KG",
+   "estoque_minimo": 1.08,
+   "prefixo": "MP"
+  },
+  {
+   "id": "mp_wasabi",
+   "nome_checklist": "MP WASABI (KG)",
+   "nome_everest": "MP WASABI",
+   "setor": "SUSHI",
+   "subsetor": "SECOS",
+   "unidade": "KG",
+   "estoque_minimo": 1.0,
+   "prefixo": "MP"
+  },
+  {
+   "id": "longneck_stella_pure_gold",
+   "nome_checklist": "LONGNECK STELLA PURE GOLD (UNID)",
+   "nome_everest": "LONGNECK STELLA PURE GOLD",
+   "setor": "VINHOS",
+   "subsetor": "BEBIDAS",
+   "unidade": "UNID",
+   "estoque_minimo": 48.0,
+   "prefixo": "LONGNECK"
+  },
+  {
+   "id": "esp_1913_brut_branco_1_4",
+   "nome_checklist": "ESP 1913 BRUT BRANCO 1/4 (UNID)",
+   "nome_everest": "ESP 1913 BRUT BRANCO 1/4",
+   "setor": "VINHOS",
+   "subsetor": "BEBIDAS",
+   "unidade": "UNID",
+   "estoque_minimo": 6.0,
+   "prefixo": "ESP"
+  },
+  {
+   "id": "esp_1913_brut_rose_1_4",
+   "nome_checklist": "ESP 1913 BRUT ROSE 1/4 (UNID)",
+   "nome_everest": "ESP 1913 BRUT ROSE 1/4",
+   "setor": "VINHOS",
+   "subsetor": "BEBIDAS",
+   "unidade": "UNID",
+   "estoque_minimo": 6.0,
+   "prefixo": "ESP"
+  },
+  {
+   "id": "esp_1913_sparkling_branco",
+   "nome_checklist": "ESP 1913 SPARKLING BRANCO (UNID)",
+   "nome_everest": "ESP 1913 SPARKLING BRANCO",
+   "setor": "VINHOS",
+   "subsetor": "BEBIDAS",
+   "unidade": "UNID",
+   "estoque_minimo": 8.0,
+   "prefixo": "ESP"
+  },
+  {
+   "id": "esp_1913_sparkling_brut_rose",
+   "nome_checklist": "ESP 1913 SPARKLING BRUT ROSE (UNID)",
+   "nome_everest": "ESP 1913 SPARKLING BRUT ROSE",
+   "setor": "VINHOS",
+   "subsetor": "BEBIDAS",
+   "unidade": "UNID",
+   "estoque_minimo": 6.0,
+   "prefixo": "ESP"
+  },
+  {
+   "id": "esp_vulcanici_brut_rose",
+   "nome_checklist": "ESP VULCANICI BRUT ROSE (UNID)",
+   "nome_everest": "ESP VULCANICI BRUT ROSE",
+   "setor": "VINHOS",
+   "subsetor": "BEBIDAS",
+   "unidade": "UNID",
+   "estoque_minimo": 4.0,
+   "prefixo": "ESP"
+  },
+  {
+   "id": "vb_aleixo_garcia_branco_250ml",
+   "nome_checklist": "VB ALEIXO GARCIA BRANCO 250ML (UNID)",
+   "nome_everest": "VB ALEIXO GARCIA BRANCO 250ML",
+   "setor": "VINHOS",
+   "subsetor": "BEBIDAS",
+   "unidade": "UNID",
+   "estoque_minimo": 10.0,
+   "prefixo": "VB"
+  },
+  {
+   "id": "vb_aleixo_reserva_bairrada_doc",
+   "nome_checklist": "VB ALEIXO RESERVA BAIRRADA DOC (UNID)",
+   "nome_everest": "VB ALEIXO RESERVA BAIRRADA DOC",
+   "setor": "VINHOS",
+   "subsetor": "BEBIDAS",
+   "unidade": "UNID",
+   "estoque_minimo": 3.0,
+   "prefixo": "VB"
+  },
+  {
+   "id": "vb_andre_goichot",
+   "nome_checklist": "VB ANDRE GOICHOT (UNID)",
+   "nome_everest": "VB ANDRE GOICHOT",
+   "setor": "VINHOS",
+   "subsetor": "BEBIDAS",
+   "unidade": "UNID",
+   "estoque_minimo": 2.0,
+   "prefixo": "VB"
+  },
+  {
+   "id": "vb_caminito_torrontes_branco",
+   "nome_checklist": "VB CAMINITO TORRONTES BRANCO (UNID)",
+   "nome_everest": "VB CAMINITO TORRONTES BRANCO",
+   "setor": "VINHOS",
+   "subsetor": "BEBIDAS",
+   "unidade": "UNID",
+   "estoque_minimo": 8.0,
+   "prefixo": "VB"
+  },
+  {
+   "id": "vb_catena_zapata_chardonnay",
+   "nome_checklist": "VB CATENA ZAPATA CHARDONNAY (UNID)",
+   "nome_everest": "VB CATENA ZAPATA CHARDONNAY",
+   "setor": "VINHOS",
+   "subsetor": "BEBIDAS",
+   "unidade": "UNID",
+   "estoque_minimo": 2.0,
+   "prefixo": "VB"
+  },
+  {
+   "id": "vb_chaka_chardonnay",
+   "nome_checklist": "VB CHAKA CHARDONNAY (UNID)",
+   "nome_everest": "VB CHAKA CHARDONNAY",
+   "setor": "VINHOS",
+   "subsetor": "BEBIDAS",
+   "unidade": "UNID",
+   "estoque_minimo": 6.0,
+   "prefixo": "VB"
+  },
+  {
+   "id": "vb_collezione_pinot_grigio",
+   "nome_checklist": "VB COLLEZIONE PINOT GRIGIO (UNID)",
+   "nome_everest": "VB COLLEZIONE PINOT GRIGIO",
+   "setor": "VINHOS",
+   "subsetor": "BEBIDAS",
+   "unidade": "UNID",
+   "estoque_minimo": 4.0,
+   "prefixo": "VB"
+  },
+  {
+   "id": "vb_jean_bousquet_chardonnay",
+   "nome_checklist": "VB JEAN BOUSQUET CHARDONNAY (UNID)",
+   "nome_everest": "VB JEAN BOUSQUET CHARDONNAY",
+   "setor": "VINHOS",
+   "subsetor": "BEBIDAS",
+   "unidade": "UNID",
+   "estoque_minimo": 6.0,
+   "prefixo": "VB"
+  },
+  {
+   "id": "vb_malacara_chardonnay",
+   "nome_checklist": "VB MALACARA CHARDONNAY (UNID)",
+   "nome_everest": "VB MALACARA CHARDONNAY",
+   "setor": "VINHOS",
+   "subsetor": "BEBIDAS",
+   "unidade": "UNID",
+   "estoque_minimo": 6.0,
+   "prefixo": "VB"
+  },
+  {
+   "id": "vb_toscanini_classic",
+   "nome_checklist": "VB TOSCANINI CLASSIC (UNID)",
+   "nome_everest": "VB TOSCANINI CLASSIC",
+   "setor": "VINHOS",
+   "subsetor": "BEBIDAS",
+   "unidade": "UNID",
+   "estoque_minimo": 8.0,
+   "prefixo": "VB"
+  },
+  {
+   "id": "vr_cuvee_sidoine",
+   "nome_checklist": "VR CUVEE SIDOINE (UNID)",
+   "nome_everest": "VR CUVEE SIDOINE",
+   "setor": "VINHOS",
+   "subsetor": "BEBIDAS",
+   "unidade": "UNID",
+   "estoque_minimo": 3.0,
+   "prefixo": "VR"
+  },
+  {
+   "id": "vr_love_pink_rose",
+   "nome_checklist": "VR LOVE PINK ROSE (UNID)",
+   "nome_everest": "VR LOVE PINK ROSE",
+   "setor": "VINHOS",
+   "subsetor": "BEBIDAS",
+   "unidade": "UNID",
+   "estoque_minimo": 4.0,
+   "prefixo": "VR"
+  },
+  {
+   "id": "vr_monteiro_torres_rosado",
+   "nome_checklist": "VR MONTEIRO TORRES ROSADO (UNID)",
+   "nome_everest": "VR MONTEIRO TORRES ROSADO",
+   "setor": "VINHOS",
+   "subsetor": "BEBIDAS",
+   "unidade": "UNID",
+   "estoque_minimo": 4.0,
+   "prefixo": "VR"
+  },
+  {
+   "id": "vr_state_spring_4_estaciones_rose",
+   "nome_checklist": "VR STATE SPRING 4 ESTACIONES ROSE (UNID)",
+   "nome_everest": "VR STATE SPRING 4 ESTACIONES ROSE",
+   "setor": "VINHOS",
+   "subsetor": "BEBIDAS",
+   "unidade": "UNID",
+   "estoque_minimo": 6.0,
+   "prefixo": "VR"
+  },
+  {
+   "id": "vt_aleixo_garcia_tinto",
+   "nome_checklist": "VT ALEIXO GARCIA TINTO (UNID)",
+   "nome_everest": "VT ALEIXO GARCIA TINTO",
+   "setor": "VINHOS",
+   "subsetor": "BEBIDAS",
+   "unidade": "UNID",
+   "estoque_minimo": 6.0,
+   "prefixo": "VT"
+  },
+  {
+   "id": "vt_aleixo_garcia_tinto_250ml",
+   "nome_checklist": "VT ALEIXO GARCIA TINTO 250ML (UNID)",
+   "nome_everest": "VT ALEIXO GARCIA TINTO 250ML",
+   "setor": "VINHOS",
+   "subsetor": "BEBIDAS",
+   "unidade": "UNID",
+   "estoque_minimo": 10.0,
+   "prefixo": "VT"
+  },
+  {
+   "id": "vt_angelica_zapata",
+   "nome_checklist": "VT ANGELICA ZAPATA (UNID)",
+   "nome_everest": "VT ANGELICA ZAPATA",
+   "setor": "VINHOS",
+   "subsetor": "BEBIDAS",
+   "unidade": "UNID",
+   "estoque_minimo": 2.0,
+   "prefixo": "VT"
+  },
+  {
+   "id": "vt_caminito_cabernet_tinto",
+   "nome_checklist": "VT CAMINITO CABERNET TINTO (UNID)",
+   "nome_everest": "VT CAMINITO CABERNET TINTO",
+   "setor": "VINHOS",
+   "subsetor": "BEBIDAS",
+   "unidade": "UNID",
+   "estoque_minimo": 8.0,
+   "prefixo": "VT"
+  },
+  {
+   "id": "vt_caminito_malbec_tinto",
+   "nome_checklist": "VT CAMINITO MALBEC TINTO (UNID)",
+   "nome_everest": "VT CAMINITO MALBEC TINTO",
+   "setor": "VINHOS",
+   "subsetor": "BEBIDAS",
+   "unidade": "UNID",
+   "estoque_minimo": 16.0,
+   "prefixo": "VT"
+  },
+  {
+   "id": "vt_cartuxa_colheita",
+   "nome_checklist": "VT CARTUXA COLHEITA (UNID)",
+   "nome_everest": "VT CARTUXA COLHEITA",
+   "setor": "VINHOS",
+   "subsetor": "BEBIDAS",
+   "unidade": "UNID",
+   "estoque_minimo": 4.0,
+   "prefixo": "VT"
+  },
+  {
+   "id": "vt_catena_zapata",
+   "nome_checklist": "VT CATENA ZAPATA (UNID)",
+   "nome_everest": "VT CATENA ZAPATA",
+   "setor": "VINHOS",
+   "subsetor": "BEBIDAS",
+   "unidade": "UNID",
+   "estoque_minimo": 2.0,
+   "prefixo": "VT"
+  },
+  {
+   "id": "vt_chaka_cabernet",
+   "nome_checklist": "VT CHAKA CABERNET (UNID)",
+   "nome_everest": "VT CHAKA CABERNET",
+   "setor": "VINHOS",
+   "subsetor": "BEBIDAS",
+   "unidade": "UNID",
+   "estoque_minimo": 5.0,
+   "prefixo": "VT"
+  },
+  {
+   "id": "vt_chaka_carmenere",
+   "nome_checklist": "VT CHAKA CARMENERE (UNID)",
+   "nome_everest": "VT CHAKA CARMENERE",
+   "setor": "VINHOS",
+   "subsetor": "BEBIDAS",
+   "unidade": "UNID",
+   "estoque_minimo": 5.0,
+   "prefixo": "VT"
+  },
+  {
+   "id": "vt_collezione_primitivo",
+   "nome_checklist": "VT COLLEZIONE PRIMITIVO (UNID)",
+   "nome_everest": "VT COLLEZIONE PRIMITIVO",
+   "setor": "VINHOS",
+   "subsetor": "BEBIDAS",
+   "unidade": "UNID",
+   "estoque_minimo": 3.0,
+   "prefixo": "VT"
+  },
+  {
+   "id": "vt_donoso_group_sate_cabernet",
+   "nome_checklist": "VT DONOSO GROUP SATE CABERNET (UNID)",
+   "nome_everest": "VT DONOSO GROUP SATE CABERNET",
+   "setor": "VINHOS",
+   "subsetor": "BEBIDAS",
+   "unidade": "UNID",
+   "estoque_minimo": 5.0,
+   "prefixo": "VT"
+  },
+  {
+   "id": "vt_esperanca_alentejo",
+   "nome_checklist": "VT ESPERANCA ALENTEJO (UNID)",
+   "nome_everest": "VT ESPERANCA ALENTEJO",
+   "setor": "VINHOS",
+   "subsetor": "BEBIDAS",
+   "unidade": "UNID",
+   "estoque_minimo": 5.0,
+   "prefixo": "VT"
+  },
+  {
+   "id": "vt_festivo_malbec",
+   "nome_checklist": "VT FESTIVO MALBEC (UNID)",
+   "nome_everest": "VT FESTIVO MALBEC",
+   "setor": "VINHOS",
+   "subsetor": "BEBIDAS",
+   "unidade": "UNID",
+   "estoque_minimo": 4.0,
+   "prefixo": "VT"
+  },
+  {
+   "id": "vt_jean_bousquet_malbec",
+   "nome_checklist": "VT JEAN BOUSQUET MALBEC (UNID)",
+   "nome_everest": "VT JEAN BOUSQUET MALBEC",
+   "setor": "VINHOS",
+   "subsetor": "BEBIDAS",
+   "unidade": "UNID",
+   "estoque_minimo": 5.0,
+   "prefixo": "VT"
+  },
+  {
+   "id": "vt_le_petit_maynne_bordeaux",
+   "nome_checklist": "VT LE PETIT MAYNNE BORDEAUX (UNID)",
+   "nome_everest": "VT LE PETIT MAYNNE BORDEAUX",
+   "setor": "VINHOS",
+   "subsetor": "BEBIDAS",
+   "unidade": "UNID",
+   "estoque_minimo": 2.0,
+   "prefixo": "VT"
+  },
+  {
+   "id": "vt_malacara_bonarda",
+   "nome_checklist": "VT MALACARA BONARDA (UNID)",
+   "nome_everest": "VT MALACARA BONARDA",
+   "setor": "VINHOS",
+   "subsetor": "BEBIDAS",
+   "unidade": "UNID",
+   "estoque_minimo": 4.0,
+   "prefixo": "VT"
+  },
+  {
+   "id": "vt_malacara_malbec",
+   "nome_checklist": "VT MALACARA MALBEC (UNID)",
+   "nome_everest": "VT MALACARA MALBEC",
+   "setor": "VINHOS",
+   "subsetor": "BEBIDAS",
+   "unidade": "UNID",
+   "estoque_minimo": 4.0,
+   "prefixo": "VT"
+  },
+  {
+   "id": "vt_pacha_reserva_merlot",
+   "nome_checklist": "VT PACHA RESERVA MERLOT (UNID)",
+   "nome_everest": "VT PACHA RESERVA MERLOT",
+   "setor": "VINHOS",
+   "subsetor": "BEBIDAS",
+   "unidade": "UNID",
+   "estoque_minimo": 2.0,
+   "prefixo": "VT"
+  },
+  {
+   "id": "vt_pelleriti_reserve_malbec_signature",
+   "nome_checklist": "VT PELLERITI RESERVE MALBEC SIGNATURE (UNID)",
+   "nome_everest": "VT PELLERITI RESERVE MALBEC SIGNATURE",
+   "setor": "VINHOS",
+   "subsetor": "BEBIDAS",
+   "unidade": "UNID",
+   "estoque_minimo": 2.0,
+   "prefixo": "VT"
+  },
+  {
+   "id": "vt_petite_fleur",
+   "nome_checklist": "VT PETITE FLEUR (UNID)",
+   "nome_everest": "VT PETITE FLEUR",
+   "setor": "VINHOS",
+   "subsetor": "BEBIDAS",
+   "unidade": "UNID",
+   "estoque_minimo": 2.0,
+   "prefixo": "VT"
+  },
+  {
+   "id": "vt_quedate_cabernet_sauvignon",
+   "nome_checklist": "VT QUEDATE CABERNET SAUVIGNON (UNID)",
+   "nome_everest": "VT QUEDATE CABERNET SAUVIGNON",
+   "setor": "VINHOS",
+   "subsetor": "BEBIDAS",
+   "unidade": "UNID",
+   "estoque_minimo": 4.0,
+   "prefixo": "VT"
+  },
+  {
+   "id": "vt_quinta_da_laceira_douro",
+   "nome_checklist": "VT QUINTA DA LACEIRA DOURO (UNID)",
+   "nome_everest": "VT QUINTA DA LACEIRA DOURO",
+   "setor": "VINHOS",
+   "subsetor": "BEBIDAS",
+   "unidade": "UNID",
+   "estoque_minimo": 2.0,
+   "prefixo": "VT"
+  },
+  {
+   "id": "vt_rosso_toscana_igt_impazzimento",
+   "nome_checklist": "VT ROSSO TOSCANA IGT IMPAZZIMENTO (UNID)",
+   "nome_everest": "VT ROSSO TOSCANA IGT IMPAZZIMENTO",
+   "setor": "VINHOS",
+   "subsetor": "BEBIDAS",
+   "unidade": "UNID",
+   "estoque_minimo": 2.0,
+   "prefixo": "VT"
+  },
+  {
+   "id": "vt_state_autumn_4_estaciones_malbec",
+   "nome_checklist": "VT STATE AUTUMN 4 ESTACIONES MALBEC (UNID)",
+   "nome_everest": "VT STATE AUTUMN 4 ESTACIONES MALBEC",
+   "setor": "VINHOS",
+   "subsetor": "BEBIDAS",
+   "unidade": "UNID",
+   "estoque_minimo": 5.0,
+   "prefixo": "VT"
+  },
+  {
+   "id": "vt_toscanini_classic_tannat",
+   "nome_checklist": "VT TOSCANINI CLASSIC TANNAT (UNID)",
+   "nome_everest": "VT TOSCANINI CLASSIC TANNAT",
+   "setor": "VINHOS",
+   "subsetor": "BEBIDAS",
+   "unidade": "UNID",
+   "estoque_minimo": 5.0,
+   "prefixo": "VT"
+  },
+  {
+   "id": "vt_urbain_v_cotes_du_rhone_aoc",
+   "nome_checklist": "VT URBAIN V COTES DU RHONE AOC (UNID)",
+   "nome_everest": "VT URBAIN V COTES DU RHONE AOC",
+   "setor": "VINHOS",
+   "subsetor": "BEBIDAS",
+   "unidade": "UNID",
+   "estoque_minimo": 0.0,
+   "prefixo": "VT"
+  },
+  {
+   "id": "vt_yllera_roble_d_o_castilla_y_leon",
+   "nome_checklist": "VT YLLERA ROBLE D.O CASTILLA Y LEON (UNID)",
+   "nome_everest": "VT YLLERA ROBLE D.O CASTILLA Y LEON",
+   "setor": "VINHOS",
+   "subsetor": "BEBIDAS",
+   "unidade": "UNID",
+   "estoque_minimo": 2.0,
+   "prefixo": "VT"
+  }
+ ]
+}
