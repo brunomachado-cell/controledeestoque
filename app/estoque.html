@@ -282,6 +282,7 @@ const state = {
   entradas: [],    // notas já conferidas e gravadas
   draft: null,     // nota em conferência
   aiStatus: null,  // texto de progresso da leitura
+  aiImg: null,     // true/false: este visualizador aceita enviar imagem para a IA
 };
 const CNPJ_UNIDADE = "35631524000327";   // MULT COMERCIO (SIG = Sudoeste)
 let db = null, catalogoCol = null, cfgDoc = null;
@@ -655,11 +656,13 @@ function calcLinha(l){
   const item=l.item_id?state.itens[l.item_id]:null;
   if(l.ignorar) return {status:"skip",qtd:null,item};
   if(!item) return {status:"item",qtd:null,item};
+  if(l.qtd==null) return {status:"qtd",qtd:null,item};
   const f=Number(l.fator);
-  if(!f||f<=0||l.qtd==null) return {status:"fator",qtd:null,item};
+  if(!f||f<=0) return {status:"fator",qtd:null,item};
   return {status:"ok",qtd:Number(l.qtd)/f,item};
 }
-const LST={ok:["ls-ok","conferido"],fator:["ls-fator","informe o fator"],item:["ls-item","escolha o item"],skip:["ls-skip","ignorada"]};
+const LST={ok:["ls-ok","conferido"],fator:["ls-fator","informe o fator"],qtd:["ls-fator","informe a quantidade"],
+  item:["ls-item","escolha o item"],skip:["ls-skip","ignorada"]};
 
 function renderEntradas(){
   const view=document.getElementById("view");
@@ -670,16 +673,30 @@ function renderEntradas(){
   if(state.draft){ renderConferencia(); return; }
   const acc=entradasPorItem();
   const nItens=Object.keys(acc).length;
-  view.innerHTML=`
-  <div class="card"><h2>Subir nota de entrada <span class="hint">PDF da DANFE ou fotos das páginas</span></h2>
-    <div class="body">
-      <div class="drop" id="dropzone">
+  const img=state.aiImg;   // true = leitura por IA disponível | false = indisponível | null = verificando
+  const blocoUpload = img===false
+    ? `<div class="warnbox" style="margin:0 0 12px">
+         <b>Leitura automática indisponível neste visualizador.</b><br>
+         Este visualizador não permite enviar imagem para a IA, então a leitura do PDF da nota
+         não roda aqui. Dois caminhos que funcionam:<br>
+         <b>1)</b> Abra este mesmo link no navegador em <b>claude.ai</b> — o suporte a imagem varia
+         por aplicativo, e lá costuma funcionar.<br>
+         <b>2)</b> Mande a nota para o Claude no chat: ele lê, confere contra o catálogo e grava a
+         entrada direto aqui.<br>
+         Enquanto isso, você pode lançar a nota à mão no botão abaixo.
+       </div>`
+    : `<div class="drop" id="dropzone">
         <b>Arraste a nota aqui, ou clique para escolher</b>
         Aceita PDF e imagem (JPG/PNG).
         <div class="hintsm">A IA lê a tabela de produtos e <b>propõe</b> as quantidades.<br>
         Nada entra no estoque sem você conferir e aprovar.</div>
-      </div>
+       </div>`;
+  view.innerHTML=`
+  <div class="card"><h2>Nova nota de entrada <span class="hint">${img===false?"lançamento manual":"PDF da DANFE ou fotos das páginas"}</span></h2>
+    <div class="body">
+      ${blocoUpload}
       <input class="hidefile" id="notaInput" type="file" accept=".pdf,image/*" multiple>
+      <button class="btn ghost" id="manualBtn">✎ Lançar nota manualmente</button>
     </div>
   </div>
   <div class="card"><h2>Notas conferidas <span class="hint">${state.entradas.length} nota(s) · ${nItens} itens com entrada</span></h2>
@@ -695,12 +712,26 @@ function renderEntradas(){
     </div>
   </div>`;
   const dz=document.getElementById("dropzone"), inp=document.getElementById("notaInput");
-  dz.onclick=()=>inp.click();
-  dz.addEventListener("dragover",e=>{e.preventDefault();dz.style.borderColor="var(--accent)";});
-  dz.addEventListener("dragleave",()=>{dz.style.borderColor="";});
-  dz.addEventListener("drop",e=>{e.preventDefault();dz.style.borderColor="";
-    if(e.dataTransfer.files.length) lerNota([...e.dataTransfer.files]);});
+  if(dz){
+    dz.onclick=()=>inp.click();
+    dz.addEventListener("dragover",e=>{e.preventDefault();dz.style.borderColor="var(--accent)";});
+    dz.addEventListener("dragleave",()=>{dz.style.borderColor="";});
+    dz.addEventListener("drop",e=>{e.preventDefault();dz.style.borderColor="";
+      if(e.dataTransfer.files.length) lerNota([...e.dataTransfer.files]);});
+  }
   inp.onchange=e=>{ if(e.target.files.length) lerNota([...e.target.files]); e.target.value=""; };
+  document.getElementById("manualBtn").onclick=abrirManual;
+}
+
+/* --- lançamento manual da nota (sempre funciona) --- */
+function abrirManual(){
+  state.draft={forn:{nome:"",cnpj:""},nota:{numero:"",serie:"",emissao:"",chave:null},
+    dest:{nome:"",cnpj:"35.631.524/0003-27"},linhas:[],aviso:"",ilegivel:[],manual:true};
+  addLinhaManual(); renderAll();
+}
+function addLinhaManual(){
+  state.draft.linhas.push({idx:state.draft.linhas.length,codigo:"",descricao:"",un:"",
+    qtd:null,vunit:null,vtotal:null,item_id:null,fator:1,ignorar:false,novo_mapa:false,manual:true});
 }
 
 function itensDatalist(){
@@ -717,20 +748,26 @@ function renderConferencia(){
   const destOk = dig(d.dest?.cnpj)===CNPJ_UNIDADE;
   const calc=d.linhas.map(calcLinha);
   const nOk=calc.filter(c=>c.status==="ok").length;
-  const nPend=calc.filter(c=>c.status==="fator"||c.status==="item").length;
+  const nPend=calc.filter(c=>c.status==="fator"||c.status==="item"||c.status==="qtd").length;
   const totalNota=d.linhas.reduce((s,l)=>s+(Number(l.vtotal)||0),0);
   view.innerHTML=`<div class="card">
     <h2>Conferência da nota <span class="hint">nada é gravado até você aprovar</span>
       <button class="btn ghost" id="descartar">Descartar</button></h2>
     <div class="notahead">
+      ${d.manual?`
+      <div class="nf"><span class="k">Fornecedor</span><input class="destsel" id="mh_nome" value="${d.forn?.nome||""}" placeholder="nome do fornecedor"></div>
+      <div class="nf"><span class="k">CNPJ fornecedor</span><input class="destsel" id="mh_cnpj" value="${d.forn?.cnpj||""}" placeholder="00.000.000/0000-00"></div>
+      <div class="nf"><span class="k">Nº da nota</span><input class="destsel" id="mh_num" value="${d.nota?.numero||""}" placeholder="000000"></div>
+      <div class="nf"><span class="k">Emissão</span><input class="destsel" id="mh_emi" value="${d.nota?.emissao||""}" placeholder="dd/mm/aaaa"></div>
+      `:`
       <div class="nf"><span class="k">Fornecedor</span><span class="v">${d.forn?.nome||"—"}</span></div>
       <div class="nf"><span class="k">CNPJ fornecedor</span><span class="v mono">${d.forn?.cnpj||"—"}</span></div>
       <div class="nf"><span class="k">Nota</span><span class="v mono">${d.nota?.numero||"—"}${d.nota?.serie?" / "+d.nota.serie:""}</span></div>
       <div class="nf"><span class="k">Emissão</span><span class="v mono">${d.nota?.emissao||"—"}</span></div>
       <div class="nf"><span class="k">Total dos produtos</span><span class="v mono">R$ ${totalNota.toLocaleString("pt-BR",{minimumFractionDigits:2})}</span></div>
-      <div class="nf"><span class="k">Destinatário</span><span class="v">${d.dest?.nome||"—"}</span></div>
+      <div class="nf"><span class="k">Destinatário</span><span class="v">${d.dest?.nome||"—"}</span></div>`}
     </div>
-    ${!destOk?`<div class="warnbox"><b>Atenção:</b> o destinatário lido (CNPJ ${d.dest?.cnpj||"não identificado"}) não é o CNPJ da sua unidade (35.631.524/0003-27). Confirme se esta nota é desta loja antes de dar entrada.</div>`:""}
+    ${(!d.manual && !destOk)?`<div class="warnbox"><b>Atenção:</b> o destinatário lido (CNPJ ${d.dest?.cnpj||"não identificado"}) não é o CNPJ da sua unidade (35.631.524/0003-27). Confirme se esta nota é desta loja antes de dar entrada.</div>`:""}
     ${d.aviso?`<div class="warnbox">${d.aviso}</div>`:""}
     ${d.ilegivel?.length?`<div class="warnbox"><b>A IA marcou como duvidoso:</b> ${d.ilegivel.join(" · ")}. Confira esses números no papel.</div>`:""}
     <div class="tablewrap"><table>
@@ -739,8 +776,12 @@ function renderConferencia(){
         const c=calc[i]; const [cls,txt]=LST[c.status];
         const item=c.item;
         return `<tr class="confrow" data-i="${i}">
-          <td class="notaside"><b>${l.descricao||"—"}</b>cód. ${l.codigo||"—"} · un ${l.un||"—"}${l.novo_mapa?' · <span style="color:var(--warn)">código novo</span>':""}</td>
-          <td class="num mono">${l.qtd??"—"}</td>
+          <td class="notaside">${l.manual
+            ? `<input class="destsel" data-f="descricao" value="${l.descricao||""}" placeholder="descrição na nota (opcional)">`
+            : `<b>${l.descricao||"—"}</b>cód. ${l.codigo||"—"} · un ${l.un||"—"}${l.novo_mapa?' · <span style="color:var(--warn)">código novo</span>':""}`}</td>
+          <td class="num">${l.manual
+            ? `<input class="fator" data-f="qtd" type="number" step="any" value="${l.qtd??""}" placeholder="qtd">`
+            : `<span class="mono">${l.qtd??"—"}</span>`}</td>
           <td><input class="destsel" list="itensDL" data-f="item" value="${item?item.nome_everest:""}" placeholder="digite para buscar…"></td>
           <td class="num"><input class="fator ${c.status==="fator"?"falta":""}" data-f="fator" type="number" step="any" value="${l.fator??""}" placeholder="?">
               <div class="setortag" style="font-size:10px">${item?`${umNorm(l.un)||"?"}/${umNorm(item.unidade)}`:""}</div></td>
@@ -750,9 +791,10 @@ function renderConferencia(){
         </tr>`;}).join("")}
       </tbody></table></div>
     <div class="confbar">
+      ${d.manual?`<button class="btn ghost" id="addlinha">＋ Linha</button>`:""}
       <span class="sum"><b>${nOk}</b> conferidos · <b>${nPend}</b> pendentes · <b>${calc.filter(c=>c.status==="skip").length}</b> ignorados</span>
       <div class="spacer"></div>
-      <button class="btn" id="confirmar" ${nPend?"disabled style=opacity:.5;cursor:not-allowed":""}>✓ Dar entrada no estoque</button>
+      <button class="btn" id="confirmar" ${(nPend||!nOk)?"disabled style=opacity:.5;cursor:not-allowed":""}>✓ Dar entrada no estoque</button>
     </div></div>`;
 
   view.querySelectorAll("tr.confrow").forEach(tr=>{
@@ -772,10 +814,26 @@ function renderConferencia(){
     tr.querySelector('[data-f="ignorar"]').addEventListener("change",e=>{
       state.draft.linhas[i].ignorar=e.target.checked; renderConferencia();
     });
+    const dsc=tr.querySelector('[data-f="descricao"]');
+    if(dsc) dsc.addEventListener("change",e=>{ state.draft.linhas[i].descricao=e.target.value; });
+    const qt=tr.querySelector('[data-f="qtd"]');
+    if(qt) qt.addEventListener("change",e=>{
+      const v=e.target.value===""?null:Number(e.target.value);
+      state.draft.linhas[i].qtd=(v!=null&&v>=0)?v:null; renderConferencia();
+    });
   });
+  if(d.manual){
+    const bind=(id,fn)=>{const el=document.getElementById(id); if(el) el.addEventListener("change",e=>fn(e.target.value));};
+    bind("mh_nome",v=>state.draft.forn.nome=v);
+    bind("mh_cnpj",v=>state.draft.forn.cnpj=v);
+    bind("mh_num", v=>state.draft.nota.numero=v);
+    bind("mh_emi", v=>state.draft.nota.emissao=v);
+    const al=document.getElementById("addlinha");
+    if(al) al.onclick=()=>{ addLinhaManual(); renderConferencia(); };
+  }
   document.getElementById("descartar").onclick=()=>{ state.draft=null; renderAll(); };
   const cb=document.getElementById("confirmar");
-  if(cb && !nPend) cb.onclick=confirmarEntrada;
+  if(cb && !nPend && nOk) cb.onclick=confirmarEntrada;
 }
 
 async function confirmarEntrada(){
@@ -825,6 +883,15 @@ async function boot(){
   if(!d){ setConn(false,"sem base"); loadSample(); return; }
   db=d; catalogoCol=db.collection("catalogo"); cfgDoc=db.doc("config/app");
   setConn(true,"salvando na nuvem");
+  // a IA aceita imagem neste visualizador? (define se a leitura de nota por PDF roda)
+  (async()=>{
+    try{
+      const sp=await claudeApi.use("sample");
+      if(!sp){ state.aiImg=false; }
+      else { const c=await sp.limits(); state.aiImg=!!(c&&c.images); }
+    }catch(e){ state.aiImg=false; }
+    if(state.tab==="entradas") renderAll();
+  })();
   // config
   try{ cfgDoc.onSnapshot(s=>{ const c=s.data(); if(c&&c.amareloFator){ state.amareloFator=Number(c.amareloFator); renderAll(); } }); }catch(e){}
   // de-para de fornecedores (1 doc por CNPJ)
