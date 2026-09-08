@@ -1,7 +1,7 @@
 {
  "loja": "SUDOESTE",
  "versao_fonte": "Lista de Requisição (10 setores)",
- "total": 471,
+ "total": 479,
  "itens": [
   {
    "id": "agua_c_gas",
@@ -4712,6 +4712,116 @@
    "unidade": "UNID",
    "estoque_minimo": 2.0,
    "prefixo": "VT"
+  },
+  {
+   "id": "hort_alface_americana",
+   "nome_checklist": "HORT ALFACE AMERICANA (KG)",
+   "nome_everest": "HORT ALFACE AMERICANA",
+   "setor": "HORTIFRUTI",
+   "subsetor": "HORTIFRUTI",
+   "unidade": "KG",
+   "estoque_minimo": 0,
+   "prefixo": "HORT",
+   "origem_cadastro": "lacuna detectada na varredura ficha x catalogo",
+   "motivo": "13 usos em fichas (Caesar, Caminito, Ensalada); 30kg comprados na NF Vegan 49017",
+   "pendente_validacao": true
+  },
+  {
+   "id": "hort_alface_roxa",
+   "nome_checklist": "HORT ALFACE ROXA (KG)",
+   "nome_everest": "HORT ALFACE ROXA",
+   "setor": "HORTIFRUTI",
+   "subsetor": "HORTIFRUTI",
+   "unidade": "KG",
+   "estoque_minimo": 0,
+   "prefixo": "HORT",
+   "origem_cadastro": "lacuna detectada na varredura ficha x catalogo",
+   "motivo": "usada em Salada Caminito/Saladinha; 4kg comprados na NF Vegan 49017",
+   "pendente_validacao": true
+  },
+  {
+   "id": "mp_carvao_saco_8kg",
+   "nome_checklist": "MP CARVAO SACO 8KG (UNID)",
+   "nome_everest": "MP CARVAO SACO 8KG",
+   "setor": "PARRILLA",
+   "subsetor": "SECOS",
+   "unidade": "UNID",
+   "estoque_minimo": 0,
+   "prefixo": "MP",
+   "origem_cadastro": "lacuna detectada na varredura ficha x catalogo",
+   "motivo": "NF Carvao Triangulo 5976: 50 sacos de 8kg (R$1.400) - insumo da parrilla",
+   "pendente_validacao": true
+  },
+  {
+   "id": "mp_peixe_branco",
+   "nome_checklist": "MP PEIXE BRANCO (KG)",
+   "nome_everest": "MP PEIXE BRANCO",
+   "setor": "SUSHI",
+   "subsetor": "CONGELADA",
+   "unidade": "KG",
+   "estoque_minimo": 0,
+   "prefixo": "MP",
+   "origem_cadastro": "lacuna detectada na varredura ficha x catalogo",
+   "motivo": "sashimi/niguiri de peixe branco em combinados 20/24/32/42 pecas",
+   "pendente_validacao": true
+  },
+  {
+   "id": "dest_rum",
+   "nome_checklist": "DEST RUM (LITRO)",
+   "nome_everest": "DEST RUM",
+   "setor": "BAR",
+   "subsetor": "BEBIDAS",
+   "unidade": "LITRO",
+   "estoque_minimo": 0,
+   "prefixo": "DEST",
+   "origem_cadastro": "lacuna detectada na varredura ficha x catalogo",
+   "motivo": "Mojito: 50ml por drink",
+   "pendente_validacao": true
+  },
+  {
+   "id": "dest_lillet",
+   "nome_checklist": "DEST LILLET (LITRO)",
+   "nome_everest": "DEST LILLET",
+   "setor": "BAR",
+   "subsetor": "BEBIDAS",
+   "unidade": "LITRO",
+   "estoque_minimo": 0,
+   "prefixo": "DEST",
+   "origem_cadastro": "lacuna detectada na varredura ficha x catalogo",
+   "motivo": "Lillet Spritz e Lillet Vive: 50ml por drink",
+   "pendente_validacao": true
+  },
+  {
+   "id": "mp_chantilly",
+   "nome_checklist": "MP CHANTILLY (LITRO)",
+   "nome_everest": "MP CHANTILLY",
+   "setor": "COZINHA",
+   "subsetor": "REFRIGERADA",
+   "unidade": "LITRO",
+   "estoque_minimo": 0,
+   "prefixo": "MP",
+   "origem_cadastro": "lacuna detectada na varredura ficha x catalogo",
+   "motivo": "Irish Coffee: 20g por drink",
+   "pendente_validacao": true
+  },
+  {
+   "id": "mp_nutella",
+   "nome_checklist": "MP NUTELLA (KG)",
+   "nome_everest": "MP NUTELLA",
+   "setor": "SECOS",
+   "subsetor": "SECOS",
+   "unidade": "KG",
+   "estoque_minimo": 0,
+   "prefixo": "MP",
+   "origem_cadastro": "lacuna detectada na varredura ficha x catalogo",
+   "motivo": "Hot Banana com Nutella (Nazo a la carte e rodizio)",
+   "pendente_validacao": true
   }
+ ],
+ "cnpj_unidade": "35.631.524/0003-27",
+ "apelidos_unidade": [
+  "SUDOESTE",
+  "SIG",
+  "CAMINITO PARRILLA SETOR GRAFICO SIG"
  ]
 }

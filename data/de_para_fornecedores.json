@@ -1,0 +1,334 @@
+{
+ "observacao": "de-para chaveado por CNPJ do fornecedor + codigo do produto. Deterministico apos aprovacao.",
+ "mapeamentos": [
+  {
+   "cnpj_fornecedor": "16.874.910/0001-33",
+   "codigo_fornecedor": "312",
+   "descricao_nota": "ABACAXI GRANDE",
+   "un_nota": "KG",
+   "item_id": "hort_abacaxi",
+   "item_everest": "HORT ABACAXI",
+   "um_catalogo": "UNID",
+   "fator_conversao": null
+  },
+  {
+   "cnpj_fornecedor": "16.874.910/0001-33",
+   "codigo_fornecedor": "002",
+   "descricao_nota": "ABACATE",
+   "un_nota": "KG",
+   "item_id": "hort_abacate_kg",
+   "item_everest": "HORT ABACATE KG",
+   "um_catalogo": "KG",
+   "fator_conversao": 1
+  },
+  {
+   "cnpj_fornecedor": "16.874.910/0001-33",
+   "codigo_fornecedor": "007",
+   "descricao_nota": "BANANA NANICA",
+   "un_nota": "KG",
+   "item_id": "hort_banana_nanica_kg",
+   "item_everest": "HORT BANANA NANICA KG",
+   "um_catalogo": "KG",
+   "fator_conversao": 1
+  },
+  {
+   "cnpj_fornecedor": "16.874.910/0001-33",
+   "codigo_fornecedor": "068",
+   "descricao_nota": "LARANJA BAHIA",
+   "un_nota": "KG",
+   "item_id": "hort_laranja_bahia_kg",
+   "item_everest": "HORT LARANJA BAHIA KG",
+   "um_catalogo": "KG",
+   "fator_conversao": 1
+  },
+  {
+   "cnpj_fornecedor": "16.874.910/0001-33",
+   "codigo_fornecedor": "019",
+   "descricao_nota": "LARANJA PERA",
+   "un_nota": "KG",
+   "item_id": "hort_laranja_kg",
+   "item_everest": "HORT LARANJA KG",
+   "um_catalogo": "KG",
+   "fator_conversao": 1
+  },
+  {
+   "cnpj_fornecedor": "16.874.910/0001-33",
+   "codigo_fornecedor": "021",
+   "descricao_nota": "LIMAO SICILIANO",
+   "un_nota": "KG",
+   "item_id": "hort_limao_siciliano_kg",
+   "item_everest": "HORT LIMAO SICILIANO KG",
+   "um_catalogo": "KG",
+   "fator_conversao": 1
+  },
+  {
+   "cnpj_fornecedor": "16.874.910/0001-33",
+   "codigo_fornecedor": "022",
+   "descricao_nota": "LIMAO TAITI",
+   "un_nota": "KG",
+   "item_id": "hort_limao_tahiti_kg",
+   "item_everest": "HORT LIMAO TAHITI KG",
+   "um_catalogo": "KG",
+   "fator_conversao": 1
+  },
+  {
+   "cnpj_fornecedor": "16.874.910/0001-33",
+   "codigo_fornecedor": "029",
+   "descricao_nota": "MANGA TOMMY",
+   "un_nota": "KG",
+   "item_id": "hort_manga_kg",
+   "item_everest": "HORT MANGA KG",
+   "um_catalogo": "KG",
+   "fator_conversao": 1
+  },
+  {
+   "cnpj_fornecedor": "16.874.910/0001-33",
+   "codigo_fornecedor": "032",
+   "descricao_nota": "MELANCIA",
+   "un_nota": "KG",
+   "item_id": "hort_melancia_kg",
+   "item_everest": "HORT MELANCIA KG",
+   "um_catalogo": "KG",
+   "fator_conversao": 1
+  },
+  {
+   "cnpj_fornecedor": "16.874.910/0001-33",
+   "codigo_fornecedor": "034",
+   "descricao_nota": "MORANGO - BJ 300",
+   "un_nota": "KG",
+   "item_id": "hort_morango_bandeja",
+   "item_everest": "HORT MORANGO BANDEJA",
+   "um_catalogo": "UNID",
+   "fator_conversao": null
+  },
+  {
+   "cnpj_fornecedor": "16.874.910/0001-33",
+   "codigo_fornecedor": "107",
+   "descricao_nota": "ALHO",
+   "un_nota": "KG",
+   "item_id": "hort_alho_descascado_kg",
+   "item_everest": "HORT ALHO DESCASCADO KG",
+   "um_catalogo": "KG",
+   "fator_conversao": 1
+  },
+  {
+   "cnpj_fornecedor": "16.874.910/0001-33",
+   "codigo_fornecedor": "108",
+   "descricao_nota": "BATATA INGLESA",
+   "un_nota": "KG",
+   "item_id": "hort_batata_inglesa_kg",
+   "item_everest": "HORT BATATA INGLESA KG",
+   "um_catalogo": "KG",
+   "fator_conversao": 1
+  },
+  {
+   "cnpj_fornecedor": "16.874.910/0001-33",
+   "codigo_fornecedor": "109",
+   "descricao_nota": "BATATA BOLINHA",
+   "un_nota": "KG",
+   "item_id": "hort_batata_bolinha_kg",
+   "item_everest": "HORT BATATA BOLINHA KG",
+   "um_catalogo": "KG",
+   "fator_conversao": 1
+  },
+  {
+   "cnpj_fornecedor": "16.874.910/0001-33",
+   "codigo_fornecedor": "110",
+   "descricao_nota": "BATATA DOCE",
+   "un_nota": "KG",
+   "item_id": "hort_batata_doce_kg",
+   "item_everest": "HORT BATATA DOCE KG",
+   "um_catalogo": "KG",
+   "fator_conversao": 1
+  },
+  {
+   "cnpj_fornecedor": "16.874.910/0001-33",
+   "codigo_fornecedor": "111",
+   "descricao_nota": "BERINJELA",
+   "un_nota": "KG",
+   "item_id": "hort_beringela_kg",
+   "item_everest": "HORT BERINGELA KG",
+   "um_catalogo": "KG",
+   "fator_conversao": 1
+  },
+  {
+   "cnpj_fornecedor": "16.874.910/0001-33",
+   "codigo_fornecedor": "115",
+   "descricao_nota": "CEBOLA",
+   "un_nota": "KG",
+   "item_id": "hort_cebola_branca_kg",
+   "item_everest": "HORT CEBOLA BRANCA KG",
+   "um_catalogo": "KG",
+   "fator_conversao": 1
+  },
+  {
+   "cnpj_fornecedor": "16.874.910/0001-33",
+   "codigo_fornecedor": "117",
+   "descricao_nota": "CEBOLA ROXA",
+   "un_nota": "KG",
+   "item_id": "hort_cebola_roxa_kg",
+   "item_everest": "HORT CEBOLA ROXA KG",
+   "um_catalogo": "KG",
+   "fator_conversao": 1
+  },
+  {
+   "cnpj_fornecedor": "16.874.910/0001-33",
+   "codigo_fornecedor": "118",
+   "descricao_nota": "CENOURA",
+   "un_nota": "KG",
+   "item_id": "hort_cenoura_kg",
+   "item_everest": "HORT CENOURA KG",
+   "um_catalogo": "KG",
+   "fator_conversao": 1
+  },
+  {
+   "cnpj_fornecedor": "16.874.910/0001-33",
+   "codigo_fornecedor": "129",
+   "descricao_nota": "PEPINO JAPONES",
+   "un_nota": "KG",
+   "item_id": "hort_pepino_japones_kg",
+   "item_everest": "HORT PEPINO JAPONES KG",
+   "um_catalogo": "KG",
+   "fator_conversao": 1
+  },
+  {
+   "cnpj_fornecedor": "16.874.910/0001-33",
+   "codigo_fornecedor": "139",
+   "descricao_nota": "TOMATE EXTRA",
+   "un_nota": "KG",
+   "item_id": "hort_tomate_kg",
+   "item_everest": "HORT TOMATE KG",
+   "um_catalogo": "KG",
+   "fator_conversao": 1
+  },
+  {
+   "cnpj_fornecedor": "16.874.910/0001-33",
+   "codigo_fornecedor": "216",
+   "descricao_nota": "CEBOLETE",
+   "un_nota": "KG",
+   "item_id": "hort_cebolete_maco",
+   "item_everest": "HORT CEBOLETE MACO",
+   "um_catalogo": "UNID",
+   "fator_conversao": null
+  },
+  {
+   "cnpj_fornecedor": "16.874.910/0001-33",
+   "codigo_fornecedor": "217",
+   "descricao_nota": "CEBOLINHA",
+   "un_nota": "KG",
+   "item_id": "hort_cebolinha_maco",
+   "item_everest": "HORT CEBOLINHA MACO",
+   "um_catalogo": "UNID",
+   "fator_conversao": null
+  },
+  {
+   "cnpj_fornecedor": "16.874.910/0001-33",
+   "codigo_fornecedor": "225",
+   "descricao_nota": "FLOR COMESTIVEL 0,070",
+   "un_nota": "KG",
+   "item_id": "hort_flor_comestivel_bandeja",
+   "item_everest": "HORT FLOR COMESTIVEL BANDEJA",
+   "um_catalogo": "UNID",
+   "fator_conversao": null
+  },
+  {
+   "cnpj_fornecedor": "16.874.910/0001-33",
+   "codigo_fornecedor": "228",
+   "descricao_nota": "TOMILHO 0,100",
+   "un_nota": "KG",
+   "item_id": "hort_tomilho_maco",
+   "item_everest": "HORT TOMILHO MACO",
+   "um_catalogo": "UNID",
+   "fator_conversao": null
+  },
+  {
+   "cnpj_fornecedor": "16.874.910/0001-33",
+   "codigo_fornecedor": "235",
+   "descricao_nota": "NABO 0,150",
+   "un_nota": "KG",
+   "item_id": "hort_nabo_unidade",
+   "item_everest": "HORT NABO UNIDADE",
+   "um_catalogo": "UNID",
+   "fator_conversao": null
+  },
+  {
+   "cnpj_fornecedor": "16.874.910/0001-33",
+   "codigo_fornecedor": "240",
+   "descricao_nota": "RUCULA ,200",
+   "un_nota": "KG",
+   "item_id": "hort_rucula_maco",
+   "item_everest": "HORT RUCULA MACO",
+   "um_catalogo": "UNID",
+   "fator_conversao": null
+  },
+  {
+   "cnpj_fornecedor": "16.874.910/0001-33",
+   "codigo_fornecedor": "241",
+   "descricao_nota": "SALSA",
+   "un_nota": "KG",
+   "item_id": "hort_salsa_maco",
+   "item_everest": "HORT SALSA MACO",
+   "um_catalogo": "UNID",
+   "fator_conversao": null
+  },
+  {
+   "cnpj_fornecedor": "16.874.910/0001-33",
+   "codigo_fornecedor": "242",
+   "descricao_nota": "SALSA CRESPA 0,200",
+   "un_nota": "KG",
+   "item_id": "hort_salsa_crespa_maco",
+   "item_everest": "HORT SALSA CRESPA MACO",
+   "um_catalogo": "UNID",
+   "fator_conversao": null
+  },
+  {
+   "cnpj_fornecedor": "16.874.910/0001-33",
+   "codigo_fornecedor": "244",
+   "descricao_nota": "SALVIA 0,080",
+   "un_nota": "KG",
+   "item_id": "hort_salvia_maco",
+   "item_everest": "HORT SALVIA MACO",
+   "um_catalogo": "UNID",
+   "fator_conversao": null
+  },
+  {
+   "cnpj_fornecedor": "41.751.122/0001-05",
+   "codigo_fornecedor": "?",
+   "descricao_nota": "ALFACE USA HIGIENIZADA",
+   "un_nota": "KG",
+   "item_id": "hort_alface_americana",
+   "item_everest": "HORT ALFACE AMERICANA",
+   "um_catalogo": "KG",
+   "fator_conversao": 1
+  },
+  {
+   "cnpj_fornecedor": "41.751.122/0001-05",
+   "codigo_fornecedor": "?",
+   "descricao_nota": "ALFACE ROXA HIGIENIZADA",
+   "un_nota": "KG",
+   "item_id": "hort_alface_roxa",
+   "item_everest": "HORT ALFACE ROXA",
+   "um_catalogo": "KG",
+   "fator_conversao": 1
+  },
+  {
+   "cnpj_fornecedor": "38.011.762/0001-66",
+   "codigo_fornecedor": "002",
+   "descricao_nota": "CARVAO TRIANGULO DE EUCALIPTO 8KG",
+   "un_nota": "UN",
+   "item_id": "mp_carvao_saco_8kg",
+   "item_everest": "MP CARVAO SACO 8KG",
+   "um_catalogo": "UNID",
+   "fator_conversao": 1
+  }
+ ],
+ "pendentes_decisao": [
+  {
+   "cnpj": "16.874.910/0001-33",
+   "codigo": "101",
+   "descricao_nota": "ABOBORA ITALIA",
+   "un_nota": "KG",
+   "motivo": "variedade nao existe no catalogo (catalogo tem apenas ABOBORA CABOTIA)"
+  }
+ ]
+}

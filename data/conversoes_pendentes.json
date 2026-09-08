@@ -1,0 +1,113 @@
+{
+ "observacao": "fator = kg por 1 unidade/maco/bandeja do catalogo",
+ "derivados_da_nota_validar": [
+  {
+   "item_everest": "HORT MORANGO BANDEJA",
+   "de": "KG",
+   "para": "UNID",
+   "descricao_nota": "MORANGO - BJ 300",
+   "pergunta": "1 unid de Morango = quantos kg?",
+   "fator_kg_por_unidade": 0.3,
+   "fonte": "peso declarado na propria descricao da nota fiscal",
+   "status": "derivado_validar"
+  },
+  {
+   "item_everest": "HORT FLOR COMESTIVEL BANDEJA",
+   "de": "KG",
+   "para": "UNID",
+   "descricao_nota": "FLOR COMESTIVEL 0,070",
+   "pergunta": "1 unid de Flor Comestivel = quantos kg?",
+   "fator_kg_por_unidade": 0.07,
+   "fonte": "peso declarado na propria descricao da nota fiscal",
+   "status": "derivado_validar"
+  },
+  {
+   "item_everest": "HORT TOMILHO MACO",
+   "de": "KG",
+   "para": "UNID",
+   "descricao_nota": "TOMILHO 0,100",
+   "pergunta": "1 unid de Tomilho = quantos kg?",
+   "fator_kg_por_unidade": 0.1,
+   "fonte": "peso declarado na propria descricao da nota fiscal",
+   "status": "derivado_validar"
+  },
+  {
+   "item_everest": "HORT NABO UNIDADE",
+   "de": "KG",
+   "para": "UNID",
+   "descricao_nota": "NABO 0,150",
+   "pergunta": "1 unid de Nabo = quantos kg?",
+   "fator_kg_por_unidade": 0.15,
+   "fonte": "peso declarado na propria descricao da nota fiscal",
+   "status": "derivado_validar"
+  },
+  {
+   "item_everest": "HORT RUCULA MACO",
+   "de": "KG",
+   "para": "UNID",
+   "descricao_nota": "RUCULA ,200",
+   "pergunta": "1 unid de Rucula ,200 = quantos kg?",
+   "fator_kg_por_unidade": 0.2,
+   "fonte": "peso declarado na propria descricao da nota fiscal",
+   "status": "derivado_validar"
+  },
+  {
+   "item_everest": "HORT SALSA CRESPA MACO",
+   "de": "KG",
+   "para": "UNID",
+   "descricao_nota": "SALSA CRESPA 0,200",
+   "pergunta": "1 unid de Salsa Crespa = quantos kg?",
+   "fator_kg_por_unidade": 0.2,
+   "fonte": "peso declarado na propria descricao da nota fiscal",
+   "status": "derivado_validar"
+  },
+  {
+   "item_everest": "HORT SALVIA MACO",
+   "de": "KG",
+   "para": "UNID",
+   "descricao_nota": "SALVIA 0,080",
+   "pergunta": "1 unid de Salvia = quantos kg?",
+   "fator_kg_por_unidade": 0.08,
+   "fonte": "peso declarado na propria descricao da nota fiscal",
+   "status": "derivado_validar"
+  }
+ ],
+ "precisa_informar": [
+  {
+   "item_everest": "HORT ABACAXI",
+   "de": "KG",
+   "para": "UNID",
+   "descricao_nota": "ABACAXI GRANDE",
+   "pergunta": "1 unid de Abacaxi Grande = quantos kg?",
+   "fator_kg_por_unidade": null,
+   "status": "precisa_do_numero_do_bruno"
+  },
+  {
+   "item_everest": "HORT CEBOLETE MACO",
+   "de": "KG",
+   "para": "UNID",
+   "descricao_nota": "CEBOLETE",
+   "pergunta": "1 unid de Cebolete = quantos kg?",
+   "fator_kg_por_unidade": null,
+   "status": "precisa_do_numero_do_bruno"
+  },
+  {
+   "item_everest": "HORT CEBOLINHA MACO",
+   "de": "KG",
+   "para": "UNID",
+   "descricao_nota": "CEBOLINHA",
+   "pergunta": "1 unid de Cebolinha = quantos kg?",
+   "fator_kg_por_unidade": null,
+   "status": "precisa_do_numero_do_bruno"
+  },
+  {
+   "item_everest": "HORT SALSA MACO",
+   "de": "KG",
+   "para": "UNID",
+   "descricao_nota": "SALSA",
+   "pergunta": "1 unid de Salsa = quantos kg?",
+   "fator_kg_por_unidade": null,
+   "status": "precisa_do_numero_do_bruno"
+  }
+ ]
+}
