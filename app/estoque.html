@@ -1,0 +1,511 @@
+<title>Controle de Estoque Sudoeste</title>
+<meta name="description" content="Painel operacional de estoque — Caminito e Nazo, unidade Sudoeste.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<style>
+:root{
+  --ground:#eceef0; --surface:#ffffff; --surface-2:#f6f7f8; --line:#dfe3e7; --line-strong:#c8ced4;
+  --ink:#1a1e24; --muted:#5c646e; --faint:#8a929c;
+  --accent:#31528c; --accent-ink:#26406e; --accent-soft:#e8edf6;
+  --caminito:#a5502a; --nazo:#2f5d6b;
+  --good:#1f8a4c; --good-bg:#e6f2ea; --good-ink:#136336;
+  --warn:#b7791f; --warn-bg:#f7efdd; --warn-ink:#8a5b12;
+  --crit:#c0392b; --crit-bg:#f8e7e4; --crit-ink:#8f271c;
+  --none:#8a929c; --none-bg:#eef0f2;
+  --shadow:0 1px 2px rgba(20,26,34,.06),0 2px 8px rgba(20,26,34,.05);
+  --radius:10px;
+}
+:root:not([data-theme="light"]){ @media (prefers-color-scheme: dark){
+  --ground:#0f1216; --surface:#171b21; --surface-2:#1e242c; --line:#2a313a; --line-strong:#3a434e;
+  --ink:#e9ecef; --muted:#a4adb7; --faint:#7d868f;
+  --accent:#7fa0d8; --accent-ink:#9db6e4; --accent-soft:#1d2836;
+  --caminito:#d98a5f; --nazo:#6fb0c2;
+  --good:#4cc07e; --good-bg:#12291d; --good-ink:#7fd7a3;
+  --warn:#e0a83c; --warn-bg:#2c2413; --warn-ink:#f0c874;
+  --crit:#e8695c; --crit-bg:#2e1815; --crit-ink:#f4a79d;
+  --none:#7d868f; --none-bg:#1e242c;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 2px 10px rgba(0,0,0,.25);
+}}
+:root[data-theme="dark"]{
+  --ground:#0f1216; --surface:#171b21; --surface-2:#1e242c; --line:#2a313a; --line-strong:#3a434e;
+  --ink:#e9ecef; --muted:#a4adb7; --faint:#7d868f;
+  --accent:#7fa0d8; --accent-ink:#9db6e4; --accent-soft:#1d2836;
+  --caminito:#d98a5f; --nazo:#6fb0c2;
+  --good:#4cc07e; --good-bg:#12291d; --good-ink:#7fd7a3;
+  --warn:#e0a83c; --warn-bg:#2c2413; --warn-ink:#f0c874;
+  --crit:#e8695c; --crit-bg:#2e1815; --crit-ink:#f4a79d;
+  --none:#7d868f; --none-bg:#1e242c;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 2px 10px rgba(0,0,0,.25);
+}
+*{box-sizing:border-box}
+body{background:var(--ground);color:var(--ink);font-family:"IBM Plex Sans",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;line-height:1.45;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:"Archivo",system-ui,sans-serif;margin:0;text-wrap:balance;letter-spacing:-.01em}
+.mono{font-family:"IBM Plex Mono",ui-monospace,monospace;font-variant-numeric:tabular-nums}
+button{font-family:inherit;cursor:pointer}
+input,select{font-family:inherit;color:var(--ink)}
+.wrap{max-width:1200px;margin:0 auto;padding:20px 20px 80px}
+
+/* Header */
+header.top{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-bottom:16px;border-bottom:1px solid var(--line)}
+.brandline{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+.chip{font-size:11px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;padding:3px 8px;border-radius:100px;border:1px solid var(--line-strong)}
+.chip.cam{color:var(--caminito);border-color:color-mix(in srgb,var(--caminito) 40%,var(--line))}
+.chip.naz{color:var(--nazo);border-color:color-mix(in srgb,var(--nazo) 40%,var(--line))}
+h1{font-size:26px;font-weight:800}
+.sub{color:var(--muted);font-size:13.5px;margin-top:3px}
+.headright{display:flex;align-items:center;gap:8px}
+.status-dot{width:8px;height:8px;border-radius:50%;background:var(--none)}
+.status-dot.on{background:var(--good)}
+.status-dot.off{background:var(--crit)}
+.conn{font-size:12px;color:var(--muted)}
+.iconbtn{background:var(--surface);border:1px solid var(--line-strong);border-radius:8px;padding:7px 9px;color:var(--ink);font-size:13px;display:inline-flex;align-items:center;gap:6px}
+.iconbtn:hover{background:var(--surface-2)}
+
+/* KPI */
+.kpis{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin:18px 0}
+.kpi{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:14px 15px;box-shadow:var(--shadow)}
+.kpi .lab{font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);font-weight:600}
+.kpi .val{font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums;font-size:30px;font-weight:600;margin-top:4px;line-height:1}
+.kpi .foot{font-size:12px;color:var(--faint);margin-top:6px}
+.kpi.crit{border-left:3px solid var(--crit)}
+.kpi.warn{border-left:3px solid var(--warn)}
+.kpi.good{border-left:3px solid var(--good)}
+.kpi.acc{border-left:3px solid var(--accent)}
+.kpi .val.c-crit{color:var(--crit)} .kpi .val.c-warn{color:var(--warn)} .kpi .val.c-good{color:var(--good)} .kpi .val.c-acc{color:var(--accent)}
+
+/* Section */
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);margin-bottom:18px}
+.card h2{font-size:15px;font-weight:700;padding:14px 16px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:12px}
+.card h2 .hint{font-family:"IBM Plex Sans";font-weight:400;font-size:12px;color:var(--faint)}
+.card .body{padding:14px 16px}
+
+/* Sector bars */
+.sectorgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px 26px}
+@media(max-width:720px){.sectorgrid{grid-template-columns:1fr}}
+.sbar{display:grid;grid-template-columns:110px 1fr auto;align-items:center;gap:10px}
+.sbar .nm{font-size:12.5px;font-weight:600;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.track{height:18px;border-radius:5px;background:var(--none-bg);overflow:hidden;display:flex}
+.track i{display:block;height:100%;border-right:2px solid var(--surface)}
+.track i:last-child{border-right:0}
+.seg-good{background:var(--good)} .seg-warn{background:var(--warn)} .seg-crit{background:var(--crit)} .seg-none{background:var(--none)}
+.sbar .cnt{font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--muted);white-space:nowrap}
+.legend{display:flex;gap:16px;flex-wrap:wrap;font-size:12px;color:var(--muted);margin-top:2px}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.swatch{width:11px;height:11px;border-radius:3px;display:inline-block}
+
+/* Toolbar */
+.toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:14px}
+.tabs{display:inline-flex;background:var(--surface-2);border:1px solid var(--line);border-radius:9px;padding:3px}
+.tabs button{border:0;background:transparent;color:var(--muted);padding:6px 13px;border-radius:6px;font-size:13px;font-weight:600}
+.tabs button.active{background:var(--surface);color:var(--ink);box-shadow:var(--shadow)}
+.field{position:relative}
+input.search,select.sel{background:var(--surface);border:1px solid var(--line-strong);border-radius:8px;padding:8px 11px;font-size:13px;min-width:0}
+input.search{width:230px}
+.spacer{flex:1}
+.btn{background:var(--accent);color:#fff;border:0;border-radius:8px;padding:8px 13px;font-size:13px;font-weight:600;display:inline-flex;align-items:center;gap:7px}
+.btn:hover{background:var(--accent-ink)}
+.btn.ghost{background:var(--surface);color:var(--ink);border:1px solid var(--line-strong)}
+.btn.ghost:hover{background:var(--surface-2)}
+
+/* Sector filter chips */
+.chips{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:14px}
+.fchip{background:var(--surface);border:1px solid var(--line-strong);color:var(--muted);border-radius:100px;padding:5px 12px;font-size:12.5px;font-weight:600}
+.fchip.active{background:var(--accent-soft);border-color:var(--accent);color:var(--accent-ink)}
+.fchip .n{font-family:"IBM Plex Mono",monospace;opacity:.7;margin-left:5px}
+
+/* Table */
+.tablewrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:13px}
+thead th{position:sticky;top:0;background:var(--surface-2);text-align:left;font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);font-weight:600;padding:9px 12px;border-bottom:1px solid var(--line-strong);white-space:nowrap}
+thead th.num,td.num{text-align:right}
+tbody td{padding:8px 12px;border-bottom:1px solid var(--line);vertical-align:middle}
+tbody tr:hover{background:var(--surface-2)}
+.itnm{font-weight:600;color:var(--ink)}
+.itsub{font-size:11.5px;color:var(--faint);margin-top:1px}
+.stripe{border-left:4px solid transparent;padding-left:10px}
+.stripe.s-good{border-color:var(--good)} .stripe.s-warn{border-color:var(--warn)} .stripe.s-crit{border-color:var(--crit)} .stripe.s-none{border-color:var(--none)}
+.pill{font-size:11px;font-weight:600;padding:3px 9px;border-radius:100px;display:inline-flex;align-items:center;gap:5px;white-space:nowrap}
+.pill.p-good{background:var(--good-bg);color:var(--good-ink)} .pill.p-warn{background:var(--warn-bg);color:var(--warn-ink)} .pill.p-crit{background:var(--crit-bg);color:var(--crit-ink)} .pill.p-none{background:var(--none-bg);color:var(--muted)}
+.pi{font-size:10px}
+.setortag{font-size:11px;color:var(--muted)}
+.um{font-size:11px;color:var(--faint);margin-left:3px}
+input.qty{width:78px;background:var(--surface);border:1px solid var(--line-strong);border-radius:6px;padding:6px 8px;font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums;text-align:right;font-size:13px}
+input.qty:focus{outline:2px solid var(--accent);outline-offset:0;border-color:var(--accent)}
+input.qty.mn{color:var(--muted)}
+td .sug{font-family:"IBM Plex Mono",monospace;font-weight:600}
+td .sug.zero{color:var(--faint);font-weight:400}
+td .sug.need{color:var(--crit)}
+.empty{padding:40px;text-align:center;color:var(--muted)}
+.count-badge{font-size:12px;color:var(--muted)}
+
+/* buy list */
+.buygrp{margin-bottom:16px}
+.buygrp h3{font-size:13px;font-weight:700;color:var(--accent-ink);margin-bottom:6px;letter-spacing:0}
+.buyrow{display:grid;grid-template-columns:1fr auto auto;gap:12px;padding:6px 0;border-bottom:1px dashed var(--line);align-items:center}
+.buyrow .q{font-family:"IBM Plex Mono",monospace;font-weight:600;color:var(--crit)}
+
+/* banner */
+.banner{background:var(--accent-soft);border:1px solid color-mix(in srgb,var(--accent) 30%,var(--line));color:var(--accent-ink);border-radius:9px;padding:10px 14px;font-size:13px;margin-bottom:16px;display:flex;gap:10px;align-items:center}
+.banner.sample{background:var(--warn-bg);border-color:color-mix(in srgb,var(--warn) 30%,var(--line));color:var(--warn-ink)}
+
+/* modal */
+.modal-bg{position:fixed;inset:0;background:rgba(10,14,20,.5);display:flex;align-items:center;justify-content:center;padding:20px;z-index:50}
+.modal{background:var(--surface);border-radius:12px;box-shadow:0 20px 60px rgba(0,0,0,.3);max-width:460px;width:100%;padding:20px}
+.modal h3{font-size:17px;margin-bottom:14px}
+.frow{display:flex;flex-direction:column;gap:4px;margin-bottom:12px}
+.frow label{font-size:12px;color:var(--muted);font-weight:600}
+.frow input,.frow select{background:var(--surface);border:1px solid var(--line-strong);border-radius:8px;padding:9px 11px;font-size:14px}
+.modal .actions{display:flex;gap:8px;justify-content:flex-end;margin-top:8px}
+.hidefile{position:absolute;width:1px;height:1px;opacity:0;overflow:hidden}
+.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:var(--ink);color:var(--ground);padding:10px 18px;border-radius:8px;font-size:13px;box-shadow:var(--shadow);z-index:80;opacity:0;transition:opacity .2s,transform .2s}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(-4px)}
+@media(max-width:860px){.kpis{grid-template-columns:repeat(2,1fr)}.headright{width:100%;justify-content:flex-start}}
+@media (prefers-reduced-motion: reduce){*{transition:none!important}}
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <div>
+      <div class="brandline">
+        <span class="chip cam">Caminito</span>
+        <span class="chip naz">Nazo</span>
+        <span class="setortag mono">· Sudoeste</span>
+      </div>
+      <h1>Controle de Estoque</h1>
+      <div class="sub" id="subline">Posição operacional do estoque por setor — semáforo, mínimos e sugestão de compra.</div>
+    </div>
+    <div class="headright">
+      <span class="conn"><span class="status-dot" id="connDot"></span> <span id="connTxt">conectando…</span></span>
+      <button class="iconbtn" id="themeBtn" title="Alternar tema">◐</button>
+    </div>
+  </header>
+
+  <div id="banner"></div>
+
+  <div class="kpis" id="kpis"></div>
+
+  <div class="card">
+    <h2>Composição por setor <span class="hint">verde = ok · âmbar = atenção · vermelho = abaixo do mínimo</span></h2>
+    <div class="body">
+      <div class="sectorgrid" id="sectorbars"></div>
+      <div class="legend">
+        <span><i class="swatch seg-good"></i> No mínimo ou acima</span>
+        <span><i class="swatch seg-warn"></i> Atenção (perto do mínimo)</span>
+        <span><i class="swatch seg-crit"></i> Abaixo do mínimo</span>
+        <span><i class="swatch seg-none"></i> Sem contagem</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="toolbar">
+    <div class="tabs" id="tabs">
+      <button data-tab="estoque" class="active">Estoque</button>
+      <button data-tab="compra">Lista de compra</button>
+    </div>
+    <div class="spacer"></div>
+    <input class="search" id="search" type="search" placeholder="Buscar item…" autocomplete="off">
+    <select class="sel" id="statusFilter" title="Filtrar por status">
+      <option value="todos">Todos os status</option>
+      <option value="crit">Abaixo do mínimo</option>
+      <option value="warn">Atenção</option>
+      <option value="good">No mínimo/acima</option>
+      <option value="none">Sem contagem</option>
+    </select>
+    <button class="btn ghost" id="uploadBtn" title="Subir planilha de contagem preenchida">⇪ Contagem</button>
+    <button class="btn ghost" id="addBtn">＋ Item</button>
+    <input class="hidefile" id="fileInput" type="file" accept=".xlsx,.xls,.csv">
+  </div>
+
+  <div class="chips" id="sectorchips"></div>
+
+  <div id="view"></div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+"use strict";
+const SETORES = ["BAR","CARNES","COZINHA","DELIVERY","HORTIFRUTI","LIMPEZA","PARRILLA","SECOS","SUSHI","VINHOS"];
+// Amostra usada só quando a base ainda não conectou (marcada como exemplo).
+const SAMPLE = [
+ {id:"dest_gin_beefeater",nome_everest:"DEST GIN BEEFEATER",nome_checklist:"DEST GIN BEEFEATER (LITRO)",setor:"BAR",subsetor:"BEBIDAS",unidade:"LITRO",minimo:0.75,contagem:0.4},
+ {id:"po_ancho_250g",nome_everest:"PO ANCHO 250G",nome_checklist:"PO ANCHO 250G (UNID)",setor:"CARNES",subsetor:"CONGELADA",unidade:"UNID",minimo:100,contagem:120},
+ {id:"po_salmao_200g",nome_everest:"PO SALMAO 200G",nome_checklist:"PO SALMAO 200G (UNID)",setor:"CARNES",subsetor:"CONGELADA",unidade:"UNID",minimo:54,contagem:50},
+ {id:"hort_abacaxi",nome_everest:"HORT ABACAXI",nome_checklist:"HORT ABACAXI (UNID)",setor:"HORTIFRUTI",subsetor:"HORTIFRUTI",unidade:"UNID",minimo:41,contagem:12},
+ {id:"mp_camarao_51_60",nome_everest:"MP CAMARAO S/ CASCA 51/60",nome_checklist:"MP CAMARAO S/ CASCA 51/60 (KG)",setor:"COZINHA",subsetor:"CONGELADA",unidade:"KG",minimo:12,contagem:12},
+ {id:"hort_cenoura_kg",nome_everest:"HORT CENOURA KG",nome_checklist:"HORT CENOURA KG (KG)",setor:"HORTIFRUTI",subsetor:"HORTIFRUTI",unidade:"KG",minimo:27,contagem:31},
+];
+
+const state = {
+  itens: {},            // id -> item {..., minimo, contagem}
+  amareloFator: 1.15,   // banda de atenção acima do mínimo
+  filtroSetor: "todos",
+  filtroStatus: "todos",
+  busca: "",
+  tab: "estoque",
+  isSample: false,
+};
+let db = null, itensCol = null, cfgDoc = null;
+
+/* ---------- status ---------- */
+function statusOf(it){
+  const c = it.contagem;
+  if(c===null||c===undefined||c==="") return "none";
+  const m = Number(it.minimo)||0;
+  const n = Number(c);
+  if(n < m) return "crit";
+  if(n < m*state.amareloFator) return "warn";
+  return "good";
+}
+function sugestao(it){
+  const c = it.contagem;
+  if(c===null||c===undefined||c==="") return null;
+  const m = Number(it.minimo)||0;
+  const d = m - Number(c);
+  return d>0 ? Math.ceil(d*100)/100 : 0;
+}
+const fmt = n => (n===null||n===undefined||n==="")?"—":(Math.round(Number(n)*100)/100).toLocaleString("pt-BR");
+
+/* ---------- rendering ---------- */
+function itemsArray(){ return Object.values(state.itens); }
+
+function renderKPIs(){
+  const arr = itemsArray();
+  const counts = {crit:0,warn:0,good:0,none:0};
+  let aPedir=0;
+  arr.forEach(it=>{ counts[statusOf(it)]++; const s=sugestao(it); if(s&&s>0) aPedir++; });
+  const el = document.getElementById("kpis");
+  el.innerHTML = `
+   <div class="kpi acc"><div class="lab">Itens no catálogo</div><div class="val c-acc">${arr.length}</div><div class="foot">${SETORES.length} setores</div></div>
+   <div class="kpi crit"><div class="lab">Abaixo do mínimo</div><div class="val c-crit">${counts.crit}</div><div class="foot">precisam reposição</div></div>
+   <div class="kpi warn"><div class="lab">Em atenção</div><div class="val c-warn">${counts.warn}</div><div class="foot">perto do mínimo</div></div>
+   <div class="kpi good"><div class="lab">No mínimo / acima</div><div class="val c-good">${counts.good}</div><div class="foot">estoque saudável</div></div>
+   <div class="kpi"><div class="lab">Itens a pedir</div><div class="val">${aPedir}</div><div class="foot">${counts.none} sem contagem</div></div>`;
+}
+
+function renderSectorBars(){
+  const box = document.getElementById("sectorbars");
+  const bySetor = {};
+  SETORES.forEach(s=>bySetor[s]={good:0,warn:0,crit:0,none:0,total:0});
+  itemsArray().forEach(it=>{ const s=bySetor[it.setor]; if(!s) return; s[statusOf(it)]++; s.total++; });
+  box.innerHTML = SETORES.filter(s=>bySetor[s].total>0).map(s=>{
+    const d=bySetor[s]; const t=d.total||1;
+    const seg=(k,cls)=> d[k]? `<i class="${cls}" style="width:${d[k]/t*100}%" title="${d[k]}"></i>`:"";
+    return `<div class="sbar">
+      <div class="nm" title="${s}">${s}</div>
+      <div class="track">${seg('good','seg-good')}${seg('warn','seg-warn')}${seg('crit','seg-crit')}${seg('none','seg-none')}</div>
+      <div class="cnt">${d.crit?`<span style="color:var(--crit)">${d.crit}▾</span> `:""}${d.total}</div>
+    </div>`;
+  }).join("") || `<div class="count-badge">Sem itens para exibir.</div>`;
+}
+
+function renderSectorChips(){
+  const box=document.getElementById("sectorchips");
+  const counts={}; itemsArray().forEach(it=>counts[it.setor]=(counts[it.setor]||0)+1);
+  const mk=(key,label,n)=>`<button class="fchip ${state.filtroSetor===key?'active':''}" data-setor="${key}">${label}<span class="n">${n}</span></button>`;
+  box.innerHTML = mk("todos","Todos",itemsArray().length) + SETORES.filter(s=>counts[s]).map(s=>mk(s,s,counts[s])).join("");
+  box.querySelectorAll(".fchip").forEach(b=>b.onclick=()=>{state.filtroSetor=b.dataset.setor;renderAll();});
+}
+
+function filtered(){
+  const q=state.busca.trim().toLowerCase();
+  return itemsArray().filter(it=>{
+    if(state.filtroSetor!=="todos" && it.setor!==state.filtroSetor) return false;
+    if(state.filtroStatus!=="todos" && statusOf(it)!==state.filtroStatus) return false;
+    if(q && !(it.nome_everest||"").toLowerCase().includes(q) && !(it.nome_checklist||"").toLowerCase().includes(q)) return false;
+    return true;
+  }).sort((a,b)=> (a.setor||"").localeCompare(b.setor)|| (a.nome_everest||"").localeCompare(b.nome_everest||""));
+}
+
+const PILL={good:["p-good","●","OK"],warn:["p-warn","▲","Atenção"],crit:["p-crit","■","Abaixo"],none:["p-none","○","Sem contagem"]};
+function renderTable(){
+  const rows=filtered();
+  const view=document.getElementById("view");
+  if(!rows.length){ view.innerHTML=`<div class="card"><div class="empty">Nenhum item com os filtros atuais.</div></div>`; return; }
+  view.innerHTML=`<div class="card"><div class="tablewrap"><table>
+    <thead><tr>
+      <th>Item</th><th>Setor</th><th class="num">Contagem</th><th class="num">Mínimo</th><th>Status</th><th class="num">Sugestão de compra</th>
+    </tr></thead><tbody>
+    ${rows.map(it=>{
+      const st=statusOf(it); const [pc,pi,pl]=PILL[st]; const sug=sugestao(it);
+      const sugCls=sug===null?"zero":(sug>0?"need":"zero");
+      const sugTxt=sug===null?"—":(sug>0?`${fmt(sug)} ${it.unidade}`:"ok");
+      return `<tr data-id="${it.id}">
+        <td class="stripe s-${st}"><div class="itnm">${it.nome_everest||it.nome_checklist||it.id}</div><div class="itsub">${it.subsetor||""}</div></td>
+        <td><span class="setortag">${it.setor||""}</span></td>
+        <td class="num"><input class="qty" type="number" step="any" inputmode="decimal" data-f="contagem" value="${it.contagem??""}" placeholder="—"><span class="um">${it.unidade||""}</span></td>
+        <td class="num"><input class="qty mn" type="number" step="any" inputmode="decimal" data-f="minimo" value="${it.minimo??""}"><span class="um">${it.unidade||""}</span></td>
+        <td><span class="pill ${pc}"><span class="pi">${pi}</span>${pl}</span></td>
+        <td class="num"><span class="sug ${sugCls}">${sugTxt}</span></td>
+      </tr>`;}).join("")}
+    </tbody></table></div></div>`;
+  view.querySelectorAll("input.qty").forEach(inp=>{
+    inp.addEventListener("change",()=>{
+      const tr=inp.closest("tr"); const id=tr.dataset.id; const f=inp.dataset.f;
+      let v=inp.value==="" ? (f==="minimo"?0:null) : Number(inp.value);
+      if(v!==null && (isNaN(v)||v<0)){ inp.value=state.itens[id][f]??""; return; }
+      updateItem(id,f,v);
+    });
+  });
+}
+
+function renderBuy(){
+  const view=document.getElementById("view");
+  const rows=itemsArray().map(it=>({it,sug:sugestao(it)})).filter(x=>x.sug&&x.sug>0)
+    .sort((a,b)=>(a.it.setor||"").localeCompare(b.it.setor)||(a.it.nome_everest||"").localeCompare(b.it.nome_everest||""));
+  if(!rows.length){ view.innerHTML=`<div class="card"><div class="empty">Nada abaixo do mínimo. Estoque coberto. 🟢<br><span class="count-badge">Preencha a contagem para gerar a lista.</span></div></div>`; return; }
+  const grp={}; rows.forEach(({it,sug})=>{(grp[it.setor]=grp[it.setor]||[]).push({it,sug});});
+  view.innerHTML=`<div class="card"><h2>Lista de compra sugerida <span class="hint">${rows.length} itens · mínimo − contagem</span>
+      <button class="btn" id="exportBtn">⇩ Exportar CSV</button></h2>
+    <div class="body">${Object.keys(grp).sort().map(s=>`
+      <div class="buygrp"><h3>${s} <span class="count-badge mono">(${grp[s].length})</span></h3>
+        ${grp[s].map(({it,sug})=>`<div class="buyrow"><div class="itnm">${it.nome_everest}</div>
+          <div class="setortag">${it.subsetor||""}</div>
+          <div class="q mono">${fmt(sug)} ${it.unidade}</div></div>`).join("")}
+      </div>`).join("")}</div></div>`;
+  const eb=document.getElementById("exportBtn"); if(eb) eb.onclick=()=>exportBuy(rows);
+}
+
+function renderAll(){ renderKPIs();renderSectorBars();renderSectorChips();
+  document.querySelectorAll("#tabs button").forEach(b=>b.classList.toggle("active",b.dataset.tab===state.tab));
+  if(state.tab==="estoque") renderTable(); else renderBuy();
+}
+
+/* ---------- persistence ---------- */
+async function updateItem(id,field,value){
+  state.itens[id][field]=value;
+  renderAll();
+  if(itensCol){ try{ await itensCol.doc(id).update({[field]:value, atualizado_em:new Date().toISOString()}); }
+    catch(e){ toast("Não salvou: "+(e.code||e.message)); } }
+}
+
+async function addItem(obj){
+  state.itens[obj.id]=obj; renderAll();
+  if(itensCol){ try{ await itensCol.doc(obj.id).set(obj); toast("Item adicionado."); }
+    catch(e){ toast("Erro ao salvar item: "+(e.code||e.message)); } }
+  else toast("Item adicionado (somente nesta sessão — base não conectada).");
+}
+
+/* ---------- xlsx contagem upload ---------- */
+function normalize(s){return (s||"").toString().trim().toUpperCase().replace(/\s+/g," ");}
+function handleFile(file){
+  const rd=new FileReader();
+  rd.onload=e=>{
+    try{
+      const wb=XLSX.read(e.target.result,{type:"array"});
+      const ws=wb.Sheets[wb.SheetNames.includes("contagem")?"contagem":wb.SheetNames[0]];
+      const rows=XLSX.utils.sheet_to_json(ws,{defval:""});
+      const byEver={},byChk={};
+      itemsArray().forEach(it=>{byEver[normalize(it.nome_everest)]=it; byChk[normalize(it.nome_checklist)]=it;});
+      let matched=0,updated=0,missing=[];
+      rows.forEach(r=>{
+        const ever=normalize(r["DESCRIÇÃO ITEM EVEREST"]||r["DESCRICAO ITEM EVEREST"]);
+        const chk=normalize(r["ITEM CHECKLIST"]);
+        const it=byEver[ever]||byChk[chk];
+        const cont=r["CONTAGEM"];
+        if(!it){ if(ever||chk) missing.push(ever||chk); return; }
+        matched++;
+        if(cont!==""&&cont!==null&&cont!==undefined&&!isNaN(Number(cont))){ updateItem(it.id,"contagem",Number(cont)); updated++; }
+      });
+      toast(`Contagem lida: ${updated} atualizados, ${matched} reconhecidos${missing.length?`, ${missing.length} não encontrados`:""}.`);
+    }catch(err){ toast("Falha ao ler a planilha: "+err.message); }
+  };
+  rd.readAsArrayBuffer(file);
+}
+
+function exportBuy(rows){
+  const header="SETOR;ITEM EVEREST;SUBSETOR;QTD A PEDIR;U.M.\n";
+  const body=rows.map(({it,sug})=>[it.setor,it.nome_everest,it.subsetor,fmt(sug),it.unidade].join(";")).join("\n");
+  const csv="﻿"+header+body;
+  (async()=>{
+    try{ const dl=await window.claude?.use?.("downloads");
+      if(dl){ await dl.save({filename:"lista_compra_sudoeste.csv",data:csv}); return; } }catch(e){}
+    const blob=new Blob([csv],{type:"text/csv"});const a=document.createElement("a");
+    a.href=URL.createObjectURL(blob);a.download="lista_compra_sudoeste.csv";a.click();
+  })();
+}
+
+/* ---------- ui plumbing ---------- */
+function toast(m){const t=document.getElementById("toast");t.textContent=m;t.classList.add("show");clearTimeout(t._t);t._t=setTimeout(()=>t.classList.remove("show"),3200);}
+function setConn(ok,txt){const d=document.getElementById("connDot");d.className="status-dot "+(ok?"on":"off");document.getElementById("connTxt").textContent=txt;}
+function banner(html,cls){document.getElementById("banner").innerHTML=html?`<div class="banner ${cls||''}">${html}</div>`:"";}
+
+document.getElementById("tabs").addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;state.tab=b.dataset.tab;renderAll();});
+document.getElementById("search").addEventListener("input",e=>{state.busca=e.target.value;if(state.tab==="estoque")renderTable();});
+document.getElementById("statusFilter").addEventListener("change",e=>{state.filtroStatus=e.target.value;renderAll();});
+document.getElementById("uploadBtn").onclick=()=>document.getElementById("fileInput").click();
+document.getElementById("fileInput").onchange=e=>{if(e.target.files[0])handleFile(e.target.files[0]);e.target.value="";};
+document.getElementById("addBtn").onclick=openAdd;
+document.getElementById("themeBtn").onclick=()=>{
+  const r=document.documentElement;const cur=r.getAttribute("data-theme");
+  const next=cur==="dark"?"light":cur==="light"?"dark":(matchMedia("(prefers-color-scheme: dark)").matches?"light":"dark");
+  r.setAttribute("data-theme",next);try{localStorage.setItem("estq_theme",next);}catch(e){}
+};
+try{const t=localStorage.getItem("estq_theme");if(t)document.documentElement.setAttribute("data-theme",t);}catch(e){}
+
+function slug(s){return (s||"").normalize("NFKD").replace(/[̀-ͯ]/g,"").replace(/[^A-Za-z0-9]+/g,"_").replace(/^_|_$/g,"").toLowerCase();}
+function openAdd(){
+  const bg=document.createElement("div");bg.className="modal-bg";
+  bg.innerHTML=`<div class="modal"><h3>Adicionar item</h3>
+    <div class="frow"><label>Nome (Everest)</label><input id="m_nome" placeholder="Ex.: DEST GIN TANQUERAY"></div>
+    <div class="frow"><label>Setor</label><select id="m_setor">${SETORES.map(s=>`<option>${s}</option>`).join("")}</select></div>
+    <div class="frow"><label>Subsetor</label><input id="m_sub" placeholder="Ex.: BEBIDAS"></div>
+    <div class="frow"><label>Unidade</label><select id="m_um"><option>UNID</option><option>KG</option><option>LITRO</option></select></div>
+    <div class="frow"><label>Estoque mínimo</label><input id="m_min" type="number" step="any" value="0"></div>
+    <div class="actions"><button class="btn ghost" id="m_cancel">Cancelar</button><button class="btn" id="m_ok">Adicionar</button></div>
+  </div>`;
+  document.body.appendChild(bg);
+  bg.querySelector("#m_cancel").onclick=()=>bg.remove();
+  bg.onclick=e=>{if(e.target===bg)bg.remove();};
+  bg.querySelector("#m_ok").onclick=()=>{
+    const nome=bg.querySelector("#m_nome").value.trim();if(!nome){toast("Informe o nome.");return;}
+    let id=slug(nome);if(state.itens[id])id+="_"+Date.now().toString(36);
+    addItem({id,nome_everest:nome.toUpperCase(),nome_checklist:nome.toUpperCase(),setor:bg.querySelector("#m_setor").value,
+      subsetor:bg.querySelector("#m_sub").value.trim().toUpperCase(),unidade:bg.querySelector("#m_um").value,
+      minimo:Number(bg.querySelector("#m_min").value)||0,contagem:null,ativo:true});
+    bg.remove();
+  };
+  bg.querySelector("#m_nome").focus();
+}
+
+/* ---------- boot ---------- */
+function loadSample(){
+  state.isSample=true;
+  SAMPLE.forEach(it=>state.itens[it.id]={...it,ativo:true});
+  banner("<b>Dados de exemplo.</b> A base ainda não conectou — os 471 itens reais aparecem assim que o app se liga ao armazenamento. Nada digitado aqui é salvo.","sample");
+  renderAll();
+}
+
+async function boot(){
+  renderAll();
+  let claudeApi=null;
+  try{ claudeApi=window.claude; }catch(e){}
+  if(!claudeApi||!claudeApi.use){ setConn(false,"offline"); loadSample(); return; }
+  let d=null;
+  try{ d=await claudeApi.use("db"); }catch(e){ d=null; }
+  if(!d){ setConn(false,"sem base"); loadSample(); return; }
+  db=d; itensCol=db.collection("itens"); cfgDoc=db.doc("config/app");
+  setConn(true,"salvando na nuvem");
+  // config
+  try{ cfgDoc.onSnapshot(s=>{ const c=s.data(); if(c&&c.amareloFator){ state.amareloFator=Number(c.amareloFator); renderAll(); } }); }catch(e){}
+  // itens (catálogo)
+  let first=true;
+  try{
+    itensCol.onSnapshot(snap=>{
+      if(state.isSample){ state.itens={}; state.isSample=false; banner(""); }
+      snap.docChanges().forEach(ch=>{
+        const data=ch.doc.data()||{}; data.id=ch.doc.id;
+        if(ch.type==="removed") delete state.itens[ch.doc.id];
+        else state.itens[ch.doc.id]=data;
+      });
+      if(first && snap.empty){ banner("<b>Base conectada, catálogo ainda vazio.</b> Os 471 itens estão sendo carregados. Se esta mensagem persistir, avise o Bruno."); }
+      else banner("");
+      first=false;
+      renderAll();
+      document.getElementById("subline").textContent=`${itemsArray().length} itens · ${SETORES.length} setores · unidade Sudoeste`;
+    },err=>{ setConn(false,"erro base"); toast("Base: "+(err.code||"erro")); });
+  }catch(e){ setConn(false,"sem base"); loadSample(); }
+}
+boot();
+</script>
