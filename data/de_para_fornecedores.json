@@ -320,15 +320,17 @@
    "item_everest": "MP CARVAO SACO 8KG",
    "um_catalogo": "UNID",
    "fator_conversao": 1
-  }
- ],
- "pendentes_decisao": [
+  },
   {
-   "cnpj": "16.874.910/0001-33",
-   "codigo": "101",
+   "cnpj_fornecedor": "16.874.910/0001-33",
+   "codigo_fornecedor": "101",
    "descricao_nota": "ABOBORA ITALIA",
    "un_nota": "KG",
-   "motivo": "variedade nao existe no catalogo (catalogo tem apenas ABOBORA CABOTIA)"
+   "item_id": "hort_abobora_italiana",
+   "item_everest": "HORT ABOBORA ITALIANA KG",
+   "um_catalogo": "KG",
+   "fator_conversao": 1
   }
- ]
+ ],
+ "pendentes_decisao": []
 }

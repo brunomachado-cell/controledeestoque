@@ -4,6 +4,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 <style>
 :root{
   --ground:#eceef0; --surface:#ffffff; --surface-2:#f6f7f8; --line:#dfe3e7; --line-strong:#c8ced4;
@@ -17,7 +18,8 @@
   --shadow:0 1px 2px rgba(20,26,34,.06),0 2px 8px rgba(20,26,34,.05);
   --radius:10px;
 }
-:root:not([data-theme="light"]){ @media (prefers-color-scheme: dark){
+@media (prefers-color-scheme: dark){
+:root:not([data-theme="light"]){
   --ground:#0f1216; --surface:#171b21; --surface-2:#1e242c; --line:#2a313a; --line-strong:#3a434e;
   --ink:#e9ecef; --muted:#a4adb7; --faint:#7d868f;
   --accent:#7fa0d8; --accent-ink:#9db6e4; --accent-soft:#1d2836;
@@ -27,7 +29,8 @@
   --crit:#e8695c; --crit-bg:#2e1815; --crit-ink:#f4a79d;
   --none:#7d868f; --none-bg:#1e242c;
   --shadow:0 1px 2px rgba(0,0,0,.3),0 2px 10px rgba(0,0,0,.25);
-}}
+}
+}
 :root[data-theme="dark"]{
   --ground:#0f1216; --surface:#171b21; --surface-2:#1e242c; --line:#2a313a; --line-strong:#3a434e;
   --ink:#e9ecef; --muted:#a4adb7; --faint:#7d868f;
@@ -161,6 +164,35 @@ td .sug.need{color:var(--crit)}
 .hidefile{position:absolute;width:1px;height:1px;opacity:0;overflow:hidden}
 .toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:var(--ink);color:var(--ground);padding:10px 18px;border-radius:8px;font-size:13px;box-shadow:var(--shadow);z-index:80;opacity:0;transition:opacity .2s,transform .2s}
 .toast.show{opacity:1;transform:translateX(-50%) translateY(-4px)}
+/* entradas / conferência de nota */
+.notahead{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px 18px;padding:12px 16px;background:var(--surface-2);border-bottom:1px solid var(--line)}
+.nf{display:flex;flex-direction:column;gap:1px}
+.nf .k{font-size:10.5px;text-transform:uppercase;letter-spacing:.05em;color:var(--faint);font-weight:600}
+.nf .v{font-size:13px;font-weight:600}
+.nf .v.mono{font-family:"IBM Plex Mono",monospace}
+.confrow td{vertical-align:top}
+.confrow .notaside{font-size:12px;color:var(--muted)}
+.confrow .notaside b{color:var(--ink);font-weight:600;font-size:13px;display:block}
+select.destsel{background:var(--surface);border:1px solid var(--line-strong);border-radius:6px;padding:6px 8px;font-size:12.5px;max-width:290px;width:100%}
+input.fator{width:88px;background:var(--surface);border:1px solid var(--line-strong);border-radius:6px;padding:6px 8px;font-family:"IBM Plex Mono",monospace;text-align:right;font-size:12.5px}
+input.fator.falta{border-color:var(--warn);background:var(--warn-bg)}
+.lnstat{font-size:11px;font-weight:600;padding:2px 8px;border-radius:100px;white-space:nowrap}
+.ls-ok{background:var(--good-bg);color:var(--good-ink)}
+.ls-fator{background:var(--warn-bg);color:var(--warn-ink)}
+.ls-item{background:var(--crit-bg);color:var(--crit-ink)}
+.ls-skip{background:var(--none-bg);color:var(--muted)}
+.confbar{display:flex;gap:10px;align-items:center;padding:12px 16px;border-top:1px solid var(--line);background:var(--surface-2);flex-wrap:wrap}
+.confbar .sum{font-size:13px;color:var(--muted)}
+.confbar .sum b{color:var(--ink)}
+.drop{border:2px dashed var(--line-strong);border-radius:10px;padding:32px 20px;text-align:center;color:var(--muted);background:var(--surface-2)}
+.drop b{color:var(--ink);display:block;font-size:15px;margin-bottom:4px}
+.drop .hintsm{font-size:12px;color:var(--faint);margin-top:8px;line-height:1.6}
+.prog{font-size:13px;color:var(--accent-ink);display:flex;align-items:center;gap:8px}
+.spin{width:13px;height:13px;border:2px solid var(--accent-soft);border-top-color:var(--accent);border-radius:50%;animation:sp .7s linear infinite}
+@keyframes sp{to{transform:rotate(360deg)}}
+.entrow{display:grid;grid-template-columns:1fr auto auto auto;gap:12px;padding:9px 0;border-bottom:1px solid var(--line);align-items:center;font-size:13px}
+.entrow .mono{font-family:"IBM Plex Mono",monospace}
+.warnbox{background:var(--crit-bg);border:1px solid color-mix(in srgb,var(--crit) 35%,var(--line));color:var(--crit-ink);border-radius:8px;padding:10px 13px;font-size:12.5px;margin:12px 16px}
 @media(max-width:860px){.kpis{grid-template-columns:repeat(2,1fr)}.headright{width:100%;justify-content:flex-start}}
 @media (prefers-reduced-motion: reduce){*{transition:none!important}}
 </style>
@@ -203,6 +235,7 @@ td .sug.need{color:var(--crit)}
     <div class="tabs" id="tabs">
       <button data-tab="estoque" class="active">Estoque</button>
       <button data-tab="compra">Lista de compra</button>
+      <button data-tab="entradas">Entradas (notas)</button>
     </div>
     <div class="spacer"></div>
     <input class="search" id="search" type="search" placeholder="Buscar item…" autocomplete="off">
@@ -245,7 +278,12 @@ const state = {
   busca: "",
   tab: "estoque",
   isSample: false,
+  dePara: {},      // cnpjDigits -> {cnpj, fornecedor, itens:{chave:{item_id,fator,...}}}
+  entradas: [],    // notas já conferidas e gravadas
+  draft: null,     // nota em conferência
+  aiStatus: null,  // texto de progresso da leitura
 };
+const CNPJ_UNIDADE = "35631524000327";   // MULT COMERCIO (SIG = Sudoeste)
 let db = null, catalogoCol = null, cfgDoc = null;
 let persistTimer = null; const dirtySetores = new Set();
 
@@ -324,9 +362,10 @@ function renderTable(){
   const rows=filtered();
   const view=document.getElementById("view");
   if(!rows.length){ view.innerHTML=`<div class="card"><div class="empty">Nenhum item com os filtros atuais.</div></div>`; return; }
+  const ent=entradasPorItem();
   view.innerHTML=`<div class="card"><div class="tablewrap"><table>
     <thead><tr>
-      <th>Item</th><th>Setor</th><th class="num">Contagem</th><th class="num">Mínimo</th><th>Status</th><th class="num">Sugestão de compra</th>
+      <th>Item</th><th>Setor</th><th class="num">Contagem</th><th class="num">Mínimo</th><th class="num">Entradas</th><th>Status</th><th class="num">Sugestão de compra</th>
     </tr></thead><tbody>
     ${rows.map(it=>{
       const st=statusOf(it); const [pc,pi,pl]=PILL[st]; const sug=sugestao(it);
@@ -337,6 +376,7 @@ function renderTable(){
         <td><span class="setortag">${it.setor||""}</span></td>
         <td class="num"><input class="qty" type="number" step="any" inputmode="decimal" data-f="contagem" value="${it.contagem??""}" placeholder="—"><span class="um">${it.unidade||""}</span></td>
         <td class="num"><input class="qty mn" type="number" step="any" inputmode="decimal" data-f="minimo" value="${it.minimo??""}"><span class="um">${it.unidade||""}</span></td>
+        <td class="num mono">${ent[it.id]?`<span style="color:var(--accent)">+${fmt(ent[it.id])}</span>`:'<span style="color:var(--faint)">—</span>'}</td>
         <td><span class="pill ${pc}"><span class="pi">${pi}</span>${pl}</span></td>
         <td class="num"><span class="sug ${sugCls}">${sugTxt}</span></td>
       </tr>`;}).join("")}
@@ -370,7 +410,13 @@ function renderBuy(){
 
 function renderAll(){ renderKPIs();renderSectorBars();renderSectorChips();
   document.querySelectorAll("#tabs button").forEach(b=>b.classList.toggle("active",b.dataset.tab===state.tab));
-  if(state.tab==="estoque") renderTable(); else renderBuy();
+  const soEstoque = state.tab==="estoque";
+  document.getElementById("sectorchips").style.display = state.tab==="entradas"?"none":"flex";
+  document.getElementById("search").style.display = soEstoque?"":"none";
+  document.getElementById("statusFilter").style.display = soEstoque?"":"none";
+  if(state.tab==="estoque") renderTable();
+  else if(state.tab==="compra") renderBuy();
+  else renderEntradas();
 }
 
 /* ---------- persistence (1 documento por setor) ---------- */
@@ -455,7 +501,7 @@ document.getElementById("themeBtn").onclick=()=>{
 };
 try{const t=localStorage.getItem("estq_theme");if(t)document.documentElement.setAttribute("data-theme",t);}catch(e){}
 
-function slug(s){return (s||"").normalize("NFKD").replace(/[̀-ͯ]/g,"").replace(/[^A-Za-z0-9]+/g,"_").replace(/^_|_$/g,"").toLowerCase();}
+function slug(s){return (s||"").normalize("NFKD").replace(/[\u0300-\u036f]/g,"").replace(/[^A-Za-z0-9]+/g,"_").replace(/^_|_$/g,"").toLowerCase();}
 function openAdd(){
   const bg=document.createElement("div");bg.className="modal-bg";
   bg.innerHTML=`<div class="modal"><h3>Adicionar item</h3>
@@ -480,6 +526,287 @@ function openAdd(){
   bg.querySelector("#m_nome").focus();
 }
 
+/* ================= ENTRADAS (notas) ================= */
+const dig = s => (s||"").toString().replace(/\D/g,"");
+function umNorm(u){ u=(u||"").toString().trim().toUpperCase();
+  if(["UN","UNID","UNIDADE","UND","PC","PÇ"].includes(u)) return "UNID";
+  if(["L","LT","LITRO","LITROS"].includes(u)) return "LITRO";
+  if(["KG","QUILO","KGS"].includes(u)) return "KG";
+  return u; }
+function descKey(s){ return "desc:"+(s||"").normalize("NFKD").replace(/[\u0300-\u036f]/g,"")
+  .toUpperCase().replace(/[^A-Z0-9 ]/g," ").replace(/\s+/g," ").trim(); }
+
+function lookupDePara(cnpj,codigo,descricao){
+  const d=state.dePara[dig(cnpj)]; if(!d||!d.itens) return null;
+  if(codigo && d.itens[codigo]) return {...d.itens[codigo],chave:codigo};
+  const dk=descKey(descricao);
+  if(d.itens[dk]) return {...d.itens[dk],chave:dk};
+  return null;
+}
+async function saveDePara(cnpj,fornecedor,chave,entry){
+  const id=dig(cnpj); if(!id) return;
+  const doc=state.dePara[id]||{cnpj,fornecedor,itens:{}};
+  doc.itens[chave]={...entry,validado_bruno:true,aprovado_em:new Date().toISOString()};
+  doc.cnpj=cnpj; doc.fornecedor=doc.fornecedor||fornecedor;
+  state.dePara[id]=doc;
+  if(db){ try{ await db.collection("de_para").doc(id).set(doc); }catch(e){ toast("De-para não salvo: "+(e.code||e.message)); } }
+}
+function entradasPorItem(){
+  const acc={};
+  state.entradas.forEach(n=>(n.linhas||[]).forEach(l=>{
+    if(!l.item_id||l.ignorar) return;
+    acc[l.item_id]=(acc[l.item_id]||0)+(Number(l.qtd_convertida)||0);
+  }));
+  return acc;
+}
+
+/* --- PDF -> imagens --- */
+async function pdfParaImagens(file,maxPag){
+  if(!window.pdfjsLib) throw new Error("biblioteca de PDF não carregou");
+  pdfjsLib.GlobalWorkerOptions.workerSrc="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+  const buf=await file.arrayBuffer();
+  const pdf=await pdfjsLib.getDocument({data:buf}).promise;
+  const n=Math.min(pdf.numPages,maxPag||4), blobs=[];
+  for(let i=1;i<=n;i++){
+    const pg=await pdf.getPage(i);
+    const vp=pg.getViewport({scale:2.0});
+    const cv=document.createElement("canvas"); cv.width=vp.width; cv.height=vp.height;
+    await pg.render({canvasContext:cv.getContext("2d"),viewport:vp}).promise;
+    const b=await new Promise(r=>cv.toBlob(r,"image/jpeg",0.88));
+    if(b) blobs.push(b);
+  }
+  return {blobs,total:pdf.numPages,lidas:n};
+}
+
+const PROMPT_NOTA = `Você está lendo as imagens de uma NOTA FISCAL ELETRÔNICA brasileira (DANFE), digitalizada.
+Extraia os dados EXATAMENTE como estão impressos. Não invente, não complete, não arredonde.
+
+Foque na tabela "DADOS DOS PRODUTOS / SERVIÇOS". Ela tem as colunas:
+CÓD. PROD. | DESCRIÇÃO DO PRODUTO/SERVIÇO | NCM/SH | CST | CFOP | UN | QTD | V.UNIT | V.TOTAL
+Inclua TODAS as linhas de produto de TODAS as páginas enviadas (a nota pode ter "Folha 1/2", "2/2" etc.).
+
+Regras:
+- Números em formato brasileiro (1.234,56) devem virar número decimal com ponto (1234.56).
+- "un" é a unidade impressa na coluna UN (KG, UN, LT...). Mantenha como está.
+- Se um campo estiver ilegível, use null. NUNCA adivinhe um número.
+- Não inclua linhas que não sejam produto (totais, impostos, observações).
+
+Responda APENAS com um objeto JSON nesta forma:
+{"fornecedor":{"nome":string|null,"cnpj":string|null},
+ "nota":{"numero":string|null,"serie":string|null,"emissao":string|null,"chave":string|null},
+ "destinatario":{"nome":string|null,"cnpj":string|null},
+ "itens":[{"codigo":string|null,"descricao":string,"un":string|null,"qtd":number|null,"vunit":number|null,"vtotal":number|null}],
+ "ilegivel":[string]}
+Em "ilegivel" liste descrições de itens cujos números você não conseguiu ler com certeza.`;
+
+async function lerNota(files){
+  const sample = await (window.claude?.use?.("sample").catch(()=>null));
+  if(!sample){ toast("Leitura por IA indisponível nesta visualização."); return; }
+  let caps=null; try{ caps=await sample.limits(); }catch(e){}
+  if(!caps || !caps.images){ toast("Esta visualização não aceita envio de imagens."); return; }
+  const maxImgs=caps.images.maxCount||4;
+
+  state.aiStatus="Preparando as páginas da nota…"; renderAll();
+  let blobs=[],aviso="";
+  try{
+    for(const f of files){
+      if(/pdf$/i.test(f.type)||/\.pdf$/i.test(f.name)){
+        const r=await pdfParaImagens(f,maxImgs-blobs.length);
+        blobs=blobs.concat(r.blobs);
+        if(r.total>r.lidas) aviso=`A nota tem ${r.total} páginas; li as ${r.lidas} primeiras (limite de ${maxImgs} imagens por leitura).`;
+      } else if(/^image\//.test(f.type)) blobs.push(f);
+      if(blobs.length>=maxImgs) break;
+    }
+  }catch(e){ state.aiStatus=null; renderAll(); toast("Não consegui abrir o PDF: "+e.message+". Tente subir fotos das páginas."); return; }
+  if(!blobs.length){ state.aiStatus=null; renderAll(); toast("Nenhuma página para ler."); return; }
+
+  state.aiStatus="Lendo a nota com IA… (pode levar até 1 minuto)"; renderAll();
+  let data=null;
+  try{
+    data=await sample.json(PROMPT_NOTA,{images:blobs,modelTier:"complex"});
+  }catch(e){
+    state.aiStatus=null; renderAll();
+    const m={not_granted:"Você recusou o uso da IA nesta visualização.",rate_limited:"Muitas leituras seguidas — aguarde um instante.",
+      invalid_json:"A IA não devolveu dados estruturados. Tente uma foto mais nítida.",images_unavailable:"Envio de imagens indisponível.",
+      image_rejected:"Alguma página foi rejeitada (formato ou tamanho).",prompt_too_large:"Nota muito grande para uma leitura."};
+    toast(m[e.code]||("Falha na leitura: "+(e.code||e.message))); return;
+  }
+  state.aiStatus=null;
+  montarConferencia(data,aviso);
+}
+
+function montarConferencia(data,aviso){
+  const forn=data?.fornecedor||{}, nota=data?.nota||{}, dest=data?.destinatario||{};
+  const linhas=(data?.itens||[]).map((it,i)=>{
+    const dp=lookupDePara(forn.cnpj,it.codigo,it.descricao);
+    const item=dp? state.itens[dp.item_id]:null;
+    const unN=umNorm(it.un), umC=item?umNorm(item.unidade):null;
+    let fator = dp? dp.fator : null;
+    if(fator==null && umC && unN===umC) fator=1;
+    return {idx:i,codigo:it.codigo||"",descricao:it.descricao||"",un:it.un||"",qtd:it.qtd,
+      vunit:it.vunit,vtotal:it.vtotal,item_id:item?item.id:null,fator,ignorar:false,
+      novo_mapa:!dp};
+  });
+  state.draft={forn,nota,dest,linhas,aviso,ilegivel:data?.ilegivel||[]};
+  state.tab="entradas"; renderAll();
+}
+
+function calcLinha(l){
+  const item=l.item_id?state.itens[l.item_id]:null;
+  if(l.ignorar) return {status:"skip",qtd:null,item};
+  if(!item) return {status:"item",qtd:null,item};
+  const f=Number(l.fator);
+  if(!f||f<=0||l.qtd==null) return {status:"fator",qtd:null,item};
+  return {status:"ok",qtd:Number(l.qtd)/f,item};
+}
+const LST={ok:["ls-ok","conferido"],fator:["ls-fator","informe o fator"],item:["ls-item","escolha o item"],skip:["ls-skip","ignorada"]};
+
+function renderEntradas(){
+  const view=document.getElementById("view");
+  if(state.aiStatus){
+    view.innerHTML=`<div class="card"><div class="body"><div class="prog"><span class="spin"></span>${state.aiStatus}</div></div></div>`;
+    return;
+  }
+  if(state.draft){ renderConferencia(); return; }
+  const acc=entradasPorItem();
+  const nItens=Object.keys(acc).length;
+  view.innerHTML=`
+  <div class="card"><h2>Subir nota de entrada <span class="hint">PDF da DANFE ou fotos das páginas</span></h2>
+    <div class="body">
+      <div class="drop" id="dropzone">
+        <b>Arraste a nota aqui, ou clique para escolher</b>
+        Aceita PDF e imagem (JPG/PNG).
+        <div class="hintsm">A IA lê a tabela de produtos e <b>propõe</b> as quantidades.<br>
+        Nada entra no estoque sem você conferir e aprovar.</div>
+      </div>
+      <input class="hidefile" id="notaInput" type="file" accept=".pdf,image/*" multiple>
+    </div>
+  </div>
+  <div class="card"><h2>Notas conferidas <span class="hint">${state.entradas.length} nota(s) · ${nItens} itens com entrada</span></h2>
+    <div class="body">${
+      state.entradas.length? state.entradas.slice().reverse().map(n=>`
+        <div class="entrow">
+          <div><b>${n.fornecedor||"—"}</b><div class="setortag">NF ${n.numero||"?"} · emissão ${n.emissao||"?"}</div></div>
+          <div class="mono setortag">${(n.linhas||[]).filter(l=>!l.ignorar).length} itens</div>
+          <div class="mono">${n.total!=null?"R$ "+Number(n.total).toLocaleString("pt-BR",{minimumFractionDigits:2}):"—"}</div>
+          <div class="setortag">${(n.criado_em||"").slice(0,10)}</div>
+        </div>`).join("")
+      : `<div class="count-badge">Nenhuma nota conferida ainda. Suba a primeira acima.</div>`}
+    </div>
+  </div>`;
+  const dz=document.getElementById("dropzone"), inp=document.getElementById("notaInput");
+  dz.onclick=()=>inp.click();
+  dz.addEventListener("dragover",e=>{e.preventDefault();dz.style.borderColor="var(--accent)";});
+  dz.addEventListener("dragleave",()=>{dz.style.borderColor="";});
+  dz.addEventListener("drop",e=>{e.preventDefault();dz.style.borderColor="";
+    if(e.dataTransfer.files.length) lerNota([...e.dataTransfer.files]);});
+  inp.onchange=e=>{ if(e.target.files.length) lerNota([...e.target.files]); e.target.value=""; };
+}
+
+function itensDatalist(){
+  if(document.getElementById("itensDL")) return;
+  const dl=document.createElement("datalist"); dl.id="itensDL";
+  dl.innerHTML=itemsArray().sort((a,b)=>(a.nome_everest||"").localeCompare(b.nome_everest||""))
+    .map(i=>`<option value="${i.nome_everest}">${i.setor} · ${i.unidade}</option>`).join("");
+  document.body.appendChild(dl);
+}
+
+function renderConferencia(){
+  itensDatalist();
+  const d=state.draft, view=document.getElementById("view");
+  const destOk = dig(d.dest?.cnpj)===CNPJ_UNIDADE;
+  const calc=d.linhas.map(calcLinha);
+  const nOk=calc.filter(c=>c.status==="ok").length;
+  const nPend=calc.filter(c=>c.status==="fator"||c.status==="item").length;
+  const totalNota=d.linhas.reduce((s,l)=>s+(Number(l.vtotal)||0),0);
+  view.innerHTML=`<div class="card">
+    <h2>Conferência da nota <span class="hint">nada é gravado até você aprovar</span>
+      <button class="btn ghost" id="descartar">Descartar</button></h2>
+    <div class="notahead">
+      <div class="nf"><span class="k">Fornecedor</span><span class="v">${d.forn?.nome||"—"}</span></div>
+      <div class="nf"><span class="k">CNPJ fornecedor</span><span class="v mono">${d.forn?.cnpj||"—"}</span></div>
+      <div class="nf"><span class="k">Nota</span><span class="v mono">${d.nota?.numero||"—"}${d.nota?.serie?" / "+d.nota.serie:""}</span></div>
+      <div class="nf"><span class="k">Emissão</span><span class="v mono">${d.nota?.emissao||"—"}</span></div>
+      <div class="nf"><span class="k">Total dos produtos</span><span class="v mono">R$ ${totalNota.toLocaleString("pt-BR",{minimumFractionDigits:2})}</span></div>
+      <div class="nf"><span class="k">Destinatário</span><span class="v">${d.dest?.nome||"—"}</span></div>
+    </div>
+    ${!destOk?`<div class="warnbox"><b>Atenção:</b> o destinatário lido (CNPJ ${d.dest?.cnpj||"não identificado"}) não é o CNPJ da sua unidade (35.631.524/0003-27). Confirme se esta nota é desta loja antes de dar entrada.</div>`:""}
+    ${d.aviso?`<div class="warnbox">${d.aviso}</div>`:""}
+    ${d.ilegivel?.length?`<div class="warnbox"><b>A IA marcou como duvidoso:</b> ${d.ilegivel.join(" · ")}. Confira esses números no papel.</div>`:""}
+    <div class="tablewrap"><table>
+      <thead><tr><th>Item na nota</th><th class="num">Qtd</th><th>Destino no estoque</th><th class="num">Fator</th><th class="num">Entra</th><th>Status</th><th>Ignorar</th></tr></thead>
+      <tbody>${d.linhas.map((l,i)=>{
+        const c=calc[i]; const [cls,txt]=LST[c.status];
+        const item=c.item;
+        return `<tr class="confrow" data-i="${i}">
+          <td class="notaside"><b>${l.descricao||"—"}</b>cód. ${l.codigo||"—"} · un ${l.un||"—"}${l.novo_mapa?' · <span style="color:var(--warn)">código novo</span>':""}</td>
+          <td class="num mono">${l.qtd??"—"}</td>
+          <td><input class="destsel" list="itensDL" data-f="item" value="${item?item.nome_everest:""}" placeholder="digite para buscar…"></td>
+          <td class="num"><input class="fator ${c.status==="fator"?"falta":""}" data-f="fator" type="number" step="any" value="${l.fator??""}" placeholder="?">
+              <div class="setortag" style="font-size:10px">${item?`${umNorm(l.un)||"?"}/${umNorm(item.unidade)}`:""}</div></td>
+          <td class="num mono">${c.qtd!=null?fmt(c.qtd)+" "+(item?item.unidade:""):"—"}</td>
+          <td><span class="lnstat ${cls}">${txt}</span></td>
+          <td><input type="checkbox" data-f="ignorar" ${l.ignorar?"checked":""}></td>
+        </tr>`;}).join("")}
+      </tbody></table></div>
+    <div class="confbar">
+      <span class="sum"><b>${nOk}</b> conferidos · <b>${nPend}</b> pendentes · <b>${calc.filter(c=>c.status==="skip").length}</b> ignorados</span>
+      <div class="spacer"></div>
+      <button class="btn" id="confirmar" ${nPend?"disabled style=opacity:.5;cursor:not-allowed":""}>✓ Dar entrada no estoque</button>
+    </div></div>`;
+
+  view.querySelectorAll("tr.confrow").forEach(tr=>{
+    const i=+tr.dataset.i;
+    tr.querySelector('[data-f="item"]').addEventListener("change",e=>{
+      const nome=e.target.value.trim().toUpperCase();
+      const it=itemsArray().find(x=>(x.nome_everest||"").toUpperCase()===nome);
+      state.draft.linhas[i].item_id=it?it.id:null;
+      if(it && state.draft.linhas[i].fator==null && umNorm(state.draft.linhas[i].un)===umNorm(it.unidade))
+        state.draft.linhas[i].fator=1;
+      renderConferencia();
+    });
+    tr.querySelector('[data-f="fator"]').addEventListener("change",e=>{
+      const v=e.target.value===""?null:Number(e.target.value);
+      state.draft.linhas[i].fator=(v!=null&&v>0)?v:null; renderConferencia();
+    });
+    tr.querySelector('[data-f="ignorar"]').addEventListener("change",e=>{
+      state.draft.linhas[i].ignorar=e.target.checked; renderConferencia();
+    });
+  });
+  document.getElementById("descartar").onclick=()=>{ state.draft=null; renderAll(); };
+  const cb=document.getElementById("confirmar");
+  if(cb && !nPend) cb.onclick=confirmarEntrada;
+}
+
+async function confirmarEntrada(){
+  const d=state.draft; if(!d) return;
+  const linhas=d.linhas.map(l=>{
+    const c=calcLinha(l); const item=c.item;
+    return {codigo:l.codigo,descricao:l.descricao,un:l.un,qtd:l.qtd,vunit:l.vunit,vtotal:l.vtotal,
+      item_id:l.item_id,item_everest:item?item.nome_everest:null,um_catalogo:item?item.unidade:null,
+      fator:l.fator,qtd_convertida:c.qtd,ignorar:l.ignorar};
+  });
+  const total=linhas.reduce((s,l)=>s+(Number(l.vtotal)||0),0);
+  const id=(dig(d.forn?.cnpj)||"sem")+"_"+(dig(d.nota?.numero)||Date.now().toString(36));
+  const doc={id,fornecedor:d.forn?.nome||null,cnpj:d.forn?.cnpj||null,numero:d.nota?.numero||null,
+    serie:d.nota?.serie||null,emissao:d.nota?.emissao||null,chave:d.nota?.chave||null,
+    destinatario_cnpj:d.dest?.cnpj||null,linhas,total,criado_em:new Date().toISOString()};
+
+  // aprende o de-para (código do fornecedor -> item + fator)
+  for(const l of d.linhas){
+    if(l.ignorar||!l.item_id||!l.fator) continue;
+    const item=state.itens[l.item_id]; if(!item) continue;
+    const chave=(l.codigo&&l.codigo!=="?")?l.codigo:descKey(l.descricao);
+    await saveDePara(d.forn?.cnpj,d.forn?.nome,chave,{item_id:l.item_id,item_everest:item.nome_everest,
+      descricao_nota:l.descricao,un_nota:l.un,um_catalogo:item.unidade,fator:Number(l.fator)});
+  }
+  state.entradas.push(doc);
+  if(db){ try{ await db.collection("entradas").doc(id).set(doc); toast("Entrada gravada e de-para aprendido."); }
+    catch(e){ toast("Erro ao gravar entrada: "+(e.code||e.message)); } }
+  else toast("Entrada registrada só nesta sessão (base não conectada).");
+  state.draft=null; renderAll();
+}
+
 /* ---------- boot ---------- */
 function loadSample(){
   state.isSample=true;
@@ -500,6 +827,19 @@ async function boot(){
   setConn(true,"salvando na nuvem");
   // config
   try{ cfgDoc.onSnapshot(s=>{ const c=s.data(); if(c&&c.amareloFator){ state.amareloFator=Number(c.amareloFator); renderAll(); } }); }catch(e){}
+  // de-para de fornecedores (1 doc por CNPJ)
+  try{ db.collection("de_para").onSnapshot(snap=>{
+      snap.docChanges().forEach(ch=>{
+        if(ch.type==="removed") delete state.dePara[ch.doc.id];
+        else state.dePara[ch.doc.id]=ch.doc.data()||{};
+      });
+      if(state.tab==="entradas") renderAll();
+    }); }catch(e){}
+  // notas de entrada já conferidas
+  try{ db.collection("entradas").onSnapshot(snap=>{
+      state.entradas=snap.docs.map(x=>({...(x.data()||{}),id:x.id}));
+      renderAll();
+    }); }catch(e){}
   // catálogo: 1 documento por setor, cada um com um array de itens
   let first=true;
   try{

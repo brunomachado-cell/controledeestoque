@@ -1,7 +1,7 @@
 {
  "loja": "SUDOESTE",
  "versao_fonte": "Lista de Requisição (10 setores)",
- "total": 479,
+ "total": 480,
  "itens": [
   {
    "id": "agua_c_gas",
@@ -4815,6 +4815,18 @@
    "prefixo": "MP",
    "origem_cadastro": "lacuna detectada na varredura ficha x catalogo",
    "motivo": "Hot Banana com Nutella (Nazo a la carte e rodizio)",
+   "pendente_validacao": true
+  },
+  {
+   "id": "hort_abobora_italiana",
+   "nome_checklist": "HORT ABOBORA ITALIANA KG (KG)",
+   "nome_everest": "HORT ABOBORA ITALIANA KG",
+   "setor": "HORTIFRUTI",
+   "subsetor": "HORTIFRUTI",
+   "unidade": "KG",
+   "estoque_minimo": 0,
+   "prefixo": "HORT",
+   "origem_cadastro": "NF MM Hortifruti cod 101 - variedade ausente do catalogo",
    "pendente_validacao": true
   }
  ],
