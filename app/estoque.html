@@ -246,7 +246,8 @@ const state = {
   tab: "estoque",
   isSample: false,
 };
-let db = null, itensCol = null, cfgDoc = null;
+let db = null, catalogoCol = null, cfgDoc = null;
+let persistTimer = null; const dirtySetores = new Set();
 
 /* ---------- status ---------- */
 function statusOf(it){
@@ -372,18 +373,26 @@ function renderAll(){ renderKPIs();renderSectorBars();renderSectorChips();
   if(state.tab==="estoque") renderTable(); else renderBuy();
 }
 
-/* ---------- persistence ---------- */
-async function updateItem(id,field,value){
-  state.itens[id][field]=value;
-  renderAll();
-  if(itensCol){ try{ await itensCol.doc(id).update({[field]:value, atualizado_em:new Date().toISOString()}); }
-    catch(e){ toast("Não salvou: "+(e.code||e.message)); } }
+/* ---------- persistence (1 documento por setor) ---------- */
+function setField(id,field,value){ if(state.itens[id]) state.itens[id][field]=value; }
+async function writeSetor(setor){
+  if(!catalogoCol) return;
+  const itens=itemsArray().filter(it=>it.setor===setor);
+  try{ await catalogoCol.doc(setor).set({setor,itens,atualizado_em:new Date().toISOString()}); }
+  catch(e){ toast("Não salvou ("+setor+"): "+(e.code||e.message)); }
 }
-
+function queuePersist(setor){
+  dirtySetores.add(setor);
+  clearTimeout(persistTimer);
+  persistTimer=setTimeout(()=>{ const s=[...dirtySetores]; dirtySetores.clear(); s.forEach(writeSetor); },400);
+}
+function updateItem(id,field,value){
+  setField(id,field,value); renderAll();
+  const it=state.itens[id]; if(it) queuePersist(it.setor);
+}
 async function addItem(obj){
   state.itens[obj.id]=obj; renderAll();
-  if(itensCol){ try{ await itensCol.doc(obj.id).set(obj); toast("Item adicionado."); }
-    catch(e){ toast("Erro ao salvar item: "+(e.code||e.message)); } }
+  if(catalogoCol){ await writeSetor(obj.setor); toast("Item adicionado."); }
   else toast("Item adicionado (somente nesta sessão — base não conectada).");
 }
 
@@ -398,7 +407,7 @@ function handleFile(file){
       const rows=XLSX.utils.sheet_to_json(ws,{defval:""});
       const byEver={},byChk={};
       itemsArray().forEach(it=>{byEver[normalize(it.nome_everest)]=it; byChk[normalize(it.nome_checklist)]=it;});
-      let matched=0,updated=0,missing=[];
+      let matched=0,updated=0,missing=[]; const touched=new Set();
       rows.forEach(r=>{
         const ever=normalize(r["DESCRIÇÃO ITEM EVEREST"]||r["DESCRICAO ITEM EVEREST"]);
         const chk=normalize(r["ITEM CHECKLIST"]);
@@ -406,8 +415,10 @@ function handleFile(file){
         const cont=r["CONTAGEM"];
         if(!it){ if(ever||chk) missing.push(ever||chk); return; }
         matched++;
-        if(cont!==""&&cont!==null&&cont!==undefined&&!isNaN(Number(cont))){ updateItem(it.id,"contagem",Number(cont)); updated++; }
+        if(cont!==""&&cont!==null&&cont!==undefined&&!isNaN(Number(cont))){ setField(it.id,"contagem",Number(cont)); touched.add(it.setor); updated++; }
       });
+      renderAll();
+      touched.forEach(writeSetor);
       toast(`Contagem lida: ${updated} atualizados, ${matched} reconhecidos${missing.length?`, ${missing.length} não encontrados`:""}.`);
     }catch(err){ toast("Falha ao ler a planilha: "+err.message); }
   };
@@ -485,25 +496,26 @@ async function boot(){
   let d=null;
   try{ d=await claudeApi.use("db"); }catch(e){ d=null; }
   if(!d){ setConn(false,"sem base"); loadSample(); return; }
-  db=d; itensCol=db.collection("itens"); cfgDoc=db.doc("config/app");
+  db=d; catalogoCol=db.collection("catalogo"); cfgDoc=db.doc("config/app");
   setConn(true,"salvando na nuvem");
   // config
   try{ cfgDoc.onSnapshot(s=>{ const c=s.data(); if(c&&c.amareloFator){ state.amareloFator=Number(c.amareloFator); renderAll(); } }); }catch(e){}
-  // itens (catálogo)
+  // catálogo: 1 documento por setor, cada um com um array de itens
   let first=true;
   try{
-    itensCol.onSnapshot(snap=>{
+    catalogoCol.onSnapshot(snap=>{
       if(state.isSample){ state.itens={}; state.isSample=false; banner(""); }
       snap.docChanges().forEach(ch=>{
-        const data=ch.doc.data()||{}; data.id=ch.doc.id;
-        if(ch.type==="removed") delete state.itens[ch.doc.id];
-        else state.itens[ch.doc.id]=data;
+        const setor=ch.doc.id; const data=ch.doc.data()||{};
+        // remove itens antigos deste setor e recarrega
+        Object.keys(state.itens).forEach(k=>{ if(state.itens[k].setor===setor) delete state.itens[k]; });
+        if(ch.type!=="removed") (data.itens||[]).forEach(it=>{ state.itens[it.id]={...it,setor:it.setor||setor}; });
       });
-      if(first && snap.empty){ banner("<b>Base conectada, catálogo ainda vazio.</b> Os 471 itens estão sendo carregados. Se esta mensagem persistir, avise o Bruno."); }
+      if(first && snap.empty){ banner("<b>Base conectada, catálogo ainda vazio.</b> Os 471 itens estão sendo carregados. Se esta mensagem persistir por muito tempo, me avise."); }
       else banner("");
       first=false;
       renderAll();
-      document.getElementById("subline").textContent=`${itemsArray().length} itens · ${SETORES.length} setores · unidade Sudoeste`;
+      if(itemsArray().length) document.getElementById("subline").textContent=`${itemsArray().length} itens · ${SETORES.length} setores · unidade Sudoeste`;
     },err=>{ setConn(false,"erro base"); toast("Base: "+(err.code||"erro")); });
   }catch(e){ setConn(false,"sem base"); loadSample(); }
 }
