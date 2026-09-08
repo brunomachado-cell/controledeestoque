@@ -1,0 +1,2467 @@
+{
+ "origem": "Almanaque do Bar 2026",
+ "produtos": [
+  {
+   "produto": "APEROL SPRITZ",
+   "pagina": 3,
+   "rendimento": {
+    "qtd": 1,
+    "un": "porcao"
+   },
+   "composicao": [
+    {
+     "ingrediente": "APEROL",
+     "qtd": 75.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "dest_aperol",
+     "item_everest": "DEST APEROL",
+     "um_catalogo": "LITRO",
+     "divisor": 1000,
+     "status": "ok"
+    },
+    {
+     "ingrediente": "ESPUMANTE",
+     "qtd": 140.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "esp_1913_sparkling_branco",
+     "item_everest": "ESP 1913 SPARKLING BRANCO",
+     "um_catalogo": "UNID",
+     "divisor": null,
+     "status": "falta_ml_por_unidade"
+    },
+    {
+     "ingrediente": "ÁGUA CACHOEIRINHA",
+     "qtd": 15.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "mp_agua_cachoeirinha",
+     "item_everest": "MP AGUA CACHOEIRINHA",
+     "um_catalogo": "LITRO",
+     "divisor": 1000,
+     "status": "ok"
+    },
+    {
+     "ingrediente": "LARANJA BAHIA",
+     "qtd": 30.0,
+     "un": "g",
+     "tipo": "estoque",
+     "item_id": "hort_laranja_bahia_kg",
+     "item_everest": "HORT LARANJA BAHIA KG",
+     "um_catalogo": "KG",
+     "divisor": 1000,
+     "status": "ok"
+    }
+   ]
+  },
+  {
+   "produto": "ALFREDO SPRITZ SASAKI SPRITZ",
+   "pagina": 4,
+   "rendimento": {
+    "qtd": 1,
+    "un": "porcao"
+   },
+   "composicao": [
+    {
+     "ingrediente": "ESPUMANTE BRUT BRANCO",
+     "qtd": 140.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "esp_1913_sparkling_branco",
+     "item_everest": "ESP 1913 SPARKLING BRANCO",
+     "um_catalogo": "UNID",
+     "divisor": null,
+     "status": "falta_ml_por_unidade"
+    },
+    {
+     "ingrediente": "REDUÇÃO DE HIBISCO",
+     "qtd": 10.0,
+     "un": "ml",
+     "tipo": "intermediario",
+     "intermediario": "PROD REDUCAO DE HIBISCO",
+     "divisor": null,
+     "status": "intermediario_sem_cadastro"
+    },
+    {
+     "ingrediente": "APEROL",
+     "qtd": 50.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "dest_aperol",
+     "item_everest": "DEST APEROL",
+     "um_catalogo": "LITRO",
+     "divisor": 1000,
+     "status": "ok"
+    },
+    {
+     "ingrediente": "ÁGUA CACHOEIRINHA",
+     "qtd": 10.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "mp_agua_cachoeirinha",
+     "item_everest": "MP AGUA CACHOEIRINHA",
+     "um_catalogo": "LITRO",
+     "divisor": 1000,
+     "status": "ok"
+    },
+    {
+     "ingrediente": "LARANJA BAHIA",
+     "qtd": 50.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "hort_laranja_bahia_kg",
+     "item_everest": "HORT LARANJA BAHIA KG",
+     "um_catalogo": "KG",
+     "divisor": null,
+     "status": "indefinido"
+    },
+    {
+     "ingrediente": "CRAVO",
+     "qtd": 1.0,
+     "un": "g",
+     "tipo": "estoque",
+     "item_id": "mp_cravo",
+     "item_everest": "MP CRAVO",
+     "um_catalogo": "KG",
+     "divisor": 1000,
+     "status": "ok"
+    },
+    {
+     "ingrediente": "HORTELÃ",
+     "qtd": 1.0,
+     "un": "g",
+     "tipo": "estoque",
+     "item_id": "hort_hortela_maco",
+     "item_everest": "HORT HORTELA MACO",
+     "um_catalogo": "UNID",
+     "divisor": null,
+     "status": "falta_g_por_unidade"
+    }
+   ]
+  },
+  {
+   "produto": "CAIPIMESSI CAIPISORA",
+   "pagina": 5,
+   "rendimento": {
+    "qtd": 1,
+    "un": "porcao"
+   },
+   "composicao": [
+    {
+     "ingrediente": "VODKA NACIONAL",
+     "qtd": 50.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "dest_vodka_smirnoff",
+     "item_everest": "DEST VODKA SMIRNOFF",
+     "um_catalogo": "LITRO",
+     "divisor": 1000,
+     "status": "ok"
+    },
+    {
+     "ingrediente": "LIMÃO SICILIANO",
+     "qtd": 40.0,
+     "un": "g",
+     "tipo": "estoque",
+     "item_id": "hort_limao_siciliano_kg",
+     "item_everest": "HORT LIMAO SICILIANO KG",
+     "um_catalogo": "KG",
+     "divisor": 1000,
+     "status": "ok"
+    },
+    {
+     "ingrediente": "SUMO DE LIMÃO",
+     "qtd": 10.0,
+     "un": "ml",
+     "tipo": "intermediario",
+     "intermediario": "PROD SUMO DE LIMAO",
+     "divisor": null,
+     "status": "intermediario_sem_cadastro"
+    },
+    {
+     "ingrediente": "REDUÇÃO DE GENGIBRE",
+     "qtd": 25.0,
+     "un": "ml",
+     "tipo": "intermediario",
+     "intermediario": "PROD REDUCAO DE GENGIBRE",
+     "divisor": null,
+     "status": "intermediario_sem_cadastro"
+    },
+    {
+     "ingrediente": "XAROPE ELDERFLOWER",
+     "qtd": 10.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "mp_xarope_de_elderflower",
+     "item_everest": "MP XAROPE DE ELDERFLOWER",
+     "um_catalogo": "LITRO",
+     "divisor": 1000,
+     "status": "ok"
+    },
+    {
+     "ingrediente": "ÁGUA CACHOEIRINHA",
+     "qtd": 100.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "mp_agua_cachoeirinha",
+     "item_everest": "MP AGUA CACHOEIRINHA",
+     "um_catalogo": "LITRO",
+     "divisor": 1000,
+     "status": "ok"
+    }
+   ]
+  },
+  {
+   "produto": "CAIPIRINHA",
+   "pagina": 6,
+   "rendimento": {
+    "qtd": 1,
+    "un": "porcao"
+   },
+   "composicao": [
+    {
+     "ingrediente": "CACHAÇA BRANCA",
+     "qtd": 50.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "dest_cachaca_salinissima_prata",
+     "item_everest": "DEST CACHACA SALINISSIMA PRATA",
+     "um_catalogo": "LITRO",
+     "divisor": 1000,
+     "status": "ok"
+    },
+    {
+     "ingrediente": "FRUTAS DA ESTAÇÃO",
+     "qtd": 50.0,
+     "un": "g",
+     "tipo": "intermediario",
+     "intermediario": "GENERICO FRUTAS DA ESTACAO",
+     "divisor": null,
+     "status": "intermediario_sem_cadastro"
+    },
+    {
+     "ingrediente": "XAROPE SIMPLES",
+     "qtd": 35.0,
+     "un": "ml",
+     "tipo": "intermediario",
+     "intermediario": "PROD XAROPE SIMPLES",
+     "divisor": null,
+     "status": "intermediario_sem_cadastro"
+    }
+   ]
+  },
+  {
+   "produto": "CAIPIROSKA",
+   "pagina": 7,
+   "rendimento": {
+    "qtd": 1,
+    "un": "porcao"
+   },
+   "composicao": [
+    {
+     "ingrediente": "VODKA",
+     "qtd": 50.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "dest_vodka_smirnoff",
+     "item_everest": "DEST VODKA SMIRNOFF",
+     "um_catalogo": "LITRO",
+     "divisor": 1000,
+     "status": "ok"
+    },
+    {
+     "ingrediente": "FRUTAS DA ESTAÇÃO",
+     "qtd": 50.0,
+     "un": "g",
+     "tipo": "intermediario",
+     "intermediario": "GENERICO FRUTAS DA ESTACAO",
+     "divisor": null,
+     "status": "intermediario_sem_cadastro"
+    },
+    {
+     "ingrediente": "XAROPE SIMPLES",
+     "qtd": 35.0,
+     "un": "ml",
+     "tipo": "intermediario",
+     "intermediario": "PROD XAROPE SIMPLES",
+     "divisor": null,
+     "status": "intermediario_sem_cadastro"
+    }
+   ]
+  },
+  {
+   "produto": "CAIPITANGO CAIPINARA",
+   "pagina": 8,
+   "rendimento": {
+    "qtd": 1,
+    "un": "porcao"
+   },
+   "composicao": [
+    {
+     "ingrediente": "VODKA NACIONAL",
+     "qtd": 50.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "dest_vodka_smirnoff",
+     "item_everest": "DEST VODKA SMIRNOFF",
+     "um_catalogo": "LITRO",
+     "divisor": 1000,
+     "status": "ok"
+    },
+    {
+     "ingrediente": "MORANGO",
+     "qtd": 30.0,
+     "un": "g",
+     "tipo": "estoque",
+     "item_id": "hort_morango_bandeja",
+     "item_everest": "HORT MORANGO BANDEJA",
+     "um_catalogo": "UNID",
+     "divisor": null,
+     "status": "falta_g_por_unidade"
+    },
+    {
+     "ingrediente": "LIMÃO SICILIANO",
+     "qtd": 30.0,
+     "un": "g",
+     "tipo": "estoque",
+     "item_id": "hort_limao_siciliano_kg",
+     "item_everest": "HORT LIMAO SICILIANO KG",
+     "um_catalogo": "KG",
+     "divisor": 1000,
+     "status": "ok"
+    },
+    {
+     "ingrediente": "XAROPE DE CRANBERRY",
+     "qtd": 25.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "mp_xarope_de_cranberry",
+     "item_everest": "MP XAROPE DE CRANBERRY",
+     "um_catalogo": "LITRO",
+     "divisor": 1000,
+     "status": "ok"
+    },
+    {
+     "ingrediente": "ELDERFLOWER",
+     "qtd": 10.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "mp_xarope_de_elderflower",
+     "item_everest": "MP XAROPE DE ELDERFLOWER",
+     "um_catalogo": "LITRO",
+     "divisor": 1000,
+     "status": "ok"
+    },
+    {
+     "ingrediente": "XAROPE SIMPLES",
+     "qtd": 5.0,
+     "un": "ml",
+     "tipo": "intermediario",
+     "intermediario": "PROD XAROPE SIMPLES",
+     "divisor": null,
+     "status": "intermediario_sem_cadastro"
+    },
+    {
+     "ingrediente": "SUMO DE LIMÃO",
+     "qtd": 5.0,
+     "un": "ml",
+     "tipo": "intermediario",
+     "intermediario": "PROD SUMO DE LIMAO",
+     "divisor": null,
+     "status": "intermediario_sem_cadastro"
+    },
+    {
+     "ingrediente": "ÁGUA CACHOEIRINHA",
+     "qtd": 100.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "mp_agua_cachoeirinha",
+     "item_everest": "MP AGUA CACHOEIRINHA",
+     "um_catalogo": "LITRO",
+     "divisor": 1000,
+     "status": "ok"
+    }
+   ]
+  },
+  {
+   "produto": "CAMINITO TROPICAL YOSHI TROPICAL",
+   "pagina": 9,
+   "rendimento": {
+    "qtd": 1,
+    "un": "porcao"
+   },
+   "composicao": [
+    {
+     "ingrediente": "REDUÇÃO DE MARACUJÁ",
+     "qtd": 30.0,
+     "un": "ml",
+     "tipo": "intermediario",
+     "intermediario": "PROD REDUCAO DE MARACUJA",
+     "divisor": null,
+     "status": "intermediario_sem_cadastro"
+    },
+    {
+     "ingrediente": "SUMO DE LIMÃO",
+     "qtd": 20.0,
+     "un": "ml",
+     "tipo": "intermediario",
+     "intermediario": "PROD SUMO DE LIMAO",
+     "divisor": null,
+     "status": "intermediario_sem_cadastro"
+    },
+    {
+     "ingrediente": "GIN",
+     "qtd": 50.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "dest_gin_larios",
+     "item_everest": "DEST GIN LARIOS",
+     "um_catalogo": "LITRO",
+     "divisor": 1000,
+     "status": "ok"
+    },
+    {
+     "ingrediente": "RED BULL TROPICAL",
+     "qtd": 250.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "ref_redbull_tropical",
+     "item_everest": "REF REDBULL TROPICAL",
+     "um_catalogo": "UNID",
+     "divisor": null,
+     "status": "falta_ml_por_unidade"
+    },
+    {
+     "ingrediente": "LARANJA BAHIA",
+     "qtd": 1.0,
+     "un": "fatia",
+     "tipo": "estoque",
+     "item_id": "hort_laranja_bahia_kg",
+     "item_everest": "HORT LARANJA BAHIA KG",
+     "um_catalogo": "KG",
+     "divisor": null,
+     "status": "medida_nao_metrica"
+    },
+    {
+     "ingrediente": "ALECRIM",
+     "qtd": 5.0,
+     "un": "g",
+     "tipo": "estoque",
+     "item_id": "hort_alecrim_maco",
+     "item_everest": "HORT ALECRIM MACO",
+     "um_catalogo": "UNID",
+     "divisor": null,
+     "status": "falta_g_por_unidade"
+    }
+   ]
+  },
+  {
+   "produto": "CARAJILLO",
+   "pagina": 10,
+   "rendimento": {
+    "qtd": 1,
+    "un": "porcao"
+   },
+   "composicao": [
+    {
+     "ingrediente": "CAFÉ EXPRESSO",
+     "qtd": 60.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "cafe_nespresso_ristretto",
+     "item_everest": "CAFE NESPRESSO RISTRETTO",
+     "um_catalogo": "UNID",
+     "divisor": null,
+     "status": "falta_ml_por_unidade"
+    },
+    {
+     "ingrediente": "LICOR 43",
+     "qtd": 35.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "dest_licor_43",
+     "item_everest": "DEST LICOR 43",
+     "um_catalogo": "LITRO",
+     "divisor": 1000,
+     "status": "ok"
+    }
+   ]
+  },
+  {
+   "produto": "CHÁ MATE",
+   "pagina": 11,
+   "rendimento": {
+    "qtd": 1,
+    "un": "porcao"
+   },
+   "composicao": [
+    {
+     "ingrediente": "REDUÇÃO DE CHÁ MATE",
+     "qtd": 200.0,
+     "un": "ml",
+     "tipo": "intermediario",
+     "intermediario": "PROD REDUCAO DE CHA MATE",
+     "divisor": null,
+     "status": "intermediario_sem_cadastro"
+    },
+    {
+     "ingrediente": "REDUÇÃO DE GENGIBRE",
+     "qtd": 50.0,
+     "un": "ml",
+     "tipo": "intermediario",
+     "intermediario": "PROD REDUCAO DE GENGIBRE",
+     "divisor": null,
+     "status": "intermediario_sem_cadastro"
+    },
+    {
+     "ingrediente": "SUMO DE LIMÃO",
+     "qtd": 50.0,
+     "un": "ml",
+     "tipo": "intermediario",
+     "intermediario": "PROD SUMO DE LIMAO",
+     "divisor": null,
+     "status": "intermediario_sem_cadastro"
+    }
+   ]
+  },
+  {
+   "produto": "CLERICOT / SANGRIA",
+   "pagina": 12,
+   "rendimento": {
+    "qtd": 1,
+    "un": "porcao"
+   },
+   "composicao": [
+    {
+     "ingrediente": "ESPUMANTE OU VINHO TINTO",
+     "qtd": 280.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "esp_1913_sparkling_branco",
+     "item_everest": "ESP 1913 SPARKLING BRANCO",
+     "um_catalogo": "UNID",
+     "divisor": null,
+     "status": "falta_ml_por_unidade"
+    },
+    {
+     "ingrediente": "LICOR DE LARANJA",
+     "qtd": 50.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "dest_licor_stock_curacau",
+     "item_everest": "DEST LICOR STOCK CURACAU",
+     "um_catalogo": "LITRO",
+     "divisor": 1000,
+     "status": "ok"
+    },
+    {
+     "ingrediente": "VODKA NACIONAL",
+     "qtd": 50.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "dest_vodka_smirnoff",
+     "item_everest": "DEST VODKA SMIRNOFF",
+     "um_catalogo": "LITRO",
+     "divisor": 1000,
+     "status": "ok"
+    },
+    {
+     "ingrediente": "SUCO DE LARANJA",
+     "qtd": 50.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "hort_laranja_kg",
+     "item_everest": "HORT LARANJA KG",
+     "um_catalogo": "KG",
+     "divisor": null,
+     "status": "indefinido"
+    },
+    {
+     "ingrediente": "XAROPE SIMPLES",
+     "qtd": 20.0,
+     "un": "ml",
+     "tipo": "intermediario",
+     "intermediario": "PROD XAROPE SIMPLES",
+     "divisor": null,
+     "status": "intermediario_sem_cadastro"
+    },
+    {
+     "ingrediente": "ABACAXI",
+     "qtd": 150.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "hort_abacaxi",
+     "item_everest": "HORT ABACAXI",
+     "um_catalogo": "UNID",
+     "divisor": null,
+     "status": "falta_ml_por_unidade"
+    },
+    {
+     "ingrediente": "UVA FATIADA",
+     "qtd": 50.0,
+     "un": "g",
+     "tipo": "estoque",
+     "item_id": "hort_uva_kg",
+     "item_everest": "HORT UVA KG",
+     "um_catalogo": "KG",
+     "divisor": 1000,
+     "status": "ok"
+    },
+    {
+     "ingrediente": "MORANGO LAMINADO",
+     "qtd": 50.0,
+     "un": "g",
+     "tipo": "estoque",
+     "item_id": "hort_morango_bandeja",
+     "item_everest": "HORT MORANGO BANDEJA",
+     "um_catalogo": "UNID",
+     "divisor": null,
+     "status": "falta_g_por_unidade"
+    },
+    {
+     "ingrediente": "ÁGUA CACHOEIRINHA",
+     "qtd": 100.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "mp_agua_cachoeirinha",
+     "item_everest": "MP AGUA CACHOEIRINHA",
+     "um_catalogo": "LITRO",
+     "divisor": 1000,
+     "status": "ok"
+    },
+    {
+     "ingrediente": "HORTELÃ",
+     "qtd": 1.0,
+     "un": "g",
+     "tipo": "estoque",
+     "item_id": "hort_hortela_maco",
+     "item_everest": "HORT HORTELA MACO",
+     "um_catalogo": "UNID",
+     "divisor": null,
+     "status": "falta_g_por_unidade"
+    }
+   ]
+  },
+  {
+   "produto": "CLERICOT / SANGRIA",
+   "pagina": 13,
+   "rendimento": {
+    "qtd": 1,
+    "un": "porcao"
+   },
+   "composicao": [
+    {
+     "ingrediente": "ESPUMANTE OU VINHO TINTO",
+     "qtd": 140.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "esp_1913_sparkling_branco",
+     "item_everest": "ESP 1913 SPARKLING BRANCO",
+     "um_catalogo": "UNID",
+     "divisor": null,
+     "status": "falta_ml_por_unidade"
+    },
+    {
+     "ingrediente": "LICOR DE LARANJA",
+     "qtd": 25.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "dest_licor_stock_curacau",
+     "item_everest": "DEST LICOR STOCK CURACAU",
+     "um_catalogo": "LITRO",
+     "divisor": 1000,
+     "status": "ok"
+    },
+    {
+     "ingrediente": "VODKA",
+     "qtd": 25.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "dest_vodka_smirnoff",
+     "item_everest": "DEST VODKA SMIRNOFF",
+     "um_catalogo": "LITRO",
+     "divisor": 1000,
+     "status": "ok"
+    },
+    {
+     "ingrediente": "SUCO DE LARANJA",
+     "qtd": 25.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "hort_laranja_kg",
+     "item_everest": "HORT LARANJA KG",
+     "um_catalogo": "KG",
+     "divisor": null,
+     "status": "indefinido"
+    },
+    {
+     "ingrediente": "XAROPE SIMPLES",
+     "qtd": 10.0,
+     "un": "ml",
+     "tipo": "intermediario",
+     "intermediario": "PROD XAROPE SIMPLES",
+     "divisor": null,
+     "status": "intermediario_sem_cadastro"
+    },
+    {
+     "ingrediente": "ABACAXI",
+     "qtd": 50.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "hort_abacaxi",
+     "item_everest": "HORT ABACAXI",
+     "um_catalogo": "UNID",
+     "divisor": null,
+     "status": "falta_ml_por_unidade"
+    },
+    {
+     "ingrediente": "UVA FATIADA",
+     "qtd": 25.0,
+     "un": "g",
+     "tipo": "estoque",
+     "item_id": "hort_uva_kg",
+     "item_everest": "HORT UVA KG",
+     "um_catalogo": "KG",
+     "divisor": 1000,
+     "status": "ok"
+    },
+    {
+     "ingrediente": "MORANGO LAMINADO",
+     "qtd": 25.0,
+     "un": "g",
+     "tipo": "estoque",
+     "item_id": "hort_morango_bandeja",
+     "item_everest": "HORT MORANGO BANDEJA",
+     "um_catalogo": "UNID",
+     "divisor": null,
+     "status": "falta_g_por_unidade"
+    },
+    {
+     "ingrediente": "ÁGUA CACHOEIRINHA",
+     "qtd": 50.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "mp_agua_cachoeirinha",
+     "item_everest": "MP AGUA CACHOEIRINHA",
+     "um_catalogo": "LITRO",
+     "divisor": 1000,
+     "status": "ok"
+    }
+   ]
+  },
+  {
+   "produto": "COZUMEL",
+   "pagina": 14,
+   "rendimento": {
+    "qtd": 1,
+    "un": "porcao"
+   },
+   "composicao": [
+    {
+     "ingrediente": "CHOPP / CERVEJA",
+     "qtd": 300.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "barril_chopp_brahma",
+     "item_everest": "BARRIL CHOPP BRAHMA",
+     "um_catalogo": "LITRO",
+     "divisor": 1000,
+     "status": "ok"
+    },
+    {
+     "ingrediente": "SUMO LIMÃO",
+     "qtd": 50.0,
+     "un": "ml",
+     "tipo": "intermediario",
+     "intermediario": "PROD SUMO DE LIMAO",
+     "divisor": null,
+     "status": "intermediario_sem_cadastro"
+    },
+    {
+     "ingrediente": "SAL",
+     "qtd": 5.0,
+     "un": "g",
+     "tipo": "estoque",
+     "item_id": "mp_sal_refinado",
+     "item_everest": "MP SAL REFINADO",
+     "um_catalogo": "KG",
+     "divisor": 1000,
+     "status": "ok"
+    }
+   ]
+  },
+  {
+   "produto": "GIN TÔNICA",
+   "pagina": 15,
+   "rendimento": {
+    "qtd": 1,
+    "un": "porcao"
+   },
+   "composicao": [
+    {
+     "ingrediente": "GIN",
+     "qtd": 50.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "dest_gin_larios",
+     "item_everest": "DEST GIN LARIOS",
+     "um_catalogo": "LITRO",
+     "divisor": 1000,
+     "status": "ok"
+    },
+    {
+     "ingrediente": "LIMÃO SICILIANO",
+     "qtd": 40.0,
+     "un": "g",
+     "tipo": "estoque",
+     "item_id": "hort_limao_siciliano_kg",
+     "item_everest": "HORT LIMAO SICILIANO KG",
+     "um_catalogo": "KG",
+     "divisor": 1000,
+     "status": "ok"
+    },
+    {
+     "ingrediente": "ÁGUA TÔNICA",
+     "qtd": 250.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "ref_agua_tonica",
+     "item_everest": "REF AGUA TONICA",
+     "um_catalogo": "UNID",
+     "divisor": null,
+     "status": "falta_ml_por_unidade"
+    },
+    {
+     "ingrediente": "ALECRIM",
+     "qtd": 1.0,
+     "un": "g",
+     "tipo": "estoque",
+     "item_id": "hort_alecrim_maco",
+     "item_everest": "HORT ALECRIM MACO",
+     "um_catalogo": "UNID",
+     "divisor": null,
+     "status": "falta_g_por_unidade"
+    }
+   ]
+  },
+  {
+   "produto": "IRISH COFFEE",
+   "pagina": 16,
+   "rendimento": {
+    "qtd": 1,
+    "un": "porcao"
+   },
+   "composicao": [
+    {
+     "ingrediente": "CAFÉ EXPRESSO",
+     "qtd": 60.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "cafe_nespresso_ristretto",
+     "item_everest": "CAFE NESPRESSO RISTRETTO",
+     "um_catalogo": "UNID",
+     "divisor": null,
+     "status": "falta_ml_por_unidade"
+    },
+    {
+     "ingrediente": "LICOR BAILEYS",
+     "qtd": 60.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "dest_licor_baileys",
+     "item_everest": "DEST LICOR BAILEYS",
+     "um_catalogo": "LITRO",
+     "divisor": 1000,
+     "status": "ok"
+    },
+    {
+     "ingrediente": "CHANTILLY",
+     "qtd": 20.0,
+     "un": "g",
+     "tipo": "estoque",
+     "item_id": "mp_chantilly",
+     "item_everest": "MP CHANTILLY",
+     "um_catalogo": "LITRO",
+     "divisor": null,
+     "status": "indefinido"
+    },
+    {
+     "ingrediente": "CASTANHAS",
+     "qtd": 0.5,
+     "un": "g",
+     "tipo": "estoque",
+     "item_id": "mp_castanha_de_caju_xerem",
+     "item_everest": "MP CASTANHA DE CAJU XEREM",
+     "um_catalogo": "KG",
+     "divisor": 1000,
+     "status": "ok"
+    }
+   ]
+  },
+  {
+   "produto": "LA BOCA TÔNICA MUSASHI TÔNICA",
+   "pagina": 17,
+   "rendimento": {
+    "qtd": 1,
+    "un": "porcao"
+   },
+   "composicao": [
+    {
+     "ingrediente": "GIN",
+     "qtd": 50.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "dest_gin_larios",
+     "item_everest": "DEST GIN LARIOS",
+     "um_catalogo": "LITRO",
+     "divisor": 1000,
+     "status": "ok"
+    },
+    {
+     "ingrediente": "REDUÇÃO PIMENTA ROSA",
+     "qtd": 35.0,
+     "un": "ml",
+     "tipo": "intermediario",
+     "intermediario": "PROD REDUCAO DE PIMENTA ROSA",
+     "divisor": null,
+     "status": "intermediario_sem_cadastro"
+    },
+    {
+     "ingrediente": "SUMO DE LIMÃO",
+     "qtd": 25.0,
+     "un": "ml",
+     "tipo": "intermediario",
+     "intermediario": "PROD SUMO DE LIMAO",
+     "divisor": null,
+     "status": "intermediario_sem_cadastro"
+    },
+    {
+     "ingrediente": "ÁGUA TÔNICA",
+     "qtd": 250.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "ref_agua_tonica",
+     "item_everest": "REF AGUA TONICA",
+     "um_catalogo": "UNID",
+     "divisor": null,
+     "status": "falta_ml_por_unidade"
+    },
+    {
+     "ingrediente": "HORTELÃ",
+     "qtd": 1.0,
+     "un": "g",
+     "tipo": "estoque",
+     "item_id": "hort_hortela_maco",
+     "item_everest": "HORT HORTELA MACO",
+     "um_catalogo": "UNID",
+     "divisor": null,
+     "status": "falta_g_por_unidade"
+    },
+    {
+     "ingrediente": "MANJERICÃO",
+     "qtd": 1.0,
+     "un": "g",
+     "tipo": "estoque",
+     "item_id": "hort_manjericao_maco",
+     "item_everest": "HORT MANJERICAO MACO",
+     "um_catalogo": "UNID",
+     "divisor": null,
+     "status": "falta_g_por_unidade"
+    }
+   ]
+  },
+  {
+   "produto": "LILLET SPRITZ",
+   "pagina": 18,
+   "rendimento": {
+    "qtd": 1,
+    "un": "porcao"
+   },
+   "composicao": [
+    {
+     "ingrediente": "LILLET",
+     "qtd": 50.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "dest_lillet",
+     "item_everest": "DEST LILLET",
+     "um_catalogo": "LITRO",
+     "divisor": 1000,
+     "status": "ok"
+    },
+    {
+     "ingrediente": "ESPUMANTE BRUT BRANCO",
+     "qtd": 140.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "esp_1913_sparkling_branco",
+     "item_everest": "ESP 1913 SPARKLING BRANCO",
+     "um_catalogo": "UNID",
+     "divisor": null,
+     "status": "falta_ml_por_unidade"
+    },
+    {
+     "ingrediente": "ÁGUA CACHOEIRINHA",
+     "qtd": 10.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "mp_agua_cachoeirinha",
+     "item_everest": "MP AGUA CACHOEIRINHA",
+     "um_catalogo": "LITRO",
+     "divisor": 1000,
+     "status": "ok"
+    },
+    {
+     "ingrediente": "CRAVO",
+     "qtd": 1.0,
+     "un": "g",
+     "tipo": "estoque",
+     "item_id": "mp_cravo",
+     "item_everest": "MP CRAVO",
+     "um_catalogo": "KG",
+     "divisor": 1000,
+     "status": "ok"
+    },
+    {
+     "ingrediente": "LARANJA BAHIA",
+     "qtd": 10.0,
+     "un": "g",
+     "tipo": "estoque",
+     "item_id": "hort_laranja_bahia_kg",
+     "item_everest": "HORT LARANJA BAHIA KG",
+     "um_catalogo": "KG",
+     "divisor": 1000,
+     "status": "ok"
+    }
+   ]
+  },
+  {
+   "produto": "LILLET VIVE",
+   "pagina": 19,
+   "rendimento": {
+    "qtd": 1,
+    "un": "porcao"
+   },
+   "composicao": [
+    {
+     "ingrediente": "LILLET",
+     "qtd": 50.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "dest_lillet",
+     "item_everest": "DEST LILLET",
+     "um_catalogo": "LITRO",
+     "divisor": 1000,
+     "status": "ok"
+    },
+    {
+     "ingrediente": "PEPINO",
+     "qtd": 10.0,
+     "un": "g",
+     "tipo": "estoque",
+     "item_id": "hort_pepino_japones_kg",
+     "item_everest": "HORT PEPINO JAPONES KG",
+     "um_catalogo": "KG",
+     "divisor": 1000,
+     "status": "ok"
+    },
+    {
+     "ingrediente": "MORANGO",
+     "qtd": 25.0,
+     "un": "g",
+     "tipo": "estoque",
+     "item_id": "hort_morango_bandeja",
+     "item_everest": "HORT MORANGO BANDEJA",
+     "um_catalogo": "UNID",
+     "divisor": null,
+     "status": "falta_g_por_unidade"
+    },
+    {
+     "ingrediente": "ÁGUA TÔNICA",
+     "qtd": 250.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "ref_agua_tonica",
+     "item_everest": "REF AGUA TONICA",
+     "um_catalogo": "UNID",
+     "divisor": null,
+     "status": "falta_ml_por_unidade"
+    },
+    {
+     "ingrediente": "HORTELÃ",
+     "qtd": 0.5,
+     "un": "g",
+     "tipo": "estoque",
+     "item_id": "hort_hortela_maco",
+     "item_everest": "HORT HORTELA MACO",
+     "um_catalogo": "UNID",
+     "divisor": null,
+     "status": "falta_g_por_unidade"
+    }
+   ]
+  },
+  {
+   "produto": "MOSCOW MULE",
+   "pagina": 20,
+   "rendimento": {
+    "qtd": 1,
+    "un": "porcao"
+   },
+   "composicao": [
+    {
+     "ingrediente": "VODKA NACIONAL",
+     "qtd": 50.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "dest_vodka_smirnoff",
+     "item_everest": "DEST VODKA SMIRNOFF",
+     "um_catalogo": "LITRO",
+     "divisor": 1000,
+     "status": "ok"
+    },
+    {
+     "ingrediente": "REDUÇÃO DE GENGIBRE",
+     "qtd": 30.0,
+     "un": "ml",
+     "tipo": "intermediario",
+     "intermediario": "PROD REDUCAO DE GENGIBRE",
+     "divisor": null,
+     "status": "intermediario_sem_cadastro"
+    },
+    {
+     "ingrediente": "SUMO DE LIMÃO",
+     "qtd": 15.0,
+     "un": "ml",
+     "tipo": "intermediario",
+     "intermediario": "PROD SUMO DE LIMAO",
+     "divisor": null,
+     "status": "intermediario_sem_cadastro"
+    },
+    {
+     "ingrediente": "CHOPP / CERVEJA",
+     "qtd": 15.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "barril_chopp_brahma",
+     "item_everest": "BARRIL CHOPP BRAHMA",
+     "um_catalogo": "LITRO",
+     "divisor": 1000,
+     "status": "ok"
+    },
+    {
+     "ingrediente": "ESPUMA DE GENGIBRE",
+     "qtd": 10.0,
+     "un": "ml",
+     "tipo": "intermediario",
+     "intermediario": "PROD ESPUMA DE GENGIBRE",
+     "divisor": null,
+     "status": "intermediario_sem_cadastro"
+    },
+    {
+     "ingrediente": "HORTELÃ",
+     "qtd": 0.1,
+     "un": "g",
+     "tipo": "estoque",
+     "item_id": "hort_hortela_maco",
+     "item_everest": "HORT HORTELA MACO",
+     "um_catalogo": "UNID",
+     "divisor": null,
+     "status": "falta_g_por_unidade"
+    }
+   ]
+  },
+  {
+   "produto": "MARADONA MULE OSAKA MULE",
+   "pagina": 21,
+   "rendimento": {
+    "qtd": 1,
+    "un": "porcao"
+   },
+   "composicao": [
+    {
+     "ingrediente": "GIN",
+     "qtd": 50.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "dest_gin_larios",
+     "item_everest": "DEST GIN LARIOS",
+     "um_catalogo": "LITRO",
+     "divisor": 1000,
+     "status": "ok"
+    },
+    {
+     "ingrediente": "REDUÇÃO DE PIMENTA",
+     "qtd": 35.0,
+     "un": "ml",
+     "tipo": "intermediario",
+     "intermediario": "PROD REDUCAO DE PIMENTA ROSA",
+     "divisor": null,
+     "status": "intermediario_sem_cadastro"
+    },
+    {
+     "ingrediente": "SUMO DE LIMÃO",
+     "qtd": 20.0,
+     "un": "ml",
+     "tipo": "intermediario",
+     "intermediario": "PROD SUMO DE LIMAO",
+     "divisor": null,
+     "status": "intermediario_sem_cadastro"
+    },
+    {
+     "ingrediente": "ESPUMA DE GENGIBRE",
+     "qtd": 10.0,
+     "un": "g",
+     "tipo": "intermediario",
+     "intermediario": "PROD ESPUMA DE GENGIBRE",
+     "divisor": null,
+     "status": "intermediario_sem_cadastro"
+    },
+    {
+     "ingrediente": "PIMENTA ROSA",
+     "qtd": 1.0,
+     "un": "g",
+     "tipo": "estoque",
+     "item_id": "mp_pimenta_rosa",
+     "item_everest": "MP PIMENTA ROSA",
+     "um_catalogo": "KG",
+     "divisor": 1000,
+     "status": "ok"
+    }
+   ]
+  },
+  {
+   "produto": "TANGO MULE TOKYO MULE",
+   "pagina": 22,
+   "rendimento": {
+    "qtd": 1,
+    "un": "porcao"
+   },
+   "composicao": [
+    {
+     "ingrediente": "VODKA NACIONAL / SAKE NACIONAL",
+     "qtd": 50.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "dest_vodka_smirnoff",
+     "item_everest": "DEST VODKA SMIRNOFF",
+     "um_catalogo": "LITRO",
+     "divisor": 1000,
+     "status": "ok"
+    },
+    {
+     "ingrediente": "REDUÇÃO AMORA",
+     "qtd": 40.0,
+     "un": "ml",
+     "tipo": "intermediario",
+     "intermediario": "PROD REDUCAO DE AMORA",
+     "divisor": null,
+     "status": "intermediario_sem_cadastro"
+    },
+    {
+     "ingrediente": "REDUÇÃO DE GENGIBRE",
+     "qtd": 20.0,
+     "un": "ml",
+     "tipo": "intermediario",
+     "intermediario": "PROD REDUCAO DE GENGIBRE",
+     "divisor": null,
+     "status": "intermediario_sem_cadastro"
+    },
+    {
+     "ingrediente": "SUMO LIMÃO",
+     "qtd": 20.0,
+     "un": "ml",
+     "tipo": "intermediario",
+     "intermediario": "PROD SUMO DE LIMAO",
+     "divisor": null,
+     "status": "intermediario_sem_cadastro"
+    },
+    {
+     "ingrediente": "ESPUMA DE GENGIBRE",
+     "qtd": 20.0,
+     "un": "ml",
+     "tipo": "intermediario",
+     "intermediario": "PROD ESPUMA DE GENGIBRE",
+     "divisor": null,
+     "status": "intermediario_sem_cadastro"
+    },
+    {
+     "ingrediente": "CANELA PÓ",
+     "qtd": 0.3,
+     "un": "g",
+     "tipo": "estoque",
+     "item_id": "mp_canela_em_po",
+     "item_everest": "MP CANELA EM PO",
+     "um_catalogo": "KG",
+     "divisor": 1000,
+     "status": "ok"
+    },
+    {
+     "ingrediente": "HORTELÃ",
+     "qtd": 1.0,
+     "un": "g",
+     "tipo": "estoque",
+     "item_id": "hort_hortela_maco",
+     "item_everest": "HORT HORTELA MACO",
+     "um_catalogo": "UNID",
+     "divisor": null,
+     "status": "falta_g_por_unidade"
+    }
+   ]
+  },
+  {
+   "produto": "MARGARITA",
+   "pagina": 23,
+   "rendimento": {
+    "qtd": 1,
+    "un": "porcao"
+   },
+   "composicao": [
+    {
+     "ingrediente": "TEQUILA PRATA",
+     "qtd": 50.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "dest_tequila_jose_prata",
+     "item_everest": "DEST TEQUILA JOSE PRATA",
+     "um_catalogo": "LITRO",
+     "divisor": 1000,
+     "status": "ok"
+    },
+    {
+     "ingrediente": "LICOR DE LARANJA",
+     "qtd": 25.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "dest_licor_stock_curacau",
+     "item_everest": "DEST LICOR STOCK CURACAU",
+     "um_catalogo": "LITRO",
+     "divisor": 1000,
+     "status": "ok"
+    },
+    {
+     "ingrediente": "XAROPE SIMPLES",
+     "qtd": 25.0,
+     "un": "ml",
+     "tipo": "intermediario",
+     "intermediario": "PROD XAROPE SIMPLES",
+     "divisor": null,
+     "status": "intermediario_sem_cadastro"
+    },
+    {
+     "ingrediente": "SUMO LIMÃO",
+     "qtd": 40.0,
+     "un": "ml",
+     "tipo": "intermediario",
+     "intermediario": "PROD SUMO DE LIMAO",
+     "divisor": null,
+     "status": "intermediario_sem_cadastro"
+    },
+    {
+     "ingrediente": "SAL",
+     "qtd": 3.0,
+     "un": "g",
+     "tipo": "estoque",
+     "item_id": "mp_sal_refinado",
+     "item_everest": "MP SAL REFINADO",
+     "um_catalogo": "KG",
+     "divisor": 1000,
+     "status": "ok"
+    }
+   ]
+  },
+  {
+   "produto": "MOJITO",
+   "pagina": 24,
+   "rendimento": {
+    "qtd": 1,
+    "un": "porcao"
+   },
+   "composicao": [
+    {
+     "ingrediente": "RUM",
+     "qtd": 50.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "dest_rum",
+     "item_everest": "DEST RUM",
+     "um_catalogo": "LITRO",
+     "divisor": 1000,
+     "status": "ok"
+    },
+    {
+     "ingrediente": "LIMÃO FATIADO",
+     "qtd": 70.0,
+     "un": "g",
+     "tipo": "estoque",
+     "item_id": "hort_limao_tahiti_kg",
+     "item_everest": "HORT LIMAO TAHITI KG",
+     "um_catalogo": "KG",
+     "divisor": 1000,
+     "status": "ok"
+    },
+    {
+     "ingrediente": "XAROPE SIMPLES",
+     "qtd": 30.0,
+     "un": "ml",
+     "tipo": "intermediario",
+     "intermediario": "PROD XAROPE SIMPLES",
+     "divisor": null,
+     "status": "intermediario_sem_cadastro"
+    },
+    {
+     "ingrediente": "HORTELÃ",
+     "qtd": 7.0,
+     "un": "g",
+     "tipo": "estoque",
+     "item_id": "hort_hortela_maco",
+     "item_everest": "HORT HORTELA MACO",
+     "um_catalogo": "UNID",
+     "divisor": null,
+     "status": "falta_g_por_unidade"
+    },
+    {
+     "ingrediente": "LIMÃO À FRANCESA",
+     "qtd": 20.0,
+     "un": "g",
+     "tipo": "estoque",
+     "item_id": "hort_limao_tahiti_kg",
+     "item_everest": "HORT LIMAO TAHITI KG",
+     "um_catalogo": "KG",
+     "divisor": 1000,
+     "status": "ok"
+    },
+    {
+     "ingrediente": "ÁGUA CACHOEIRINHA",
+     "qtd": 100.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "mp_agua_cachoeirinha",
+     "item_everest": "MP AGUA CACHOEIRINHA",
+     "um_catalogo": "LITRO",
+     "divisor": 1000,
+     "status": "ok"
+    }
+   ]
+  },
+  {
+   "produto": "NEGRONI",
+   "pagina": 25,
+   "rendimento": {
+    "qtd": 1,
+    "un": "porcao"
+   },
+   "composicao": [
+    {
+     "ingrediente": "GIN",
+     "qtd": 50.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "dest_gin_larios",
+     "item_everest": "DEST GIN LARIOS",
+     "um_catalogo": "LITRO",
+     "divisor": 1000,
+     "status": "ok"
+    },
+    {
+     "ingrediente": "CAMPARI",
+     "qtd": 50.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "dest_campari",
+     "item_everest": "DEST CAMPARI",
+     "um_catalogo": "LITRO",
+     "divisor": 1000,
+     "status": "ok"
+    },
+    {
+     "ingrediente": "VERMUTE ROSSO",
+     "qtd": 50.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "dest_martini_rosso",
+     "item_everest": "DEST MARTINI ROSSO",
+     "um_catalogo": "LITRO",
+     "divisor": 1000,
+     "status": "ok"
+    },
+    {
+     "ingrediente": "LARANJA BAHIA",
+     "qtd": 10.0,
+     "un": "g",
+     "tipo": "estoque",
+     "item_id": "hort_laranja_bahia_kg",
+     "item_everest": "HORT LARANJA BAHIA KG",
+     "um_catalogo": "KG",
+     "divisor": 1000,
+     "status": "ok"
+    }
+   ]
+  },
+  {
+   "produto": "PALÁCIOS HANA",
+   "pagina": 26,
+   "rendimento": {
+    "qtd": 1,
+    "un": "porcao"
+   },
+   "composicao": [
+    {
+     "ingrediente": "GIN",
+     "qtd": 50.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "dest_gin_larios",
+     "item_everest": "DEST GIN LARIOS",
+     "um_catalogo": "LITRO",
+     "divisor": 1000,
+     "status": "ok"
+    },
+    {
+     "ingrediente": "ÁGUA TÔNICA",
+     "qtd": 250.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "ref_agua_tonica",
+     "item_everest": "REF AGUA TONICA",
+     "um_catalogo": "UNID",
+     "divisor": null,
+     "status": "falta_ml_por_unidade"
+    },
+    {
+     "ingrediente": "LARANJA BAHIA",
+     "qtd": 15.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "hort_laranja_bahia_kg",
+     "item_everest": "HORT LARANJA BAHIA KG",
+     "um_catalogo": "KG",
+     "divisor": null,
+     "status": "indefinido"
+    },
+    {
+     "ingrediente": "CRAVO",
+     "qtd": 5.0,
+     "un": "g",
+     "tipo": "estoque",
+     "item_id": "mp_cravo",
+     "item_everest": "MP CRAVO",
+     "um_catalogo": "KG",
+     "divisor": 1000,
+     "status": "ok"
+    }
+   ]
+  },
+  {
+   "produto": "PINK LEMONADE",
+   "pagina": 27,
+   "rendimento": {
+    "qtd": 1,
+    "un": "porcao"
+   },
+   "composicao": [
+    {
+     "ingrediente": "XAROPE DE CRANBERRY",
+     "qtd": 40.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "mp_xarope_de_cranberry",
+     "item_everest": "MP XAROPE DE CRANBERRY",
+     "um_catalogo": "LITRO",
+     "divisor": 1000,
+     "status": "ok"
+    },
+    {
+     "ingrediente": "SUMO DE LIMÃO",
+     "qtd": 40.0,
+     "un": "ml",
+     "tipo": "intermediario",
+     "intermediario": "PROD SUMO DE LIMAO",
+     "divisor": null,
+     "status": "intermediario_sem_cadastro"
+    },
+    {
+     "ingrediente": "ÁGUA CACHOEIRINHA",
+     "qtd": 200.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "mp_agua_cachoeirinha",
+     "item_everest": "MP AGUA CACHOEIRINHA",
+     "um_catalogo": "LITRO",
+     "divisor": 1000,
+     "status": "ok"
+    },
+    {
+     "ingrediente": "HORTELÃ",
+     "qtd": 1.0,
+     "un": "g",
+     "tipo": "estoque",
+     "item_id": "hort_hortela_maco",
+     "item_everest": "HORT HORTELA MACO",
+     "um_catalogo": "UNID",
+     "divisor": null,
+     "status": "falta_g_por_unidade"
+    }
+   ]
+  },
+  {
+   "produto": "RIQUELME NAKATA",
+   "pagina": 28,
+   "rendimento": {
+    "qtd": 1,
+    "un": "porcao"
+   },
+   "composicao": [
+    {
+     "ingrediente": "GIN",
+     "qtd": 50.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "dest_gin_larios",
+     "item_everest": "DEST GIN LARIOS",
+     "um_catalogo": "LITRO",
+     "divisor": 1000,
+     "status": "ok"
+    },
+    {
+     "ingrediente": "MORANGO",
+     "qtd": 25.0,
+     "un": "g",
+     "tipo": "estoque",
+     "item_id": "hort_morango_bandeja",
+     "item_everest": "HORT MORANGO BANDEJA",
+     "um_catalogo": "UNID",
+     "divisor": null,
+     "status": "falta_g_por_unidade"
+    },
+    {
+     "ingrediente": "UVA",
+     "qtd": 25.0,
+     "un": "g",
+     "tipo": "estoque",
+     "item_id": "hort_uva_kg",
+     "item_everest": "HORT UVA KG",
+     "um_catalogo": "KG",
+     "divisor": 1000,
+     "status": "ok"
+    },
+    {
+     "ingrediente": "REDUÇÃO DE HIBISCO",
+     "qtd": 20.0,
+     "un": "ml",
+     "tipo": "intermediario",
+     "intermediario": "PROD REDUCAO DE HIBISCO",
+     "divisor": null,
+     "status": "intermediario_sem_cadastro"
+    },
+    {
+     "ingrediente": "XAROPE GRENADINE",
+     "qtd": 20.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "mp_xarope_de_grenadine",
+     "item_everest": "MP XAROPE DE GRENADINE",
+     "um_catalogo": "LITRO",
+     "divisor": 1000,
+     "status": "ok"
+    },
+    {
+     "ingrediente": "ÁGUA TÔNICA",
+     "qtd": 250.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "ref_agua_tonica",
+     "item_everest": "REF AGUA TONICA",
+     "um_catalogo": "UNID",
+     "divisor": null,
+     "status": "falta_ml_por_unidade"
+    },
+    {
+     "ingrediente": "ALECRIM",
+     "qtd": 2.0,
+     "un": "g",
+     "tipo": "estoque",
+     "item_id": "hort_alecrim_maco",
+     "item_everest": "HORT ALECRIM MACO",
+     "um_catalogo": "UNID",
+     "divisor": null,
+     "status": "falta_g_por_unidade"
+    }
+   ]
+  },
+  {
+   "produto": "SANDÍA SUIKA",
+   "pagina": 29,
+   "rendimento": {
+    "qtd": 1,
+    "un": "porcao"
+   },
+   "composicao": [
+    {
+     "ingrediente": "GIN",
+     "qtd": 50.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "dest_gin_larios",
+     "item_everest": "DEST GIN LARIOS",
+     "um_catalogo": "LITRO",
+     "divisor": 1000,
+     "status": "ok"
+    },
+    {
+     "ingrediente": "MELANCIA",
+     "qtd": 40.0,
+     "un": "g",
+     "tipo": "estoque",
+     "item_id": "hort_melancia_kg",
+     "item_everest": "HORT MELANCIA KG",
+     "um_catalogo": "KG",
+     "divisor": 1000,
+     "status": "ok"
+    },
+    {
+     "ingrediente": "SUMO DE LIMÃO",
+     "qtd": 25.0,
+     "un": "ml",
+     "tipo": "intermediario",
+     "intermediario": "PROD SUMO DE LIMAO",
+     "divisor": null,
+     "status": "intermediario_sem_cadastro"
+    },
+    {
+     "ingrediente": "RED BULL MELANCIA",
+     "qtd": 200.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "ref_redbull_melancia",
+     "item_everest": "REF REDBULL MELANCIA",
+     "um_catalogo": "UNID",
+     "divisor": null,
+     "status": "falta_ml_por_unidade"
+    },
+    {
+     "ingrediente": "HORTELÃ",
+     "qtd": 6.0,
+     "un": "g",
+     "tipo": "estoque",
+     "item_id": "hort_hortela_maco",
+     "item_everest": "HORT HORTELA MACO",
+     "um_catalogo": "UNID",
+     "divisor": null,
+     "status": "falta_g_por_unidade"
+    }
+   ]
+  },
+  {
+   "produto": "SIMEONE SOUR REMON WHISKY SOUR",
+   "pagina": 30,
+   "rendimento": {
+    "qtd": 1,
+    "un": "porcao"
+   },
+   "composicao": [
+    {
+     "ingrediente": "WHISKY BOURBON",
+     "qtd": 50.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "dest_whisky_jim_beam_bourbon",
+     "item_everest": "DEST WHISKY JIM BEAM BOURBON",
+     "um_catalogo": "LITRO",
+     "divisor": 1000,
+     "status": "ok"
+    },
+    {
+     "ingrediente": "XAROPE SIMPLES",
+     "qtd": 20.0,
+     "un": "ml",
+     "tipo": "intermediario",
+     "intermediario": "PROD XAROPE SIMPLES",
+     "divisor": null,
+     "status": "intermediario_sem_cadastro"
+    },
+    {
+     "ingrediente": "SUMO DE LIMÃO",
+     "qtd": 15.0,
+     "un": "ml",
+     "tipo": "intermediario",
+     "intermediario": "PROD SUMO DE LIMAO",
+     "divisor": null,
+     "status": "intermediario_sem_cadastro"
+    },
+    {
+     "ingrediente": "LICOR DE LARANJA",
+     "qtd": 10.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "dest_licor_stock_curacau",
+     "item_everest": "DEST LICOR STOCK CURACAU",
+     "um_catalogo": "LITRO",
+     "divisor": 1000,
+     "status": "ok"
+    },
+    {
+     "ingrediente": "ESPUMA DE GENGIBRE",
+     "qtd": 15.0,
+     "un": "ml",
+     "tipo": "intermediario",
+     "intermediario": "PROD ESPUMA DE GENGIBRE",
+     "divisor": null,
+     "status": "intermediario_sem_cadastro"
+    },
+    {
+     "ingrediente": "SAL",
+     "qtd": 0.1,
+     "un": "g",
+     "tipo": "estoque",
+     "item_id": "mp_sal_refinado",
+     "item_everest": "MP SAL REFINADO",
+     "um_catalogo": "KG",
+     "divisor": 1000,
+     "status": "ok"
+    }
+   ]
+  },
+  {
+   "produto": "VERON NAOKI",
+   "pagina": 31,
+   "rendimento": {
+    "qtd": 1,
+    "un": "porcao"
+   },
+   "composicao": [
+    {
+     "ingrediente": "GIN",
+     "qtd": 50.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "dest_gin_larios",
+     "item_everest": "DEST GIN LARIOS",
+     "um_catalogo": "LITRO",
+     "divisor": 1000,
+     "status": "ok"
+    },
+    {
+     "ingrediente": "XAROPE DE ELDERFLOWER",
+     "qtd": 35.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "mp_xarope_de_elderflower",
+     "item_everest": "MP XAROPE DE ELDERFLOWER",
+     "um_catalogo": "LITRO",
+     "divisor": 1000,
+     "status": "ok"
+    },
+    {
+     "ingrediente": "XAROPE DE CRANBERRY",
+     "qtd": 20.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "mp_xarope_de_cranberry",
+     "item_everest": "MP XAROPE DE CRANBERRY",
+     "um_catalogo": "LITRO",
+     "divisor": 1000,
+     "status": "ok"
+    },
+    {
+     "ingrediente": "SUMO DE LIMÃO SICILIANO",
+     "qtd": 10.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "hort_limao_siciliano_kg",
+     "item_everest": "HORT LIMAO SICILIANO KG",
+     "um_catalogo": "KG",
+     "divisor": null,
+     "status": "indefinido"
+    },
+    {
+     "ingrediente": "SUMO DE LIMÃO",
+     "qtd": 5.0,
+     "un": "ml",
+     "tipo": "intermediario",
+     "intermediario": "PROD SUMO DE LIMAO",
+     "divisor": null,
+     "status": "intermediario_sem_cadastro"
+    },
+    {
+     "ingrediente": "MORANGO LAMINADO",
+     "qtd": 40.0,
+     "un": "g",
+     "tipo": "estoque",
+     "item_id": "hort_morango_bandeja",
+     "item_everest": "HORT MORANGO BANDEJA",
+     "um_catalogo": "UNID",
+     "divisor": null,
+     "status": "falta_g_por_unidade"
+    },
+    {
+     "ingrediente": "MANJERICÃO",
+     "qtd": 5.0,
+     "un": "g",
+     "tipo": "estoque",
+     "item_id": "hort_manjericao_maco",
+     "item_everest": "HORT MANJERICAO MACO",
+     "um_catalogo": "UNID",
+     "divisor": null,
+     "status": "falta_g_por_unidade"
+    },
+    {
+     "ingrediente": "ÁGUA CACHOEIRINHA",
+     "qtd": 100.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "mp_agua_cachoeirinha",
+     "item_everest": "MP AGUA CACHOEIRINHA",
+     "um_catalogo": "LITRO",
+     "divisor": 1000,
+     "status": "ok"
+    }
+   ]
+  },
+  {
+   "produto": "COSMOPOLITAN",
+   "pagina": 32,
+   "rendimento": {
+    "qtd": 1,
+    "un": "porcao"
+   },
+   "composicao": [
+    {
+     "ingrediente": "VODKA NACIONAL",
+     "qtd": 50.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "dest_vodka_smirnoff",
+     "item_everest": "DEST VODKA SMIRNOFF",
+     "um_catalogo": "LITRO",
+     "divisor": 1000,
+     "status": "ok"
+    },
+    {
+     "ingrediente": "XAROPE DE CRANBERRY",
+     "qtd": 25.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "mp_xarope_de_cranberry",
+     "item_everest": "MP XAROPE DE CRANBERRY",
+     "um_catalogo": "LITRO",
+     "divisor": 1000,
+     "status": "ok"
+    },
+    {
+     "ingrediente": "SUMO DE LIMÃO SICILIANO",
+     "qtd": 20.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "hort_limao_siciliano_kg",
+     "item_everest": "HORT LIMAO SICILIANO KG",
+     "um_catalogo": "KG",
+     "divisor": null,
+     "status": "indefinido"
+    },
+    {
+     "ingrediente": "LICOR DE LARANJA",
+     "qtd": 10.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "dest_licor_stock_curacau",
+     "item_everest": "DEST LICOR STOCK CURACAU",
+     "um_catalogo": "LITRO",
+     "divisor": 1000,
+     "status": "ok"
+    }
+   ]
+  },
+  {
+   "produto": "RED SODA",
+   "pagina": 33,
+   "rendimento": {
+    "qtd": 1,
+    "un": "porcao"
+   },
+   "composicao": [
+    {
+     "ingrediente": "GENGIBRE PICADO",
+     "qtd": 6.0,
+     "un": "g",
+     "tipo": "estoque",
+     "item_id": "hort_gengibre_kg",
+     "item_everest": "HORT GENGIBRE KG",
+     "um_catalogo": "KG",
+     "divisor": 1000,
+     "status": "ok"
+    },
+    {
+     "ingrediente": "PEPINO JAPONÊS",
+     "qtd": 20.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "hort_pepino_japones_kg",
+     "item_everest": "HORT PEPINO JAPONES KG",
+     "um_catalogo": "KG",
+     "divisor": null,
+     "status": "indefinido"
+    },
+    {
+     "ingrediente": "REDUÇÃO DE HIBISCO",
+     "qtd": 50.0,
+     "un": "ml",
+     "tipo": "intermediario",
+     "intermediario": "PROD REDUCAO DE HIBISCO",
+     "divisor": null,
+     "status": "intermediario_sem_cadastro"
+    },
+    {
+     "ingrediente": "SUMO DE LIMÃO",
+     "qtd": 15.0,
+     "un": "ml",
+     "tipo": "intermediario",
+     "intermediario": "PROD SUMO DE LIMAO",
+     "divisor": null,
+     "status": "intermediario_sem_cadastro"
+    },
+    {
+     "ingrediente": "ÁGUA CACHOEIRINHA",
+     "qtd": 100.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "mp_agua_cachoeirinha",
+     "item_everest": "MP AGUA CACHOEIRINHA",
+     "um_catalogo": "LITRO",
+     "divisor": 1000,
+     "status": "ok"
+    }
+   ]
+  },
+  {
+   "produto": "ICHIGOR SODA",
+   "pagina": 34,
+   "rendimento": {
+    "qtd": 1,
+    "un": "porcao"
+   },
+   "composicao": [
+    {
+     "ingrediente": "REDUÇÃO DE MORANGO",
+     "qtd": 40.0,
+     "un": "ml",
+     "tipo": "intermediario",
+     "intermediario": "PROD REDUCAO DE MORANGO",
+     "divisor": null,
+     "status": "intermediario_sem_cadastro"
+    },
+    {
+     "ingrediente": "SUMO DE LIMÃO",
+     "qtd": 40.0,
+     "un": "ml",
+     "tipo": "intermediario",
+     "intermediario": "PROD SUMO DE LIMAO",
+     "divisor": null,
+     "status": "intermediario_sem_cadastro"
+    },
+    {
+     "ingrediente": "REDUÇÃO GENGIBRE",
+     "qtd": 30.0,
+     "un": "ml",
+     "tipo": "intermediario",
+     "intermediario": "PROD REDUCAO DE GENGIBRE",
+     "divisor": null,
+     "status": "intermediario_sem_cadastro"
+    },
+    {
+     "ingrediente": "ÁGUA CACHOEIRINHA",
+     "qtd": 100.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "mp_agua_cachoeirinha",
+     "item_everest": "MP AGUA CACHOEIRINHA",
+     "um_catalogo": "LITRO",
+     "divisor": 1000,
+     "status": "ok"
+    }
+   ]
+  },
+  {
+   "produto": "SODA ITALIANA MACA VERDE",
+   "pagina": 35,
+   "rendimento": {
+    "qtd": 1,
+    "un": "porcao"
+   },
+   "composicao": [
+    {
+     "ingrediente": "XAROPE DE MACA VERDE",
+     "qtd": 40.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "mp_xarope_de_maca_verde",
+     "item_everest": "MP XAROPE DE MACA VERDE",
+     "um_catalogo": "LITRO",
+     "divisor": 1000,
+     "status": "ok"
+    },
+    {
+     "ingrediente": "SUMO DE LIMÃO",
+     "qtd": 10.0,
+     "un": "ml",
+     "tipo": "intermediario",
+     "intermediario": "PROD SUMO DE LIMAO",
+     "divisor": null,
+     "status": "intermediario_sem_cadastro"
+    },
+    {
+     "ingrediente": "ÁGUA CACHOEIRINHA",
+     "qtd": 150.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "mp_agua_cachoeirinha",
+     "item_everest": "MP AGUA CACHOEIRINHA",
+     "um_catalogo": "LITRO",
+     "divisor": 1000,
+     "status": "ok"
+    },
+    {
+     "ingrediente": "MACA VERDE 15g (2 laminas)",
+     "qtd": null,
+     "un": null,
+     "tipo": "estoque",
+     "item_id": "hort_maca_verde_kg",
+     "item_everest": "HORT MACA VERDE KG",
+     "um_catalogo": "KG",
+     "divisor": null,
+     "status": "indefinido"
+    }
+   ]
+  },
+  {
+   "produto": "SODA ITALIANA FRUTAS VERMELHAS",
+   "pagina": 36,
+   "rendimento": {
+    "qtd": 1,
+    "un": "porcao"
+   },
+   "composicao": [
+    {
+     "ingrediente": "XAROPE DE GRENADINE",
+     "qtd": 40.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "mp_xarope_de_grenadine",
+     "item_everest": "MP XAROPE DE GRENADINE",
+     "um_catalogo": "LITRO",
+     "divisor": 1000,
+     "status": "ok"
+    },
+    {
+     "ingrediente": "ÁGUA CACHOEIRINHA",
+     "qtd": 150.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "mp_agua_cachoeirinha",
+     "item_everest": "MP AGUA CACHOEIRINHA",
+     "um_catalogo": "LITRO",
+     "divisor": 1000,
+     "status": "ok"
+    },
+    {
+     "ingrediente": "MORANGO LAMINADO",
+     "qtd": 25.0,
+     "un": "g",
+     "tipo": "estoque",
+     "item_id": "hort_morango_bandeja",
+     "item_everest": "HORT MORANGO BANDEJA",
+     "um_catalogo": "UNID",
+     "divisor": null,
+     "status": "falta_g_por_unidade"
+    },
+    {
+     "ingrediente": "UVA FATIADA",
+     "qtd": 25.0,
+     "un": "g",
+     "tipo": "estoque",
+     "item_id": "hort_uva_kg",
+     "item_everest": "HORT UVA KG",
+     "um_catalogo": "KG",
+     "divisor": 1000,
+     "status": "ok"
+    }
+   ]
+  },
+  {
+   "produto": "SODA ITALIANA MORANGO",
+   "pagina": 37,
+   "rendimento": {
+    "qtd": 1,
+    "un": "porcao"
+   },
+   "composicao": [
+    {
+     "ingrediente": "XAROPE DE CRANBERRY",
+     "qtd": 50.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "mp_xarope_de_cranberry",
+     "item_everest": "MP XAROPE DE CRANBERRY",
+     "um_catalogo": "LITRO",
+     "divisor": 1000,
+     "status": "ok"
+    },
+    {
+     "ingrediente": "ÁGUA CACHOEIRINHA",
+     "qtd": 150.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "mp_agua_cachoeirinha",
+     "item_everest": "MP AGUA CACHOEIRINHA",
+     "um_catalogo": "LITRO",
+     "divisor": 1000,
+     "status": "ok"
+    },
+    {
+     "ingrediente": "MORANGO LAMINADO",
+     "qtd": 50.0,
+     "un": "g",
+     "tipo": "estoque",
+     "item_id": "hort_morango_bandeja",
+     "item_everest": "HORT MORANGO BANDEJA",
+     "um_catalogo": "UNID",
+     "divisor": null,
+     "status": "falta_g_por_unidade"
+    }
+   ]
+  },
+  {
+   "produto": "TROPICAL MULE",
+   "pagina": 38,
+   "rendimento": {
+    "qtd": 1,
+    "un": "porcao"
+   },
+   "composicao": [
+    {
+     "ingrediente": "VODKA NACIONAL",
+     "qtd": 40.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "dest_vodka_smirnoff",
+     "item_everest": "DEST VODKA SMIRNOFF",
+     "um_catalogo": "LITRO",
+     "divisor": 1000,
+     "status": "ok"
+    },
+    {
+     "ingrediente": "REDUÇÃO DE MARACUJÁ",
+     "qtd": 50.0,
+     "un": "ml",
+     "tipo": "intermediario",
+     "intermediario": "PROD REDUCAO DE MARACUJA",
+     "divisor": null,
+     "status": "intermediario_sem_cadastro"
+    },
+    {
+     "ingrediente": "SUMO DE LIMÃO",
+     "qtd": 15.0,
+     "un": "ml",
+     "tipo": "intermediario",
+     "intermediario": "PROD SUMO DE LIMAO",
+     "divisor": null,
+     "status": "intermediario_sem_cadastro"
+    },
+    {
+     "ingrediente": "REDUÇÃO DE GENGIBRE",
+     "qtd": 10.0,
+     "un": "ml",
+     "tipo": "intermediario",
+     "intermediario": "PROD REDUCAO DE GENGIBRE",
+     "divisor": null,
+     "status": "intermediario_sem_cadastro"
+    },
+    {
+     "ingrediente": "LICOR DE LARANJA",
+     "qtd": 5.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "dest_licor_stock_curacau",
+     "item_everest": "DEST LICOR STOCK CURACAU",
+     "um_catalogo": "LITRO",
+     "divisor": 1000,
+     "status": "ok"
+    },
+    {
+     "ingrediente": "ESPUMA DE GENGIBRE",
+     "qtd": 5.0,
+     "un": "ml",
+     "tipo": "intermediario",
+     "intermediario": "PROD ESPUMA DE GENGIBRE",
+     "divisor": null,
+     "status": "intermediario_sem_cadastro"
+    }
+   ]
+  },
+  {
+   "produto": "RED BERRY RED BERRY",
+   "pagina": 39,
+   "rendimento": {
+    "qtd": 1,
+    "un": "porcao"
+   },
+   "composicao": [
+    {
+     "ingrediente": "REDUCAO DE AMORA",
+     "qtd": 40.0,
+     "un": "ml",
+     "tipo": "intermediario",
+     "intermediario": "PROD REDUCAO DE AMORA",
+     "divisor": null,
+     "status": "intermediario_sem_cadastro"
+    },
+    {
+     "ingrediente": "SUMO DE LIMAO",
+     "qtd": 15.0,
+     "un": "ml",
+     "tipo": "intermediario",
+     "intermediario": "PROD SUMO DE LIMAO",
+     "divisor": null,
+     "status": "intermediario_sem_cadastro"
+    },
+    {
+     "ingrediente": "ELDERFLOWER",
+     "qtd": 10.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "mp_xarope_de_elderflower",
+     "item_everest": "MP XAROPE DE ELDERFLOWER",
+     "um_catalogo": "LITRO",
+     "divisor": 1000,
+     "status": "ok"
+    },
+    {
+     "ingrediente": "AGUA CACHOEIRINHA",
+     "qtd": 50.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "mp_agua_cachoeirinha",
+     "item_everest": "MP AGUA CACHOEIRINHA",
+     "um_catalogo": "LITRO",
+     "divisor": 1000,
+     "status": "ok"
+    }
+   ]
+  },
+  {
+   "produto": "COCO ABACAXI COCO ABACAXI",
+   "pagina": 40,
+   "rendimento": {
+    "qtd": 1,
+    "un": "porcao"
+   },
+   "composicao": [
+    {
+     "ingrediente": "XAROPE DE COCO",
+     "qtd": 40.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "mp_xarope_coco",
+     "item_everest": "MP XAROPE COCO",
+     "um_catalogo": "LITRO",
+     "divisor": 1000,
+     "status": "ok"
+    },
+    {
+     "ingrediente": "REDUCAO PIMENTA ROSA",
+     "qtd": 5.0,
+     "un": "ml",
+     "tipo": "intermediario",
+     "intermediario": "PROD REDUCAO DE PIMENTA ROSA",
+     "divisor": null,
+     "status": "intermediario_sem_cadastro"
+    },
+    {
+     "ingrediente": "HORTELA",
+     "qtd": 5.0,
+     "un": "folhas",
+     "tipo": "estoque",
+     "item_id": "hort_hortela_maco",
+     "item_everest": "HORT HORTELA MACO",
+     "um_catalogo": "UNID",
+     "divisor": null,
+     "status": "medida_nao_metrica"
+    },
+    {
+     "ingrediente": "AGUA CACHOEIRINHA",
+     "qtd": 50.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "mp_agua_cachoeirinha",
+     "item_everest": "MP AGUA CACHOEIRINHA",
+     "um_catalogo": "LITRO",
+     "divisor": 1000,
+     "status": "ok"
+    }
+   ]
+  },
+  {
+   "produto": "WHISKY SOUR",
+   "pagina": 41,
+   "rendimento": {
+    "qtd": 1,
+    "un": "porcao"
+   },
+   "composicao": [
+    {
+     "ingrediente": "WHISKY BOURBON",
+     "qtd": 50.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "dest_whisky_jim_beam_bourbon",
+     "item_everest": "DEST WHISKY JIM BEAM BOURBON",
+     "um_catalogo": "LITRO",
+     "divisor": 1000,
+     "status": "ok"
+    },
+    {
+     "ingrediente": "SUMO DE LIMÃO",
+     "qtd": 30.0,
+     "un": "ml",
+     "tipo": "intermediario",
+     "intermediario": "PROD SUMO DE LIMAO",
+     "divisor": null,
+     "status": "intermediario_sem_cadastro"
+    },
+    {
+     "ingrediente": "XAROPE SIMPLES",
+     "qtd": 25.0,
+     "un": "ml",
+     "tipo": "intermediario",
+     "intermediario": "PROD XAROPE SIMPLES",
+     "divisor": null,
+     "status": "intermediario_sem_cadastro"
+    },
+    {
+     "ingrediente": "CLARA DE OVO",
+     "qtd": 20.0,
+     "un": "ml",
+     "tipo": "estoque",
+     "item_id": "mp_ovo",
+     "item_everest": "MP OVO",
+     "um_catalogo": "UNID",
+     "divisor": null,
+     "status": "falta_ml_por_unidade"
+    }
+   ]
+  }
+ ],
+ "intermediarios_necessarios": [
+  "GENERICO FRUTAS DA ESTACAO",
+  "PROD ESPUMA DE GENGIBRE",
+  "PROD REDUCAO DE AMORA",
+  "PROD REDUCAO DE CHA MATE",
+  "PROD REDUCAO DE GENGIBRE",
+  "PROD REDUCAO DE HIBISCO",
+  "PROD REDUCAO DE MARACUJA",
+  "PROD REDUCAO DE MORANGO",
+  "PROD REDUCAO DE PIMENTA ROSA",
+  "PROD SUMO DE LIMAO",
+  "PROD XAROPE SIMPLES"
+ ]
+}
