@@ -314,6 +314,20 @@ const fmt = n => (n===null||n===undefined||n==="")?"—":(Math.round(Number(n)*1
 
 /* ---------- rendering ---------- */
 function itemsArray(){ return Object.values(state.itens); }
+/* a contagem mais recente do historico preenche itens que ainda nao tem valor proprio */
+function aplicarUltimaContagem(){
+  if(!state.contagens.length) return 0;
+  const ult=state.contagens.slice().sort((a,b)=>String(b.criado_em||b.data).localeCompare(String(a.criado_em||a.data)))[0];
+  if(!ult||!ult.valores) return 0;
+  let n=0;
+  Object.entries(ult.valores).forEach(([id,v])=>{
+    const it=state.itens[id];
+    if(it && (it.contagem===null||it.contagem===undefined||it.contagem==="")){
+      it.contagem=Number(v); it.contagem_de_sessao=ult.rotulo||ult.data; n++;
+    }
+  });
+  return n;
+}
 
 function renderKPIs(){
   const arr = itemsArray();
@@ -477,6 +491,28 @@ async function addItem(obj){
 
 /* ---------- xlsx contagem upload ---------- */
 function normalize(s){return (s||"").toString().trim().toUpperCase().replace(/\s+/g," ");}
+/* apelidos: nome no checklist -> nome no catalogo (Everest) */
+const ALIAS_CONTAGEM={
+ "ESP 1913 BRANCO BRUT":"ESP 1913 BRUT BRANCO 1/4",
+ "MP SACHE ACUCAR":"MP SACHE ACUCAR CAIXA","MP SACHE ADOCANTE":"MP SACHE ADOCANTE CAIXA",
+ "MP SACHE KETCHUP":"MP SACHE KETCHUP CAIXA","MP SACHE MOSTARDA":"MP SACHE MOSTARDA CAIXA",
+ "MP SACHE PALITO":"MP SACHE PALITO CAIXA","MP SACHE SAL":"MP SACHE SAL CAIXA",
+ "MP SACHE WASABI":"MP SACHE WASABI PACOTE"};
+/* campos do checklist que nao sao item de estoque */
+const NAO_ITEM=/^(nome do requisitante|nome do respons|observa|data|turno|respons)/i;
+/* numero em formato brasileiro: "40,60" -> 40.6 | "1.411" -> 1411 */
+function numBR(v){
+  if(v===null||v===undefined||v==="") return null;
+  if(typeof v==="number") return isFinite(v)?v:null;
+  let t=String(v).trim().replace(/\s/g,"");
+  if(!t) return null;
+  if(t.includes(",")) t=t.replace(/\./g,"").replace(",",".");
+  else if(/^\d{1,3}(\.\d{3})+$/.test(t)) t=t.replace(/\./g,"");
+  const n=Number(t);
+  return isFinite(n)?n:null;
+}
+/* remove o sufixo de unidade entre parenteses: "PO ANCHO 250G (UNID)" -> "PO ANCHO 250G" */
+function semUn(s){ return normalize(String(s||"").replace(/\s*\([^)]*\)\s*$/,"")); }
 async function handleFiles(files){
   state.uploadLog={arquivo:files.length===1?files[0].name:`${files.length} arquivos`,etapas:[],fim:null,
     resumo:{reconhecidos:0,gravados:0,vazios:0,arquivos:0}};
@@ -515,27 +551,47 @@ function handleFile(file,emLote){
     log("linhas","ok",`aba "${nomeAba}": ${rows.length} linhas`);
     if(!rows.length){ log("conteudo","erro","A aba esta vazia."); resolve(); return; }
     const cols=Object.keys(rows[0]||{});
-    const temEver=cols.some(c=>/EVEREST/i.test(c)), temChk=cols.some(c=>/ITEM CHECKLIST/i.test(c));
-    const temCont=cols.some(c=>/^CONTAGEM$/i.test(c));
-    log("colunas",(temEver||temChk)?"ok":"erro",
-      "encontradas: "+cols.slice(0,8).join(" | ")+(cols.length>8?" …":"")+
-      ((temEver||temChk)?"":"  ← falta 'DESCRICAO ITEM EVEREST' ou 'ITEM CHECKLIST'. Esta planilha nao e a de contagem."));
-    if(!temEver&&!temChk){ resolve(); return; }
-    if(!temCont) log("coluna CONTAGEM","erro","nao achei a coluna CONTAGEM — nada a atualizar.");
-    const byEver={},byChk={};
-    itemsArray().forEach(it=>{byEver[normalize(it.nome_everest)]=it; byChk[normalize(it.nome_checklist)]=it;});
-    let matched=0,updated=0,vazios=0; const missing=[]; const touched=new Set();
-    rows.forEach(r=>{
-      const ever=normalize(r["DESCRIÇÃO ITEM EVEREST"]||r["DESCRICAO ITEM EVEREST"]);
-      const chk=normalize(r["ITEM CHECKLIST"]);
-      const it=byEver[ever]||byChk[chk];
-      const cont=r["CONTAGEM"];
-      if(!it){ if(ever||chk) missing.push(ever||chk); return; }
-      matched++;
-      if(cont===""||cont===null||cont===undefined){ vazios++; return; }
-      if(isNaN(Number(cont))) return;
-      setField(it.id,"contagem",Number(cont)); touched.add(it.setor); updated++;
+    const cEver=cols.find(c=>/EVEREST/i.test(c)), cChk=cols.find(c=>/ITEM CHECKLIST/i.test(c));
+    const cCont=cols.find(c=>/^CONTAGEM$/i.test(c));
+    const cItem=cols.find(c=>/^item$/i.test(c)), cResp=cols.find(c=>/^resposta$/i.test(c));
+    const formato = (cEver||cChk) ? "requisicao" : ((cItem&&cResp) ? "checklist" : null);
+    log("formato",formato?"ok":"erro",
+      formato==="requisicao" ? "Lista de Requisição (usa DESCRIÇÃO ITEM EVEREST + CONTAGEM)"
+      : formato==="checklist" ? "Export de checklist (usa Item + Resposta)"
+      : "não reconheci o modelo. Colunas: "+cols.slice(0,8).join(" | ")+(cols.length>8?" …":""));
+    if(!formato){ resolve(); return; }
+    if(formato==="requisicao" && !cCont) log("coluna CONTAGEM","erro","nao achei a coluna CONTAGEM — nada a atualizar.");
+    const byEver={},byChk={},bySemUn={};
+    itemsArray().forEach(it=>{
+      byEver[normalize(it.nome_everest)]=it; byChk[normalize(it.nome_checklist)]=it;
+      bySemUn[semUn(it.nome_checklist)]=it; bySemUn[semUn(it.nome_everest)]=it;
     });
+    const resolveItem=nome=>{
+      const n=normalize(nome);
+      if(byEver[n]||byChk[n]) return byEver[n]||byChk[n];
+      const su=semUn(nome);
+      const al=ALIAS_CONTAGEM[su]; if(al && byEver[normalize(al)]) return byEver[normalize(al)];
+      return bySemUn[su]||null;
+    };
+    let matched=0,updated=0,vazios=0,ignorados=0,quem=null; const missing=[]; const touched=new Set();
+    rows.forEach(r=>{
+      let nome,cont;
+      if(formato==="requisicao"){
+        nome=r[cEver]||r[cChk]; cont=cCont?r[cCont]:null;
+      } else {
+        nome=r[cItem]; cont=r[cResp];
+        if(NAO_ITEM.test(String(nome||""))){ if(cont) quem=String(cont).trim(); ignorados++; return; }
+      }
+      if(!nome) return;
+      const it=resolveItem(nome);
+      if(!it){ missing.push(normalize(nome)); return; }
+      matched++;
+      const v=numBR(cont);
+      if(v===null){ vazios++; return; }
+      setField(it.id,"contagem",v); touched.add(it.setor); updated++;
+    });
+    if(quem) log("responsavel","ok","contagem feita por: "+quem);
+    if(ignorados) log("campos ignorados","ok",ignorados+" linha(s) do checklist que nao sao item de estoque");
     log("casamento",matched?"ok":"erro",`${matched} itens reconhecidos · ${missing.length} nao encontrados`);
     if(missing.length) log("nao encontrados","aviso",missing.slice(0,8).join(" · ")+(missing.length>8?` … (+${missing.length-8})`:""));
     if(updated) log("contagem","ok",`${updated} contagens gravadas · ${vazios} linhas sem numero`);
@@ -1133,7 +1189,9 @@ async function boot(){
   // histórico de contagens (base do CMV)
   try{ db.collection("contagens").onSnapshot(snap=>{
       state.contagens=snap.docs.map(x=>({...(x.data()||{}),id:x.id}));
-      if(state.tab==="cmv") renderAll();
+      const n=aplicarUltimaContagem();
+      if(n) banner(`<b>Contagem carregada do histórico.</b> ${n} itens estão exibindo o valor da contagem mais recente salva. Suba a planilha de contagem para atualizar.`);
+      renderAll();
     }); }catch(e){}
   // notas de entrada já conferidas
   try{ db.collection("entradas").onSnapshot(snap=>{
@@ -1154,6 +1212,7 @@ async function boot(){
       if(first && snap.empty){ banner("<b>Base conectada, catálogo ainda vazio.</b> Os 471 itens estão sendo carregados. Se esta mensagem persistir por muito tempo, me avise."); }
       else banner("");
       first=false;
+      aplicarUltimaContagem();
       renderAll();
       if(itemsArray().length) document.getElementById("subline").textContent=`${itemsArray().length} itens · ${SETORES.length} setores · unidade Sudoeste`;
     },err=>{ setConn(false,"erro base"); toast("Base: "+(err.code||"erro")); });

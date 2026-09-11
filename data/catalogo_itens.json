@@ -1,7 +1,7 @@
 {
  "loja": "SUDOESTE",
  "versao_fonte": "Lista de Requisição (10 setores)",
- "total": 490,
+ "total": 498,
  "itens": [
   {
    "id": "agua_c_gas",
@@ -5002,6 +5002,102 @@
    "tem_receita_no_almanaque": false,
    "origem_cadastro": "intermediario da ficha do bar - decisao: contar como item de estoque",
    "pendente_validacao": true
+  },
+  {
+   "id": "cerv_stella_pure_gold_600ml",
+   "nome_checklist": "CERV STELLA PURE GOLD 600ML (UNID)",
+   "nome_everest": "CERV STELLA PURE GOLD 600ML",
+   "setor": "BAR",
+   "subsetor": "CERVEJAS",
+   "unidade": "UNID",
+   "estoque_minimo": 0,
+   "prefixo": "CERV",
+   "pendente_validacao": true,
+   "origem_cadastro": "aparece na contagem 06/09 do checklist e nao estava na Lista de Requisicao"
+  },
+  {
+   "id": "mp_espinafre_congelado",
+   "nome_checklist": "MP ESPINAFRE CONGELADO (KG)",
+   "nome_everest": "MP ESPINAFRE CONGELADO",
+   "setor": "COZINHA",
+   "subsetor": "MATERIA PRIMA",
+   "unidade": "KG",
+   "estoque_minimo": 0,
+   "prefixo": "MP",
+   "pendente_validacao": true,
+   "origem_cadastro": "aparece na contagem 06/09 do checklist e nao estava na Lista de Requisicao"
+  },
+  {
+   "id": "mp_pao_baguete",
+   "nome_checklist": "MP PAO BAGUETE (UNID)",
+   "nome_everest": "MP PAO BAGUETE",
+   "setor": "COZINHA",
+   "subsetor": "MATERIA PRIMA",
+   "unidade": "UNID",
+   "estoque_minimo": 0,
+   "prefixo": "MP",
+   "pendente_validacao": true,
+   "origem_cadastro": "aparece na contagem 06/09 do checklist e nao estava na Lista de Requisicao"
+  },
+  {
+   "id": "prod_maionese_king",
+   "nome_checklist": "PROD MAIONESE KING (KG)",
+   "nome_everest": "PROD MAIONESE KING",
+   "setor": "COZINHA",
+   "subsetor": "PROCESSADOS",
+   "unidade": "KG",
+   "estoque_minimo": 0,
+   "prefixo": "PROD",
+   "pendente_validacao": true,
+   "origem_cadastro": "aparece na contagem 06/09 do checklist e nao estava na Lista de Requisicao"
+  },
+  {
+   "id": "prod_molho_tempura",
+   "nome_checklist": "PROD MOLHO TEMPURA (KG)",
+   "nome_everest": "PROD MOLHO TEMPURA",
+   "setor": "COZINHA",
+   "subsetor": "PROCESSADOS",
+   "unidade": "KG",
+   "estoque_minimo": 0,
+   "prefixo": "PROD",
+   "pendente_validacao": true,
+   "origem_cadastro": "aparece na contagem 06/09 do checklist e nao estava na Lista de Requisicao"
+  },
+  {
+   "id": "prod_molho_sweet_spicy",
+   "nome_checklist": "PROD MOLHO SWEET SPICY (KG)",
+   "nome_everest": "PROD MOLHO SWEET SPICY",
+   "setor": "COZINHA",
+   "subsetor": "PROCESSADOS",
+   "unidade": "KG",
+   "estoque_minimo": 0,
+   "prefixo": "PROD",
+   "pendente_validacao": true,
+   "origem_cadastro": "aparece na contagem 06/09 do checklist e nao estava na Lista de Requisicao"
+  },
+  {
+   "id": "prod_molho_yakimeshi",
+   "nome_checklist": "PROD MOLHO YAKIMESHI (KG)",
+   "nome_everest": "PROD MOLHO YAKIMESHI",
+   "setor": "COZINHA",
+   "subsetor": "PROCESSADOS",
+   "unidade": "KG",
+   "estoque_minimo": 0,
+   "prefixo": "PROD",
+   "pendente_validacao": true,
+   "origem_cadastro": "aparece na contagem 06/09 do checklist e nao estava na Lista de Requisicao"
+  },
+  {
+   "id": "mp_acucar_confeiteiro",
+   "nome_checklist": "MP ACUCAR CONFEITEIRO (KG)",
+   "nome_everest": "MP ACUCAR CONFEITEIRO",
+   "setor": "SECOS",
+   "subsetor": "MATERIA PRIMA",
+   "unidade": "KG",
+   "estoque_minimo": 0,
+   "prefixo": "MP",
+   "pendente_validacao": true,
+   "origem_cadastro": "aparece na contagem 06/09 do checklist e nao estava na Lista de Requisicao"
   }
  ],
  "cnpj_unidade": "35.631.524/0003-27",
@@ -5009,5 +5105,15 @@
   "SUDOESTE",
   "SIG",
   "CAMINITO PARRILLA SETOR GRAFICO SIG"
- ]
+ ],
+ "alias_contagem": {
+  "ESP 1913 BRANCO BRUT": "ESP 1913 BRUT BRANCO 1/4",
+  "MP SACHE ACUCAR": "MP SACHE ACUCAR CAIXA",
+  "MP SACHE ADOCANTE": "MP SACHE ADOCANTE CAIXA",
+  "MP SACHE KETCHUP": "MP SACHE KETCHUP CAIXA",
+  "MP SACHE MOSTARDA": "MP SACHE MOSTARDA CAIXA",
+  "MP SACHE PALITO": "MP SACHE PALITO CAIXA",
+  "MP SACHE SAL": "MP SACHE SAL CAIXA",
+  "MP SACHE WASABI": "MP SACHE WASABI PACOTE"
+ }
 }
