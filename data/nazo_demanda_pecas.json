@@ -1,0 +1,421 @@
+{
+ "total_por_peca": {
+  "NIGUIRI SALMAO": 4231,
+  "SASHIMI SALMAO": 15468,
+  "URAMAKI FILADELFIA": 4872,
+  "SASHIMI ATUM": 5459,
+  "SASHIMI PEIXE BRANCO": 2827,
+  "NIGUIRI PEIXE BRANCO": 1156,
+  "JO SALMAO": 2807,
+  "NIGUIRI ATUM": 1813,
+  "MAKIMONO SALMAO": 1018,
+  "BARRIGA SALMAO": 7200,
+  "JO SALMAO MACARICADO": 2332,
+  "EBI ICHIGO": 1032,
+  "URAMAKI TATAKI": 1348,
+  "JO SALMAO BRULE": 1817,
+  "SALMAO THAI": 3299,
+  "JO SALMAO Q COALHO": 694,
+  "EBITEM ESPECIAL": 1423,
+  "CARPACCIO SALMAO": 760.1,
+  "CARPACCIO TRUFADO": 1041.65,
+  "MINI TEMAKI CALIFORNIA": 22,
+  "GUNKAN CENOURA": 44,
+  "GUNKAN SHIMEJI": 44,
+  "NIGUIRI LARANJA": 22,
+  "URAMAKI CALIFORNIA VEG": 44,
+  "KAPAMAKI VEG": 44,
+  "BROWNIE DOCE LEITE": 1357,
+  "CARPACCIO BEEF": 495,
+  "CARPACCIO SENSEI": 770,
+  "CESTINHA COM BRIGADEIRO": 1046,
+  "CESTINHA SALMAO": 720,
+  "CEVICHE": 1209,
+  "EBI FURAY": 719,
+  "EBI KING": 1833,
+  "EBITEM TRUFADO": 259,
+  "GYOZA": 1748,
+  "HARUMAKI CAMARAO": 953,
+  "HARUMAKI QUEIJO": 1054,
+  "HOT BANANA COM NUTELLA": 973,
+  "HOT FILADELFIA": 3572,
+  "HOT NAZO": 1706,
+  "HOT PORO": 2008,
+  "HOT SALMAO": 1021,
+  "JO ANCHOVA DEFU": 1164,
+  "JO SALMAO ABACAXI": 859,
+  "JO SALMAO DEFUMADO": 559,
+  "JO SALMAO COALHO": 1921,
+  "MAKIMONO ATUM": 652,
+  "MAKIMONO CALIFOR": 216,
+  "MAKIMONO CAMARAO": 125,
+  "MAKIMONO FILADELFIA": 631,
+  "MINI HARUMAKI DOCE LEITE": 1568,
+  "MINI TEMAKI CAMARAO": 112,
+  "MINI TEMAKI ATUM": 67,
+  "MINI TEMAKI SALMAO": 155,
+  "MINI TEMAKI FILADELFIA": 381,
+  "MISSOSHIRO": 193,
+  "NIGUIRI CAMARAO": 363,
+  "NIGUIRI SKIN": 292,
+  "NIGUIRI TRUFADO": 618,
+  "ROBATA ABACAXI CANELA": 438,
+  "ROBATA BROCOLIS": 94,
+  "ROBATA CARNE": 281,
+  "ROBATA FRANGO": 103,
+  "SALMAO MARACUJA": 2782,
+  "SALMAO NACHOS": 680,
+  "SASHIMI ANCHOVA DEFUMADA": 2204,
+  "SASHIMI ANCHOVA NEGRA": 1300,
+  "SASHIMI ESPECIAL NAZO": 1105,
+  "SASHIMI SALMAO APEROL": 1555,
+  "SASHIMI TROPICAL": 1218,
+  "SHIMEJI": 1370,
+  "SMOKED CEVICHE": 233,
+  "SUNOMONO ESPECIAL": 529,
+  "TARTARE SALMAO DEFUMADO": 261,
+  "TATAKI ATUM": 501,
+  "TATAKI SALMAO": 1353,
+  "TRIO BRIGADEIROS": 640,
+  "URAMAKI CAMARAO": 482,
+  "URAMAKI SALMAO": 923,
+  "URAMAKI SKIN": 323,
+  "URAMAKI TUNA": 250,
+  "YAKISOBA ESPECIAL": 284,
+  "YAKISOBA TRADICIONAL": 137
+ },
+ "origem": {
+  "NIGUIRI SALMAO": {
+   "comb": 2408,
+   "rod": 1823
+  },
+  "SASHIMI SALMAO": {
+   "comb": 4035,
+   "rod": 11433
+  },
+  "URAMAKI FILADELFIA": {
+   "comb": 3430,
+   "rod": 1442
+  },
+  "SASHIMI ATUM": {
+   "comb": 1750,
+   "rod": 3709
+  },
+  "SASHIMI PEIXE BRANCO": {
+   "comb": 1372,
+   "rod": 1455
+  },
+  "NIGUIRI PEIXE BRANCO": {
+   "comb": 578,
+   "rod": 578
+  },
+  "JO SALMAO": {
+   "comb": 1306,
+   "rod": 1501
+  },
+  "NIGUIRI ATUM": {
+   "comb": 844,
+   "rod": 969
+  },
+  "MAKIMONO SALMAO": {
+   "comb": 524,
+   "rod": 494
+  },
+  "BARRIGA SALMAO": {
+   "comb": 596,
+   "rod": 6604
+  },
+  "JO SALMAO MACARICADO": {
+   "comb": 330,
+   "rod": 2002
+  },
+  "EBI ICHIGO": {
+   "comb": 82,
+   "rod": 950
+  },
+  "URAMAKI TATAKI": {
+   "comb": 510,
+   "rod": 838
+  },
+  "JO SALMAO BRULE": {
+   "comb": 162,
+   "rod": 1655
+  },
+  "SALMAO THAI": {
+   "comb": 1104,
+   "rod": 2195
+  },
+  "JO SALMAO Q COALHO": {
+   "comb": 694,
+   "rod": 0
+  },
+  "EBITEM ESPECIAL": {
+   "comb": 410,
+   "rod": 1013
+  },
+  "CARPACCIO SALMAO": {
+   "comb": 3.1,
+   "rod": 757
+  },
+  "CARPACCIO TRUFADO": {
+   "comb": 6.65,
+   "rod": 1035
+  },
+  "MINI TEMAKI CALIFORNIA": {
+   "comb": 22,
+   "rod": 0
+  },
+  "GUNKAN CENOURA": {
+   "comb": 44,
+   "rod": 0
+  },
+  "GUNKAN SHIMEJI": {
+   "comb": 44,
+   "rod": 0
+  },
+  "NIGUIRI LARANJA": {
+   "comb": 22,
+   "rod": 0
+  },
+  "URAMAKI CALIFORNIA VEG": {
+   "comb": 44,
+   "rod": 0
+  },
+  "KAPAMAKI VEG": {
+   "comb": 44,
+   "rod": 0
+  },
+  "BROWNIE DOCE LEITE": {
+   "comb": 0,
+   "rod": 1357
+  },
+  "CARPACCIO BEEF": {
+   "comb": 0,
+   "rod": 495
+  },
+  "CARPACCIO SENSEI": {
+   "comb": 0,
+   "rod": 770
+  },
+  "CESTINHA COM BRIGADEIRO": {
+   "comb": 0,
+   "rod": 1046
+  },
+  "CESTINHA SALMAO": {
+   "comb": 0,
+   "rod": 720
+  },
+  "CEVICHE": {
+   "comb": 0,
+   "rod": 1209
+  },
+  "EBI FURAY": {
+   "comb": 0,
+   "rod": 719
+  },
+  "EBI KING": {
+   "comb": 0,
+   "rod": 1833
+  },
+  "EBITEM TRUFADO": {
+   "comb": 0,
+   "rod": 259
+  },
+  "GYOZA": {
+   "comb": 0,
+   "rod": 1748
+  },
+  "HARUMAKI CAMARAO": {
+   "comb": 0,
+   "rod": 953
+  },
+  "HARUMAKI QUEIJO": {
+   "comb": 0,
+   "rod": 1054
+  },
+  "HOT BANANA COM NUTELLA": {
+   "comb": 0,
+   "rod": 973
+  },
+  "HOT FILADELFIA": {
+   "comb": 0,
+   "rod": 3572
+  },
+  "HOT NAZO": {
+   "comb": 0,
+   "rod": 1706
+  },
+  "HOT PORO": {
+   "comb": 0,
+   "rod": 2008
+  },
+  "HOT SALMAO": {
+   "comb": 0,
+   "rod": 1021
+  },
+  "JO ANCHOVA DEFU": {
+   "comb": 0,
+   "rod": 1164
+  },
+  "JO SALMAO ABACAXI": {
+   "comb": 0,
+   "rod": 859
+  },
+  "JO SALMAO DEFUMADO": {
+   "comb": 0,
+   "rod": 559
+  },
+  "JO SALMAO COALHO": {
+   "comb": 0,
+   "rod": 1921
+  },
+  "MAKIMONO ATUM": {
+   "comb": 0,
+   "rod": 652
+  },
+  "MAKIMONO CALIFOR": {
+   "comb": 0,
+   "rod": 216
+  },
+  "MAKIMONO CAMARAO": {
+   "comb": 0,
+   "rod": 125
+  },
+  "MAKIMONO FILADELFIA": {
+   "comb": 0,
+   "rod": 631
+  },
+  "MINI HARUMAKI DOCE LEITE": {
+   "comb": 0,
+   "rod": 1568
+  },
+  "MINI TEMAKI CAMARAO": {
+   "comb": 0,
+   "rod": 112
+  },
+  "MINI TEMAKI ATUM": {
+   "comb": 0,
+   "rod": 67
+  },
+  "MINI TEMAKI SALMAO": {
+   "comb": 0,
+   "rod": 155
+  },
+  "MINI TEMAKI FILADELFIA": {
+   "comb": 0,
+   "rod": 381
+  },
+  "MISSOSHIRO": {
+   "comb": 0,
+   "rod": 193
+  },
+  "NIGUIRI CAMARAO": {
+   "comb": 0,
+   "rod": 363
+  },
+  "NIGUIRI SKIN": {
+   "comb": 0,
+   "rod": 292
+  },
+  "NIGUIRI TRUFADO": {
+   "comb": 0,
+   "rod": 618
+  },
+  "ROBATA ABACAXI CANELA": {
+   "comb": 0,
+   "rod": 438
+  },
+  "ROBATA BROCOLIS": {
+   "comb": 0,
+   "rod": 94
+  },
+  "ROBATA CARNE": {
+   "comb": 0,
+   "rod": 281
+  },
+  "ROBATA FRANGO": {
+   "comb": 0,
+   "rod": 103
+  },
+  "SALMAO MARACUJA": {
+   "comb": 0,
+   "rod": 2782
+  },
+  "SALMAO NACHOS": {
+   "comb": 0,
+   "rod": 680
+  },
+  "SASHIMI ANCHOVA DEFUMADA": {
+   "comb": 0,
+   "rod": 2204
+  },
+  "SASHIMI ANCHOVA NEGRA": {
+   "comb": 0,
+   "rod": 1300
+  },
+  "SASHIMI ESPECIAL NAZO": {
+   "comb": 0,
+   "rod": 1105
+  },
+  "SASHIMI SALMAO APEROL": {
+   "comb": 0,
+   "rod": 1555
+  },
+  "SASHIMI TROPICAL": {
+   "comb": 0,
+   "rod": 1218
+  },
+  "SHIMEJI": {
+   "comb": 0,
+   "rod": 1370
+  },
+  "SMOKED CEVICHE": {
+   "comb": 0,
+   "rod": 233
+  },
+  "SUNOMONO ESPECIAL": {
+   "comb": 0,
+   "rod": 529
+  },
+  "TARTARE SALMAO DEFUMADO": {
+   "comb": 0,
+   "rod": 261
+  },
+  "TATAKI ATUM": {
+   "comb": 0,
+   "rod": 501
+  },
+  "TATAKI SALMAO": {
+   "comb": 0,
+   "rod": 1353
+  },
+  "TRIO BRIGADEIROS": {
+   "comb": 0,
+   "rod": 640
+  },
+  "URAMAKI CAMARAO": {
+   "comb": 0,
+   "rod": 482
+  },
+  "URAMAKI SALMAO": {
+   "comb": 0,
+   "rod": 923
+  },
+  "URAMAKI SKIN": {
+   "comb": 0,
+   "rod": 323
+  },
+  "URAMAKI TUNA": {
+   "comb": 0,
+   "rod": 250
+  },
+  "YAKISOBA ESPECIAL": {
+   "comb": 0,
+   "rod": 284
+  },
+  "YAKISOBA TRADICIONAL": {
+   "comb": 0,
+   "rod": 137
+  }
+ }
+}

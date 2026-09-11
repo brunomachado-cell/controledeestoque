@@ -1,0 +1,337 @@
+{
+ "observacao": "demanda por peca = combinados explodidos + rodizio avulso; ordem = prioridade de pesagem",
+ "pecas": [
+  {
+   "peca": "SASHIMI SALMAO",
+   "total_mes": 15468
+  },
+  {
+   "peca": "BARRIGA SALMAO",
+   "total_mes": 7200
+  },
+  {
+   "peca": "SASHIMI ATUM",
+   "total_mes": 5459
+  },
+  {
+   "peca": "URAMAKI FILADELFIA",
+   "total_mes": 4872
+  },
+  {
+   "peca": "NIGUIRI SALMAO",
+   "total_mes": 4231
+  },
+  {
+   "peca": "HOT FILADELFIA",
+   "total_mes": 3572
+  },
+  {
+   "peca": "SALMAO THAI",
+   "total_mes": 3299
+  },
+  {
+   "peca": "SASHIMI PEIXE BRANCO",
+   "total_mes": 2827
+  },
+  {
+   "peca": "JO SALMAO",
+   "total_mes": 2807
+  },
+  {
+   "peca": "SALMAO MARACUJA",
+   "total_mes": 2782
+  },
+  {
+   "peca": "JO SALMAO MACARICADO",
+   "total_mes": 2332
+  },
+  {
+   "peca": "SASHIMI ANCHOVA DEFUMADA",
+   "total_mes": 2204
+  },
+  {
+   "peca": "HOT PORO",
+   "total_mes": 2008
+  },
+  {
+   "peca": "JO SALMAO COALHO",
+   "total_mes": 1921
+  },
+  {
+   "peca": "EBI KING",
+   "total_mes": 1833
+  },
+  {
+   "peca": "JO SALMAO BRULE",
+   "total_mes": 1817
+  },
+  {
+   "peca": "NIGUIRI ATUM",
+   "total_mes": 1813
+  },
+  {
+   "peca": "GYOZA",
+   "total_mes": 1748
+  },
+  {
+   "peca": "HOT NAZO",
+   "total_mes": 1706
+  },
+  {
+   "peca": "MINI HARUMAKI DOCE LEITE",
+   "total_mes": 1568
+  },
+  {
+   "peca": "SASHIMI SALMAO APEROL",
+   "total_mes": 1555
+  },
+  {
+   "peca": "EBITEM ESPECIAL",
+   "total_mes": 1423
+  },
+  {
+   "peca": "SHIMEJI",
+   "total_mes": 1370
+  },
+  {
+   "peca": "BROWNIE DOCE LEITE",
+   "total_mes": 1357
+  },
+  {
+   "peca": "TATAKI SALMAO",
+   "total_mes": 1353
+  },
+  {
+   "peca": "URAMAKI TATAKI",
+   "total_mes": 1348
+  },
+  {
+   "peca": "SASHIMI ANCHOVA NEGRA",
+   "total_mes": 1300
+  },
+  {
+   "peca": "SASHIMI TROPICAL",
+   "total_mes": 1218
+  },
+  {
+   "peca": "CEVICHE",
+   "total_mes": 1209
+  },
+  {
+   "peca": "JO ANCHOVA DEFU",
+   "total_mes": 1164
+  },
+  {
+   "peca": "NIGUIRI PEIXE BRANCO",
+   "total_mes": 1156
+  },
+  {
+   "peca": "SASHIMI ESPECIAL NAZO",
+   "total_mes": 1105
+  },
+  {
+   "peca": "HARUMAKI QUEIJO",
+   "total_mes": 1054
+  },
+  {
+   "peca": "CESTINHA COM BRIGADEIRO",
+   "total_mes": 1046
+  },
+  {
+   "peca": "CARPACCIO TRUFADO",
+   "total_mes": 1041.65
+  },
+  {
+   "peca": "EBI ICHIGO",
+   "total_mes": 1032
+  },
+  {
+   "peca": "HOT SALMAO",
+   "total_mes": 1021
+  },
+  {
+   "peca": "MAKIMONO SALMAO",
+   "total_mes": 1018
+  },
+  {
+   "peca": "HOT BANANA COM NUTELLA",
+   "total_mes": 973
+  },
+  {
+   "peca": "HARUMAKI CAMARAO",
+   "total_mes": 953
+  },
+  {
+   "peca": "URAMAKI SALMAO",
+   "total_mes": 923
+  },
+  {
+   "peca": "JO SALMAO ABACAXI",
+   "total_mes": 859
+  },
+  {
+   "peca": "CARPACCIO SENSEI",
+   "total_mes": 770
+  },
+  {
+   "peca": "CARPACCIO SALMAO",
+   "total_mes": 760.1
+  },
+  {
+   "peca": "CESTINHA SALMAO",
+   "total_mes": 720
+  },
+  {
+   "peca": "EBI FURAY",
+   "total_mes": 719
+  },
+  {
+   "peca": "JO SALMAO Q COALHO",
+   "total_mes": 694
+  },
+  {
+   "peca": "SALMAO NACHOS",
+   "total_mes": 680
+  },
+  {
+   "peca": "MAKIMONO ATUM",
+   "total_mes": 652
+  },
+  {
+   "peca": "TRIO BRIGADEIROS",
+   "total_mes": 640
+  },
+  {
+   "peca": "MAKIMONO FILADELFIA",
+   "total_mes": 631
+  },
+  {
+   "peca": "NIGUIRI TRUFADO",
+   "total_mes": 618
+  },
+  {
+   "peca": "JO SALMAO DEFUMADO",
+   "total_mes": 559
+  },
+  {
+   "peca": "SUNOMONO ESPECIAL",
+   "total_mes": 529
+  },
+  {
+   "peca": "TATAKI ATUM",
+   "total_mes": 501
+  },
+  {
+   "peca": "CARPACCIO BEEF",
+   "total_mes": 495
+  },
+  {
+   "peca": "URAMAKI CAMARAO",
+   "total_mes": 482
+  },
+  {
+   "peca": "ROBATA ABACAXI CANELA",
+   "total_mes": 438
+  },
+  {
+   "peca": "MINI TEMAKI FILADELFIA",
+   "total_mes": 381
+  },
+  {
+   "peca": "NIGUIRI CAMARAO",
+   "total_mes": 363
+  },
+  {
+   "peca": "URAMAKI SKIN",
+   "total_mes": 323
+  },
+  {
+   "peca": "NIGUIRI SKIN",
+   "total_mes": 292
+  },
+  {
+   "peca": "YAKISOBA ESPECIAL",
+   "total_mes": 284
+  },
+  {
+   "peca": "ROBATA CARNE",
+   "total_mes": 281
+  },
+  {
+   "peca": "TARTARE SALMAO DEFUMADO",
+   "total_mes": 261
+  },
+  {
+   "peca": "EBITEM TRUFADO",
+   "total_mes": 259
+  },
+  {
+   "peca": "URAMAKI TUNA",
+   "total_mes": 250
+  },
+  {
+   "peca": "SMOKED CEVICHE",
+   "total_mes": 233
+  },
+  {
+   "peca": "MAKIMONO CALIFOR",
+   "total_mes": 216
+  },
+  {
+   "peca": "MISSOSHIRO",
+   "total_mes": 193
+  },
+  {
+   "peca": "MINI TEMAKI SALMAO",
+   "total_mes": 155
+  },
+  {
+   "peca": "YAKISOBA TRADICIONAL",
+   "total_mes": 137
+  },
+  {
+   "peca": "MAKIMONO CAMARAO",
+   "total_mes": 125
+  },
+  {
+   "peca": "MINI TEMAKI CAMARAO",
+   "total_mes": 112
+  },
+  {
+   "peca": "ROBATA FRANGO",
+   "total_mes": 103
+  },
+  {
+   "peca": "ROBATA BROCOLIS",
+   "total_mes": 94
+  },
+  {
+   "peca": "MINI TEMAKI ATUM",
+   "total_mes": 67
+  },
+  {
+   "peca": "GUNKAN CENOURA",
+   "total_mes": 44
+  },
+  {
+   "peca": "GUNKAN SHIMEJI",
+   "total_mes": 44
+  },
+  {
+   "peca": "URAMAKI CALIFORNIA VEG",
+   "total_mes": 44
+  },
+  {
+   "peca": "KAPAMAKI VEG",
+   "total_mes": 44
+  },
+  {
+   "peca": "MINI TEMAKI CALIFORNIA",
+   "total_mes": 22
+  },
+  {
+   "peca": "NIGUIRI LARANJA",
+   "total_mes": 22
+  }
+ ]
+}
