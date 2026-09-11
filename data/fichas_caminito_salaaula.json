@@ -1,0 +1,156 @@
+{
+ "origem": "imagens do Google Classroom embutidas no almanaque Caminito (paginas 'Sala de Aula')",
+ "obs_p40": "A imagem nomeada 'Coxinha de cupim.png' contem a ficha de LINGUICAS, nao de coxinha de cupim. COXINHA DE CUPIM segue SEM ficha.",
+ "fichas": [
+  {
+   "ficha": "PÃO DE ALHO",
+   "secao": "ENTRADA",
+   "porcao": 1,
+   "recuperada_de": "imagem p.56",
+   "composicao": [
+    {
+     "ingrediente": "Pão de alho",
+     "qtd": 1.0,
+     "un": "uni",
+     "medida": "1 unidade"
+    },
+    {
+     "ingrediente": "Manteiga com salsa",
+     "qtd": 0.002,
+     "un": "kg",
+     "medida": "1 pincelada"
+    }
+   ]
+  },
+  {
+   "ficha": "PASTEL DE PASTRAMI",
+   "secao": "ENTRADA",
+   "porcao": 1,
+   "recuperada_de": "imagem p.53",
+   "composicao": [
+    {
+     "ingrediente": "PROD Pastel de pastrami",
+     "qtd": 4.0,
+     "un": "uni",
+     "medida": "4 unidades"
+    },
+    {
+     "ingrediente": "PROD geleia de abacaxi",
+     "qtd": 0.04,
+     "un": "kg",
+     "medida": "1 concha de 1OZ"
+    }
+   ]
+  },
+  {
+   "ficha": "SALTEÑAS (Empanada de carne)",
+   "secao": "ENTRADA",
+   "porcao": 1,
+   "recuperada_de": "imagem p.42",
+   "composicao": [
+    {
+     "ingrediente": "Empanada",
+     "qtd": 1.0,
+     "un": "uni",
+     "medida": "1 unidade"
+    }
+   ]
+  },
+  {
+   "ficha": "CROQUETA SUÍNA",
+   "secao": "ENTRADA",
+   "porcao": 1,
+   "recuperada_de": "imagem p.41",
+   "composicao": [
+    {
+     "ingrediente": "Croqueta",
+     "qtd": 6.0,
+     "un": "uni",
+     "medida": "6 unidades"
+    },
+    {
+     "ingrediente": "BBQ",
+     "qtd": 0.03,
+     "un": "kg",
+     "medida": "1 concha de 1OZ"
+    }
+   ]
+  },
+  {
+   "ficha": "BATATA COM BRISKET",
+   "secao": "ENTRADA",
+   "porcao": 1,
+   "recuperada_de": "imagem p.37",
+   "composicao": [
+    {
+     "ingrediente": "Batata palito 7x7",
+     "qtd": 0.35,
+     "un": "kg",
+     "medida": "1 porção"
+    },
+    {
+     "ingrediente": "PROD Brisket",
+     "qtd": 0.1,
+     "un": "kg",
+     "medida": "1 pacote"
+    },
+    {
+     "ingrediente": "Ovo",
+     "qtd": 1.0,
+     "un": "uni",
+     "medida": "1 unidade"
+    },
+    {
+     "ingrediente": "PROD Maionese tabasco",
+     "qtd": 0.025,
+     "un": "kg",
+     "medida": "1 click da bisnaga"
+    },
+    {
+     "ingrediente": "Cebolete",
+     "qtd": 0.002,
+     "un": "kg",
+     "medida": "1 pitada"
+    },
+    {
+     "ingrediente": "PP pó de bacon",
+     "qtd": 0.012,
+     "un": "kg",
+     "medida": "1 tbs"
+    },
+    {
+     "ingrediente": "PROD Picles de cebola",
+     "qtd": 0.01,
+     "un": "kg",
+     "medida": "4 rodelas"
+    }
+   ]
+  },
+  {
+   "ficha": "PÃO DE LINGUIÇA",
+   "secao": "ENTRADA",
+   "porcao": 1,
+   "recuperada_de": "imagem p.57",
+   "composicao": [
+    {
+     "ingrediente": "PROD Pão de linguiça",
+     "qtd": 1.0,
+     "un": "uni",
+     "medida": "2 metades"
+    },
+    {
+     "ingrediente": "PP novo Chimichurri",
+     "qtd": 0.04,
+     "un": "kg",
+     "medida": "1 concha de 1OZ"
+    },
+    {
+     "ingrediente": "Salsa",
+     "qtd": 0.001,
+     "un": "kg",
+     "medida": "pitada"
+    }
+   ]
+  }
+ ]
+}
