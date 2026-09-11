@@ -250,7 +250,7 @@ input.fator.falta{border-color:var(--warn);background:var(--warn-bg)}
     <button class="btn ghost" id="uploadBtn" title="Subir planilha de contagem preenchida">⇪ Contagem</button>
     <button class="btn ghost" id="salvarCont" title="Salvar a contagem atual no histórico (base do CMV)">⛁ Salvar contagem</button>
     <button class="btn ghost" id="addBtn">＋ Item</button>
-    <input class="hidefile" id="fileInput" type="file" accept=".xlsx,.xls,.csv">
+    <input class="hidefile" id="fileInput" type="file">
   </div>
 
   <div class="chips" id="sectorchips"></div>
@@ -287,6 +287,7 @@ const state = {
   aiImg: null,     // true/false: este visualizador aceita enviar imagem para a IA
   contagens: [],   // snapshots de contagem (histórico) -> base do CMV
   cmvA: null, cmvB: null,
+  uploadLog: null,  // resultado visivel da ultima leitura de planilha
 };
 const CNPJ_UNIDADE = "35631524000327";   // MULT COMERCIO (SIG = Sudoeste)
 let db = null, catalogoCol = null, cfgDoc = null;
@@ -363,12 +364,27 @@ function filtered(){
 }
 
 const PILL={good:["p-good","●","OK"],warn:["p-warn","▲","Atenção"],crit:["p-crit","■","Abaixo"],none:["p-none","○","Sem contagem"]};
+function renderUploadLog(){
+  const u=state.uploadLog; if(!u) return "";
+  const ic={ok:"\u2713",erro:"\u2715",aviso:"!"};
+  const cor={ok:"var(--good)",erro:"var(--crit)",aviso:"var(--warn)"};
+  return `<div class="card"><h2>Leitura da planilha — ${u.arquivo}
+      <button class="btn ghost" id="fecharLog">Fechar</button></h2>
+    <div class="body"><div style="display:flex;flex-direction:column;gap:8px;font-size:13px">
+      ${(u.etapas||[]).map(e=>`<div><span style="color:${cor[e.ok]||"var(--muted)"};font-weight:700">${ic[e.ok]||"\u00b7"}</span>
+        <b style="text-transform:uppercase;font-size:11px;letter-spacing:.04em;color:var(--muted)"> ${e.etapa}</b>
+        <div style="margin-left:18px">${e.msg}</div></div>`).join("")}
+      ${u.fim?`<div style="margin-top:4px;font-weight:600">${u.fim}</div>`:""}
+    </div></div></div>`;
+}
 function renderTable(){
   const rows=filtered();
   const view=document.getElementById("view");
-  if(!rows.length){ view.innerHTML=`<div class="card"><div class="empty">Nenhum item com os filtros atuais.</div></div>`; return; }
+  if(!rows.length){ view.innerHTML=renderUploadLog()+`<div class="card"><div class="empty">Nenhum item com os filtros atuais.</div></div>`;
+    const f0=document.getElementById("fecharLog"); if(f0) f0.onclick=()=>{state.uploadLog=null;renderAll();};
+    return; }
   const ent=entradasPorItem();
-  view.innerHTML=`<div class="card"><div class="tablewrap"><table>
+  view.innerHTML=renderUploadLog()+`<div class="card"><div class="tablewrap"><table>
     <thead><tr>
       <th>Item</th><th>Setor</th><th class="num">Contagem</th><th class="num">Mínimo</th><th class="num">Entradas</th><th>Status</th><th class="num">Sugestão de compra</th><th title="Reposição automática do CPD — sai da lista de compra">Auto</th>
     </tr></thead><tbody>
@@ -387,6 +403,8 @@ function renderTable(){
         <td style="text-align:center"><input type="checkbox" data-f="auto_cpd" ${it.auto_cpd?"checked":""} title="Reposição automática do CPD"></td>
       </tr>`;}).join("")}
     </tbody></table></div></div>`;
+  const fl=document.getElementById("fecharLog");
+  if(fl) fl.onclick=()=>{ state.uploadLog=null; renderAll(); };
   view.querySelectorAll('input[data-f="auto_cpd"]').forEach(cb=>{
     cb.addEventListener("change",()=>{
       const id=cb.closest("tr").dataset.id;
@@ -460,32 +478,60 @@ async function addItem(obj){
 /* ---------- xlsx contagem upload ---------- */
 function normalize(s){return (s||"").toString().trim().toUpperCase().replace(/\s+/g," ");}
 function handleFile(file){
+  const log=(etapa,ok,msg)=>{ (state.uploadLog.etapas ||= []).push({etapa,ok,msg}); renderAll(); };
+  state.uploadLog={arquivo:file?.name||"(sem nome)",etapas:[],fim:null};
+  renderAll();
+  if(!file){ log("arquivo","erro","Nenhum arquivo recebido."); return; }
+  if(typeof XLSX==="undefined"){
+    log("biblioteca","erro","A biblioteca de planilha (XLSX) nao carregou nesta visualizacao. Sem ela nao da para ler .xlsx.");
+    return;
+  }
+  log("arquivo","ok",`${file.name} — ${(file.size/1024).toFixed(0)} KB`);
   const rd=new FileReader();
+  rd.onerror=()=>log("leitura","erro","O navegador nao conseguiu ler o arquivo.");
   rd.onload=e=>{
-    try{
-      const wb=XLSX.read(e.target.result,{type:"array"});
-      const ws=wb.Sheets[wb.SheetNames.includes("contagem")?"contagem":wb.SheetNames[0]];
-      const rows=XLSX.utils.sheet_to_json(ws,{defval:""});
-      const byEver={},byChk={};
-      itemsArray().forEach(it=>{byEver[normalize(it.nome_everest)]=it; byChk[normalize(it.nome_checklist)]=it;});
-      let matched=0,updated=0,missing=[]; const touched=new Set();
-      rows.forEach(r=>{
-        const ever=normalize(r["DESCRIÇÃO ITEM EVEREST"]||r["DESCRICAO ITEM EVEREST"]);
-        const chk=normalize(r["ITEM CHECKLIST"]);
-        const it=byEver[ever]||byChk[chk];
-        const cont=r["CONTAGEM"];
-        if(!it){ if(ever||chk) missing.push(ever||chk); return; }
-        matched++;
-        if(cont!==""&&cont!==null&&cont!==undefined&&!isNaN(Number(cont))){ setField(it.id,"contagem",Number(cont)); touched.add(it.setor); updated++; }
-      });
-      renderAll();
-      touched.forEach(writeSetor);
-      toast(`Contagem lida: ${updated} atualizados, ${matched} reconhecidos${missing.length?`, ${missing.length} não encontrados`:""}.`);
-    }catch(err){ toast("Falha ao ler a planilha: "+err.message); }
+    let wb;
+    try{ wb=XLSX.read(e.target.result,{type:"array"}); }
+    catch(err){ log("abrir","erro","Nao consegui abrir como planilha: "+err.message+
+      (/\.pdf$/i.test(file.name)?" — isto parece um PDF; este botao e so para a planilha de contagem.":"")); return; }
+    log("abrir","ok","abas: "+wb.SheetNames.join(", "));
+    const nomeAba=wb.SheetNames.includes("contagem")?"contagem":wb.SheetNames[0];
+    const ws=wb.Sheets[nomeAba];
+    const rows=XLSX.utils.sheet_to_json(ws,{defval:""});
+    log("linhas","ok",`aba "${nomeAba}": ${rows.length} linhas`);
+    if(!rows.length){ log("conteudo","erro","A aba esta vazia."); return; }
+    const cols=Object.keys(rows[0]||{});
+    const temEver=cols.some(c=>/EVEREST/i.test(c)), temChk=cols.some(c=>/ITEM CHECKLIST/i.test(c));
+    const temCont=cols.some(c=>/^CONTAGEM$/i.test(c));
+    log("colunas",(temEver||temChk)?"ok":"erro",
+      "encontradas: "+cols.slice(0,8).join(" | ")+(cols.length>8?" …":"")+
+      ((temEver||temChk)?"":"  ← falta 'DESCRICAO ITEM EVEREST' ou 'ITEM CHECKLIST'. Esta planilha nao e a de contagem."));
+    if(!temEver&&!temChk) return;
+    if(!temCont) log("coluna CONTAGEM","erro","nao achei a coluna CONTAGEM — nada a atualizar.");
+    const byEver={},byChk={};
+    itemsArray().forEach(it=>{byEver[normalize(it.nome_everest)]=it; byChk[normalize(it.nome_checklist)]=it;});
+    let matched=0,updated=0,vazios=0; const missing=[]; const touched=new Set();
+    rows.forEach(r=>{
+      const ever=normalize(r["DESCRIÇÃO ITEM EVEREST"]||r["DESCRICAO ITEM EVEREST"]);
+      const chk=normalize(r["ITEM CHECKLIST"]);
+      const it=byEver[ever]||byChk[chk];
+      const cont=r["CONTAGEM"];
+      if(!it){ if(ever||chk) missing.push(ever||chk); return; }
+      matched++;
+      if(cont===""||cont===null||cont===undefined){ vazios++; return; }
+      if(isNaN(Number(cont))) return;
+      setField(it.id,"contagem",Number(cont)); touched.add(it.setor); updated++;
+    });
+    log("casamento",matched?"ok":"erro",`${matched} itens reconhecidos · ${missing.length} nao encontrados`);
+    if(missing.length) log("nao encontrados","aviso",missing.slice(0,8).join(" · ")+(missing.length>8?` … (+${missing.length-8})`:""));
+    log("contagem","ok",`${updated} atualizados · ${vazios} sem valor preenchido na planilha`);
+    renderAll();
+    touched.forEach(writeSetor);
+    state.uploadLog.fim=updated?`Pronto: ${updated} contagens gravadas.`:"Nada foi gravado — veja os passos acima.";
+    renderAll();
   };
   rd.readAsArrayBuffer(file);
 }
-
 function exportBuy(rows){
   const header="SETOR;ITEM EVEREST;SUBSETOR;QTD A PEDIR;U.M.\n";
   const body=rows.map(({it,sug})=>[it.setor,it.nome_everest,it.subsetor,fmt(sug),it.unidade].join(";")).join("\n");
