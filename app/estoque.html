@@ -247,10 +247,10 @@ input.fator.falta{border-color:var(--warn);background:var(--warn-bg)}
       <option value="good">No mínimo/acima</option>
       <option value="none">Sem contagem</option>
     </select>
-    <button class="btn ghost" id="uploadBtn" title="Subir planilha de contagem preenchida">⇪ Contagem</button>
+    <button class="btn ghost" id="uploadBtn" title="Subir as planilhas de contagem preenchidas (pode selecionar vários setores de uma vez)">⇪ Contagem</button>
     <button class="btn ghost" id="salvarCont" title="Salvar a contagem atual no histórico (base do CMV)">⛁ Salvar contagem</button>
     <button class="btn ghost" id="addBtn">＋ Item</button>
-    <input class="hidefile" id="fileInput" type="file">
+    <input class="hidefile" id="fileInput" type="file" multiple>
   </div>
 
   <div class="chips" id="sectorchips"></div>
@@ -477,36 +477,50 @@ async function addItem(obj){
 
 /* ---------- xlsx contagem upload ---------- */
 function normalize(s){return (s||"").toString().trim().toUpperCase().replace(/\s+/g," ");}
-function handleFile(file){
-  const log=(etapa,ok,msg)=>{ (state.uploadLog.etapas ||= []).push({etapa,ok,msg}); renderAll(); };
-  state.uploadLog={arquivo:file?.name||"(sem nome)",etapas:[],fim:null};
+async function handleFiles(files){
+  state.uploadLog={arquivo:files.length===1?files[0].name:`${files.length} arquivos`,etapas:[],fim:null,
+    resumo:{reconhecidos:0,gravados:0,vazios:0,arquivos:0}};
   renderAll();
+  for(const f of files){ await handleFile(f,true); }
+  const r=state.uploadLog.resumo;
+  state.uploadLog.fim = r.gravados
+    ? `Pronto: ${r.gravados} contagens gravadas em ${r.arquivos} arquivo(s).`
+    : (r.vazios
+        ? `Nada foi gravado: os ${r.arquivos} arquivo(s) vieram com a coluna CONTAGEM VAZIA (${r.vazios} linhas sem número). É o modelo em branco — preencha a contagem na planilha e suba de novo, ou digite direto na tabela abaixo.`
+        : "Nada foi gravado — veja os passos acima.");
+  renderAll();
+}
+function handleFile(file,emLote){
+  const pre=emLote?`[${file?.name||"?"}] `:"";
+  const log=(etapa,ok,msg)=>{ (state.uploadLog.etapas ||= []).push({etapa:pre+etapa,ok,msg}); renderAll(); };
+  if(!emLote){ state.uploadLog={arquivo:file?.name||"(sem nome)",etapas:[],fim:null,resumo:{reconhecidos:0,gravados:0,vazios:0,arquivos:0}}; renderAll(); }
   if(!file){ log("arquivo","erro","Nenhum arquivo recebido."); return; }
   if(typeof XLSX==="undefined"){
     log("biblioteca","erro","A biblioteca de planilha (XLSX) nao carregou nesta visualizacao. Sem ela nao da para ler .xlsx.");
     return;
   }
   log("arquivo","ok",`${file.name} — ${(file.size/1024).toFixed(0)} KB`);
+  return new Promise(resolve=>{
   const rd=new FileReader();
-  rd.onerror=()=>log("leitura","erro","O navegador nao conseguiu ler o arquivo.");
+  rd.onerror=()=>{ log("leitura","erro","O navegador nao conseguiu ler o arquivo."); resolve(); };
   rd.onload=e=>{
     let wb;
     try{ wb=XLSX.read(e.target.result,{type:"array"}); }
     catch(err){ log("abrir","erro","Nao consegui abrir como planilha: "+err.message+
-      (/\.pdf$/i.test(file.name)?" — isto parece um PDF; este botao e so para a planilha de contagem.":"")); return; }
+      (/\.pdf$/i.test(file.name)?" — isto parece um PDF; este botao e so para a planilha de contagem.":"")); resolve(); return; }
     log("abrir","ok","abas: "+wb.SheetNames.join(", "));
     const nomeAba=wb.SheetNames.includes("contagem")?"contagem":wb.SheetNames[0];
     const ws=wb.Sheets[nomeAba];
     const rows=XLSX.utils.sheet_to_json(ws,{defval:""});
     log("linhas","ok",`aba "${nomeAba}": ${rows.length} linhas`);
-    if(!rows.length){ log("conteudo","erro","A aba esta vazia."); return; }
+    if(!rows.length){ log("conteudo","erro","A aba esta vazia."); resolve(); return; }
     const cols=Object.keys(rows[0]||{});
     const temEver=cols.some(c=>/EVEREST/i.test(c)), temChk=cols.some(c=>/ITEM CHECKLIST/i.test(c));
     const temCont=cols.some(c=>/^CONTAGEM$/i.test(c));
     log("colunas",(temEver||temChk)?"ok":"erro",
       "encontradas: "+cols.slice(0,8).join(" | ")+(cols.length>8?" …":"")+
       ((temEver||temChk)?"":"  ← falta 'DESCRICAO ITEM EVEREST' ou 'ITEM CHECKLIST'. Esta planilha nao e a de contagem."));
-    if(!temEver&&!temChk) return;
+    if(!temEver&&!temChk){ resolve(); return; }
     if(!temCont) log("coluna CONTAGEM","erro","nao achei a coluna CONTAGEM — nada a atualizar.");
     const byEver={},byChk={};
     itemsArray().forEach(it=>{byEver[normalize(it.nome_everest)]=it; byChk[normalize(it.nome_checklist)]=it;});
@@ -524,13 +538,17 @@ function handleFile(file){
     });
     log("casamento",matched?"ok":"erro",`${matched} itens reconhecidos · ${missing.length} nao encontrados`);
     if(missing.length) log("nao encontrados","aviso",missing.slice(0,8).join(" · ")+(missing.length>8?` … (+${missing.length-8})`:""));
-    log("contagem","ok",`${updated} atualizados · ${vazios} sem valor preenchido na planilha`);
+    if(updated) log("contagem","ok",`${updated} contagens gravadas · ${vazios} linhas sem numero`);
+    else log("contagem","erro",`0 gravadas — a coluna CONTAGEM esta vazia em ${vazios} linha(s). Esta planilha e o modelo em branco.`);
+    const r=state.uploadLog.resumo; if(r){ r.reconhecidos+=matched; r.gravados+=updated; r.vazios+=vazios; r.arquivos+=1; }
     renderAll();
     touched.forEach(writeSetor);
-    state.uploadLog.fim=updated?`Pronto: ${updated} contagens gravadas.`:"Nada foi gravado — veja os passos acima.";
-    renderAll();
+    if(!emLote){ state.uploadLog.fim=updated?`Pronto: ${updated} contagens gravadas.`
+      :`Nada foi gravado: a coluna CONTAGEM veio vazia (${vazios} linhas). Preencha a contagem na planilha e suba de novo, ou digite direto na tabela abaixo.`; }
+    renderAll(); resolve();
   };
   rd.readAsArrayBuffer(file);
+  });
 }
 function exportBuy(rows){
   const header="SETOR;ITEM EVEREST;SUBSETOR;QTD A PEDIR;U.M.\n";
@@ -553,7 +571,7 @@ document.getElementById("tabs").addEventListener("click",e=>{const b=e.target.cl
 document.getElementById("search").addEventListener("input",e=>{state.busca=e.target.value;if(state.tab==="estoque")renderTable();});
 document.getElementById("statusFilter").addEventListener("change",e=>{state.filtroStatus=e.target.value;renderAll();});
 document.getElementById("uploadBtn").onclick=()=>document.getElementById("fileInput").click();
-document.getElementById("fileInput").onchange=e=>{if(e.target.files[0])handleFile(e.target.files[0]);e.target.value="";};
+document.getElementById("fileInput").onchange=e=>{if(e.target.files.length)handleFiles([...e.target.files]);e.target.value="";};
 document.getElementById("addBtn").onclick=openAdd;
 document.getElementById("salvarCont").onclick=()=>{
   const n=itemsArray().filter(i=>i.contagem!=null&&i.contagem!=="").length;
