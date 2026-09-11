@@ -1,0 +1,187 @@
+{
+ "de_para": {
+  "1": [
+   "APEROL SPRITZ"
+  ],
+  "2": [
+   "ALFREDO SPRITZ",
+   "SASAKI SPRITZ"
+  ],
+  "3": [
+   "CAIPIMESSI",
+   "CAIPISORA"
+  ],
+  "6": [
+   "CAIPITANGO",
+   "CAIPINARA"
+  ],
+  "7": [
+   "CAMINITO TROPICAL",
+   "YOSHI TROPICAL"
+  ],
+  "8": [
+   "CARAJILLO"
+  ],
+  "9": [
+   "CHÁ MATE GELADO"
+  ],
+  "10": [
+   "CLERICOT 1,2L",
+   "SANGRIA 1,2L"
+  ],
+  "11": [
+   "CLERICOT 500ML",
+   "SANGRIA 500ML"
+  ],
+  "12": [
+   "COZUMEL"
+  ],
+  "13": [
+   "GIN TÔNICA"
+  ],
+  "14": [],
+  "15": [
+   "LA BOCA TÔNICA",
+   "MUSASHI TÔNICA"
+  ],
+  "16": [],
+  "17": [],
+  "18": [
+   "MOSCOW MULE"
+  ],
+  "19": [
+   "MARADONA MULE",
+   "OSAKA MULE"
+  ],
+  "20": [
+   "TANGO MULE",
+   "TOKYO MULE"
+  ],
+  "21": [
+   "MARGARITA"
+  ],
+  "22": [
+   "MOJITO"
+  ],
+  "23": [
+   "NEGRONI"
+  ],
+  "24": [
+   "PALÁCIOS",
+   "HANA"
+  ],
+  "25": [
+   "PINK LEMONADE"
+  ],
+  "26": [
+   "RIQUELME",
+   "NAKATA"
+  ],
+  "27": [
+   "SANDÍA",
+   "SUIKA"
+  ],
+  "28": [
+   "SIMEONE SOUR",
+   "REMON WHISKY SOUR"
+  ],
+  "29": [
+   "VERON",
+   "NAOKI"
+  ],
+  "30": [
+   "COSMOPOLITAN"
+  ],
+  "31": [
+   "RED SODA"
+  ],
+  "32": [
+   "ICHIGOR SODA"
+  ],
+  "33": [
+   "SODA ITALIANA MAÇA VERDE"
+  ],
+  "34": [
+   "SODA ITALIANA FRUTAS VERMELHAS"
+  ],
+  "35": [
+   "SODA ITALIANA MORANGO"
+  ],
+  "36": [
+   "TROPICAL MULE"
+  ],
+  "37": [
+   "RED BERRY SPRITZ ZERO"
+  ],
+  "38": [
+   "COCO COM ABACAXI ZERO"
+  ],
+  "39": [],
+  "4": [
+   "CAIPIRINHA ABACAXI",
+   "CAIPIRINHA FRUTAS VERMELHAS",
+   "CAIPIRINHA LIMAO",
+   "CAIPIRINHA MARACUJA",
+   "CAIPIRINHA MELANCIA",
+   "CAIPIRINHA MORANGO",
+   "CAIPIRINHA UVA"
+  ],
+  "5": [
+   "CAIPIROSKA ABACAXI",
+   "CAIPIROSKA FRUTAS VERMELHAS",
+   "CAIPIROSKA LIMAO",
+   "CAIPIROSKA LIMAO 02 DOSES",
+   "CAIPIROSKA MARACUJA",
+   "CAIPIROSKA MELANCIA",
+   "CAIPIROSKA MORANGO",
+   "CAIPIROSKA UVA"
+  ]
+ },
+ "nomes": {
+  "1": "APEROL SPRITZ",
+  "2": "ALFREDO/SASAKI SPRITZ",
+  "3": "CAIPIMESSI/CAIPISORA",
+  "4": "CAIPIRINHA",
+  "5": "CAIPIROSKA",
+  "6": "CAIPITANGO/CAIPINARA",
+  "7": "CAMINITO/YOSHI TROPICAL",
+  "8": "CARAJILLO",
+  "9": "CHA MATE",
+  "10": "CLERICOT/SANGRIA JARRA",
+  "11": "CLERICOT/SANGRIA TACA",
+  "12": "COZUMEL",
+  "13": "GIN TONICA",
+  "14": "IRISH COFFEE",
+  "15": "LA BOCA/MUSASHI TONICA",
+  "16": "LILLET SPRITZ",
+  "17": "LILLET VIVE",
+  "18": "MOSCOW MULE",
+  "19": "MARADONA/OSAKA MULE",
+  "20": "TANGO/TOKYO MULE",
+  "21": "MARGARITA",
+  "22": "MOJITO",
+  "23": "NEGRONI",
+  "24": "PALACIOS/HANA",
+  "25": "PINK LEMONADE",
+  "26": "RIQUELME/NAKATA",
+  "27": "SANDIA/SUIKA",
+  "28": "SIMEONE/REMON SOUR",
+  "29": "VERON/NAOKI",
+  "30": "COSMOPOLITAN",
+  "31": "RED SODA",
+  "32": "ICHIGOR SODA",
+  "33": "SODA MACA VERDE",
+  "34": "SODA FRUTAS VERMELHAS",
+  "35": "SODA MORANGO",
+  "36": "TROPICAL MULE",
+  "37": "RED BERRY",
+  "38": "COCO ABACAXI",
+  "39": "WHISKY SOUR"
+ },
+ "orfas": [
+  "IRISH COFFEE",
+  "LILLET SPRITZ",
+  "LILLET VIVE",
+  "WHISKY SOUR"
+ ]
+}

@@ -4789,7 +4789,9 @@
    "prefixo": "DEST",
    "origem_cadastro": "lacuna detectada na varredura ficha x catalogo",
    "motivo": "Lillet Spritz e Lillet Vive: 50ml por drink",
-   "pendente_validacao": true
+   "pendente_validacao": true,
+   "sem_venda_no_pdv": true,
+   "revisar_cadastro": "Lillet Spritz e Lillet Vive nao aparecem no PDV (0 venda em agosto)"
   },
   {
    "id": "mp_chantilly",
@@ -4802,7 +4804,9 @@
    "prefixo": "MP",
    "origem_cadastro": "lacuna detectada na varredura ficha x catalogo",
    "motivo": "Irish Coffee: 20g por drink",
-   "pendente_validacao": true
+   "pendente_validacao": true,
+   "sem_venda_no_pdv": true,
+   "revisar_cadastro": "Irish Coffee nao aparece no PDV (0 venda em agosto)"
   },
   {
    "id": "mp_nutella",
